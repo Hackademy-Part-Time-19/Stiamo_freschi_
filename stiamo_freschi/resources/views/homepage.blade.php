@@ -39,37 +39,24 @@
     </div>
 
 
-    <div class="containerD" >
+    <div class="containerD">
         <div class="row">
             <div class="col-sm-6 mb-3 mb-sm-0">
 
                 <div class="card-body">
-                    
+
                 </div>
             </div>
 
             <div class="col-sm-6">
 
                 <div class="card-body " style="background-color: rgba(217, 217, 217, 1)">
-                
+
                 </div>
 
             </div>
         </div>
     </div>
-
-
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="cardLayout">
-                            <div class="imgCard">
-
-                            </div>
-                            <div class="userCard">
-                                <div class="imageUser">
     <div class="container-carousel">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
