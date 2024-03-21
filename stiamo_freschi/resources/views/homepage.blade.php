@@ -1,6 +1,6 @@
 <x-layout>
 
-    <x-navbar/>
+    <x-navbar />
     <div class="banner">
         <div class="banner-cat">Uomo</div>
         <div class="banner-cat">Donna</div>
@@ -26,7 +26,7 @@
     </div>
     <div class="container-copy">
         <div class="container2">
-            <h1 class="copy"> 
+            <h1 class="copy">
                 "Grandi Risparmi in Arrivo! Vendi come Compri.<br>
                 Scopri le Offerte Irripetibili su Abbigliamento, Accessori e Altro!"</h1>
             <div class="btn-copy">
@@ -35,7 +35,7 @@
             </div>
         </div>
     </div>
-{{--     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="row">
@@ -203,13 +203,13 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-    </div> --}}
+    </div>
     <div class="ContainerCard">
         <div class="row" style="">
-            <div  id="containerColCard" class="col-12 col-xl-3 col-lg-4 col-md-6 mt-5">
+            <div id="containerColCard" class="col-12 col-xl-3 col-lg-4 col-md-6 mt-5">
                 <x-card-home></x-card-home>
             </div>
-            <div  id="containerColCard" class="col-12 col-xl-3 col-lg-4 col-md-6 mt-5">
+            <div id="containerColCard" class="col-12 col-xl-3 col-lg-4 col-md-6 mt-5">
                 <x-card-home></x-card-home>
             </div>
             <div id="containerColCard" class="col-12 col-xl-3 col-lg-4 col-md-6 mt-5">
@@ -250,4 +250,3 @@
 
 
 </x-layout>
-
