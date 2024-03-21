@@ -20,12 +20,9 @@ class PageController extends Controller
     {
         return view('test');
     }
-<<<<<<< HEAD
 
-    public function announcementCreate(){
+    public function announcementCreate()
+    {
         return view('Announcements-create');
-    }   
+    }
 }
-=======
-}
->>>>>>> 4270118970437d6528c1ee768fd78c374b178cfd
