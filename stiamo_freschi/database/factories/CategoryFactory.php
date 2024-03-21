@@ -10,6 +10,8 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class CategoryFactory extends Factory
 {
+
+    public $categories = ['Sport', 'Elettronica', 'Musica', 'Casa', 'Giardino', 'Fai da te', 'Abbigliamento', 'Accessori', 'Gioielli'];
     /**
      * Define the model's default state.
      *
@@ -18,6 +20,7 @@ class CategoryFactory extends Factory
     public function definition(): array
     {
         return [ 
+            
         ];
     }
 }
