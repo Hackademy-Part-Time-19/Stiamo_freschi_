@@ -135,6 +135,15 @@
     align-items: center;
 }
 
+.container-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+
 .container2 {
     height: 200px;
     width: 100%;

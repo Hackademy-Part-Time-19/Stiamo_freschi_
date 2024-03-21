@@ -2,7 +2,7 @@
 @import './style.css';
 
 
-.containerPadreLogin{
+.containerPadreLogin {
     width: 100%;
     min-height: 100vh;
     height: auto;
@@ -13,7 +13,7 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    
+
 
 }
 
@@ -21,7 +21,7 @@
     min-height: 70vh;
     height: auto;
     padding: 40px;
-    background-color:#d9d9d9b2;
+    background-color: #d9d9d9b2;
     border-radius: 20px;
     margin-top: 70px;
 }
@@ -253,28 +253,35 @@ a {
     color: white;
     font-weight: 500;
 }
+
 .btnCardLayout:hover {
     background-color: #0d3b6f;
     transition: 0.3s;
 }
 
 .copy {
-    font-family: Arial, sans-serif; 
-    font-size: 25px; 
-    font-weight: bold; 
-    color: #4863A0; 
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: #4863A0;
     text-align: center;
     margin-top: 20px;
 }
 
-.ContainerCard{
+.ContainerCard {
     min-height: 100vh;
     height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    padding: 50px;
     background-color: white;
 }
 
-#containerColCard{
+
+
+#containerColCard {
     display: flex;
     flex-direction: column;
     justify-content: center;
