@@ -16,12 +16,8 @@ use App\Http\Controllers\PageController;
 |
 */
 
-Route::get('/', function () {
-    return view('homepage');
-});
-
+Route::get('/', [PageController::class, 'home']);
 route::resource('announcement', AnnouncementController::class);
 route::resource('categories', CategoryController::class);
 
-Route::get('/test',[PageController::class,  'test']);
-
+Route::get('/test', [PageController::class, 'test']);
