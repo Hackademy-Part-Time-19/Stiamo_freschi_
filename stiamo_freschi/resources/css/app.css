@@ -1,0 +1,271 @@
+@import "bootstrap";
+@import './style.css';
+
+
+.containerPadreLogin{
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://images.pexels.com/photos/3184356/pexels-photo-3184356.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+
+}
+
+#containerFormLogin {
+    min-height: 70vh;
+    height: auto;
+    padding: 40px;
+    background-color:#d9d9d9b2;
+    border-radius: 20px;
+    margin-top: 70px;
+}
+
+.accediLogin {
+    margin-bottom: 30px;
+    color: black !important;
+
+}
+
+form input {
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 22px;
+    padding-left: 10px;
+
+}
+
+form label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.BtnAccediLogin {
+    height: 45px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: #081F37;
+    color: white;
+}
+
+.BtnAccediLogin:hover {
+    background-color: #0d3b6f;
+    transition: 0.3s;
+}
+
+.BtnRegistratiLogin {
+    height: 45px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: #081F37;
+    color: white;
+}
+
+.BtnRegistratiLogin:hover {
+    background-color: #0d3b6f;
+    transition: 0.3s;
+}
+
+
+
+.oppureLogin {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.pswDimenticata {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.pswDimenticata:hover {
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.accedi {
+    color: black;
+}
+
+.accedi:hover {
+    color: #144983;
+    transition: 0.2s;
+
+}
+
+.giaRegistrato {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+/* SEZIONE CARD HOME COMPONENT*/
+.containerTest {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    padding-top: 50px;
+    margin-top: 100px;
+}
+
+
+
+.cardLayout {
+    margin: 10px;
+    height: 500px;
+    width: 300px;
+    background-color: #d9d9d999;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.imgCard {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    flex: 9;
+    background-image: url('https://images1.vinted.net/t/02_0126f_7UxTSDC7QPA9b5SwtpjvXi9K/f800/1710953115.jpeg?s=2b251215e7d94314a9ffa97432a4b9413faa19e3');
+    background-size: cover;
+}
+
+.userCard {
+    flex: 0.5;
+    background-color: none;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+}
+
+.imageUser {
+    height: 30px;
+    width: 30px;
+    background-image: url('https://banner2.cleanpng.com/20180508/toe/kisspng-user-profile-computer-icons-clip-art-5af1ac8cee74c6.8111281615257877889767.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: #081F37;
+    margin-left: 20px;
+    border-radius: 100%;
+}
+
+.nomeUser {
+    background-color: none;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-left: 7px;
+    padding-top: 10px;
+    height: 80%;
+    width: 100px;
+
+
+}
+
+.nomeUser p {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.prezzoCard {
+    flex: 0.2;
+    background-color: none;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+
+}
+
+
+.prezzoCard p {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+
+.prezzoCard h4 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 10px;
+    color: black;
+}
+
+.descrizioneCard {
+    flex: 2;
+    background-color: none;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.descrizioneCard p {
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 10px;
+
+}
+
+
+.btnCardLayout {
+    border-radius: 5px;
+    width: 100%;
+    height: 50px;
+    border: 1px solid white;
+    background-color: #081F37;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.copy {
+    font-family: Arial, sans-serif; 
+    font-size: 25px; 
+    font-weight: bold; 
+    color: #4863A0; 
+    text-align: center;
+    margin-top: 20px;
+}
+
+.ContainerCard{
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    background-color: white;
+}
+
+#containerColCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+}
