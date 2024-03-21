@@ -196,15 +196,13 @@ a {
 }
 
 .div-form {
-    height: 94vh;
+    height: 100vh;
     background-image: url("/public/img/sfondo-wave-water-blue-vector-design-v2_250616-original.webp");
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
-
 }
 
 .div-modale {

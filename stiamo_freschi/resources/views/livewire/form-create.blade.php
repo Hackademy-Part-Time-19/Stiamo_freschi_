@@ -27,6 +27,9 @@
                     @error('description')
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
+                    <div class="mb-3">
+                        <label for="category">Seleziona una categoria</label>
+                    </div>
                     <select class="form-select" aria-label="Default select example" name="category_id"
                         wire:model="category_id">
                         <option selected>Open this select menu</option>
@@ -45,7 +48,7 @@
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
 
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary sbm">Submit</button>
                 </form>
             </div>
 
