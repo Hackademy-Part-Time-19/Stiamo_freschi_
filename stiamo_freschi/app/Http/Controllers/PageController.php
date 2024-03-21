@@ -21,7 +21,8 @@ class PageController extends Controller
         return view('test');
     }
 
-    public function announcementCreate(){
+    public function announcementCreate()
+    {
         return view('Announcements-create');
     }   
 }
