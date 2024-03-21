@@ -25,3 +25,5 @@ route::resource('categories', CategoryController::class);
 
 Route::get('/test',[PageController::class,  'test']);
 
+Route::get('/create',[PageController::class,  'announcementCreate']);
+
