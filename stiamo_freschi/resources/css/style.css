@@ -85,6 +85,7 @@
     background-image: url("/public/img/iug.png");
     background-size: cover;
     background-repeat: no-repeat;
+    
 
 }
 
@@ -161,6 +162,31 @@
     border: none;
     border-radius: 20px;
 }
+
+.containerD {
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+
+}
+
+
+.card-body {
+
+    background-color:rgba(8, 31, 55, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   margin: 40px;
+    height: 350px;
+    width: 500px;
+   
+}
+
+
+
 
 nav.tablet {
     display: none;
@@ -242,6 +268,8 @@ nav.desktop {
     background-color: black;
     margin-left: 100px;
     margin-top: 150px;
+   
+    
 }
 
 .container-card {
