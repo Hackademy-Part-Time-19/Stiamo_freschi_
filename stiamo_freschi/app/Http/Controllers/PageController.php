@@ -14,13 +14,15 @@ class PageController extends Controller
     public function home()
     {
         $categories = Category::all();
-        return view('homepage', ['categories' => $categories, 'announcements' => Announcement::all()]);
+        $announcements = Announcement::orderBy('created_at', 'desc')->get();
+        return view('homepage', compact('categories', 'announcements'));
     }
 
 
 
     public function announcementCreate()
     {
+
         return view('Announcements-create', ['categories' => Category::all()]);
     }   
 }

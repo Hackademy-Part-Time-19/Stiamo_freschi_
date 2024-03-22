@@ -260,7 +260,7 @@
     <div class="ContainerCard">
         <div class="row">
             @foreach ($announcements as $announcement)
-            <div id="containerColCard" class="col-12 col-xl-3 col-lg-4 col-md-6 mt-5">
+            <div id="containerColCard" class="col-12 col-xl-3 col-lg-3 col-md-6 mt-5">
                 <x-card-home 
                 :user="$announcement->user->name" 
                 :title="$announcement->title"
