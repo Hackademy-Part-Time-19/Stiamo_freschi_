@@ -14,18 +14,14 @@ class PageController extends Controller
     public function home()
     {
         $categories = Category::all();
-        
         return view('homepage', ['categories' => $categories, 'announcements' => Announcement::all()]);
     }
 
-    public function test()
-    {
-        return view('test');
-    }
+
 
     public function announcementCreate()
     {
-        return view('Announcements-create');
+        return view('Announcements-create', ['categories' => Category::all()]);
     }   
 }
 

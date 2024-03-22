@@ -2,6 +2,7 @@
 
     <div class="row div-form">
         <div class="col-4 div-modale">
+            <h1 style="margin-bottom: 20px">Crea il tuo annuncio</h1>
             <div class="form3">
                 <form wire:submit="store">
                     <x-session-success />

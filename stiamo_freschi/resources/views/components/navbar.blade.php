@@ -120,7 +120,7 @@
     <div class="container-navbar">
         <a href="/">
             <div class="container-logo">
-                <img src="img\logo.presto.scontornato.2.png" alt="logo" class="img-logo">
+                <img src="\img\logo.presto.scontornato.2.png" alt="logo" class="img-logo">
             </div>
         </a>
 

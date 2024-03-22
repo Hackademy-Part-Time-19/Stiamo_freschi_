@@ -7,6 +7,16 @@ use Illuminate\Http\Request;
 
 class AnnouncementController extends Controller
 {
+    public function indexByCategory($id)
+    {
+        return view('search-bycategory', ['announcements' => Announcement::where('category_id', $id)->get()]);
+    }
+
+
+
+
+
+
     /**
      * Display a listing of the resource.
      */
