@@ -336,13 +336,12 @@ a {
 }
 
 .ContainerCard {
+    width: 97%;
     min-height: 100vh;
     height: auto;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    padding: 60px;
     background-color: none;
 }
 

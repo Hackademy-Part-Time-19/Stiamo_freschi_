@@ -1,5 +1,6 @@
 .body {
     padding: 0px;
+    margin: 0px;
 }
 
 .navbar {
@@ -325,6 +326,13 @@ nav.desktop {
     justify-content: center;
     align-items: center;
     margin-top: 30px;
+}
+
+:root {
+    --bs-gutter-x: 0px;
+    /* Modifica lo spazio orizzontale tra le colonne */
+    --bs-gutter-y: 0px;
+    /* Modifica lo spazio verticale tra le righe */
 }
 
 @media screen and (max-width:991px) {
