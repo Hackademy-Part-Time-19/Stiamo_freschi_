@@ -3,7 +3,7 @@
     <x-navbar />
     <div class="banner">
         @foreach ($categories as $category)
-            <div id="myButton" class="banner-cat">{{ $category->name }}</div>
+            <div id="myButton" class="banner-cat"><a href="">{{ $category->name }}</a></div>
         @endforeach
     </div>
     <div class="img-container-mobile">
@@ -12,25 +12,27 @@
         @auth
             <div class="txt-img">
                 <h1>Bentornato {{ auth()->user()->name }}</h1>
-                <button class="btn-txt-img">
-                    Inserisci il tuo annuncio
-                </button>
-            </div>
-        @else
-            <div class="txt-img">
-                <h1>Vendi con facilità, inizia PRESTO!</h1>
-                <button class="btn-txt-img">
-                    Inserisci il tuo annuncio
+                <button class="btn-txt-img"><a href="{{route('announcement.create')}}" style="text-decoration: none; color:white;">
+                    Inserisci il tuo annuncio</a>
                 </button>
             </div>
         @endauth
+        @guest
+            <div class="txt-img">
+                <h1>Vendi con facilità, inizia PRESTO!</h1>
+                <h4>Comincia a guadagnare, registrati!</h5>
+                <button class="btn-txt-img"><a href="/login" style="text-decoration: none; color:white;">
+                    Accedi/Registrati
+                </a></button>
+            </div>
+        @endguest
 
     </div>
     <div class="container-copy">
         <div class="container2">
             <h1 class="copy">
-                "Grandi Risparmi in Arrivo! Vendi come Compri.<br>
-                Scopri le Offerte Irripetibili su Abbigliamento, Accessori e Altro!"</h1>
+                "Grandi Risparmi in Arrivo! Vendi come Compri.
+                Scopri le Offerte Irripetibili su Abbigliamento, Accessori e Altro!"
             <div class="btn-copy">
                 <button class="btn2"></button>
                 <button class="btn3"></button>
@@ -82,6 +84,10 @@
 
                                 <div class="descrizioneCard">
                                     <p>Descrizione di prova</p>
+                                </div>
+                            
+                                <div class="Areabutton">
+                                    
                                     <button class="btnCardLayout">Vai al dettaglio</button>
                                 </div>
                             </div>
@@ -106,6 +112,10 @@
 
                                 <div class="descrizioneCard">
                                     <p>Descrizione di prova</p>
+                                </div>
+                            
+                                <div class="Areabutton">
+                                    
                                     <button class="btnCardLayout">Vai al dettaglio</button>
                                 </div>
                             </div>
@@ -131,6 +141,10 @@
 
                                 <div class="descrizioneCard">
                                     <p>Descrizione di prova</p>
+                                </div>
+                            
+                                <div class="Areabutton">
+                                    
                                     <button class="btnCardLayout">Vai al dettaglio</button>
                                 </div>
                             </div>
@@ -160,6 +174,10 @@
 
                                 <div class="descrizioneCard">
                                     <p>Descrizione di prova</p>
+                                </div>
+                            
+                                <div class="Areabutton">
+                                    
                                     <button class="btnCardLayout">Vai al dettaglio</button>
                                 </div>
                             </div>
@@ -185,6 +203,10 @@
 
                                 <div class="descrizioneCard">
                                     <p>Descrizione di prova</p>
+                                </div>
+                            
+                                <div class="Areabutton">
+                                    
                                     <button class="btnCardLayout">Vai al dettaglio</button>
                                 </div>
                             </div>
@@ -209,6 +231,10 @@
 
                             <div class="descrizioneCard">
                                 <p>Descrizione di prova</p>
+                            </div>
+                        
+                            <div class="Areabutton">
+                                
                                 <button class="btnCardLayout">Vai al dettaglio</button>
                             </div>
                         </div>
@@ -229,32 +255,26 @@
         </div>
     </div>
 
+    {{-- @dd($announcements) --}}
+
     <div class="ContainerCard">
         <div class="row">
+            @foreach ($announcements as $announcement)
             <div id="containerColCard" class="col-12 col-xl-3 col-lg-4 col-md-6 mt-5">
-                <x-card-home></x-card-home>
+                <x-card-home 
+                :user="$announcement->user->name" 
+                :title="$announcement->title"
+                :price="$announcement->price"
+                :description="$announcement->description"
+                :category="$announcement->category->name"
+                >
+                </x-card-home>
             </div>
-            <div id="containerColCard" class="col-12 col-xl-3 col-lg-4 col-md-6 mt-5">
-                <x-card-home></x-card-home>
-            </div>
-            <div id="containerColCard" class="col-12 col-xl-3 col-lg-4 col-md-6 mt-5">
-                <x-card-home></x-card-home>
-            </div>
-            <div id="containerColCard" class="col-12 col-xl-3 col-lg-4 col-md-6 mt-5">
-                <x-card-home></x-card-home>
-            </div>
-            <div id="containerColCard" class="col-12 col-xl-3 col-lg-4 col-md-6 mt-5">
-                <x-card-home></x-card-home>
-            </div>
-            <div id="containerColCard" class="col-12 col-xl-3 col-lg-4 col-md-6 mt-5">
-                <x-card-home></x-card-home>
-            </div>
-            <div id="containerColCard" class="col-12 col-xl-3 col-lg-4 col-md-6 mt-5">
-                <x-card-home></x-card-home>
-            </div>
-            <div id="containerColCard" class="col-12 col-xl-3 col-lg-4 col-md-6 mt-5">
-                <x-card-home></x-card-home>
-            </div>
+            @endforeach
+
+            
+        
+           
 
 
         </div>

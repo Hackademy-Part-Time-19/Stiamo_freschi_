@@ -6,6 +6,7 @@ use App\Models\Category;
 
 
 
+use App\Models\Announcement;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -13,7 +14,8 @@ class PageController extends Controller
     public function home()
     {
         $categories = Category::all();
-        return view('homepage', ['categories' => $categories]);
+        
+        return view('homepage', ['categories' => $categories, 'announcements' => Announcement::all()]);
     }
 
     public function test()

@@ -7,16 +7,21 @@
             <img src="https://banner2.cleanpng.com/20180508/toe/kisspng-user-profile-computer-icons-clip-art-5af1ac8cee74c6.8111281615257877889767.jpg" alt="">
         </div>
         <div class="nomeUser">
-            <p>Luca Leanza</p>
+            <p>{{$user}}</p>
         </div>
     </div>
     <div class="prezzoCard">
-        <h4>Titolo Card</h4>
-        <p>10,99 €</p>
+        <h4>{{$title}}</h4>
+        <p>{{$price}} €</p>
+        <h6>{{$category}}</h6>
+    </div>
+    
+    <div class="descrizioneCard">
+        <p>{{$description}}</p>
     </div>
 
-    <div class="descrizioneCard">
-        <p>Descrizione di prova</p>
+    <div class="Areabutton">
+        
         <button class="btnCardLayout">Vai al dettaglio</button>
     </div>
 

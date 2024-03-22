@@ -2,6 +2,14 @@
 @import './style.css';
 
 
+* {
+    font-family: "Akshar", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+
+
 .containerPadreLogin {
     width: 100%;
     min-height: 100vh;
@@ -38,6 +46,7 @@ form input {
     border-radius: 5px;
     font-size: 22px;
     padding-left: 10px;
+    background-color: red;
 
 }
 
@@ -149,9 +158,11 @@ a {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     flex: 9;
+    padding: 0px;
 }
 
 .imgCard img {
+    margin: 0px;
     height: 300px;
     width: 100%;
     border-top-right-radius: 10px;
@@ -164,6 +175,8 @@ a {
     display: flex;
     justify-content: start;
     align-items: center;
+    /*non andare a capo*/
+    white-space: nowrap;
 
 }
 
@@ -191,6 +204,7 @@ a {
     padding-top: 10px;
     height: 80%;
     width: 100px;
+    color: rgba(0, 0, 0, 0.783);
 
 
 }
@@ -203,13 +217,14 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: black;
 }
 
 .div-modale {
     min-height: 70vh;
     height: auto;
     padding: 40px;
-    background-color: #d9d9d9b2;
+    background-color: #d9d9d9e0;
     border-radius: 20px;
     margin-top: 70px;
 }
@@ -226,26 +241,46 @@ a {
 
 .prezzoCard {
     flex: 0.2;
+    height: 70px;
     background-color: none;
     display: flex;
     align-items: center;
     justify-content: start;
     flex-direction: column;
+    background-color: none;
+    white-space: nowrap;
 
 }
 
 
 .prezzoCard p {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     color: black;
+    position: relative;
+    top: -5px;
 }
 
 .prezzoCard h4 {
-    font-size: 25px;
+    font-size: 21px;
     font-weight: bold;
     margin-left: 10px;
     color: black;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.prezzoCard h6 {
+    font-size: 17px;
+    font-weight: bold;
+    margin-left: 10px;
+    color: black;
+    white-space: nowrap;
+    position: relative;
+    top: -10px;
+    text-align: center;
+    
+
 }
 
 .descrizioneCard {
@@ -253,25 +288,31 @@ a {
     background-color: none;
     padding: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     flex-direction: column;
     overflow: hidden;
-    text-overflow: ellipsis;
+    background-color: none;
+    text-overflow: clip;
+
 }
+
 
 .descrizioneCard p {
     font-size: 15px;
     font-weight: 500;
     margin-left: 10px;
-
+    position: relative;
+    bottom: -8px;
 }
 
 
 .btnCardLayout {
     border-radius: 5px;
+    font-size: 18px;
     width: 100%;
-    height: 70px;
+    height: 40px;
+    margin-bottom: 10px;
     border: 1px solid white;
     background-color: #081F37;
     color: white;
@@ -284,7 +325,6 @@ a {
 }
 
 .copy {
-    font-family: Arial, sans-serif;
     font-size: 25px;
     font-weight: bold;
     color: #4863A0;
@@ -311,4 +351,24 @@ a {
     justify-content: center;
     align-items: center;
     background-color: none;
+}
+
+.carousel-control-prev-icon {
+    background-color: #081F37;
+    height: 50px;
+    width: 40px;
+    border-radius: 20%;
+    padding: 10px;
+    position: relative;
+    right: 40px;
+}
+
+.carousel-control-next-icon {
+    background-color: #081F37;
+    height: 50px;
+    width: 40px;
+    border-radius: 20%;
+    padding: 10px;
+    position: relative;
+    left: 40px;
 }

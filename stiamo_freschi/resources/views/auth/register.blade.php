@@ -8,7 +8,7 @@
                 @csrf
                 <div class="mb-3">
                     <label for="name" class="form-label">Inserisci il tuo nome completo</label>
-                    <input type="text" name="name" class="form-control" id="name"
+                    <input type="text" name="name" class="form-control" style="width: 100%; height:35px;" id="name"
                         aria-describedby="emailHelp">
                     @error('name')
                         <div class="alert alert-danger"
@@ -19,7 +19,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Inserisci una email</label>
-                    <input type="email" name="email" class="form-control" id="exampleInputEmail1"
+                    <input type="email" name="email" class="form-control" style="width: 100%; height:35px;" id="exampleInputEmail1"
                         aria-describedby="emailHelp">
                 </div>
                 @error('email')
@@ -27,7 +27,7 @@
                 @enderror
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Inserisci una password</label>
-                    <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+                    <input type="password" name="password" class="form-control" style="width: 100%; height:35px;" id="exampleInputPassword1">
                     <div id="emailHelp" class="form-text"></div>
 
                 </div>
@@ -36,7 +36,7 @@
                 @enderror
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Ripeti la password</label>
-                    <input type="password" name="password_confirmation" class="form-control" id="exampleInputPassword1">
+                    <input type="password" name="password_confirmation" class="form-control" style="width: 100%; height:35px;" id="exampleInputPassword1">
                 </div>
                 @error('password_confirmation')
                 <div class="alert alert-danger" style="height: 30px;display:flex;justify-content:center;align-items:center;">{{ $message }}</div>
