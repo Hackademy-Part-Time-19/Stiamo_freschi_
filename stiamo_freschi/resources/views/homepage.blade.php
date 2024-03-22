@@ -267,6 +267,7 @@
                 :price="$announcement->price"
                 :description="$announcement->description"
                 :category="$announcement->category->name"
+                :announcement="$announcement"
                 >
                 </x-card-home>
             </div>

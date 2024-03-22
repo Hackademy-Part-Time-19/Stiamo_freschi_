@@ -22,7 +22,7 @@
 
     <div class="Areabutton">
         
-        <button class="btnCardLayout">Vai al dettaglio</button>
+        <button class="btnCardLayout"><a style="color: white" href="{{route('announcement.show', ['announcement' => $announcement] )}}">Vai al dettaglio</a></button>
     </div>
 
     
