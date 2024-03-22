@@ -1,5 +1,6 @@
 .body {
     padding: 0px;
+    margin: 0px;
 }
 
 .navbar {
@@ -262,7 +263,7 @@ nav.desktop {
     position: fixed;
     left: 0;
     right: 0;
-
+    z-index: 1000;
     display: flex;
     height: 50px;
     background-color: #dbd8e3b0;
@@ -282,12 +283,12 @@ nav.desktop {
 }
 
 .banner-cat:hover {
-    background-color:#f1f0f4bd;
+    background-color: #f1f0f4bd;
     border-radius: 5px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.banner-cat a{
+.banner-cat a {
     color: #081F37;
 }
 
@@ -325,6 +326,13 @@ nav.desktop {
     justify-content: center;
     align-items: center;
     margin-top: 30px;
+}
+
+:root {
+    --bs-gutter-x: 0px;
+    /* Modifica lo spazio orizzontale tra le colonne */
+    --bs-gutter-y: 0px;
+    /* Modifica lo spazio verticale tra le righe */
 }
 
 @media screen and (max-width:991px) {
