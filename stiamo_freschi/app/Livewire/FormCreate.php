@@ -22,7 +22,7 @@ class FormCreate extends Component
            /*  'image' => 'required|image|max:1024', */
         ];
         
-        protected $message = [
+        protected $messages = [
             'title.required' => 'Il campo titolo è obbligatorio',
             'title.max' => 'Il campo titolo deve essere lungo al massimo 40 caratteri',
             'price.required' => 'Il campo prezzo è obbligatorio',
