@@ -170,7 +170,7 @@
 
 .container2 {
     height: 200px;
-    width: 100%;
+    width: 60%;
     margin-top: 40px;
     display: flex;
     flex-direction: column;
@@ -195,6 +195,11 @@
     border-radius: 20px;
 }
 
+.btn-login {
+    text-decoration: none;
+    color: white;
+}
+
 .containerD {
     height: 350px;
     display: flex;
@@ -217,6 +222,15 @@
 
 }
 
+.card-body2 {
+    background-color: rgba(217, 217, 217, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    height: 350px;
+    width: 500px;
+}
 
 
 

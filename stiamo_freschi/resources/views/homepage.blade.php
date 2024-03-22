@@ -1,5 +1,4 @@
 <x-layout>
-
     <x-navbar />
     <div class="banner">
         @foreach ($categories as $category)
@@ -23,7 +22,7 @@
             <div class="txt-img">
                 <h1>Vendi con facilità, inizia PRESTO!</h1>
                 <h4>Comincia a guadagnare, registrati!</h5>
-                    <button class="btn-txt-img"><a href="/login" style="text-decoration: none; color:white;">
+                    <button class="btn-txt-img"><a href="/login" class="btn-login">
                             Accedi/Registrati
                         </a></button>
             </div>
@@ -33,30 +32,23 @@
     <div class="container-copy">
         <div class="container2">
             <h1 class="copy">
-                "Sono in arrivo grandi risparmi! Acquista e vendi con facilità. Scopri offerte imperdibili su abbigliamento, accessori e tanto altro!"
+                "Sono in arrivo grandi risparmi! Acquista e vendi con facilità. Scopri offerte imperdibili su
+                abbigliamento, accessori e tanto altro!"
                 <div class="btn-copy">
                     <button class="btn2"></button>
                     <button class="btn3"></button>
                 </div>
         </div>
     </div>
-
-
     <div class="containerD">
         <div class="row">
             <div class="col-sm-6 mb-3 mb-sm-0">
-
                 <div class="card-body">
-
                 </div>
             </div>
-
             <div class="col-sm-6">
-
-                <div class="card-body " style="background-color: rgba(217, 217, 217, 1)">
-
+                <div class="card-body2 ">
                 </div>
-
             </div>
         </div>
     </div>
@@ -68,11 +60,9 @@
                         <div class="col-md-4">
                             <div class="cardLayout">
                                 <div class="imgCard">
-
                                 </div>
                                 <div class="userCard">
                                     <div class="imageUser">
-
                                     </div>
                                     <div class="nomeUser">
                                         <p>Luca Leanza</p>
@@ -82,13 +72,10 @@
                                     <h4>Titolo Card</h4>
                                     <p>10,99 €</p>
                                 </div>
-
                                 <div class="descrizioneCard">
                                     <p>Descrizione di prova</p>
                                 </div>
-
                                 <div class="Areabutton">
-
                                     <button class="btnCardLayout">Vai al dettaglio</button>
                                 </div>
                             </div>
@@ -255,9 +242,7 @@
             </button>
         </div>
     </div>
-
     {{-- @dd($announcements) --}}
-
     <div class="ContainerCard">
         <div class="row">
             @foreach ($announcements as $announcement)
@@ -267,16 +252,6 @@
                     </x-card-home>
                 </div>
             @endforeach
-
-
-
-
-
-
         </div>
-
-
-
     </div>
-
 </x-layout>
