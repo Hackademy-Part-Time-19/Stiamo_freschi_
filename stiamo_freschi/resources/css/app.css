@@ -152,6 +152,7 @@ a {
     border: 1px solid black;
     border-radius: 10px;
     padding: 5px;
+    box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.3)
 }
 
 .imgCard {
@@ -399,6 +400,11 @@ a {
     padding-top: 80px;
 
 
+}
+
+.cardLayout:hover {
+    scale: 1.05;
+    transition: 0.15s;
 }
 
 .containerCaruselShow {
