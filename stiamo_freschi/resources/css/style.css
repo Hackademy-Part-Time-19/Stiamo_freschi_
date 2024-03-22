@@ -23,6 +23,21 @@
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
+.div-carosello {
+    padding-top: 40vh;
+    height: 100vh;
+    margin-bottom: 30px;
+}
+
+.carosello {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 30vh;
+}
+
+
 .container-logo {
     height: 100%;
     display: flex;

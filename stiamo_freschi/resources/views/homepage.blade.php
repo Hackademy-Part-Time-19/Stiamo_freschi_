@@ -60,8 +60,8 @@
             </div>
         </div>
     </div>
-    <div class="container-carousel">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="container-carousel div-carosello">
+        <div id="carouselExampleIndicators" class="carousel slide carosello" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="row">
