@@ -33,8 +33,7 @@
     <div class="container-copy">
         <div class="container2">
             <h1 class="copy">
-                "Grandi Risparmi in Arrivo! Vendi come Compri.
-                Scopri le Offerte Irripetibili su Abbigliamento, Accessori e Altro!"
+                "Sono in arrivo grandi risparmi! Acquista e vendi con facilità. Scopri offerte imperdibili su abbigliamento, accessori e tanto altro!"
                 <div class="btn-copy">
                     <button class="btn2"></button>
                     <button class="btn3"></button>
