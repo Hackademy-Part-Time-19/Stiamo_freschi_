@@ -12,8 +12,7 @@
         @auth
             <div class="txt-img">
                 <h1>Bentornato {{ auth()->user()->name }}</h1>
-                <button class="btn-txt-img"><a href="{{ route('announcement.create') }}"
-                        style="text-decoration: none; color:white;">
+                <button class="btn-txt-img "><a href="{{ route('announcement.create') }}" class="txt-a">
                         Inserisci il tuo annuncio</a>
                 </button>
             </div>
@@ -43,11 +42,11 @@
     <div class="containerD">
         <div class="row">
             <div class="col-sm-6 mb-3 mb-sm-0">
-                <div class="card-body">
+                <div class="card-body box">
                 </div>
             </div>
             <div class="col-sm-6">
-                <div class="card-body2 ">
+                <div class="card-body2 box">
                 </div>
             </div>
         </div>

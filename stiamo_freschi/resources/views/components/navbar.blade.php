@@ -123,16 +123,28 @@
                 <img src="\img\logo.presto.scontornato.2.png" alt="logo" class="img-logo">
             </div>
         </a>
-
-        <div class="container-fluid">
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" style="margin-top: 13px; height:35px" type="search"
-                    placeholder="Cerca il tuo annuncio" aria-label="Search">
-                <button class="btn btn-outline-secondary btn-search"
-                    style="color: white; background-color: #081F37;height:35px;" type="submit">Cerca</button>
-            </form>
-        </div>
-
+        @auth
+            <div class="container-fluid">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" style="margin-top: 13px; height:35px" type="search"
+                        placeholder="Cerca il tuo annuncio" aria-label="Search">
+                    <button class="btn btn-outline-secondary btn-search"
+                        style="color: white; background-color: #081F37;height:35px;" type="submit">Cerca</button>
+                </form>
+            </div>
+            <div class="btn-ann" onclick="scrollFunction()" id="scrollToTopBtn">
+                <a href="{{ route('announcement.create') }}"><button class="btn-desk2">Inserisci articolo</button></a>
+            </div>
+        @else
+            <div class="container-fluid">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" style="margin-top: 13px; height:35px" type="search"
+                        placeholder="Cerca il tuo annuncio" aria-label="Search">
+                    <button class="btn btn-outline-secondary btn-search"
+                        style="color: white; background-color: #081F37;height:35px;" type="submit">Cerca</button>
+                </form>
+            </div>
+        @endauth
         @guest
             <div class="div-btn-desk">
                 <a href="/login"><button class="btn-desk2">ACCEDI</button></a>
@@ -145,7 +157,7 @@
                             {{ auth()->user()->name }}</span></button></a>
                 <form action="/logout" method="post">
                     @csrf
-                    <button class="btn-desk2">LOGOUT</button>
+                    <button class="btn-desk2 logout">LOGOUT</button>
                 </form>
             </div>
         @endauth
