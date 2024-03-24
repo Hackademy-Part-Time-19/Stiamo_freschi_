@@ -258,8 +258,10 @@ nav.desktop {
 .div-btn-desk {
     background-color: none;
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
+    z-index: 2001;
+    width: 20%;
 }
 
 .btn-desk {
@@ -269,6 +271,7 @@ nav.desktop {
     margin-right: 20px;
     align-items: center;
 }
+
 
 
 .btn-desk2 {
