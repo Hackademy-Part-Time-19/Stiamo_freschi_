@@ -42,7 +42,7 @@
                 </div>
             </li>
         </ul>
-        <ul class="section1">
+        <ul class="section1 border">
             <li class="li-foot">
                 <h4>CONTATTACI</h4>
                 <div class="section2">
