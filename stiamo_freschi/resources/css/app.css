@@ -336,13 +336,14 @@ a {
 }
 
 .ContainerCard {
-    width: 97%;
+    width: 100%;
     min-height: 100vh;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: none;
+    padding-bottom: 30px;
 }
 
 
@@ -350,10 +351,11 @@ a {
 #containerColCard {
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     background-color: none;
     width: 350px;
     margin-left: 5px;
+    background-color: none;
 }
 
 .carousel-control-prev-icon {
