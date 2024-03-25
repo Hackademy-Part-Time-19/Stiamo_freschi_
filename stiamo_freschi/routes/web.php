@@ -24,3 +24,4 @@ route::resource('categories', CategoryController::class);
 Route::get('/create',[PageController::class,  'announcementCreate'])->name('announcement.create')->middleware('auth');
 Route::get('/category/{id}', [AnnouncementController::class, 'indexByCategory'])->name('announcement.category');
 
+Route::get('/test', [PageController::class, 'test'])->name('test');

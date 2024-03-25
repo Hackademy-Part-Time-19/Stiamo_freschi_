@@ -24,6 +24,11 @@ class PageController extends Controller
     {
 
         return view('Announcements-create', ['categories' => Category::all()]);
-    }   
+    }
+    
+    public function test()
+    {
+        return view('dashboard-revisore');
+    }
 }
 
