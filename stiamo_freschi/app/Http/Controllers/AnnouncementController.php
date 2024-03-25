@@ -13,9 +13,11 @@ class AnnouncementController extends Controller
         return view('search-bycategory', ['announcements' => Announcement::where('category_id', $id)->get()]);
     }
 
-    public function searchAnnouncements(request $request)
+    public function searchAnnouncements(Request $request)
     {
-        $announcements = Announcement::search($request->searched);
+        /*  dd($request->all());  */
+        $announcements = Announcement::search($request->searched)->get();
+      /*   dd($announcements); */
         $categories = Category::all();
         return view('homepage', compact('announcements', 'categories'));
     }

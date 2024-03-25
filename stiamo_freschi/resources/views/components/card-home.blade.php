@@ -9,7 +9,7 @@
                 alt="">
         </div>
         <div class="nomeUser">
-            <p>{{ $user }}</p>
+           <p>{{ $user }}</p>
         </div>
     </div>
     <div class="prezzoCard">
