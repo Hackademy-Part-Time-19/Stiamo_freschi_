@@ -44,11 +44,11 @@
         </div>
 
 
-        <div class="containerD">
+        <div class="containerD ">
             <div class="row">
-                <div class="col-sm-6 mb-3 mb-sm-0">
+                <div class="col-sm-6 mb-3 mb-sm-0 ">
 
-                    <div class="card-body">
+                    <div class="card-body box">
 
                     </div>
                 </div>

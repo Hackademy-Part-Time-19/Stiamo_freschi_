@@ -270,10 +270,11 @@ nav.desktop {
     align-items: center;
     z-index: 2001;
     width: 20%;
+    margin-right: 50px;
 }
 
 .icon-profile {
-    padding: 5px;
+    padding: 10px;
     width: 70px;
     height: 40px;
     border: none;
@@ -402,7 +403,7 @@ nav.desktop {
 .foot {
     height: max-content;
     background-color: #dbd8e3;
-    margin-top: 30px;
+
 }
 
 .div-foot {
