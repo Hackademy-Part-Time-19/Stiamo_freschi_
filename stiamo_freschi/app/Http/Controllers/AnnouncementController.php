@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
 
@@ -10,6 +11,13 @@ class AnnouncementController extends Controller
     public function indexByCategory($id)
     {
         return view('search-bycategory', ['announcements' => Announcement::where('category_id', $id)->get()]);
+    }
+
+    public function searchAnnouncements(request $request)
+    {
+        $announcements = Announcement::search($request->searched);
+        $categories = Category::all();
+        return view('homepage', compact('announcements', 'categories'));
     }
 
 
