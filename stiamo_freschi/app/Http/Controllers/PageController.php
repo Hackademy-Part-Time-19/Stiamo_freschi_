@@ -28,7 +28,7 @@ class PageController extends Controller
     
     public function test()
     {
-        return view('test');
+        return view('dashboard-revisore');
     }
 }
 
