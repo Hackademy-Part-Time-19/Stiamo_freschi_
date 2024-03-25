@@ -9,15 +9,19 @@
     width: 100%;
     padding: 0px;
     position: fixed;
-    z-index: 1000;
+    z-index: 1005;
     top: 0;
     left: 0;
     right: 0;
 }
 
+.div-container {
+    background: url("/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg");
+}
+
 .btn-ann {
     display: none;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     margin-right: 20px;
     width: 100px;
@@ -51,7 +55,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 1;
+    flex: 0.5;
     background-color: none;
 }
 
@@ -92,7 +96,7 @@
 .form-control {
     margin-top: 5px;
     height: 30px;
-    width: 50%;
+    width: 500px;
     background-color: none;
 }
 
@@ -112,7 +116,7 @@
     margin-top: 60px;
     width: 100%;
     height: 60vh;
-    background-image: url("/public/img/iug.png");
+    background: url("/public/img/iug.png");
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -133,15 +137,15 @@
     margin: 0px;
     height: 100%;
     background-color: none;
-    flex: 1;
+    flex: 3;
     width: 10px;
 }
 
 .d-flex {
-    width: 100%;
+    width: 900px;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .btn-search {
@@ -155,6 +159,7 @@
     justify-content: center;
     align-items: center;
     background-color: white;
+    background-color: transparent;
 }
 
 .btn-copy {
@@ -214,6 +219,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 40px;
+    background-color: transparent;
 }
 
 .box {
@@ -232,7 +238,8 @@
 }
 
 .logout:hover {
-    background-color: red !important;
+    color: red !important;
+
 }
 
 .card-body2 {
@@ -258,8 +265,24 @@ nav.desktop {
 .div-btn-desk {
     background-color: none;
     display: flex;
-    justify-content: end;
+    flex: 1;
+    justify-content: center;
     align-items: center;
+    z-index: 2001;
+    width: 20%;
+}
+
+.icon-profile {
+    padding: 5px;
+    width: 70px;
+    height: 40px;
+    border: none;
+    margin-top: 5px
+}
+
+.btn-log {
+    border: none;
+    background-color: transparent;
 }
 
 .btn-desk {
@@ -269,6 +292,7 @@ nav.desktop {
     margin-right: 20px;
     align-items: center;
 }
+
 
 
 .btn-desk2 {
@@ -392,6 +416,11 @@ nav.desktop {
     flex-direction: column;
     align-items: center;
     margin-top: 5vh;
+}
+
+.border {
+    border-left: solid 1px black !important;
+    height: 100%;
 }
 
 .section2 {

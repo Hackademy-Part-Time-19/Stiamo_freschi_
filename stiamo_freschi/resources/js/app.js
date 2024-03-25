@@ -12,17 +12,17 @@ const bannerCatElements = document.querySelectorAll('.banner-cat');
     bannerCatElements.forEach(function(element) {
         element.addEventListener('click', handleClick);
     });
-
-    window.onscroll = function() {scrollFunction()};
-
-
+    window.onscroll = function() {
+        scrollFunction();
+    };
+    
     function scrollFunction() {
         var scrollToTopBtn = document.getElementById("scrollToTopBtn");
-    
+        
         // Mostra il bottone quando si scende di una certa altezza dalla cima della pagina
         if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
-            scrollToTopBtn.style.display = "flex";
+            scrollToTopBtn.style.display = "flex"; // Mostra il bottone
         } else {
-            scrollToTopBtn.style.display = "none";
+            scrollToTopBtn.style.display = "none"; // Nascondi il bottone
         }
     }
