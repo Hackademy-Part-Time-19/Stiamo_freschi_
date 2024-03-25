@@ -125,8 +125,8 @@
         </a>
         @auth
             <div class="container-fluid">
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" style="margin-top: 13px; height:35px" type="search"
+                <form class="d-flex" role="search" action="{{route('announcements.search')}}" method="GET">
+                    <input name="searched" class="form-control me-2" style="margin-top: 13px; height:35px" type="search"
                         placeholder="Cerca il tuo annuncio" aria-label="Search">
                     <button class="btn btn-outline-secondary btn-search" style="" type="submit">Cerca</button>
                 </form>
