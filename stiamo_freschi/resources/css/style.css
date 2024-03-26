@@ -602,11 +602,16 @@ nav.desktop {
     padding-left: 0rem;
 }
 
+.li-aside:hover {
+    background-color: rgb(235, 198, 128);
+    color: orange;
+}
+
 .li-aside {
     width: 100%;
     list-style: none;
     padding-left: 20px;
-    margin-top: 10px;
+    padding-top: 10px;
     padding-bottom: 10px;
     border-bottom: solid 1px black;
 }
