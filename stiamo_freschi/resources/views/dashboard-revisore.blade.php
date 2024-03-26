@@ -177,16 +177,15 @@
 
                     </div>
                 </div>
-
             </div>
             <div style="flex: 1.3;position: fixed;right:20px; ">
                 <div style="padding-left:30px;">
                     <h1>Reading Now</h1>
                 </div>
-                <div style="display: flex; align items:center; justify-content:center">
+                <div class="dx-aside">
                     <div class="row" style="--bs-gutter-x: 0rem;" ;>
                         <div class="col-sm-4 mb-3 mb-sm-0 div-a-dash">
-                            <div class="card div-card-dash">
+                            <div class="card div-card-dash box">
                                 <div class="card-body  body-dash">
                                     <h5 class="card-title">Special title treatment</h5>
                                     <p class="card-text">With supporting text below as a natural lead-in to additional
@@ -196,8 +195,8 @@
                             </div>
                         </div>
                         <div class="col-sm-4 mb-3 mb-sm-0  div-a-dash">
-                            <div class="card div-card-dash">
-                                <div class="card-body body-dash">
+                            <div class="card div-card-dash ">
+                                <div class="card-body body-dash box">
                                     <h5 class="card-title">Special title treatment</h5>
                                     <p class="card-text">With supporting text below as a natural lead-in to additional
                                         content.

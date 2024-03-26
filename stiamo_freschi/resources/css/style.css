@@ -557,10 +557,12 @@ nav.desktop {
 .div-card-dash {
     height: 120px;
     width: 220px;
+    border-radius: 25px;
 }
 
 .div-a-dash {
-    margin: 30px
+    margin: 30px;
+    border-radius: 25px;
 }
 
 .aside-left {
@@ -581,6 +583,12 @@ nav.desktop {
     align-items: center;
 }
 
+.dx-aside {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
 .div-card {
     flex: 3;
     max-height: 60vh;
@@ -594,11 +602,16 @@ nav.desktop {
     padding-left: 0rem;
 }
 
+.li-aside:hover {
+    background-color: rgb(235, 198, 128);
+    color: orange;
+}
+
 .li-aside {
     width: 100%;
     list-style: none;
     padding-left: 20px;
-    margin-top: 10px;
+    padding-top: 10px;
     padding-bottom: 10px;
     border-bottom: solid 1px black;
 }
