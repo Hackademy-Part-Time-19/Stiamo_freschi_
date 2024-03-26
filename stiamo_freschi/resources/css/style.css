@@ -551,7 +551,8 @@ nav.desktop {
     height: 100%;
     background-color: white;
     display: flex;
-    padding: 0px
+    padding: 0px;
+    margin-right: 0px;
 }
 
 .div-card-dash {
@@ -561,8 +562,8 @@ nav.desktop {
 }
 
 .div-a-dash {
-    margin: 30px;
     border-radius: 25px;
+
 }
 
 .aside-left {
@@ -586,7 +587,9 @@ nav.desktop {
 .dx-aside {
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    margin-right: 0px;
+
 }
 
 .div-card {
@@ -595,6 +598,7 @@ nav.desktop {
     margin-top: 60px;
     display: flex;
     overflow-y: scroll;
+    margin-right: 0px;
 }
 
 .ul-aside {
@@ -614,6 +618,7 @@ nav.desktop {
     padding-top: 10px;
     padding-bottom: 10px;
     border-bottom: solid 1px black;
+    display: flex;
 }
 
 @media screen and (max-width:991px) {
