@@ -2,8 +2,7 @@
     <x-navbar />
     <div style="display: flex;">
 
-        <div style="flex:0.3;background-color:red;height:60vh;margin-top:60px">
-
+        <div class="aside-left">
             <ul>
                 <li>Dashboard</li>
                 <li>Catalogs</li>
@@ -13,7 +12,7 @@
                 <li>Basket</li>
             </ul>
         </div>
-        <div style="flex: 2;background-color:blueviolet;margin-top:60px;display:flex">
+        <div class="div-card">
             <div style="flex: 2">
                 <h1>Good day, artem</h1>
                 <p>we are collecting articoles for you </p>
@@ -163,28 +162,23 @@
                 <h1>Reading Now</h1>
                 <div style="display: flex; align items:center; justify-content:center">
                     <div class="row" style="--bs-gutter-x: 0rem;" ;>
-                        <div class="col-sm-4 mb-3 mb-sm-0" style="margin: 10px">
-                            <div class="card" style="height: 120px; width:220px">
-                                <div class="card-body"
-                                    style="margin: 0; width:100%;height:100%;background-color:white;display:block">
+                        <div class="col-sm-4 mb-3 mb-sm-0 div-a-dash">
+                            <div class="card div-card-dash">
+                                <div class="card-body  body-dash">
                                     <h5 class="card-title">Special title treatment</h5>
-
-                                    <p class="card-text">With supporting text below as a natural lead-in to additional
-                                        content.</p>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 mb-3 mb-sm-0 " style="margin: 10px">
-                            <div class="card" style="height: 120px; width:220px">
-                                <div class="card-body"
-                                    style="margin: 0; width:100%;height:100%;background-color:white;display:block">
-                                    <h5 class="card-title">Special title treatment</h5>
-
                                     <p class="card-text">With supporting text below as a natural lead-in to additional
                                         content.
                                     </p>
-
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 mb-3 mb-sm-0  div-a-dash">
+                            <div class="card div-card-dash">
+                                <div class="card-body body-dash">
+                                    <h5 class="card-title">Special title treatment</h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional
+                                        content.
+                                    </p>
                                 </div>
                             </div>
                         </div>

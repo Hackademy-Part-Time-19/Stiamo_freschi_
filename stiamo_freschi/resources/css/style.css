@@ -292,7 +292,7 @@
     flex-direction: column;
     padding-bottom: 40px;
     padding-right: 20px;
-    
+
 }
 
 .card-body2 h4 {
@@ -545,6 +545,37 @@ nav.desktop {
     margin-left: 10px;
 }
 
+.body-dash {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    padding: 0px
+}
+
+.div-card-dash {
+    height: 120px;
+    width: 220px;
+}
+
+.div-a-dash {
+    margin: 30px
+}
+
+.aside-left {
+    flex: 0.3;
+    background-color: red;
+    height: 60vh;
+    margin-top: 60px
+}
+
+.div-card {
+    flex: 3;
+    background-color: blueviolet;
+    margin-top: 60px;
+    display: flex
+}
 
 
 
