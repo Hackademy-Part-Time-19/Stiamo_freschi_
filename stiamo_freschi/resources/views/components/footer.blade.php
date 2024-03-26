@@ -6,7 +6,7 @@
                 <div class="section2">
                     <ul class="ul-foot">
                         <li class="li-foot"><a href="" class="a-foot">Chi siamo</a></li>
-                        <li class="li-foot"><a href="" class="a-foot">Lavora con noi</a></li>
+                        <li class="li-foot"><a href="{{route('become.revisor')}}" class="a-foot">Diventa Revisore</a></li>
                         <li class="li-foot"><a href=""class="a-foot">Sostenibilità</a></li>
                         <li class="li-foot"><a href=""class="a-foot">Stampa</a></li>
                         <li class="li-foot"><a href=""class="a-foot">Pubblicità</a></li>
