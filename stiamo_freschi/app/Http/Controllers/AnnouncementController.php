@@ -15,7 +15,7 @@ class AnnouncementController extends Controller
 
     public function searchAnnouncements(Request $request)
     {
-        /*  dd($request->all());  */
+         /* dd($request->all());  */
         $announcements = Announcement::search($request->searched)->get();
       /*   dd($announcements); */
         $categories = Category::all();
