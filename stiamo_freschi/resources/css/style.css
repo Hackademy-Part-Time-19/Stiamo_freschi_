@@ -229,7 +229,8 @@
 }
 
 .containerD {
-    height: 350px;
+    min-height: 350px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -242,14 +243,33 @@
 }
 
 .card-body {
-
-    background-color: rgba(8, 31, 55, 1);
+    /* background-color: rgba(8, 31, 55, 1); */
+    background-image: url('/public/img/pexels-rdne-stock-project-7309322.jpg');
+    background-size: cover;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     margin: 40px;
-    height: 350px;
-    width: 500px;
+    margin-left: 60px;
+    height: 370px;
+    width: 600px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    color: white;
+    border-radius: 10px;
+    flex-direction: column;
+
+}
+
+.card-body p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.card-body h4 {
+    font-size: 23px;
+    font-weight: 600;
 }
 
 .logout:hover {
@@ -259,12 +279,26 @@
 
 .card-body2 {
     background-color: rgba(217, 217, 217, 1);
+    background-image: url('/public/img/pexels-marek-levak-2265488.jpg');
+    background-size: cover;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px;
-    height: 350px;
-    width: 500px;
+    justify-content: end;
+    align-items: end;
+    margin-right: 40px;
+    margin-top: 40px;
+    height: 370px;
+    width: 600px;
+    border-radius: 10px;
+    flex-direction: column;
+    padding-bottom: 40px;
+    padding-right: 20px;
+    
+}
+
+.card-body2 h4 {
+    font-size: 23px;
+    font-weight: 600;
+
 }
 
 

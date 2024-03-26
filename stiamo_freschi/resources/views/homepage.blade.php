@@ -46,17 +46,18 @@
 
         <div class="containerD ">
             <div class="row">
-                <div class="col-sm-6 mb-3 mb-sm-0 ">
+                <div  class="col-12 col-xl-6 col-l-6 col-md-12 mb-3 mb-sm-0 ">
 
                     <div class="card-body box">
-
+                        <h4>Cambia il futuro del tuo spazio con tesori d'usato:</h4>
+                        <p>scopri la bellezza dei ritrovamenti nel nostro vasto assortimento!</p>
                     </div>
                 </div>
 
                 <div class="col-sm-6">
 
-                    <div class="card-body " style="background-color: rgba(217, 217, 217, 1)">
-
+                    <div class="card-body2 box">
+                        <h4>Tutti gli annunci sono revisionati dal <br> nostro team di esperti.</h4>
                     </div>
 
                 </div>
