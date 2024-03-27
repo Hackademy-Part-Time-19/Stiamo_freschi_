@@ -546,10 +546,15 @@ nav.desktop {
 }
 
 .aside-left {
+    background-color: #dbd8e388;
     flex: 0.3;
-    height: 60vh;
+    width: 200px;
     margin-top: 60px;
-    border-right: 1px solid black;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    top: 0px;
+    display: flex;
 }
 
 
@@ -558,7 +563,8 @@ nav.desktop {
 .div-card {
     margin-top: 60px;
     flex: 3;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     margin-right: 0px;
@@ -576,8 +582,8 @@ nav.desktop {
 }
 
 .li-aside:hover {
-    background-color: rgb(235, 198, 128);
-    color: orange;
+    background-color: #00B58F;
+    color: #081F37;
 }
 
 .li-aside {
@@ -594,6 +600,7 @@ nav.desktop {
     height: 80%;
     width: 80%;
     margin-top: 40px;
+    margin-left: 150px;
 }
 
 .card-dash2 {
@@ -620,10 +627,44 @@ nav.desktop {
 }
 
 .inserzione {
-    background-color: #133f6f;
+    background-color: #dbd8e3;
     height: 90px;
     width: 100%;
     display: flex;
+}
+
+.btn4 {
+    background-color: transparent;
+    width: 90%;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+}
+
+.true:hover {
+    background-color: green;
+}
+
+.false:hover {
+    background-color: red;
+}
+
+.div-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div_container_btn {
+    position: absolute;
+    bottom: 20px;
+    right: 180px;
+
+}
+
+.btn_btn {
+    margin: 40px;
+    width: 150px;
 }
 
 @media screen and (max-width:991px) {
