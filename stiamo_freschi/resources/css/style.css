@@ -593,7 +593,7 @@ nav.desktop {
 .card-dash {
     height: 80%;
     width: 80%;
-
+    margin-top: 40px;
 }
 
 .card-dash2 {
@@ -604,9 +604,9 @@ nav.desktop {
 }
 
 .img-size {
-    height: 400px;
+    height: 550px;
     /* Imposta l'altezza desiderata */
-    width: 100%;
+    width: 400px;
 }
 
 
@@ -621,8 +621,9 @@ nav.desktop {
 
 .inserzione {
     background-color: #133f6f;
-    height: 100px;
+    height: 90px;
     width: 100%;
+    display: flex;
 }
 
 @media screen and (max-width:991px) {
