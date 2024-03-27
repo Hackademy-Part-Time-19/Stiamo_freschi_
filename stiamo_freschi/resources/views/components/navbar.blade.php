@@ -198,6 +198,15 @@
                     <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton">
                         <li><a class="dropdown-item" href="#">Dashboard</a></li>
                         <li><a class="dropdown-item" href="#">Assistenza</a></li>
+                        @if (Auth::check())
+                            @if (Auth::user()->is_revisor)
+                                <li><a class="dropdown-item" href="{{ route('revisor.index') }}">Zona revisore :
+                                        {{ App\Models\Announcement::toBeRevisionedCount() }}</a></li>
+                            @endif
+                        @endif
+                        @if (!Auth::user()->is_revisor)
+                            <li><a class="dropdown-item" href="{{ route('become.revisor') }}">Diventa revisore
+                        @endif
                         <li><a class="dropdown-item btn-log" href="#">
                                 <form action="/logout" method="post">
                                     @csrf
