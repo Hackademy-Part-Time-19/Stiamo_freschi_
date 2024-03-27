@@ -17,13 +17,20 @@ class BecomeRevisor extends Mailable
     /**
      * Create a new message instance.
      */
-     
+
+
     public $user;
 
     public function __construct(User $user)
     {
         $this->user = $user;
+        
     }
+    
+
+    /* public function build() {
+        return $this->from('presto.it@noreply.com')->view('mail.become_revisor');
+    } */
 
     /**
      * Get the message envelope.
@@ -31,34 +38,38 @@ class BecomeRevisor extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
+            from: 'presto.it@noreply.com',
             subject: 'Diventa Revisore',
+            
         );
     }
 
 
-    public function build() {
-        return $this->from('presto.it@noreply.com')->view('mail.become_revisor');
-    }
+ 
     /**
      * Get the message content definition.
      */
-/*     public function content(): Content
+
+
+
+     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            
+            view: 'mail.become_revisor',
         );
     }
 
-    /**
+   /**
      * Get the attachments for the message.
      *
      * @return array<int, \Illuminate\Mail\Mailables\Attachment>
      */
-    
-  /*   public function attachments(): array
+   
+     public function attachments(): array
     {
         return [];
-    } */
+    } 
     
 }
  
