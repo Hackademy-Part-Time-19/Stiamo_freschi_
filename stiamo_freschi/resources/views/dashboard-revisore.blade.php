@@ -17,6 +17,11 @@
                     <li>My articles</li>
                 </div>
                 <div class="li-aside">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-person" viewBox="0 0 16 16" style="margin-right: 10px">
+                        <path
+                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+                    </svg>
                     <li>Profile</li>
                 </div>
                 <div class="li-aside">
@@ -25,204 +30,44 @@
             </ul>
         </div>
         <div class="div-card">
-            <div style="width:70%">
-                <div class="pad">
-                    <h1>Good day, artem</h1>
-                    <p>we are collecting articoles for you </p>
-                </div>
-                <div class="pad">
-                    <h2> New Articles </h2>
-                    <div class="card-aside">
-                        <div class="row" style="--bs-gutter-x: 0rem;">
-
-                            <div class="cardLayout box col-sm-4" style="margin: 10px">
-                                <div class="imgCard">
-                                    <img src="https://images1.vinted.net/t/02_0126f_7UxTSDC7QPA9b5SwtpjvXi9K/f800/1710953115.jpeg?s=2b251215e7d94314a9ffa97432a4b9413faa19e3"
-                                        alt="">
-                                </div>
-                                <div class="userCard">
-                                    <div class="imageUser">
-                                        <img src="https://banner2.cleanpng.com/20180508/toe/kisspng-user-profile-computer-icons-clip-art-5af1ac8cee74c6.8111281615257877889767.jpg"
-                                            alt="">
-                                    </div>
-                                    <div class="nomeUser">
-                                        <p> Giovanna{{-- {{ $user }} --}}</p>
-                                    </div>
-                                </div>
-                                <div class="prezzoCard">
-                                    <h4>Borsa{{-- {{ $title }} --}}</h4>
-                                    <p>10 {{-- {{} $price }} --}} €</p>
-                                    <h6>Donna{{-- $category --}}</h6>
-                                </div>
-
-                                <div class="descrizioneCard">
-                                    <p>Descrizione {{-- $description --}}</p>
-
-                                </div>
-                                <div class="Areabutton">
-
-                                    <button class="btnCardLayout"><a style="color: white"
-                                            href="{{-- route('announcement.show', ['announcement' => $announcement]) --}}">Vai
-                                            al
-                                            dettaglio</a></button>
-                                </div>
+            <div>
+                <h3>Bentornato</h3>
+            </div>
+            <div class="card-dash">
+                <div class="card-daash2">
+                    <div id="carouselExample" class="carousel slide" style="width: 100%;height:100%">
+                        <div class="carousel-inner" style="width: 100%;height:100%">
+                            <div class="carousel-item active">
+                                <img src="https://images1.vinted.net/t/01_00c4d_ibKrDo5AVXpgGHcrrAVUxZwh/f800/1711030911.jpeg?s=162684a97acb85e57eac3596398af8bbcb25c46e"
+                                    class=" img-size d-block " alt="...">
                             </div>
-                            <div class="cardLayout box col-sm-4" style="margin: 10px">
-                                <div class="imgCard">
-                                    <img src="https://images1.vinted.net/t/02_0126f_7UxTSDC7QPA9b5SwtpjvXi9K/f800/1710953115.jpeg?s=2b251215e7d94314a9ffa97432a4b9413faa19e3"
-                                        alt="">
-                                </div>
-                                <div class="userCard">
-                                    <div class="imageUser">
-                                        <img src="https://banner2.cleanpng.com/20180508/toe/kisspng-user-profile-computer-icons-clip-art-5af1ac8cee74c6.8111281615257877889767.jpg"
-                                            alt="">
-                                    </div>
-                                    <div class="nomeUser">
-                                        <p> Giovanna{{-- {{ $user }} --}}</p>
-                                    </div>
-                                </div>
-                                <div class="prezzoCard">
-                                    <h4>Borsa{{-- {{ $title }} --}}</h4>
-                                    <p>10 {{-- {{} $price }} --}} €</p>
-                                    <h6>Donna{{-- $category --}}</h6>
-                                </div>
-
-                                <div class="descrizioneCard">
-                                    <p>Descrizione {{-- $description --}}</p>
-
-                                </div>
-
-                                <div class="Areabutton">
-
-                                    <button class="btnCardLayout"><a style="color: white"
-                                            href="{{-- route('announcement.show', ['announcement' => $announcement]) --}}">Vai
-                                            al
-                                            dettaglio</a></button>
-                                </div>
-
-
+                            <div class="carousel-item">
+                                <img src="https://images1.vinted.net/t/01_00c4d_ibKrDo5AVXpgGHcrrAVUxZwh/f800/1711030911.jpeg?s=162684a97acb85e57eac3596398af8bbcb25c46e"
+                                    class="img-size d-block  " alt="...">
                             </div>
-
-                            <div class="cardLayout box col-sm-4" style="margin: 10px">
-                                <div class="imgCard">
-                                    <img src="https://images1.vinted.net/t/02_0126f_7UxTSDC7QPA9b5SwtpjvXi9K/f800/1710953115.jpeg?s=2b251215e7d94314a9ffa97432a4b9413faa19e3"
-                                        alt="">
-                                </div>
-                                <div class="userCard">
-                                    <div class="imageUser">
-                                        <img src="https://banner2.cleanpng.com/20180508/toe/kisspng-user-profile-computer-icons-clip-art-5af1ac8cee74c6.8111281615257877889767.jpg"
-                                            alt="">
-                                    </div>
-                                    <div class="nomeUser">
-                                        <p> Giovanna{{-- {{ $user }} --}}</p>
-                                    </div>
-                                </div>
-                                <div class="prezzoCard">
-                                    <h4>Borsa{{-- {{ $title }} --}}</h4>
-                                    <p>10 {{-- {{} $price }} --}} €</p>
-                                    <h6>Donna{{-- $category --}}</h6>
-                                </div>
-
-                                <div class="descrizioneCard">
-                                    <p>Descrizione {{-- $description --}}</p>
-
-                                </div>
-
-                                <div class="Areabutton">
-
-                                    <button class="btnCardLayout"><a style="color: white"
-                                            href="{{-- route('announcement.show', ['announcement' => $announcement]) --}}">Vai
-                                            al
-                                            dettaglio</a></button>
-                                </div>
-
-
-                            </div>
-                            <div class="cardLayout box col-sm-4" style="margin: 10px">
-                                <div class="imgCard">
-                                    <img src="https://images1.vinted.net/t/02_0126f_7UxTSDC7QPA9b5SwtpjvXi9K/f800/1710953115.jpeg?s=2b251215e7d94314a9ffa97432a4b9413faa19e3"
-                                        alt="">
-                                </div>
-                                <div class="userCard">
-                                    <div class="imageUser">
-                                        <img src="https://banner2.cleanpng.com/20180508/toe/kisspng-user-profile-computer-icons-clip-art-5af1ac8cee74c6.8111281615257877889767.jpg"
-                                            alt="">
-                                    </div>
-                                    <div class="nomeUser">
-                                        <p> Giovanna{{-- {{ $user }} --}}</p>
-                                    </div>
-                                </div>
-                                <div class="prezzoCard">
-                                    <h4>Borsa{{-- {{ $title }} --}}</h4>
-                                    <p>10 {{-- {{} $price }} --}} €</p>
-                                    <h6>Donna{{-- $category --}}</h6>
-                                </div>
-
-                                <div class="descrizioneCard">
-                                    <p>Descrizione {{-- $description --}}</p>
-
-                                </div>
-
-                                <div class="Areabutton">
-
-                                    <button class="btnCardLayout"><a style="color: white"
-                                            href="{{-- route('announcement.show', ['announcement' => $announcement]) --}}">Vai
-                                            al
-                                            dettaglio</a></button>
-                                </div>
-
-
+                            <div class="carousel-item">
+                                <img src="https://images1.vinted.net/t/01_00c4d_ibKrDo5AVXpgGHcrrAVUxZwh/f800/1711030911.jpeg?s=162684a97acb85e57eac3596398af8bbcb25c46e"
+                                    class="img-size d-block " alt="...">
                             </div>
                         </div>
-
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
                 </div>
-            </div>
-            <div style="flex: 1;position: relative;right:20px; ">
-                
-                <div class="dx-aside " style="margin-top: 30px">
-                    <div class="row" style="background-color:yellow;padding-top:80px;position: fixed;" >
-                        <div style="padding-left:30px;">
-                            <h1>Reading Now</h1>
-                        </div>
-                        <div class="row row-cols-1 row-cols-md-2 g-4" style="margin-top: 30px">
-                            <div class="col-sm-3">
-                              <div class="card div-card-dash">
-                               
-                                <div class="card-body body-dash"  >
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="card div-card-dash">
-                                 
-                                  <div class="card-body body-dash"  >
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col-sm-3">
-                                <div class="card div-card-dash">
-                                 
-                                  <div class="card-body body-dash"  >
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col-sm-3">
-                                <div class="card div-card-dash">
-                                 
-                                  <div class="card-body body-dash"  >
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                  </div>
-                                </div>
-                              </div>
-                          </div>
+                <div style="flex:3">
+                    <div class="div-descr" style="">
+                        <h1>{{-- $announcement->title --}}</h1>
+                        <h2>Prezzo : {{-- $announcement->price --}} € </h2>
+                        <p>Descrizione : {{-- $announcement->description --}}</p>
+                        <p>Categoria : {{-- $announcement->category->name --}}</p>
                     </div>
 
 
@@ -230,6 +75,7 @@
                 
 
             </div>
+
         </div>
     </div>
 </x-layout>

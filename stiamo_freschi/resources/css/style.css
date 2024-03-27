@@ -545,26 +545,6 @@ nav.desktop {
     margin-left: 10px;
 }
 
-.body-dash {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    display: flex;
-    padding: 0px
-}
-
-.div-card-dash {
-    height: 120px;
-    width: 220px;
-    border-radius: 25px;
-}
-
-.div-a-dash {
-    margin: 30px;
-    border-radius: 25px;
-}
-
 .aside-left {
     flex: 0.3;
     height: 60vh;
@@ -572,29 +552,22 @@ nav.desktop {
     border-right: 1px solid black;
 }
 
-.pad {
-    padding: 50px;
-}
 
-.card-aside {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-}
 
-.dx-aside {
-    display: flex;
-    align-items: center;
-    justify-content: center
-}
 
 .div-card {
-    flex: 3;
-    max-height: 60vh;
     margin-top: 60px;
+    flex: 3;
+    height: 60vh;
     display: flex;
-    overflow-y: scroll;
+    flex-direction: column;
+    margin-right: 0px;
+    background-image: url("/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
 }
 
 .ul-aside {
@@ -614,6 +587,35 @@ nav.desktop {
     padding-top: 10px;
     padding-bottom: 10px;
     border-bottom: solid 1px black;
+    display: flex;
+}
+
+.card-dash {
+    height: 80%;
+    width: 90%;
+    display: flex;
+}
+
+.card-dash2 {
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-size {
+    height: 400px;
+    /* Imposta l'altezza desiderata */
+    width: 100%;
+}
+
+.carousel-item {}
+
+.div-descr {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px
 }
 
 @media screen and (max-width:991px) {
