@@ -558,7 +558,7 @@ nav.desktop {
 .div-card {
     margin-top: 60px;
     flex: 3;
-    height: 60vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     margin-right: 0px;
@@ -592,12 +592,13 @@ nav.desktop {
 
 .card-dash {
     height: 80%;
-    width: 90%;
-    display: flex;
+    width: 80%;
+
 }
 
 .card-dash2 {
     flex: 2;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -608,7 +609,7 @@ nav.desktop {
     width: 100%;
 }
 
-.carousel-item {}
+
 
 .div-descr {
     justify-content: center;
@@ -616,6 +617,12 @@ nav.desktop {
     display: flex;
     flex-direction: column;
     margin-top: 40px
+}
+
+.inserzione {
+    background-color: #133f6f;
+    height: 100px;
+    width: 100%;
 }
 
 @media screen and (max-width:991px) {
