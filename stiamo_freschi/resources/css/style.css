@@ -596,6 +596,10 @@ nav.desktop {
     display: flex;
 }
 
+.liMargin {
+    margin-left: 20px
+}
+
 .card-dash {
     height: 80%;
     width: 80%;
@@ -608,6 +612,7 @@ nav.desktop {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #dbd8e388;
 }
 
 .img-size {
@@ -623,26 +628,35 @@ nav.desktop {
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin-top: 40px
+    margin-top: 40px;
+
 }
 
 .inserzione {
     background-color: #dbd8e3;
-    height: 90px;
+    height: 60px;
     width: 100%;
     display: flex;
 }
 
 .btn4 {
     background-color: transparent;
-    width: 90%;
-    height: 50px;
+    width: max-content;
+    height: max-content;
     border: none;
     border-radius: 20px;
 }
 
 .true:hover {
     background-color: green;
+}
+
+.true svg:hover {
+    fill: #081F37;
+}
+
+.false svg:hover {
+    fill: #081F37;
 }
 
 .false:hover {
@@ -659,13 +673,43 @@ nav.desktop {
     position: absolute;
     bottom: 20px;
     right: 180px;
-
+    display: flex;
 }
 
 .btn_btn {
     margin: 40px;
     width: 150px;
+    background-color: transparent;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/*
+.btn_btn svg:hover {
+    fill: #081F37;
+}*/
+
+
+.trueBorder {
+    border: 1px solid green;
+    color: green;
+}
+
+.trueBorder:hover {
+    color: #081F37;
+}
+
+.falseBorder {
+    border: 1px solid red;
+    color: red;
+}
+
+.falseBorder:hover {
+    color: #081F37;
+}
+
 
 @media screen and (max-width:991px) {
     .banner {
