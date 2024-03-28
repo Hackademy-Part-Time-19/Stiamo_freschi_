@@ -111,10 +111,10 @@
                     </div>
                     <div style="flex:3">
                         <div class="div-descr">
-                            <h6>User:</h6>
-                            <h1>{{-- $announcement->title --}}</h1>
-                            <h2>Prezzo : {{-- $announcement->price - € --}}</h2>
-                            <p>Descrizione : {{-- $announcement->description --}}</p>
+                            <h6>User: {{$announcement_to_check->user->name}}</h6>
+                            <h1>{{$announcement_to_check->title}}</h1>
+                            <h2>Prezzo : {{$announcement_to_check->price}}</h2>
+                            <h6>Descrizione : {{$announcement_to_check->description}}</p>
                         </div>
                         <div class="div_container_btn">
                             <button class="btn_btn true">
