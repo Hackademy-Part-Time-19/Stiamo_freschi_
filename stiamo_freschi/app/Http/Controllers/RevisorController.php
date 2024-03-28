@@ -18,7 +18,7 @@ class RevisorController extends Controller
     
     public function index (){
         $announcement_to_check = Announcement::where('is_accepted', null)->first();
-        return view('revisore-test', compact('announcement_to_check'));
+        return view('dashboard-revisore', compact('announcement_to_check'));
     }
 
     public function acceptAnnouncement(Announcement $announcement){

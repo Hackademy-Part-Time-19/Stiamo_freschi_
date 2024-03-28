@@ -546,10 +546,15 @@ nav.desktop {
 }
 
 .aside-left {
+    background-color: #dbd8e388;
     flex: 0.3;
-    height: 60vh;
+    width: 200px;
     margin-top: 60px;
-    border-right: 1px solid black;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    top: 0px;
+    display: flex;
 }
 
 
@@ -558,7 +563,8 @@ nav.desktop {
 .div-card {
     margin-top: 60px;
     flex: 3;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     margin-right: 0px;
@@ -576,8 +582,8 @@ nav.desktop {
 }
 
 .li-aside:hover {
-    background-color: rgb(235, 198, 128);
-    color: orange;
+    background-color: #00B58F;
+    color: #081F37;
 }
 
 .li-aside {
@@ -590,10 +596,15 @@ nav.desktop {
     display: flex;
 }
 
+.liMargin {
+    margin-left: 20px
+}
+
 .card-dash {
     height: 80%;
     width: 80%;
-
+    margin-top: 40px;
+    margin-left: 150px;
 }
 
 .card-dash2 {
@@ -601,12 +612,13 @@ nav.desktop {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #dbd8e388;
 }
 
 .img-size {
-    height: 400px;
+    height: 550px;
     /* Imposta l'altezza desiderata */
-    width: 100%;
+    width: 400px;
 }
 
 
@@ -616,14 +628,88 @@ nav.desktop {
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin-top: 40px
+    margin-top: 40px;
+
 }
 
 .inserzione {
-    background-color: #133f6f;
-    height: 100px;
+    background-color: #dbd8e3;
+    height: 60px;
     width: 100%;
+    display: flex;
 }
+
+.btn4 {
+    background-color: transparent;
+    width: max-content;
+    height: max-content;
+    border: none;
+    border-radius: 20px;
+}
+
+.true:hover {
+    background-color: green;
+}
+
+.true svg:hover {
+    fill: #081F37;
+}
+
+.false svg:hover {
+    fill: #081F37;
+}
+
+.false:hover {
+    background-color: red;
+}
+
+.div-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div_container_btn {
+    position: absolute;
+    bottom: 20px;
+    right: 180px;
+    display: flex;
+}
+
+.btn_btn {
+    margin: 40px;
+    width: 150px;
+    background-color: transparent;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+.btn_btn svg:hover {
+    fill: #081F37;
+}*/
+
+
+.trueBorder {
+    border: 1px solid green;
+    color: green;
+}
+
+.trueBorder:hover {
+    color: #081F37;
+}
+
+.falseBorder {
+    border: 1px solid red;
+    color: red;
+}
+
+.falseBorder:hover {
+    color: #081F37;
+}
+
 
 @media screen and (max-width:991px) {
     .banner {

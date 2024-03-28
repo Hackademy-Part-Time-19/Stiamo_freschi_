@@ -26,3 +26,4 @@ const bannerCatElements = document.querySelectorAll('.banner-cat');
             scrollToTopBtn.style.display = "none"; // Nascondi il bottone
         }
     }
+
