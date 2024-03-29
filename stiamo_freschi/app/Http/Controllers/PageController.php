@@ -14,7 +14,7 @@ class PageController extends Controller
     public function home()
     {
         $categories = Category::all();
-        $announcements = Announcement::orderBy('created_at', 'desc')->get();
+        $announcements = Announcement::orderBy('created_at', 'desc')->where('is_accepted', true)->get();
         return view('homepage', compact('categories', 'announcements'));
     }
 
