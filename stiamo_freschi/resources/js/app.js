@@ -26,4 +26,21 @@ const bannerCatElements = document.querySelectorAll('.banner-cat');
             scrollToTopBtn.style.display = "none"; // Nascondi il bottone
         }
     }
+    document.getElementById('close').onclick=function () {
+        document.getElementById('pop').style.display ='none'
+    }
+    document.getElementById('pop').onclick=function () {
+        document.getElementById('pop').style.display='none'
+    }
+window.onscroll=function () {
+    scrollPop()
+}
+    function scrollPop() {
+        var scrollTop = document.getElementById('pop');
 
+        if (window.pageYOffset>1000) {
+            scrollTop.style.display='block'
+        } else {
+            scrollTop.style.display='none'
+        }
+    }
