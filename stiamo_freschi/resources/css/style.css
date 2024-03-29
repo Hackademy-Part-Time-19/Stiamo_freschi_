@@ -557,6 +557,21 @@ nav.desktop {
     display: flex;
 }
 
+.div-cons {
+    margin: 30px;
+    margin-top: 70px;
+    margin-right: 0px;
+    margin-bottom: 50px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    min-height: 87.3vh;
+    height: auto;
+    box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.3);
+}
 
 
 
