@@ -585,7 +585,7 @@ nav.desktop {
     display: flex;
     flex-direction: column;
     margin-right: 0px;
-    background-image: url("/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg");
+    background-image: url('/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
