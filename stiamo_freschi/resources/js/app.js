@@ -33,8 +33,6 @@ const bannerCatElements = document.querySelectorAll('.banner-cat');
     document.getElementById('pop').onclick=function () {
         document.getElementById('pop').style.display='none'
     }
-
-    
     function scrollPop() {
         var scrollTop = document.getElementById('pop');
 
