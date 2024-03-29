@@ -59,11 +59,13 @@
         </div>
         <div class="div-card">
             <div>
-                <h1 style="text-align:center;margin-top:30px">Bentornato {{Auth::user()->name}}</h1>
-                <h3 style="text-align:center">Hai <span style="font-weight:bold;color:#00B58F;">{{ App\Models\Announcement::toBeRevisionedCount() }}</span> annunci da revisionare!</h3>
-                
+                <h1 style="text-align:center;margin-top:30px">Bentornato {{ Auth::user()->name }}</h1>
+                <h3 style="text-align:center">Hai <span
+                        style="font-weight:bold;color:#00B58F;">{{ App\Models\Announcement::toBeRevisionedCount() }}</span>
+                    annunci da revisionare!</h3>
+
             </div>
-            <x-session-success/>
+            <x-session-success />
             <div class="card-dash">
                 <div class="inserzione">
                     <div
@@ -75,34 +77,34 @@
                                 method="post">
                                 @csrf
                                 @method ('PATCH')
-                            <button class="btn4 true" style="flex:0.5; margin:10px" onclick="">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="green"
-                                    class="bi bi-check2" viewBox="0 0 16 16">
-                                    <path
-                                        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
-                                </svg>
-                            </button>
+                                <button class="btn4 true" style="flex:0.5; margin:10px" onclick="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="green"
+                                        class="bi bi-check2" viewBox="0 0 16 16">
+                                        <path
+                                            d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
+                                    </svg>
+                                </button>
                             </form>
                             <form
-                            action="{{ route('revisor.reject_announcement', ['announcement' => $announcement_to_check]) }}"
-                            method="post">
-                            @csrf
-                            @method ('PATCH')
-                            <button class="btn4 false" style="flex:0.5;margin:10px" onclick="">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" fill="red"
-                                    class="bi bi-x-lg" viewBox="0 0 16 16">
-                                    <path
-                                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
-                                </svg>
-                            </button>
+                                action="{{ route('revisor.reject_announcement', ['announcement' => $announcement_to_check]) }}"
+                                method="post">
+                                @csrf
+                                @method ('PATCH')
+                                <button class="btn4 false" style="flex:0.5;margin:10px" onclick="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" fill="red"
+                                        class="bi bi-x-lg" viewBox="0 0 16 16">
+                                        <path
+                                            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                                    </svg>
+                                </button>
                             </form>
                         </div>
                         <div style="flex:1;margin:10px; border-right:1px solid black;">
-                            <h3 style="padding: 0px;font-size:25px">Annuncio: {{ $announcement_to_check->title}}</h3>
+                            <h3 style="padding: 0px;font-size:25px">Annuncio: {{ $announcement_to_check->title }}</h3>
                         </div>
                         <div style="flex:1;margin:10px; margin-right:50px;">
                             <div style="margin-left: 20px">
-                                <h3 style="font-size:25px;">{{ $announcement_to_check->category->name}}</h3>
+                                <h3 style="font-size:25px;">{{ $announcement_to_check->category->name }}</h3>
                             </div>
                         </div>
                     </div>

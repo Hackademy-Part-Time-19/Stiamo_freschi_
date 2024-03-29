@@ -108,7 +108,7 @@
 .form-control {
     margin-top: 5px;
     height: 30px;
-    width: 500px;
+    width: 70%;
     background-color: none;
 }
 
@@ -579,11 +579,13 @@ nav.desktop {
 .ul-aside {
     width: 100%;
     padding-left: 0rem;
+    padding-right: 10px;
 }
 
 .li-aside:hover {
     background-color: #00B58F;
     color: #081F37;
+    transition: 0.7s;
 }
 
 .li-aside {
@@ -710,6 +712,11 @@ nav.desktop {
     color: #081F37;
 }
 
+.btn-revisore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 @media screen and (max-width:991px) {
     .banner {
