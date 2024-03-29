@@ -565,10 +565,10 @@ nav.desktop {
     border-bottom-left-radius: 25px;
     display: flex;
     justify-content: end;
-    align-items: center;
+    align-items: start;
     background-color: #d9d9d99a;
-    min-height: 60vh;
     height: auto;
+    height: 100%;
     box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.3);
     border-bottom-right-radius: 25px;
     border-top-right-radius: 25px;
