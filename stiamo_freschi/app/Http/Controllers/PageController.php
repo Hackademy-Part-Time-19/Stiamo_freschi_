@@ -22,7 +22,6 @@ class PageController extends Controller
 
     public function announcementCreate()
     {
-
         return view('Announcements-create', ['categories' => Category::all()]);
     }
     
