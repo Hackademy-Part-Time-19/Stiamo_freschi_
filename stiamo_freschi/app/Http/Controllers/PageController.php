@@ -29,5 +29,9 @@ class PageController extends Controller
     {
         return view('dashboard-revisore');
     }
+    public function passwordDimenticata()
+    {
+        return view('auth.passwords-email');
+    }
 }
 
