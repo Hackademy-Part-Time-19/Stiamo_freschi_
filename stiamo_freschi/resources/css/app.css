@@ -218,8 +218,6 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    justify-content: center;
-    align-items: center;
     color: black;
 }
 
@@ -228,7 +226,8 @@ a {
     height: auto;
     padding: 40px;
     background-color: #d9d9d9e0;
-    border-radius: 20px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
     margin-top: 70px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     margin-bottom: 50px;
@@ -467,12 +466,12 @@ a {
     color: black;
 }
 
-#dropdownMenuNavDesktop{
-    margin-bottom:5px;
-    
+#dropdownMenuNavDesktop {
+    margin-bottom: 5px;
+
 }
 
 
-#annuncioHome1{
+#annuncioHome1 {
     background-color: red;
 }
