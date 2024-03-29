@@ -222,9 +222,8 @@ a {
 }
 
 .div-modale {
-    min-height: 70vh;
+    min-height: 100%;
     width: 50%;
-    height: auto;
     padding: 40px;
     background-color: #d9d9d9e0;
     border-bottom-right-radius: 25px;
