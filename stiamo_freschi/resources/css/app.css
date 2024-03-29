@@ -214,7 +214,7 @@ a {
 .div-form {
     min-height: 100vh;
     height: auto;
-    background-image: url("/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg");
+    background-image: url('public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -223,14 +223,14 @@ a {
 
 .div-modale {
     min-height: 70vh;
+    width: 50%;
     height: auto;
     padding: 40px;
     background-color: #d9d9d9e0;
     border-bottom-right-radius: 25px;
     border-top-right-radius: 25px;
-    margin-top: 70px;
+    
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    margin-bottom: 50px;
 }
 
 .form3 {

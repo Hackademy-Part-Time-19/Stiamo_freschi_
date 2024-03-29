@@ -558,19 +558,21 @@ nav.desktop {
 }
 
 .div-cons {
-    margin: 30px;
-    margin-top: 70px;
-    margin-right: 0px;
-    margin-bottom: 50px;
+    width: 950px;
+    margin-top: 100px;
+    padding: 0px;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
-    background-color: blue;
-    min-height: 87.3vh;
+    background-color: #d9d9d99a;
+    min-height: 60vh;
     height: auto;
     box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.3);
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    margin-bottom: 50px;
 }
 
 
