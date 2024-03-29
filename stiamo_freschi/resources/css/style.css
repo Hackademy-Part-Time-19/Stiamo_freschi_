@@ -19,6 +19,43 @@
     background: url("/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg");
 }
 
+.popup {
+    width: 600px;
+    height: 400px;
+    background: blue;
+    margin: 40px auto;
+    padding: 10px 20px;
+    position: relative;
+    color: #333;
+}
+
+.overlay {
+    z-index: 3000;
+    position: fixed;
+    /* schermo intero*/
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    background: rgba(155, 154, 154, 0.7);
+    /* colore sfondo e opcità */
+    text-align: center;
+    display: none;
+    /*cambiaremo in display: none*/
+}
+
+#close {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    color: #fff;
+}
+
+#close:hover {
+    cursor: pointer;
+}
+
 .btn-ann {
     display: none;
     justify-content: flex-end;

@@ -63,6 +63,16 @@
                 </div>
             </div>
         </div>
+
+        <div class="overlay" id="pop" onclick="scrollPop">
+            <div class="popup">
+                <h2>Questo è un popup</h2>
+                <p>Potete utilizzarmi per inserire pubblicità</p>
+                <p>o per fare un annuncio</p>
+                <span id="close">X</span>
+            </div>
+        </div>
+
         {{-- @dd($announcements) --}}
 
         <div class="ContainerCard">
