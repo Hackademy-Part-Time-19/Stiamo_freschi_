@@ -1,5 +1,5 @@
 <div>
-    <div class="row div-fcorm" style=" justify-content: center !important;
+    <div class="row div-form" style=" justify-content: center !important;
     align-items: center !important;">
         <div class="col-4 div-cons">
 

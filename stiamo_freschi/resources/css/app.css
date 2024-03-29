@@ -212,9 +212,9 @@ a {
 }
 
 .div-form {
-    min-height: 100vh;
+    min-height: 90vh;
     height: auto;
-    background-image: url('public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg');
+    background-image: url('/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
