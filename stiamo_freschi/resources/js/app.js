@@ -14,6 +14,7 @@ const bannerCatElements = document.querySelectorAll('.banner-cat');
     });
     window.onscroll = function() {
         scrollFunction();
+        scrollPop()
     };
     
     function scrollFunction() {
@@ -32,14 +33,14 @@ const bannerCatElements = document.querySelectorAll('.banner-cat');
     document.getElementById('pop').onclick=function () {
         document.getElementById('pop').style.display='none'
     }
-window.onscroll=function () {
-    scrollPop()
-}
+
+    
     function scrollPop() {
         var scrollTop = document.getElementById('pop');
 
         if (window.pageYOffset>1000) {
             scrollTop.style.display='block'
+            scrollTop.style.transition='all 5s'
         } else {
             scrollTop.style.display='none'
         }
