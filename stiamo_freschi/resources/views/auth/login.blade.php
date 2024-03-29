@@ -1,14 +1,20 @@
 <x-layout>
     <x-navbar />
+      
     <div class="containerPadreLogin">
         <div id="containerFormLogin" class="col-12 col-xl-4">
+            @if (session('status'))
+            <div class="alert alert-success">
+                {{ session('status') }}
+            </div>
+        @endif
             <h1 class="accediLogin">Accedi</h1>
             <form action="./login" method="POST">
                 @csrf
                 <div class="mb-4">
                     <label for="exampleInputEmail1" class="form-label">Inserisci la tua email</label>
                     <input type="email" name="email" class="form-control" id="exampleInputEmail1"
-                        style="width: 100%; height:40px;" aria-describedby="emailHelp" value="{{old('email')}}">
+                        style="width: 100%; height:40px;" aria-describedby="emailHelp" value="{{ old('email') }}">
                 </div>
 
                 <div class="mb-4">
@@ -30,9 +36,9 @@
                 <h6 class="oppureLogin">OPPURE</h6>
                 <button type="button" class="BtnRegistratiLogin"><a href="{{ route('register') }}"
                         style="color: white">Registrati</a></button>
-                    <a href="/forgot-password">
-                        <p class="pswDimenticata" style="color: black">Hai dimenticato la password?</p>
-                    </a>
+                <a href="/forgot-password">
+                    <p class="pswDimenticata" style="color: black">Hai dimenticato la password?</p>
+                </a>
             </form>
         </div>
     </div>

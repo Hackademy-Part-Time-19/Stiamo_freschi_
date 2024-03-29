@@ -2,6 +2,11 @@
     <x-navbar />
     <div class="containerPadreLogin">
         <div id="containerFormLogin" class="col-12 col-xl-4" style="min-height:300px">
+            @if (session('status'))
+            <div class="alert alert-success">
+                {{ session('status') }}
+            </div>
+        @endif
             <h1 class="accediLogin">Recupera la tua password</h1>
             <form action="/forgot-password" method="POST">
                 @csrf
