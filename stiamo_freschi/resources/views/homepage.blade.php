@@ -66,11 +66,12 @@
         @guest
             <div id="pop" class="overlay">
                 <div class="popup">
-                    <h2>Non hai fatto ancora l'accesso?</h2>
-                    <p>Registrati ora per ricevere notifiche esclusive sui nostri prodotti, accedere in anteprima alle
+                    <h2 style="margin: 20px">Non hai fatto ancora l'accesso?</h2>
+                    <p style="margin: 20px">Registrati ora per ricevere notifiche esclusive sui nostri prodotti, accedere in
+                        anteprima alle
                         offerte speciali e non perderti mai più le ultime novità!</p>
-                    <span id="close">X</span>
-                    <button href="/register">Iscriviti ora</button>
+                    <span id="close" style="color: black; font-size:1.5rem">X</span>
+                    <button href="/register" class="btn_popup btn-desk2">Iscriviti ora</button>
                 </div>
             </div>
         @endguest
