@@ -63,16 +63,17 @@
                 </div>
             </div>
         </div>
-
-        <div class="overlay" id="pop" onclick="scrollPop">
-            <div class="popup">
-                <h2>Questo è un popup</h2>
-                <p>Potete utilizzarmi per inserire pubblicità</p>
-                <p>o per fare un annuncio</p>
-                <span id="close">X</span>
+        @guest
+            <div id="pop" class="overlay">
+                <div class="popup">
+                    <h2>Non hai fatto ancora l'accesso?</h2>
+                    <p>Registrati ora per ricevere notifiche esclusive sui nostri prodotti, accedere in anteprima alle
+                        offerte speciali e non perderti mai più le ultime novità!</p>
+                    <span id="close">X</span>
+                    <button href="/register">Iscriviti ora</button>
+                </div>
             </div>
-        </div>
-
+        @endguest
         {{-- @dd($announcements) --}}
 
         <div class="ContainerCard">

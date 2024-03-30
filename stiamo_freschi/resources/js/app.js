@@ -1,22 +1,16 @@
 import './bootstrap';
 import "bootstrap";
 
-const bannerCatElements = document.querySelectorAll('.banner-cat');
-
-    // Definisci la funzione handleClick
-    function handleClick() {
-        console.log("Div cliccato!");
-    }
-
-    // Aggiungi l'evento onclick a ciascun elemento con classe "banner-cat"
-    bannerCatElements.forEach(function(element) {
-        element.addEventListener('click', handleClick);
-    });
+document.addEventListener('DOMContentLoaded', function() {
+    // Il tuo codice JavaScript qui
+    var isLoggedIn = false;
     window.onscroll = function() {
-        scrollFunction();
         scrollPop()
+        scrollFunction();
+        
     };
-    
+ 
+
     function scrollFunction() {
         var scrollToTopBtn = document.getElementById("scrollToTopBtn");
         
@@ -27,19 +21,37 @@ const bannerCatElements = document.querySelectorAll('.banner-cat');
             scrollToTopBtn.style.display = "none"; // Nascondi il bottone
         }
     }
-    document.getElementById('close').onclick=function () {
-        document.getElementById('pop').style.display ='none'
-    }
-    document.getElementById('pop').onclick=function () {
-        document.getElementById('pop').style.display='none'
-    }
-    function scrollPop() {
-        var scrollTop = document.getElementById('pop');
+ 
+   
+    var closeBtn = document.getElementById('close');
+    var popElement = document.getElementById('pop');
 
-        if (window.pageYOffset>1000) {
-            scrollTop.style.display='block'
-            scrollTop.style.transition='all 5s'
-        } else {
-            scrollTop.style.display='none'
+    if (closeBtn && popElement) {
+        closeBtn.onclick = function () {
+            popElement.style.display ='none';
+        }
+
+        popElement.onclick = function () {
+            popElement.style.display='none';
         }
     }
+  
+
+    function scrollPop() {
+     
+        if (!isLoggedIn) {
+            var popElement = document.getElementById('pop');
+            if (popElement) {
+                popElement.style.display = 'block';
+            }
+        }
+        var scrollTop = document.getElementById('pop');
+
+        if (window.pageYOffset > 1000 && scrollTop) {
+            scrollTop.style.display = 'block';
+            scrollTop.style.transition = 'all 5s';
+        } else if (scrollTop) {
+            scrollTop.style.display = 'none';
+        }
+    }
+});
