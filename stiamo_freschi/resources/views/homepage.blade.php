@@ -71,7 +71,7 @@
                         anteprima alle
                         offerte speciali e non perderti mai più le ultime novità!</p>
                     <span id="close" style="color: black; font-size:1.5rem">X</span>
-                    <button href="/register" class="btn_popup btn-desk2">Iscriviti ora</button>
+                    <a href="/register"><button class="btn_popup btn-desk2">Iscriviti ora</button></a>
                 </div>
             </div>
         @endguest
