@@ -352,6 +352,7 @@ a {
     margin-top: 0px;
     align-content: center;
     justify-content: center;
+    flex: 3;
 }
 
 

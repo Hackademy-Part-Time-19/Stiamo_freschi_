@@ -484,7 +484,12 @@ nav.desktop {
     justify-content: start;
     align-items: start;
     margin-top: 30px;
-    margin-bottom: 50vh;
+    margin-bottom: 60vh;
+}
+
+.back-by-cat {
+    background: url("/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg");
+    background-repeat: none;
 }
 
 .banner {

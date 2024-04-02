@@ -7,7 +7,7 @@
         style="display: flex; align-items:end;justify-content:center;color:white;padding-bottom:30px">
         <h1>Ecco i risultati trovati per la categoria : {{-- {{$announcements->category->name}} --}} </h1>
     </div>
-    <div style="display: flex">
+    <div class="back-by-cat" style="display: flex">
         <div class="banner2" style="margin-top: 40px">
             @foreach ($categories as $category)
                 <div id="myButton" class="banner-cat"><a
