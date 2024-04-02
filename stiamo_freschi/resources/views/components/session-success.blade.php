@@ -1,7 +1,5 @@
-<div>
-    @if (session()->has('message'))
-        <div class="alert alert-success">
-            {{ session('message') }}
-        </div>
-    @endif
-</div>
+@if (session('message'))
+<div class="alert alert-success" role="alert">
+    {{ session('message') }}
+  </div>
+@endif

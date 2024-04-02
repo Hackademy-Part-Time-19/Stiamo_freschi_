@@ -22,7 +22,7 @@ route::resource('announcement', AnnouncementController::class);
 route::resource('categories', CategoryController::class);
 
 
-Route::get('/create',[PageController::class,  'announcementCreate'])->name('announcement.create')->middleware('auth');
+Route::get('/create', [PageController::class, 'announcementCreate'])->name('announcement.create')->middleware('auth');
 Route::get('/category/{id}', [AnnouncementController::class, 'indexByCategory'])->name('announcement.category');
 
 Route::get('/test', [PageController::class, 'test'])->name('test');
@@ -46,3 +46,5 @@ Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->
 
 // Rendi utente revisore
 Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
+Route::get('/passwordDimenticata', [PageController::class, 'passwordDimenticata']);

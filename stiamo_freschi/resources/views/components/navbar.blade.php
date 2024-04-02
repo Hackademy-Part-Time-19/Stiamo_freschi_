@@ -148,8 +148,9 @@
 
         @if (Auth::check())
             @if (Auth::user()->is_revisor)
-                <a href="{{ route('revisor.index') }}"><button>Zona revisore</button>
-                    <span>{{ App\Models\Announcement::toBeRevisionedCount() }} </span>
+                <a href="{{ route('revisor.index') }}" class="btn-revisore"><button class="btn-desk2">Zona
+                        revisore <span style="margin-left:4px;"
+                            class="badge bg-white text-danger ">{{ App\Models\Announcement::toBeRevisionedCount() }}</span></button>
                 </a>
             @endif
         @endif
@@ -197,10 +198,12 @@
                     </button>
                     <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton">
                         <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                        <li><a class="dropdown-item" href="#">Saldo</a></li>
                         <li><a class="dropdown-item" href="#">Assistenza</a></li>
                         @if (Auth::check())
                             @if (Auth::user()->is_revisor)
-                                <li><a class="dropdown-item" href="{{ route('revisor.index') }}">Zona revisore :
+                                <li><a class="dropdown-item" href="{{ route('revisor.index') }}">Zona
+                                        revisore :
                                         {{ App\Models\Announcement::toBeRevisionedCount() }}</a></li>
                             @endif
                         @endif

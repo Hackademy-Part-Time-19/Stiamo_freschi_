@@ -22,8 +22,7 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-
-
+    flex-direction: column;
 }
 
 #containerFormLogin {
@@ -200,38 +199,43 @@ a {
 .nomeUser {
     background-color: none;
     display: flex;
-    align-items: center;
-    justify-content: start;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
     margin-left: 7px;
     padding-top: 10px;
     height: 80%;
     width: 100px;
     color: rgba(0, 0, 0, 0.783);
-
+    margin-bottom: 10px;
 
 }
 
+.nomeUser p {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0px;
+}
+
 .div-form {
-    min-height: 100vh;
+    min-height: 90vh;
     height: auto;
-    background-image: url("/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg");
+    background-image: url('/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    justify-content: center;
-    align-items: center;
     color: black;
 }
 
 .div-modale {
-    min-height: 70vh;
-    height: auto;
+    width: 50%;
+    height: 100%;
     padding: 40px;
     background-color: #d9d9d9e0;
-    border-radius: 20px;
-    margin-top: 70px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    margin-bottom: 50px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.3);
+
 }
 
 .form3 {
@@ -304,7 +308,7 @@ a {
 
 
 .descrizioneCard p {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 500;
     margin-left: 10px;
     position: relative;
@@ -338,15 +342,16 @@ a {
     margin-top: 20px;
 }
 
-.ContainerCard {
+.ContainerCard1 {
     width: 100%;
     min-height: 100vh;
     height: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: none;
     padding-bottom: 30px;
+    margin-top: 0px;
+    align-content: center;
+    justify-content: center;
 }
 
 
@@ -396,10 +401,6 @@ a {
     background-color: none;
     display: flex;
     align-items: center;
-    background-image: url("/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding-top: 80px;
 
@@ -439,7 +440,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    padding-top: 150px;
+    padding-top: 50px;
     padding-left: 50px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -467,12 +468,12 @@ a {
     color: black;
 }
 
-#dropdownMenuNavDesktop{
-    margin-bottom:5px;
-    
+#dropdownMenuNavDesktop {
+    margin-bottom: 5px;
+
 }
 
 
-#annuncioHome1{
+#annuncioHome1 {
     background-color: red;
 }

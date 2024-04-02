@@ -19,6 +19,91 @@
     background: url("/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg");
 }
 
+.container-img-back {
+    background: url("/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg");
+}
+
+.popup {
+    width: 600px;
+    height: 400px;
+    background-color: #dbd8e3;
+    margin: 40px auto;
+    padding: 10px 20px;
+    position: relative;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_popup {
+    margin-top: 50px;
+    width: 90px;
+    height: 40px;
+}
+
+.overlay {
+    z-index: 3000;
+    position: fixed;
+    /* schermo intero*/
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    background: rgba(155, 154, 154, 0.7);
+    /* colore sfondo e opcità */
+    text-align: center;
+    display: none;
+    /*cambiaremo in display: none*/
+}
+
+#close {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    color: #fff;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Colonne automatiche adattive */
+    gap: 20px;
+    /* Spazio tra le immagini */
+}
+
+.num_ann {
+    font-weight: bold;
+}
+
+.div-btn-acq {
+    margin-top: 20px;
+    margin-left: 70px;
+}
+
+.btn-acq {
+    margin: 30px;
+    width: 200px;
+}
+
+.grid-item {
+    width: 100%;
+    /* Larghezza massima di ogni elemento */
+}
+
+.grid-item img {
+    width: 100%;
+    /* Riempimento completo dell'elemento padre */
+    height: auto;
+    /* Altezza automatica per mantenere le proporzioni */
+}
+
+#close:hover {
+    cursor: pointer;
+}
+
 .btn-ann {
     display: none;
     justify-content: flex-end;
@@ -108,7 +193,7 @@
 .form-control {
     margin-top: 5px;
     height: 30px;
-    width: 500px;
+    width: 70%;
     background-color: none;
 }
 
@@ -358,7 +443,11 @@ nav.desktop {
     width: auto;
     white-space: nowrap;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 
 .sbm {
     display: flex;
@@ -372,6 +461,19 @@ nav.desktop {
     align-items: center;
     justify-content: center;
     height: 50px;
+}
+
+.banner2 {
+    flex: 1;
+    position: sticky;
+    left: 0px;
+    top: 60px;
+    display: block;
+    max-height: 50px;
+    justify-content: start;
+    align-items: start;
+    margin-top: 30px;
+    margin-bottom: 50vh;
 }
 
 .banner {
@@ -451,7 +553,6 @@ nav.desktop {
 .foot {
     height: max-content;
     background-color: #dbd8e3;
-
 }
 
 .div-foot {
@@ -557,6 +658,21 @@ nav.desktop {
     display: flex;
 }
 
+.div-cons {
+    width: 950px;
+    margin-top: 100px;
+    padding: 0px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    display: flex;
+    justify-content: end;
+    align-items: start;
+    background-color: #d9d9d99a;
+    box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.3);
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    margin-bottom: 50px;
+}
 
 
 
@@ -568,7 +684,7 @@ nav.desktop {
     display: flex;
     flex-direction: column;
     margin-right: 0px;
-    background-image: url("/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg");
+    background-image: url('/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -579,11 +695,13 @@ nav.desktop {
 .ul-aside {
     width: 100%;
     padding-left: 0rem;
+    padding-right: 10px;
 }
 
 .li-aside:hover {
     background-color: #00B58F;
     color: #081F37;
+    transition: 0.7s;
 }
 
 .li-aside {
@@ -710,6 +828,11 @@ nav.desktop {
     color: #081F37;
 }
 
+.btn-revisore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 @media screen and (max-width:991px) {
     .banner {
