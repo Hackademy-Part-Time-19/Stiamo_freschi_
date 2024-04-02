@@ -20,7 +20,7 @@
     </div>
 
     <div class="descrizioneCard">
-        <p>{{ $description }}</p>
+        <p>{{ Str::limit($description, 100) }}</p>
     </div>
 
     <div class="Areabutton">
