@@ -24,6 +24,7 @@
     background-attachment: fixed;
     flex-direction: column;
 }
+
 #containerFormLogin {
     min-height: 70vh;
     height: auto;
@@ -207,7 +208,7 @@ a {
     width: 100px;
     color: rgba(0, 0, 0, 0.783);
     margin-bottom: 10px;
-    
+
 }
 
 .nomeUser p {
@@ -234,7 +235,7 @@ a {
     border-bottom-right-radius: 25px;
     border-top-right-radius: 25px;
     box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.3);
-    
+
 }
 
 .form3 {
@@ -346,10 +347,10 @@ a {
     min-height: 100vh;
     height: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: none;
     padding-bottom: 30px;
+    margin-top: 0px;
+
 }
 
 
@@ -399,10 +400,6 @@ a {
     background-color: none;
     display: flex;
     align-items: center;
-    background-image: url("/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding-top: 80px;
 
@@ -442,7 +439,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    padding-top: 150px;
+    padding-top: 50px;
     padding-left: 50px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;

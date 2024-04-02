@@ -19,6 +19,10 @@
     background: url("/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg");
 }
 
+.container-img-back {
+    background: url("/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg");
+}
+
 .popup {
     width: 600px;
     height: 400px;
@@ -459,15 +463,17 @@ nav.desktop {
     height: 50px;
 }
 
-.banner {
-    position: fixed;
-    left: 0;
-    z-index: 1000;
+.banner2 {
+    flex: 1;
+    position: sticky;
+    left: 0px;
+    top: 60px;
     display: block;
-    height: 50px;
-    background-color: #dbd8e3b0;
-    align-items: center;
-    justify-content: center;
+    max-height: 50px;
+    justify-content: start;
+    align-items: start;
+    margin-top: 30px;
+    margin-bottom: 50vh;
 }
 
 .banner {
@@ -547,7 +553,6 @@ nav.desktop {
 .foot {
     height: max-content;
     background-color: #dbd8e3;
-
 }
 
 .div-foot {
