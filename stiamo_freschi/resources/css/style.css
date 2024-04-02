@@ -462,6 +462,17 @@ nav.desktop {
 .banner {
     position: fixed;
     left: 0;
+    z-index: 1000;
+    display: block;
+    height: 50px;
+    background-color: #dbd8e3b0;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner {
+    position: fixed;
+    left: 0;
     right: 0;
     z-index: 1000;
     display: flex;
