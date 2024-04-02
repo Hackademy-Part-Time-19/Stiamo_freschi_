@@ -21,6 +21,7 @@
 
 .container-img-back {
     background: url("/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg");
+    background-repeat: none;
 }
 
 .popup {
@@ -35,6 +36,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.ContainerCard {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    background-color: none;
+    padding-bottom: 30px;
+    margin-top: 0px;
 }
 
 .btn_popup {
