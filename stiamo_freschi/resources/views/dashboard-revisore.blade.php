@@ -60,145 +60,145 @@
         <div class="div-card">
             <div>
                 <h1 style="text-align:center;margin-top:30px">Bentornato {{ Auth::user()->name }}</h1>
-                <h3 style="text-align:center">Hai <span
-                        style="font-weight:bold;color:#00B58F;">{{ App\Models\Announcement::toBeRevisionedCount() }}</span>
+                <h3 style="text-align:center">Hai <span class="num_ann"
+                        id="num_ann">{{ App\Models\Announcement::toBeRevisionedCount() }}</span>
                     annunci da revisionare!</h3>
 
             </div>
             <x-session-success />
             {{-- @foreach ($announcement_to_check as $announcement_to_check) --}}
-                <div class="card-dash">
-                    <div class="inserzione">
-                        <div
-                            style="display: flex;  width: 80%;padding:5px;justify-content: center;
+            <div class="card-dash">
+                <div class="inserzione">
+                    <div
+                        style="display: flex;  width: 80%;padding:5px;justify-content: center;
                     align-items: center;">
-                            <div id="div_container_btn" style="display:flex; flex:0.5">
-                                <form
-                                    action="{{ route('revisor.accept_announcement', ['announcement' => $announcement_to_check]) }}"
-                                    method="post">
-                                    @csrf
-                                    @method ('PATCH')
-                                    <button class="btn4 true" style="flex:0.5; margin:10px" onclick="">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                                            fill="green" class="bi bi-check2" viewBox="0 0 16 16">
-                                            <path
-                                                d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
-                                        </svg>
-                                    </button>
-                                </form>
-                                <form
-                                    action="{{ route('revisor.reject_announcement', ['announcement' => $announcement_to_check]) }}"
-                                    method="post">
-                                    @csrf
-                                    @method ('PATCH')
-                                    <button class="btn4 false" style="flex:0.5;margin:10px" onclick="">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25"
-                                            fill="red" class="bi bi-x-lg" viewBox="0 0 16 16">
-                                            <path
-                                                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
-                                        </svg>
-                                    </button>
-                                </form>
-                            </div>
-                            <div style="flex:1;margin:10px; border-right:1px solid black;">
-                                <h3 style="padding: 0px;font-size:25px">Annuncio: {{ $announcement_to_check->title }}
-                                </h3>
-                            </div>
-                            <div style="flex:1;margin:10px; margin-right:50px;">
-                                <div style="margin-left: 20px">
-                                    <h3 style="font-size:25px;">{{ $announcement_to_check->category->name }}</h3>
-                                </div>
+                        <div id="div_container_btn" style="display:flex; flex:0.5">
+                            <form
+                                action="{{ route('revisor.accept_announcement', ['announcement' => $announcement_to_check]) }}"
+                                method="post">
+                                @csrf
+                                @method ('PATCH')
+                                <button class="btn4 true" style="flex:0.5; margin:10px" onclick="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="green"
+                                        class="bi bi-check2" viewBox="0 0 16 16">
+                                        <path
+                                            d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
+                                    </svg>
+                                </button>
+                            </form>
+                            <form
+                                action="{{ route('revisor.reject_announcement', ['announcement' => $announcement_to_check]) }}"
+                                method="post">
+                                @csrf
+                                @method ('PATCH')
+                                <button class="btn4 false" style="flex:0.5;margin:10px" onclick="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" fill="red"
+                                        class="bi bi-x-lg" viewBox="0 0 16 16">
+                                        <path
+                                            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                        <div style="flex:1;margin:10px; border-right:1px solid black;">
+                            <h3 style="padding: 0px;font-size:25px">Annuncio: {{ $announcement_to_check->title }}
+                            </h3>
+                        </div>
+                        <div style="flex:1;margin:10px; margin-right:50px;">
+                            <div style="margin-left: 20px">
+                                <h3 style="font-size:25px;">{{ $announcement_to_check->category->name }}</h3>
                             </div>
                         </div>
-                        <div class="div-btn">
-                            <button class="btn4" onclick="apriBox()">
-                                <div id="btn" style="display:block">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                        fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-                                    </svg>
+                    </div>
+                    <div class="div-btn">
+                        <button class="btn4" onclick="apriBox()">
+                            <div id="btn" style="display:block">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                </svg>
+                            </div>
+                            <div id="btn2" style="display:  none">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+
+                </div>
+                <div id="box-card" style="display: none; ">
+                    <div class="card-dash2">
+                        <div id="carouselExample" class="carousel slide" style="width: 100%;height:100%">
+                            <div class="carousel-inner" style="width: 100%;height:100%">
+                                <div class="carousel-item active">
+                                    <img src="https://images1.vinted.net/t/01_00c4d_ibKrDo5AVXpgGHcrrAVUxZwh/f800/1711030911.jpeg?s=162684a97acb85e57eac3596398af8bbcb25c46e"
+                                        class=" img-size d-block " alt="...">
                                 </div>
-                                <div id="btn2" style="display:  none">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                        fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
-                                    </svg>
+                                <div class="carousel-item">
+                                    <img src="https://images1.vinted.net/t/01_00c4d_ibKrDo5AVXpgGHcrrAVUxZwh/f800/1711030911.jpeg?s=162684a97acb85e57eac3596398af8bbcb25c46e"
+                                        class="img-size d-block  " alt="...">
                                 </div>
+                                <div class="carousel-item">
+                                    <img src="https://images1.vinted.net/t/01_00c4d_ibKrDo5AVXpgGHcrrAVUxZwh/f800/1711030911.jpeg?s=162684a97acb85e57eac3596398af8bbcb25c46e"
+                                        class="img-size d-block " alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
                             </button>
                         </div>
-
                     </div>
-                    <div id="box-card" style="display: none; ">
-                        <div class="card-dash2">
-                            <div id="carouselExample" class="carousel slide" style="width: 100%;height:100%">
-                                <div class="carousel-inner" style="width: 100%;height:100%">
-                                    <div class="carousel-item active">
-                                        <img src="https://images1.vinted.net/t/01_00c4d_ibKrDo5AVXpgGHcrrAVUxZwh/f800/1711030911.jpeg?s=162684a97acb85e57eac3596398af8bbcb25c46e"
-                                            class=" img-size d-block " alt="...">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="https://images1.vinted.net/t/01_00c4d_ibKrDo5AVXpgGHcrrAVUxZwh/f800/1711030911.jpeg?s=162684a97acb85e57eac3596398af8bbcb25c46e"
-                                            class="img-size d-block  " alt="...">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="https://images1.vinted.net/t/01_00c4d_ibKrDo5AVXpgGHcrrAVUxZwh/f800/1711030911.jpeg?s=162684a97acb85e57eac3596398af8bbcb25c46e"
-                                            class="img-size d-block " alt="...">
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button"
-                                    data-bs-target="#carouselExample" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button"
-                                    data-bs-target="#carouselExample" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
+                    <div style="flex:3; background-color: #dbd8e388;">
+                        <div class="div-descr">
+                            <h6>User: {{ $announcement_to_check->user->name }}</h6>
+                            <h1>{{ $announcement_to_check->title }}</h1>
+                            <h2>Prezzo : {{ $announcement_to_check->price }}</h2>
+                            <h6>Descrizione : {{ $announcement_to_check->description }}</p>
                         </div>
-                        <div style="flex:3; background-color: #dbd8e388;">
-                            <div class="div-descr">
-                                <h6>User: {{ $announcement_to_check->user->name }}</h6>
-                                <h1>{{ $announcement_to_check->title }}</h1>
-                                <h2>Prezzo : {{ $announcement_to_check->price }}</h2>
-                                <h6>Descrizione : {{ $announcement_to_check->description }}</p>
-                            </div>
-                            <div class="div_container_btn">
-                                <form
-                                    action="{{ route('revisor.accept_announcement', ['announcement' => $announcement_to_check]) }}"
-                                    method="post">
-                                    @csrf
-                                    @method ('PATCH')
-                                    <button class="btn_btn true trueBorder">
-                                        {{-- <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="green"
+                        <div class="div_container_btn">
+                            <form
+                                action="{{ route('revisor.accept_announcement', ['announcement' => $announcement_to_check]) }}"
+                                method="post">
+                                @csrf
+                                @method ('PATCH')
+                                <button class="btn_btn true trueBorder">
+                                    {{-- <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="green"
                                     class="bi bi-check2" viewBox="0 0 16 16">
                                     <path
                                         d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
                                 </svg> --}}
-                                        <h4>accetta</h4>
-                                    </button>
-                                </form>
-                                <form
-                                    action="{{ route('revisor.reject_announcement', ['announcement' => $announcement_to_check]) }}"
-                                    method="post">
-                                    @csrf
-                                    @method ('PATCH')
-                                    <button class="btn_btn false falseBorder">
-                                        {{-- <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" fill="red"
+                                    <h4>accetta</h4>
+                                </button>
+                            </form>
+                            <form
+                                action="{{ route('revisor.reject_announcement', ['announcement' => $announcement_to_check]) }}"
+                                method="post">
+                                @csrf
+                                @method ('PATCH')
+                                <button class="btn_btn false falseBorder">
+                                    {{-- <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" fill="red"
                                     class="bi bi-x-lg" viewBox="0 0 16 16">
                                     <path
                                         d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
                                 </svg> --}}
-                                        <h4>rifiuta</h4>
-                                    </button>
-                                </form>
-                            </div>
+                                    <h4>rifiuta</h4>
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
+            </div>
             {{-- @endforeach --}}
 
         </div>
@@ -224,6 +224,22 @@
                 apertura = false;
             }
         }
+        document.addEventListener('DOMContentLoaded', function() {
+            // Recupera l'elemento span con la classe num_ann
+            var numAnnSpan = document.getElementById('num_ann');
+
+            // Ottieni il conteggio dei annunci da revisionare
+            var numAnnCount = parseInt(numAnnSpan.textContent);
+
+            // Imposta il colore in base al conteggio
+            if (numAnnCount === 0) {
+                numAnnSpan.style.color = 'green';
+            } else if (numAnnCount > 0 && numAnnCount < 10) {
+                numAnnSpan.style.color = 'orange';
+            } else {
+                numAnnSpan.style.color = 'red';
+            }
+        });
     </script>
 
 </x-layout-revisore>

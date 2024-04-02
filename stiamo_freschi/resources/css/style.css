@@ -70,6 +70,12 @@
     /* Spazio tra le immagini */
 }
 
+.num_ann {
+    font-weight: bold;
+
+}
+
+
 .grid-item {
     width: 100%;
     /* Larghezza massima di ogni elemento */

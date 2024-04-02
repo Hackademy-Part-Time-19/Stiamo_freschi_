@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const gridContainer = document.getElementById("grid-container");
 
-    // Array di oggetti contenenti informazioni sull'immagine e il collegamento
+  /*  // Array di oggetti contenenti informazioni sull'immagine e il collegamento
     const images = [
         { src: '/img/pexels-photo-4397840.webp', alt: "Categoria 1", link: "categoria1.html" },
         { src: "categoria2.jpg", alt: "Categoria 2", link: "categoria2.html" },
@@ -82,5 +82,8 @@ document.addEventListener('DOMContentLoaded', function() {
         link.appendChild(img);
         gridItem.appendChild(link);
         gridContainer.appendChild(gridItem);
-    });
+    });*/
+
+ 
+   
 });
