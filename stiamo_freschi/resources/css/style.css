@@ -487,6 +487,11 @@ nav.desktop {
     margin-bottom: 50vh;
 }
 
+.back-by-cat {
+    background: url("/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg");
+    background-repeat: none;
+}
+
 .banner {
     position: fixed;
     left: 0;
