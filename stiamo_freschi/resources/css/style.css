@@ -72,9 +72,17 @@
 
 .num_ann {
     font-weight: bold;
-
 }
 
+.div-btn-acq {
+    margin-top: 20px;
+    margin-left: 70px;
+}
+
+.btn-acq {
+    margin: 30px;
+    width: 200px;
+}
 
 .grid-item {
     width: 100%;

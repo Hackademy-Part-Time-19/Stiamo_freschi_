@@ -198,6 +198,7 @@
                     </button>
                     <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton">
                         <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                        <li><a class="dropdown-item" href="#">Saldo</a></li>
                         <li><a class="dropdown-item" href="#">Assistenza</a></li>
                         @if (Auth::check())
                             @if (Auth::user()->is_revisor)
