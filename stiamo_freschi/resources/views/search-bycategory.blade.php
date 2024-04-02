@@ -24,7 +24,13 @@
 
 
     </div>
-
+    <div class="banner2">
+        @foreach ($categories as $category)
+            <div id="myButton" class="banner-cat"><a
+                    href="{{ route('announcement.category', ['id' => $category->id]) }}">{{ $category->name }}</a>
+            </div>
+        @endforeach
+    </div>
 
 
 
