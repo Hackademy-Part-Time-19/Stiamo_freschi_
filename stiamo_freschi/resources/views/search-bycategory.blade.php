@@ -12,7 +12,7 @@
         <div class="row">
             @foreach ($announcements as $announcement)
                 <div id="containerColCard" class="col-12 col-xl-3 col-lg-4 col-md-6 mt-5">
-                    <x-card-home :user="$announcement->user->name" :title="$announcement->title" :price="$announcement->price" :description="$announcement->description"
+                    <x-card-home :user="$announcement->user->name" :title="$announcement->title" :date="$announcement->updated_at->format('Y/m/d H:i:s')" :price="$announcement->price" :description="$announcement->description"
                         :category="$announcement->category->name" :announcement="$announcement">
                     </x-card-home>
                 </div>

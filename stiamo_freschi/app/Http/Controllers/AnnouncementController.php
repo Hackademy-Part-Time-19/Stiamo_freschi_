@@ -10,6 +10,7 @@ class AnnouncementController extends Controller
 {
     public function indexByCategory($id)
     {
+        
         return view('search-bycategory', ['announcements' => Announcement::where('category_id', $id)->where('is_accepted', true)->get()]);
     }
 
@@ -56,9 +57,10 @@ class AnnouncementController extends Controller
      */
     public function show(Announcement $announcement)
     {
+        $announcement_all = Announcement::all();
         
 
-        return view('announcement-show', ['announcement' => $announcement]);
+        return view('announcement-show', ['announcement' => $announcement, 'announcements_all' => $announcement_all]);
 
     }
 
