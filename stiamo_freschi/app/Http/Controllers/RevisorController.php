@@ -18,12 +18,8 @@ class RevisorController extends Controller
     
     public function index (){
         // voglio passare i primi 5 annunci
-
-        $announcement_to_check = Announcement::where('is_accepted', null)->orderBy('created_at', 'desc')->take(5)->get();
-
-
-        
-
+        /* $announcement_to_check = Announcement::where('is_accepted', null)->orderBy('created_at', 'desc')->take(5)->get(); */
+        $announcement_to_check = Announcement::where('is_accepted', null)->orderBy('created_at', 'desc')->first();
         return view('dashboard-revisore', compact('announcement_to_check'));
     }
 

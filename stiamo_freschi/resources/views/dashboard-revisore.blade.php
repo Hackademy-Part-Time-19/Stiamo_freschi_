@@ -66,7 +66,7 @@
 
             </div>
             <x-session-success />
-            @foreach ($announcement_to_check as $announcement_to_check)
+            {{-- @foreach ($announcement_to_check as $announcement_to_check) --}}
                 <div class="card-dash">
                     <div class="inserzione">
                         <div
@@ -199,7 +199,7 @@
                         </div>
                     </div>
                 </div>
-            @endforeach
+            {{-- @endforeach --}}
 
         </div>
     </div>
