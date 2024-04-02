@@ -342,7 +342,7 @@ a {
     margin-top: 20px;
 }
 
-.ContainerCard {
+.ContainerCard1 {
     width: 100%;
     min-height: 100vh;
     height: auto;
@@ -350,7 +350,8 @@ a {
     background-color: none;
     padding-bottom: 30px;
     margin-top: 0px;
-
+    align-content: center;
+    justify-content: center;
 }
 
 
