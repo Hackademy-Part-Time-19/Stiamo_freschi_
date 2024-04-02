@@ -62,6 +62,26 @@
     color: #fff;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Colonne automatiche adattive */
+    gap: 20px;
+    /* Spazio tra le immagini */
+}
+
+.grid-item {
+    width: 100%;
+    /* Larghezza massima di ogni elemento */
+}
+
+.grid-item img {
+    width: 100%;
+    /* Riempimento completo dell'elemento padre */
+    height: auto;
+    /* Altezza automatica per mantenere le proporzioni */
+}
+
 #close:hover {
     cursor: pointer;
 }

@@ -63,6 +63,11 @@
                 </div>
             </div>
         </div>
+
+        <div class="grid-container" id="grid-container">
+            <!-- Le immagini verranno caricate qui dinamicamente -->
+        </div>
+
         @guest
             <div id="pop" class="overlay">
                 <div class="popup">
