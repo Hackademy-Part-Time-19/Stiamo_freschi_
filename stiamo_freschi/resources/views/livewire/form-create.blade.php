@@ -6,9 +6,10 @@
 
             <div class="col-4 div-modale">
                 <h1 style="margin-bottom: 20px">Crea il tuo annuncio</h1>
+                
                 <div class="form3">
+                    <x-session-success />
                     <form wire:submit="store">
-                        <x-session-success />
                         <div class="mb-3">
                             <label for="title" class="form-label">Inserisci il titolo del tuo annuncio</label>
                             <input type="text" name="text" class="form-control" style="width: 100%; height:35px;"
