@@ -149,8 +149,8 @@
         @if (Auth::check())
             @if (Auth::user()->is_revisor)
                 <a href="{{ route('revisor.index') }}" class="btn-revisore"><button class="btn-desk2">Zona
-                        revisore</button>
-                    <span>{{ App\Models\Announcement::toBeRevisionedCount() }} </span>
+                        revisore <span style="margin-left:4px;"
+                            class="badge bg-white text-primary">{{ App\Models\Announcement::toBeRevisionedCount() }}</span></button>
                 </a>
             @endif
         @endif

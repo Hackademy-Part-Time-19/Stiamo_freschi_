@@ -9,7 +9,8 @@
                 alt="">
         </div>
         <div class="nomeUser">
-           <p>{{ $user }}</p>
+           <p style="font-size: 15px;color:black">{{ $user }}</p>
+           <p style="font-size: 11px">Data pubblicazione: {{$date}}</p>
         </div>
     </div>
     <div class="prezzoCard">
@@ -23,6 +24,7 @@
     </div>
 
     <div class="Areabutton">
+        
         <button class="btnCardLayout"><a style="color: white"
                 href="{{ route('announcement.show', ['announcement' => $announcement]) }}">Vai al
                 dettaglio</a></button>

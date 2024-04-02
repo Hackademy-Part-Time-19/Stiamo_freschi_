@@ -198,15 +198,22 @@ a {
 .nomeUser {
     background-color: none;
     display: flex;
-    align-items: center;
-    justify-content: start;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
     margin-left: 7px;
     padding-top: 10px;
     height: 80%;
     width: 100px;
     color: rgba(0, 0, 0, 0.783);
+    margin-bottom: 10px;
+    
+}
 
-
+.nomeUser p {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0px;
 }
 
 .div-form {
@@ -300,7 +307,7 @@ a {
 
 
 .descrizioneCard p {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 500;
     margin-left: 10px;
     position: relative;

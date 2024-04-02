@@ -405,7 +405,11 @@ nav.desktop {
     width: auto;
     white-space: nowrap;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 
 .sbm {
     display: flex;
