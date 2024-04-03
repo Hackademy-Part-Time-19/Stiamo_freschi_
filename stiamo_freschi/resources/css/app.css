@@ -473,8 +473,57 @@ a {
     margin-bottom: 5px;
 
 }
-
-
 #annuncioHome1 {
     background-color: red;
+}
+
+.ContainerModaleCookies{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modaleCookies{
+    background-color: none;
+    width: 100%;
+    height: 250px; 
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    text-align: center;
+}
+.modaleCookies p{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.modaleCookies h5{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.containerTextModale{
+    flex: 3;
+    background-color: #dbd8e3;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 20px;
+}
+.containerBtnCookies{
+    flex: 0.5;
+    background-color: #dbd8e3;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 50px;
+    padding-bottom: 15px;
+    gap: 15px;
+}
+.containerBtnCookies button{
+   width: 100px;
 }

@@ -10,16 +10,15 @@ class AnnouncementController extends Controller
 {
     public function indexByCategory($id)
     {
-        $categories= Category::all();
-        
-        return view('search-bycategory', ['announcements' => Announcement::where('category_id', $id)->where('is_accepted', true)->get(),'categories'=> $categories]);
+        $categories = Category::all();
+        return view('search-bycategory', ['announcements' => Announcement::where('category_id', $id)->where('is_accepted', true)->get(), 'categories' => $categories]);
     }
 
     public function searchAnnouncements(Request $request)
     {
-         /* dd($request->all());  */
+        /* dd($request->all());  */
         $announcements = Announcement::search($request->searched)->where('is_accepted', true)->get();
-      /*   dd($announcements); */
+        /*   dd($announcements); */
         $categories = Category::all();
         return view('homepage', compact('announcements', 'categories'));
     }
@@ -60,10 +59,7 @@ class AnnouncementController extends Controller
     {
         $categoryAnnouncements = $announcement->category->announcements;
         $categories = Category::all();
-        
-
         return view('announcement-show', ['announcement' => $announcement, 'categoryAnnouncements' => $categoryAnnouncements], compact('categories'));
-
     }
 
 
