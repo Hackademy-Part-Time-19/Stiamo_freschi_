@@ -35,16 +35,18 @@ Route::get('/ricerca/annuncio', [AnnouncementController::class, 'searchAnnouncem
 
 // index revisore
 Route::get('/revisor/home', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
-
 // Accetta annuncio
 Route::patch('/accetta/annuncio/{announcement}', [RevisorController::class, 'acceptAnnouncement'])->middleware('isRevisor')->name('revisor.accept_announcement');
 // Rifiuta annuncio
 Route::patch('/accetta/rifiuta/{announcement}', [RevisorController::class, 'rejectAnnouncement'])->middleware('isRevisor')->name('revisor.reject_announcement');
-
 // Richiedi di diventare revisore
 Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
-
 // Rendi utente revisore
 Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 
 Route::get('/passwordDimenticata', [PageController::class, 'passwordDimenticata']);
+
+// Accetta cookies
+Route::get('/accetta-cookies', [PageController::class, 'accettaCookies'])->name('accetta-cookies');
+// Rifiuta cookies
+Route::get('/rifiuta-cookies', [PageController::class, 'rifiutaCookies'])->name('rifiuta-cookies');
