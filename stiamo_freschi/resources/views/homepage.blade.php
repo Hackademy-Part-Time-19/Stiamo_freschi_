@@ -92,6 +92,7 @@
                                 ricerca.</p>
                         </div>
                     </div>
+                @endempty    
                 @endforelse
             </div>
         </div>
