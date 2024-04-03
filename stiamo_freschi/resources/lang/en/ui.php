@@ -14,4 +14,22 @@ return [
    'boxSx2'=>"discover the beauty of the finds in our vast assortment!",
    'boxDx1'=>"All ads are reviewed by",
    'boxDx2'=>"our team of experts.",
+   
+   //footer
+   'about'=>"About",
+   'Revisor'=>"Be revisor",
+   'Sustainability'=>"Sustainability",
+   'Print'=>'Print',
+   'Advertising'=>'Advertising',
+   'Discover'=>'Discover',
+   'Functionality'=>'Functionality',
+   'ArticleCheck'=>'Article Check',
+   'AppMobile'=>'App Mobile',
+   'News'=>'News',
+   'SupportPro'=>'Support PrestoPro',
+   'Assistance'=>'Assistance',
+   'CustomerService'=>'Customer service',
+   'Sell'=>'Sell',
+   'Buy'=>'Buy',
+   'Security'=>'Security and reliability'
 ];

@@ -5,40 +5,40 @@
                 <h4>PRESTO</h4>
                 <div class="section2">
                     <ul class="ul-foot">
-                        <li class="li-foot"><a href="" class="a-foot">Chi siamo</a></li>
-                        <li class="li-foot"><a href="{{ route('become.revisor') }}" class="a-foot">Diventa Revisore</a>
+                        <li class="li-foot"><a href="" class="a-foot">{{__('ui.about')}}</a></li>
+                        <li class="li-foot"><a href="{{ route('become.revisor') }}" class="a-foot">{{__('ui.Revisor')}}</a>
                         </li>
-                        <li class="li-foot"><a href=""class="a-foot">Sostenibilità</a></li>
-                        <li class="li-foot"><a href=""class="a-foot">Stampa</a></li>
-                        <li class="li-foot"><a href=""class="a-foot">Pubblicità</a></li>
+                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.Sustainability')}}</a></li>
+                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.Print')}}</a></li>
+                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.Advertising')}}</a></li>
                     </ul>
                 </div>
             </li>
         </ul>
         <ul class="section1">
             <li class="li-foot">
-                <h4>SCOPRI</h4>
+                <h4>{{__('ui.Discover')}}</h4>
                 <div class="section2">
                     <ul class="ul-foot">
-                        <li class="li-foot"><a href=""class="a-foot">Come funziona</a></li>
-                        <li class="li-foot"><a href=""class="a-foot">Verifica dell'articolo</a></li>
-                        <li class="li-foot"><a href=""class="a-foot">App mobili</a></li>
-                        <li class="li-foot"><a href=""class="a-foot">Notizie</a></li>
+                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.Functionality')}}</a></li>
+                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.ArticleCheck')}}</a></li>
+                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.AppMobile')}}</a></li>
+                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.News')}}</a></li>
                         <li class="li-foot"><a href=""class="a-foot">Presto Pro</a></li>
-                        <li class="li-foot"><a href=""class="a-foot">Guida Presto Pro</a></li>
+                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.SupportPro')}}</a></li>
                     </ul>
                 </div>
             </li>
         </ul>
         <ul class="section1">
             <li class="li-foot">
-                <h4>ASSISTENZA</h4>
+                <h4>{{__('ui.Assistance')}}</h4>
                 <div class="section2">
                     <ul class="ul-foot">
-                        <li class="li-foot"><a href=""class="a-foot">Centro assistenza</a></li>
-                        <li class="li-foot"><a href=""class="a-foot">Vendere</a></li>
-                        <li class="li-foot"><a href=""class="a-foot">Acquistare</a></li>
-                        <li class="li-foot"><a href=""class="a-foot">Sicurezza ed affidabilità</a></li>
+                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.CustomerService')}}</a></li>
+                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.Sell')}}</a></li>
+                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.Buy')}}</a></li>
+                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.Security')}}</a></li>
                     </ul>
                 </div>
             </li>
