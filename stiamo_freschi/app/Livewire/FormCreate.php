@@ -20,24 +20,28 @@ class FormCreate extends Component
 
 
     protected $rules = [
-        'title' => 'required|max:40',
+        'title' => 'required|min:4|max:40',
         'price' => 'required|numeric',
-        'description' => 'required|max:255',
+        'description' => 'required|min:10|max:255',
         'category_id' => 'required',
-        /*  'image' => 'required|image|max:1024', */
+        'images.*' => 'image|max:1024',
+        'temporary_images.*' => 'image|max:1024',
     ];
 
     protected $messages = [
         'title.required' => 'Il campo titolo è obbligatorio',
+        'title.min' => 'Il campo titolo deve contenere più di 4 caratteri',
         'title.max' => 'Il campo titolo deve essere lungo al massimo 40 caratteri',
         'price.required' => 'Il campo prezzo è obbligatorio',
         'price.numeric' => 'Il campo prezzo deve essere un numero',
         'description.required' => 'Il campo descrizione è obbligatorio',
+        'description.min' => 'Il campo descrizione deve contenere più di 10 caratteri',
         'description.max' => 'Il campo descrizione deve essere lungo al massimo 255 caratteri',
         'category_id.required' => 'Il campo categoria è obbligatorio',
-        /* 'image.required' => 'Il campo :attribute è obbligatorio',
-        'image.image' => 'Il campo :attribute deve essere un\'immagine',
-        'image.max' => 'Il campo :attribute deve essere lungo al massimo 1024 caratteri', */
+        'images.image' => 'I file caricati devono essere delle immagini',
+        'images.max' => 'I file caricati non devono superare 1 mb di grandezza',
+        'temporary_images.*.image' => 'I file caricati devono essere delle immagini',
+        'temporary_images.*.max' => 'I file caricati non devono superare 1 mb di grandezza',
     ];
 
 
@@ -47,7 +51,13 @@ class FormCreate extends Component
         /* dd($validateData); */
         $authUser = auth()->user()->id;
         Announcement::create(array_merge($validatedData, ['user_id' => $authUser]));
+        if (count($this->images)) {
+            foreach ($this->images as $image) {
+                $this->announcement->images()->create(['path' => $image->store('images', 'public')]);
+            }
+        }
         session()->flash('message', 'Annuncio creato con successo!');
+        $this->clearForm();
     }
 
     public function render()
@@ -56,4 +66,29 @@ class FormCreate extends Component
             'categories' => Category::all()
         ]);
     }
+
+    public function updatedTemporaryImages()
+    {
+        if ($this->validate(['temporary_images.*' => 'image|max:1024'])) {
+            foreach ($this->temporary_images as $image) {
+                $this->images[] = $image;
+            }
+        }
+    }
+    public function removeImage($key)
+    {
+        if (in_array($key, array_keys($this->images))) {
+            unset($this->images[$key]);
+        }
+    }
+
+    public function clearForm()
+    {
+        $this->title = '';
+        $this->price = '';
+        $this->description = '';
+        $this->images = [];
+        $this->temporary_images = [];
+    }
+
 }
