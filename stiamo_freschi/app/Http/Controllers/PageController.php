@@ -27,11 +27,19 @@ class PageController extends Controller
     
     public function test()
     {
-        return view('dashboard-revisore');
+        return view('test-cookies');
     }
     public function passwordDimenticata()
     {
         return view('auth.passwords-email');
+    }
+
+    public function accettaCookies()
+    {
+        return redirect()->back()->withCookie('request_user_cookies', true, 60 * 60 * 24 * 30);
+    }
+    public function rifiutaCookies(){
+        return redirect()->back()->withCookie('request_user_cookies', false, 60 * 60 * 24 * 30);
     }
 }
 

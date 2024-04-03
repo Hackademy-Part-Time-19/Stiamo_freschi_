@@ -75,8 +75,6 @@
                     <span id="close" style="color: black; font-size:1.5rem">X</span>
                     <a href="/register"><button class="btn_popup btn-desk2">{{__('ui.registration')}}</button></a>
                 </div>
-            </div>
-        @endguest
         {{-- @dd($announcements) --}}
 
         <div class="ContainerCard">

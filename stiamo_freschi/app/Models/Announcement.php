@@ -4,7 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-Use Laravel\Scout\Searchable;
+use Laravel\Scout\Searchable;
+use App\Models\Image;
 
 class Announcement extends Model
 {
@@ -21,11 +22,11 @@ class Announcement extends Model
             'id' => $this->id,
             'title' => $this->title,
             'description' => $this->description,
-            'category'=> $category,
+            'category' => $category,
         ];
-        return $array; 
+        return $array;
     }
-    
+
     public function Category()
     {
         return $this->belongsTo(Category::class);
@@ -36,15 +37,19 @@ class Announcement extends Model
         return $this->belongsTo(User::class);
     }
 
-    public static function toBeRevisionedCount(){
+    public static function toBeRevisionedCount()
+    {
         return Announcement::where('is_accepted', null)->count();
     }
 
-    public function setAccepted($value){
+    public function setAccepted($value)
+    {
         $this->is_accepted = $value;
         $this->save();
         return true;
     }
-    
+    public function images()
+    {
+        return $this->hasMany(Image::class);
+    }
 }
-
