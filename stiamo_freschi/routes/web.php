@@ -1,10 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\RevisorController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\LanguageController;
+use App\Http\Controllers\AnnouncementController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,3 +49,5 @@ Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->
 Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 
 Route::get('/passwordDimenticata', [PageController::class, 'passwordDimenticata']);
+
+Route::post('/lingua/{lang}', [LanguageController::class,'setLanguage'])->name('set_language_locale');

@@ -123,6 +123,16 @@
                 <img src="\img\logo.presto.scontornato.2.png" alt="logo" class="img-logo">
             </div>
         </a>
+
+        <ul class="nav-item">
+            <x-_locale lang='it' nation='it'/>
+        </ul>
+        <ul class="nav-item">
+            <x-_locale lang='en' nation='gb'/>
+        </ul>
+        <ul class="nav-item">
+            <x-_locale lang='es' nation='es'/>
+        </ul>
         @auth
             <div class="container-fluid">
                 <form class="d-flex" role="search" action="{{ route('announcements.search') }}" method="GET">
