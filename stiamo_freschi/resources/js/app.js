@@ -64,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
         popElement.onclick = function () {
             popElement.style.display = 'none';
             isPopClosedManually = true; // Imposta il flag quando l'utente chiude manualmente l'elemento pop
+            // verifica se esiste il cookie
             var request_user_cookies = getCookie('chiusuraSpamRegister');
             if (request_user_cookies == "") {
                 // se non esiste il cookie, crealo
