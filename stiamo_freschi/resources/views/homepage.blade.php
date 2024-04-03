@@ -12,7 +12,7 @@
     <div class="img-container">
         @auth
             <div class="txt-img">
-                <h1>Bentornato {{ auth()->user()->name }}</h1>
+                <h1>{{__('ui.welcomeName')}} {{ auth()->user()->name }}</h1>
                 <button class="btn-txt-img"><a href="{{ route('announcement.create') }}"
                         style="text-decoration: none; color:white;">
                         Inserisci il tuo annuncio</a>
@@ -21,10 +21,10 @@
         @endauth
         @guest
             <div class="txt-img">
-                <h1>Vendi con facilità, inizia PRESTO!</h1>
-                <h4>Comincia a guadagnare, registrati!</h5>
+                <h1>{{__('ui.cardAccediRegistrati1')}}</h1>
+                <h4>{{__('ui.cardAccediRegistrati2')}}</h5>
                     <button class="btn-txt-img"><a href="/login" style="text-decoration: none; color:white;">
-                            Accedi/Registrati
+                            {{__('ui.buttonAccediRegistrati')}}
                         </a></button>
             </div>
         @endguest
@@ -34,8 +34,7 @@
         <div class="container-copy">
             <div class="container2">
                 <h1 class="copy">
-                    "Sono in arrivo grandi risparmi! Acquista e vendi con facilità. Scopri offerte imperdibili su
-                    abbigliamento, accessori e tanto altro!"
+                    {{__('ui.copyHomepage')}}
                     <div class="btn-copy">
                         <button class="btn2"></button>
                         <button class="btn3"></button>
@@ -49,15 +48,15 @@
                 <div class="col-12 col-xl-6 col-l-6 col-md-12 mb-3 mb-sm-0 ">
 
                     <div class="card-body box">
-                        <h4>Cambia il futuro del tuo spazio con tesori d'usato:</h4>
-                        <p>scopri la bellezza dei ritrovamenti nel nostro vasto assortimento!</p>
+                        <h4>{{__('ui.boxSx1')}}</h4>
+                        <p>{{__('ui.boxSx2')}}</p>
                     </div>
                 </div>
 
                 <div class="col-sm-6">
 
                     <div class="card-body2 box">
-                        <h4>Tutti gli annunci sono revisionati dal <br> nostro team di esperti.</h4>
+                        <h4>{{__('ui.boxDx1')}} <br> {{__('ui.boxDx2')}}</h4>
                     </div>
 
                 </div>
@@ -67,17 +66,14 @@
         <div class="grid-container" id="grid-container">
             <!-- Le immagini verranno caricate qui dinamicamente -->
         </div>
---}}    
-                <div id="pop" class="overlay">
-                    <div class="popup">
-                        <h2 style="margin: 20px">Non hai fatto ancora l'accesso?</h2>
-                        <p style="margin: 20px">Registrati ora per ricevere notifiche esclusive sui nostri prodotti,
-                            accedere in
-                            anteprima alle
-                            offerte speciali e non perderti mai più le ultime novità!</p>
-                        <span id="close" style="color: black; font-size:1.5rem">X</span>
-                        <a href="/register"><button class="btn_popup btn-desk2">Iscriviti ora</button></a>
-                    </div>
+--}}
+        @guest
+            <div id="pop" class="overlay">
+                <div class="popup">
+                    <h2 style="margin: 20px">{{__('ui.popup1')}}</h2>
+                    <p style="margin: 20px">{{__('ui.popup2')}}</p>
+                    <span id="close" style="color: black; font-size:1.5rem">X</span>
+                    <a href="/register"><button class="btn_popup btn-desk2">{{__('ui.registration')}}</button></a>
                 </div>
         {{-- @dd($announcements) --}}
 
