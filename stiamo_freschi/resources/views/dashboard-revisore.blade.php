@@ -134,18 +134,29 @@
                     <div class="card-dash2">
                         <div id="carouselExample" class="carousel slide" style="width: 100%;height:100%">
                             <div class="carousel-inner" style="width: 100%;height:100%">
-                                <div class="carousel-item active">
-                                    <img src="https://images1.vinted.net/t/01_00c4d_ibKrDo5AVXpgGHcrrAVUxZwh/f800/1711030911.jpeg?s=162684a97acb85e57eac3596398af8bbcb25c46e"
-                                        class=" img-size d-block " alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://images1.vinted.net/t/01_00c4d_ibKrDo5AVXpgGHcrrAVUxZwh/f800/1711030911.jpeg?s=162684a97acb85e57eac3596398af8bbcb25c46e"
-                                        class="img-size d-block  " alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://images1.vinted.net/t/01_00c4d_ibKrDo5AVXpgGHcrrAVUxZwh/f800/1711030911.jpeg?s=162684a97acb85e57eac3596398af8bbcb25c46e"
-                                        class="img-size d-block " alt="...">
-                                </div>
+                                @if ($announcement_to_check->images)
+
+                                    @foreach ($announcement_to_check->images as $image)
+                                        <div class="carousel-item @if ($loop->first) active @endif">
+                                            <img src="{{ Storage::url($image->path) }}" class="d-block w-100"
+                                                alt="...">
+                                        </div>
+                                    @endforeach
+                                @else
+                                    <div class="carousel-item active">
+                                        <img src="https://images1.vinted.net/t/01_00c4d_ibKrDo5AVXpgGHcrrAVUxZwh/f800/1711030911.jpeg?s=162684a97acb85e57eac3596398af8bbcb25c46e"
+                                            class=" img-size d-block " alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://images1.vinted.net/t/01_00c4d_ibKrDo5AVXpgGHcrrAVUxZwh/f800/1711030911.jpeg?s=162684a97acb85e57eac3596398af8bbcb25c46e"
+                                            class="img-size d-block  " alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://images1.vinted.net/t/01_00c4d_ibKrDo5AVXpgGHcrrAVUxZwh/f800/1711030911.jpeg?s=162684a97acb85e57eac3596398af8bbcb25c46e"
+                                            class="img-size d-block " alt="...">
+                                    </div>
+
+                                @endif
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
                                 data-bs-slide="prev">

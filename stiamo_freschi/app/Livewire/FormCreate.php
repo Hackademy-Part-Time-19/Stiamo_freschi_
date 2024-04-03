@@ -49,8 +49,11 @@ class FormCreate extends Component
     {
         $validatedData = $this->validate();
         /* dd($validateData); */
+        $this->validate();
         $authUser = auth()->user()->id;
-        Announcement::create(array_merge($validatedData, ['user_id' => $authUser]));
+        $this->announcement = Announcement::create(array_merge($this->validate(), ['user_id' => $authUser]));
+     /*    $authUser = auth()->user()->id;
+        Announcement::create(array_merge($validatedData, ['user_id' => $authUser])); */
         if (count($this->images)) {
             foreach ($this->images as $image) {
                 $this->announcement->images()->create(['path' => $image->store('images', 'public')]);
