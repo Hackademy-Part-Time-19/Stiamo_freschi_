@@ -14,4 +14,25 @@ return [
     'boxSx2'=>"¡descubre la belleza de los hallazgos en nuestra amplia selección!",
     'boxDx1'=>"Todos los anuncios son revisados por",
     'boxDx2'=>"nuestro equipo de expertos.",
+
+    //footer 
+    'about'=>"Quienes somos",
+    'Revisor'=>"Convertirse en auditor",
+    'sustainability'=>'Sostenibilidad',
+    'Print'=>'Prensa',
+    'Advertising'=>'Publicidad',
+
+
+    'Discover'=>'Descubre',
+    'functionality'=>'Funcionalidad',
+    'ArticleCeck'=>'Verificación del artículo',
+    'AppMobile'=>'App móviles',
+    'News'=>'Noticias',
+    'SupportPro'=>'Soporte PrestoPro',
+    'Assistance'=>'Asistencia',
+    'CustomerService'=>'Centro de asistencia',
+    'Sell'=>'Vender',
+    'Buy'=>'Comprar',
+    'Security'=>'Seguridad y Fiabilidad'
+
 ];

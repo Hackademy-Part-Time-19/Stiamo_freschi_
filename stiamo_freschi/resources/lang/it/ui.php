@@ -14,5 +14,24 @@ return [
     'boxSx2'=>"scopri la bellezza dei ritrovamenti nel nostro vasto assortimento!",
     'boxDx1'=>"Tutti gli annunci sono revisionati dal ",
     'boxDx2'=>"nostro team di esperti.",
+    
+      //footer
+
+   'about'=>"Chi Siamo",
+   'Revisor'=>"Diventa revisore",
+   'sustainability'=>'Sostenibilità',
+   'Print'=>'Stampa',
+   'Advertising'=>'Pubblicità',
+   'Discover'=>'Scopri',
+   'Funcionalidad'=>'Funzionalità',
+   'ArticleCheck'=>"Verifica dell'articolo",
+   'AppMobile'=>'App Mobile',
+   'News'=>'News',
+   'SupportPro'=>' Supporto PrestoPro',
+   'Assistance'=>'Assistenza',
+   'CustomerService'=>'Centro Assistenza ',
+   'Sell'=>'Vendere',
+   'Buy'=>'Acquistare',
+   'Security'=>'Sicurezza ed Affidabilità'
 
 ];
