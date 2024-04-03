@@ -6,7 +6,7 @@
 
             <div class="col-4 div-modale">
                 <h1 style="margin-bottom: 20px">Crea il tuo annuncio</h1>
-                
+
                 <div class="form3">
                     <x-session-success />
                     <form wire:submit.live="store">
@@ -61,8 +61,9 @@
                         @enderror
                         <div class="mb-3">
                             <label for="image" class="form-label">Inserisci un'immagine</label>
-                            <input type="file" name="image" class="form-control" id="image"
-                                wire:model.live="image" style="width: 100%; height:35px;margin-bottom: 20px">
+                            <input wire:model='temporary_images' type="file" name="image" multiple
+                                class="form-control @error('temporary_images.*') is-invalide @enderror" id="image"
+                                wire:model.blur="image" style="width: 100%; height:35px;margin-bottom: 20px">
                         </div>
                         @error('image')
                             <div class="alert alert-danger"
