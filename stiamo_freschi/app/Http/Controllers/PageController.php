@@ -27,7 +27,7 @@ class PageController extends Controller
     
     public function test()
     {
-        return view('test-cookies');
+        return view('dashboard');
     }
     public function passwordDimenticata()
     {
