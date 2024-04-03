@@ -20,11 +20,12 @@ class FormCreate extends Component
 
 
     protected $rules = [
-        'title' => 'required|max:40',
+        'title' => 'required|min:4|max:40',
         'price' => 'required|numeric',
-        'description' => 'required|max:255',
+        'description' => 'required|min:10|max:255',
         'category_id' => 'required',
-        /*  'image' => 'required|image|max:1024', */
+        'images.*' => 'image|max:1024',
+        'temporary_images.*' => 'image|max:1024',
     ];
 
     protected $messages = [
