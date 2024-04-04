@@ -128,8 +128,8 @@
                 <form class="d-flex" role="search" action="{{ route('announcements.search') }}" method="GET">
                     @csrf
                     <input name="searched" class="form-control me-2" style="margin-top: 13px; height:35px"
-                        type="search" placeholder="Cerca il tuo annuncio" aria-label="Search">
-                    <button class="btn btn-outline-secondary btn-search" style="" type="submit">Cerca</button>
+                        type="search" placeholder="{{__('ui.placeholderSearchA')}}" aria-label="Search">
+                    <button class="btn btn-outline-secondary btn-search" style="" type="submit">{{__('ui.placeholderSearchA')}}</button>
                 </form>
                 <div class="btn-ann" onclick="scrollFunction()" id="scrollToTopBtn">
                     <a href="{{ route('announcement.create') }}"><button class="btn-desk2">Inserisci articolo</button></a>
@@ -140,16 +140,15 @@
                 <form class="d-flex" role="search" action="{{ route('announcements.search') }}" method="GET">
                     @csrf
                     <input name="searched" class="form-control me-2" style="margin-top: 13px; height:35px"
-                        type="search" placeholder="Cerca il tuo annuncio" aria-label="Search">
-                    <button class="btn btn-outline-secondary btn-search" type="submit">Cerca</button>
+                        type="search" placeholder="{{__('ui.placeholderSearchG')}}" aria-label="Search">
+                    <button class="btn btn-outline-secondary btn-search" type="submit">{{__('ui.ButtonSearchG')}}</button>
                 </form>
             </div>
         @endauth
 
         @if (Auth::check())
             @if (Auth::user()->is_revisor)
-                <a href="{{ route('revisor.index') }}" class="btn-revisore"><button class="btn-desk2">Zona
-                        revisore <span style="margin-left:4px;"
+                <a href="{{ route('revisor.index') }}" class="btn-revisore"><button class="btn-desk2">{{__('ui.AuditorArea')}} <span style="margin-left:4px;"
                             class="badge bg-white text-danger ">{{ App\Models\Announcement::toBeRevisionedCount() }}</span></button>
                 </a>
             @endif
@@ -158,14 +157,14 @@
 
         @guest
             <div class="div-btn-desk">
-                <a href="/login"><button class="btn-desk2">ACCEDI</button></a>
-                <a href="/register"><button class="btn-desk2">REGISTRATI</button></a>
+                <a href="/login"><button class="btn-desk2">{{__('ui.ButtonLoginG')}}</button></a>
+                <a href="/register"><button class="btn-desk2">{{__('ui.ButtonRegisterG')}}</button></a>
             </div>
 
             <div class="dropdown icon-btn" id="dropdownMenuNavDesktop" style="flex:1">
                 <button class="btn dropdown-toggle icon-profile" type="button" id="dropdownMenuButton"
                     data-bs-toggle="dropdown" aria-expanded="false">
-                    Lingua
+                    {{__('ui.ChangeLanguage')}}
                 </button>
                 <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton">
                     <li style="display: flex; margin:10px">

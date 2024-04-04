@@ -78,7 +78,18 @@ return [
    'rememberR'=>"Recuérdame",
    'registerR'=>"Regístrate",
    'requestRegister'=>"¿Ya estás registrado?",
-   'loginR'=>"Iniciar sesión"
+   'loginR'=>"Iniciar sesión",
 
+   //Navbar guest
 
+   'placeholderSearchG'=>"Busca tu anuncio ",
+   'ButtonSearchG'=>"Buscar",
+   'ButtonLoginG'=>"Iniciar sesión",
+   'ButtonRegisterG'=>"Regístrate",
+   'ChangeLanguage'=>'Idioma',
+
+    //Navbar auth
+    'placeholderSearchA'=>"Busca tu anuncio ",
+    'ButtonSearchA'=>"Buscar",
+    'AuditorArea'=>'Area de auditores',
 ];

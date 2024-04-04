@@ -78,7 +78,26 @@ return [
    'rememberR'=>"Ricordami",
    'registerR'=>"Registrati",
    'requestRegister'=>"Sei già registrato?",
-   'loginR'=>"Accedi"
+   'loginR'=>"Accedi",
+
+  //Navbar guest
+
+   'placeholderSearchG'=>"Cerca il tuo annuncio ",
+   'ButtonSearchG'=>"Cerca",
+   'ButtonLoginG'=>"Accedi",
+   'ButtonRegisterG'=>"Registrati",
+   'ChangeLanguage'=>'Lingua',
+
+    //Navbar auth
+    'placeholderSearchA'=>"Cerca il tuo annuncio ",
+    'ButtonSearchA'=>"Cerca",
+    'AuditorArea'=>'Zona Revisore',
+
+
+
+
+
+   
 
 ];
 

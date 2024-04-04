@@ -6,8 +6,12 @@
             <div style="margin-right:70px;margin-left:60px;">
                 <div class="cardLayoutFormCreate box">
                     <div class="imgCard">
-                        <img src="https://images1.vinted.net/t/02_0126f_7UxTSDC7QPA9b5SwtpjvXi9K/f800/1710953115.jpeg?s=2b251215e7d94314a9ffa97432a4b9413faa19e3"
-                            alt="">
+                        <div aria-hidden="true">
+                            <h4 class="card-text placeholder-glow skeleton centro-skeletron">
+                                <span class="placeholder col-12 "
+                                    style="height: 250px; width: 300px;margin-left:70px"></span>
+                            </h4>
+                        </div>
                     </div>
                     <div class="userCard">
                         <div class="imageUser">
