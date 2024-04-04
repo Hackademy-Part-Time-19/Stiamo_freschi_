@@ -47,8 +47,8 @@
                             </p>
                         </div>
                     </div>
-                    <div class="Areabutton">
-                        <a class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
+                    <div class="Areabutton" style="padding: 20px;">
+                        <a class="btn btn-primary disabled placeholder col-12" aria-disabled="true"></a>
                         {{-- <button class="btnCardLayout"><a style="color: white"
                             href="{{ route('announcement.show', ['announcement' => $announcement]) }}">Vai al
                             dettaglio</a></button> --}}
