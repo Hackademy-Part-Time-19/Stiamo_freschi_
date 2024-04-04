@@ -2,6 +2,62 @@
     <div class="row div-form" style=" justify-content: center !important;
     align-items: center !important;">
         <div class="col-4 div-cons">
+            <div style="margin-right:50px;margin-top:50px">
+                <div class="cardLayout box">
+                    <div class="imgCard">
+                        <img src="https://images1.vinted.net/t/02_0126f_7UxTSDC7QPA9b5SwtpjvXi9K/f800/1710953115.jpeg?s=2b251215e7d94314a9ffa97432a4b9413faa19e3"
+                            alt="">
+                    </div>
+                    <div class="userCard">
+                        <div class="imageUser">
+                            <img src="https://banner2.cleanpng.com/20180508/toe/kisspng-user-profile-computer-icons-clip-art-5af1ac8cee74c6.8111281615257877889767.jpg"
+                                alt="">
+                        </div>
+                        <div class="nomeUser ">
+                            <div aria-hidden="true">
+                                <div class="card-body">
+                                    <p class="card-text placeholder-glow skeleton ">
+                                        <span class="placeholder col-4"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prezzoCard ">
+                        <div aria-hidden="true">
+                            <h4 class="card-text placeholder-glow skeleton centro-skeletron">
+                                <span class="placeholder col-12"></span>
+                            </h4>
+                        </div>
+                        <div aria-hidden="true">
+                            <p class="card-text placeholder-glow skeleton centro-skeletron">
+                                <span class="placeholder col-6"></span>
+                            </p>
+                        </div>
+                        <div aria-hidden="true">
+                            <h6 class="card-text placeholder-glow skeleton centro-skeletron">
+                                <span class="placeholder col-12"></span>
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="descrizioneCard" style="margin-top: 10px">
+                        <div aria-hidden="true">
+                            <p class="card-text placeholder-glow skeleton centro-skeletron">
+                                <span class="placeholder col-12"></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="Areabutton">
+                        <a class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
+                        {{-- <button class="btnCardLayout"><a style="color: white"
+                            href="{{ route('announcement.show', ['announcement' => $announcement]) }}">Vai al
+                            dettaglio</a></button> --}}
+                    </div>
+
+
+                </div>
+
+            </div>
 
 
             <div class="col-4 div-modale">
