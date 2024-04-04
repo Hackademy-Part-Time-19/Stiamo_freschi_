@@ -161,6 +161,23 @@
                 <a href="/login"><button class="btn-desk2">ACCEDI</button></a>
                 <a href="/register"><button class="btn-desk2">REGISTRATI</button></a>
             </div>
+
+            <div class="dropdown icon-btn" id="dropdownMenuNavDesktop" style="flex:1">
+                <button class="btn dropdown-toggle icon-profile" type="button" id="dropdownMenuButton"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Lingua
+                </button>
+                <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+                    <li style="display: flex; margin:10px">
+                        <a href="" style="margin-right: 5px">Italiano</a>
+                        <x-_locale lang='it' nation='it' />
+                    </li>
+                    <li style="display: flex;margin:10px"><a href="">Inglese</a> <x-_locale lang='en'
+                            nation='gb' /></li>
+                    <li style="display: flex;margin:10px"><a href="">Spagnolo\</a> <x-_locale lang='es'
+                            nation='es' /></li>
+                </ul>
+            </div>
         @endguest
         @auth
             <div class="div-btn-desk">
@@ -228,22 +245,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="dropdown icon-btn" id="dropdownMenuNavDesktop" style="flex:1">
-                    <button class="btn dropdown-toggle icon-profile" type="button" id="dropdownMenuButton"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Lingua
-                    </button>
-                    <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton">
-                        <li style="display: flex; margin:10px">
-                            <a href="" style="margin-right: 5px">Italiano</a>
-                            <x-_locale lang='it' nation='it' />
-                        </li>
-                        <li style="display: flex;margin:10px"><a href="">Inglese</a> <x-_locale lang='en'
-                                nation='gb' /></li>
-                        <li style="display: flex;margin:10px"><a href="">Spagnolo\</a> <x-_locale lang='es'
-                                nation='es' /></li>
-                    </ul>
-                </div>
+                
                 <ul class="nav-item">
 
                 </ul>

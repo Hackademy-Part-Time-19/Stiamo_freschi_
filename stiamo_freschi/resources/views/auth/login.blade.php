@@ -8,23 +8,23 @@
                 {{ session('status') }}
             </div>
         @endif
-            <h1 class="accediLogin">Accedi</h1>
+            <h1 class="accediLogin">{{__('ui.login')}}</h1>
             <form action="./login" method="POST">
                 @csrf
                 <div class="mb-4">
-                    <label for="exampleInputEmail1" class="form-label">Inserisci la tua email</label>
+                    <label for="exampleInputEmail1" class="form-label">{{__('ui.insertemail')}}</label>
                     <input type="email" name="email" class="form-control" id="exampleInputEmail1"
                         style="width: 100%; height:40px;" aria-describedby="emailHelp" value="{{ old('email') }}">
                 </div>
 
                 <div class="mb-4">
-                    <label for="exampleInputPassword1" class="form-label">Inserisci la tua password</label>
+                    <label for="exampleInputPassword1" class="form-label">{{__('ui.insertipsw')}}</label>
                     <input type="password" name="password" class="form-control" style="width: 100%; height:40px;"
                         id="exampleInputPassword1">
                 </div>
                 <div class="mb-4 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Ricordami</label>
+                    <label class="form-check-label" for="exampleCheck1">{{__('ui.remember')}}</label>
                 </div>
                 @error('email')
                     <div class="alert alert-danger"
@@ -32,12 +32,12 @@
                     </div>
                 @enderror
 
-                <button type="submit" class="BtnAccediLogin">Accedi</button>
-                <h6 class="oppureLogin">OPPURE</h6>
+                <button type="submit" class="BtnAccediLogin">{{__('ui.login')}}</button>
+                <h6 class="oppureLogin">{{__('ui.or')}}</h6>
                 <button type="button" class="BtnRegistratiLogin"><a href="{{ route('register') }}"
-                        style="color: white">Registrati</a></button>
+                        style="color: white">{{__('ui.register')}}</a></button>
                 <a href="/forgot-password">
-                    <p class="pswDimenticata" style="color: black">Hai dimenticato la password?</p>
+                    <p class="pswDimenticata" style="color: black">{{__('ui.requestPsw')}}</p>
                 </a>
             </form>
         </div>

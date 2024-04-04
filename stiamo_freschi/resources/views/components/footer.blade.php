@@ -6,51 +6,51 @@
                 <div class="section2">
                     <ul class="ul-foot">
                         <li class="li-foot"><a href="" class="a-foot">{{__('ui.about')}}</a></li>
-                        <li class="li-foot"><a href="{{ route('become.revisor') }}" class="a-foot">{{__('ui.Revisor')}}</a>
+                        <li class="li-foot"><a href="{{ route('become.revisor') }}" class="a-foot">{{__('ui.revisor')}}</a>
                         </li>
-                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.Sustainability')}}</a></li>
-                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.Print')}}</a></li>
-                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.Advertising')}}</a></li>
+                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.sustainability')}}</a></li>
+                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.print')}}</a></li>
+                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.advertising')}}</a></li>
                     </ul>
                 </div>
             </li>
         </ul>
         <ul class="section1">
             <li class="li-foot">
-                <h4>{{__('ui.Discover')}}</h4>
+                <h4>{{__('ui.discover')}}</h4>
                 <div class="section2">
                     <ul class="ul-foot">
-                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.Functionality')}}</a></li>
-                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.ArticleCheck')}}</a></li>
-                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.AppMobile')}}</a></li>
-                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.News')}}</a></li>
+                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.functionality')}}</a></li>
+                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.articleCheck')}}</a></li>
+                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.appMobile')}}</a></li>
+                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.news')}}</a></li>
                         <li class="li-foot"><a href=""class="a-foot">Presto Pro</a></li>
-                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.SupportPro')}}</a></li>
+                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.supportPro')}}</a></li>
                     </ul>
                 </div>
             </li>
         </ul>
         <ul class="section1">
             <li class="li-foot">
-                <h4>{{__('ui.Assistance')}}</h4>
+                <h4>{{__('ui.assistance')}}</h4>
                 <div class="section2">
                     <ul class="ul-foot">
-                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.CustomerService')}}</a></li>
-                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.Sell')}}</a></li>
-                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.Buy')}}</a></li>
-                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.Security')}}</a></li>
+                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.customerService')}}</a></li>
+                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.sell')}}</a></li>
+                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.buy')}}</a></li>
+                        <li class="li-foot"><a href=""class="a-foot">{{__('ui.security')}}</a></li>
                     </ul>
                 </div>
             </li>
         </ul>
         <ul class="section1 border">
             <li class="li-foot">
-                <h4>CONTATTACI</h4>
+                <h4>{{__('ui.contactUs')}}</h4>
                 <div class="section2">
                     <form action="">
                         @csrf
                         <div>
-                            <label for="name"class="foot-lbl">Inserisci il tuo nome completo</label>
+                            <label for="name"class="foot-lbl">{{__('ui.name')}}</label>
                             <input type="text" name="name" class="inp-foot form-control" id="name"
                                 aria-describedby="emailHelp">
                             @error('name')
@@ -62,7 +62,7 @@
 
                         </div>
                         <div>
-                            <label for="exampleInputEmail1" class="foot-lbl">Inserisci la tua email</label>
+                            <label for="exampleInputEmail1" class="foot-lbl">{{__('ui.email')}}</label>
                             <input type="email" name="email" class="inp-foot form-control" id="exampleInputEmail1"
                                 aria-describedby="emailHelp">
                         </div>
@@ -73,12 +73,12 @@
                             </div>
                         @enderror
                         <div>
-                            <label for="" class="foot-lbl">Messaggio</label>
+                            <label for="" class="foot-lbl">{{__('ui.message')}}</label>
                             <input type="text" id="myTextBox" name="myTextBox"
-                                placeholder="Inserisci il testo qui..." class="inp-foot form-control">
+                                placeholder="{{__('ui.placeholderfooter')}}" class="inp-foot form-control">
                         </div>
                         <div class="div-foot2">
-                            <button type="submit" class="btn-foot">Invia</button>
+                            <button type="submit" class="btn-foot">{{__('ui.buttoninvia')}}</button>
                         </div>
                     </form>
                 </div>

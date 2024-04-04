@@ -15,7 +15,7 @@
                 <h1>{{__('ui.welcomeName')}} {{ auth()->user()->name }}</h1>
                 <button class="btn-txt-img"><a href="{{ route('announcement.create') }}"
                         style="text-decoration: none; color:white;">
-                        Inserisci il tuo annuncio</a>
+                        {{__('ui.insertAd')}}</a>
                 </button>
             </div>
         @endauth
@@ -91,8 +91,7 @@
                 @empty
                     <div class="col-12">
                         <div class="alert alert-warning py-3 shadow">
-                            <p class="lead">Non ci sono annunci per questa ricerca. Prova a cambiare i parametri di
-                                ricerca.</p>
+                            <p class="lead">{{__('ui.alertNoAds')}}</p>
                         </div>
                     </div> 
                 @endforelse
