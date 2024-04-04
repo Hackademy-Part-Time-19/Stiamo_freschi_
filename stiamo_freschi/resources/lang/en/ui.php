@@ -78,6 +78,22 @@ return [
    'rememberR'=>"Remember ",
    'registerR'=>"Register",
    'requestRegister'=>"Are you already registered?",
-   'loginR'=>"login"
+   'loginR'=>"login",
+
+ //Navbar guest
+
+   'placeholderSearchG'=>"Search for your ad ",
+   'ButtonSearchG'=>"Search",
+   'ButtonLoginG'=>"Login",
+   'ButtonRegisterG'=>"Register",
+   'ChangeLanguage'=>'Language',
+
+    //Navbar auth
+    'placeholderSearchA'=>"Search for your ad ",
+    'ButtonSearchA'=>"Search",
+    
+    'AuditorArea'=>'Auditor area',
+
+
 
 ];
