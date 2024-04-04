@@ -697,7 +697,7 @@ nav.desktop {
     border-bottom-left-radius: 25px;
     display: flex;
     justify-content: end;
-    align-items: start;
+    align-items: center;
     background-color: #d9d9d99a;
     box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.3);
     border-bottom-right-radius: 25px;

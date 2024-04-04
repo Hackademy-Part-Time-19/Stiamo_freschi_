@@ -3,8 +3,7 @@
 
 
 
-    
-        <livewire:form-create />
-   
+
+    <livewire:form-create />
 
 </x-layout>

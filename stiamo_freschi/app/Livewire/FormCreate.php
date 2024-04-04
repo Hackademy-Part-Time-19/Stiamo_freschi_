@@ -18,6 +18,9 @@ class FormCreate extends Component
     public $announcement;
     public $temporary_images;
 
+    public $name = ['Sport', 'Elettronica', 'Musica', 'Casa', 'Giardino', 'Fai da te', 'Abbigliamento', 'Accessori', 'Gioielli'];
+  
+
 
     protected $rules = [
         'title' => 'required|min:4|max:40',
@@ -47,8 +50,9 @@ class FormCreate extends Component
 
     public function store()
     {
+
+         // [0 => Sport, 1 => Elettronica, 2 => Musica, 3 => Casa, 4 => Giardino, 5 => Fai da te, 6 => Abbigliamento, 7 => Accessori, 8 => Gioielli]
         $validatedData = $this->validate();
-        /* dd($validateData); */
         $this->validate();
         $authUser = auth()->user()->id;
         $this->announcement = Announcement::create(array_merge($this->validate(), ['user_id' => $authUser]));
@@ -92,6 +96,7 @@ class FormCreate extends Component
         $this->description = '';
         $this->images = [];
         $this->temporary_images = [];
+        $this->category_id = '';
     }
 
 }
