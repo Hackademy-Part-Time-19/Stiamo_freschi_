@@ -1,6 +1,7 @@
 import './bootstrap';
 import "bootstrap";
 
+
 document.addEventListener('DOMContentLoaded', function () {
     // Il tuo codice JavaScript qui
     var isLoggedIn = false;

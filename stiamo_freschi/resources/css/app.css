@@ -3,6 +3,7 @@
 @import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 
+
 * {
     font-family: "Akshar", sans-serif;
     font-optical-sizing: auto;
@@ -190,8 +191,22 @@ a {
     border-radius: 100%;
 }
 
+.imageUser1 {
+    height: 30px;
+    width: 30px;
+    background-color: #081F37;
+    margin-left: 5px;
+    border-radius: 100%;
+}
+
 
 .imageUser img {
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+}
+
+.imageUser1 img {
     height: 30px;
     width: 30px;
     border-radius: 100%;
@@ -262,6 +277,22 @@ a {
 
 }
 
+.centro-skeletron {
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.skeleton {
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+}
+
+.skeleton span {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
 
 .prezzoCard p {
     font-size: 15px;
@@ -474,20 +505,22 @@ a {
     margin-bottom: 5px;
 
 }
+
 #annuncioHome1 {
     background-color: red;
 }
 
-.ContainerModaleCookies{
+.ContainerModaleCookies {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.modaleCookies{
+
+.modaleCookies {
     background-color: none;
     width: 100%;
-    height: 250px; 
+    height: 250px;
     display: flex;
     flex-direction: column;
     margin-left: 20px;
@@ -495,25 +528,27 @@ a {
     padding: 20px;
     text-align: center;
 }
-.modaleCookies p{
+
+.modaleCookies p {
     font-size: 16px;
     font-weight: 500;
 }
 
-.modaleCookies h5{
+.modaleCookies h5 {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-.containerTextModale{
+.containerTextModale {
     flex: 3;
     background-color: #dbd8e3;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     padding: 20px;
 }
-.containerBtnCookies{
+
+.containerBtnCookies {
     flex: 0.5;
     background-color: #dbd8e3;
     border-bottom-left-radius: 20px;
@@ -525,6 +560,7 @@ a {
     padding-bottom: 15px;
     gap: 15px;
 }
-.containerBtnCookies button{
-   width: 100px;
+
+.containerBtnCookies button {
+    width: 100px;
 }
