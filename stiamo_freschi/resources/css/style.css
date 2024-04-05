@@ -423,14 +423,12 @@ nav.desktop {
 }
 
 .div-btn-desk {
-    background-color: none;
+    background-color:none;
     display: flex;
     flex: 1;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     z-index: 2001;
-    width: 20%;
-    padding-right: 50px;
 }
 
 .icon-profile {

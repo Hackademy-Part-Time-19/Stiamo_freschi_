@@ -115,7 +115,7 @@
                             </div>
                         @enderror
                         <div class="mb-3">
-                            <label for="description" class="form-label">Inserisci una breve descrizione</label>
+                            <label for="description" class="form-label">Inserisci una descrizione</label>
                             <input type="textarea" name="description" class="form-control"
                                 style="width: 100%; height:35px;" id="description" wire:model.live="description">
                         </div>
