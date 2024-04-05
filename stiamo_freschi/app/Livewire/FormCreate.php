@@ -2,10 +2,12 @@
 
 namespace App\Livewire;
 
-use App\Models\Announcement;
-use App\Models\Category;
 use Livewire\Component;
+use App\Models\Category;
+use App\Jobs\ResizeImage;
+use App\Models\Announcement;
 use Livewire\WithFileUploads;
+use Illuminate\Support\Facades\File;
 
 class FormCreate extends Component
 {
@@ -60,10 +62,14 @@ class FormCreate extends Component
            Announcement::create(array_merge($validatedData, ['user_id' => $authUser])); */
         if (count($this->images)) {
             foreach ($this->images as $image) {
-                $this->announcement->images()->create(['path' => $image->store('images', 'public')]);
-                /* $newFileName = "announcement/{$this->announcemnt->id}";
-                 $newImage = $this->announcement->images()->create(['path' => $image->store($newFileName, 'public')]);*/
+                /* $this->announcement->images()->create(['path' => $image->store('images', 'public')]);*/
+                $newFileName = "announcement/{$this->announcement->id}";
+                $newImage = $this->announcement->images()->create(['path' => $image->store($newFileName, 'public')]);
+
+                dispatch(new ResizeImage($newImage->path, 200, 300));
             }
+
+            File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
         session()->flash('message', 'Annuncio creato con successo!');
         $this->clearForm();
