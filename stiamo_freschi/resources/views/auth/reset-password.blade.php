@@ -7,11 +7,11 @@
             </div>
         @endif
         <div id="containerFormLogin" class="col-12 col-xl-4">
-            <h1 class="accediLogin">Resetta la tua password</h1>
+            <h1 class="accediLogin">{{__('ui.resetPsw')}}</h1>
             <form action="/reset-password" method="POST">
                 @csrf
                 <div class="mb-4">
-                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                    <label for="exampleInputEmail1" class="form-label">{{__('ui.emailResetPsw')}}</label>
                     <input type="email" name="email" class="form-control" id="exampleInputEmail1"
                         style="width: 100%; height:40px;" aria-describedby="emailHelp">
                 </div>
@@ -21,7 +21,7 @@
                     </div>
                 @enderror
                 <div class="mb-4">
-                    <label for="exampleInputPassword1" class="form-label">Inserisci la nuova password</label>
+                    <label for="exampleInputPassword1" class="form-label">{{__('ui.newPswReset')}}</label>
                     <input type="password" name="password" class="form-control" style="width: 100%; height:40px;"
                         id="exampleInputPassword1" value="">
                 </div>
@@ -32,7 +32,7 @@
                 @enderror
 
                 <div class="mb-4">
-                    <label for="exampleInputPassword1" class="form-label">Ripeti la password</label>
+                    <label for="exampleInputPassword1" class="form-label">{{__('ui.retypePswReset')}}</label>
                     <input style="width: 100%; height:40px;" type="password" name="password_confirmation"
                         class="form-control" style="width: 100%; height:35px;" id="exampleInputPassword1">
                 </div>
@@ -45,7 +45,7 @@
                     <input hidden type="hidden" name="token" value="{{request()->route('token')}}" class="form-control">
                 </div>
 
-                <button type="submit" class="BtnAccediLogin">Modifica password</button>
+                <button type="submit" class="BtnAccediLogin">{{__('ui.editPsw')}}</button>
             </form>
         </div>
     </div>

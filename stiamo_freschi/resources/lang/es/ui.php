@@ -31,14 +31,14 @@ return [
 
     //footer 
 
-    //prima colonna
+    //prima colonna footer
     'about'=>"Quienes somos",
     'revisor'=>"Convertirse en auditor",
     'sustainability'=>'Sostenibilidad',
     'print'=>'Prensa',
     'advertising'=>'Publicidad',
 
-    //seconda colonna
+    //seconda colonna footer
     'discover'=>'DESCUBRE',
     'functionality'=>'Funcionalidad',
     'articleCeck'=>'Verificación del artículo',
@@ -46,14 +46,14 @@ return [
     'news'=>'Noticias',
     'supportPro'=>'Soporte PrestoPro',
 
-    //terza colonna
+    //terza colonna footer
     'assistance'=>'ASISTENCIA',
     'customerService'=>'Centro de asistencia',
     'sell'=>'Vender',
     'buy'=>'Comprar',
     'security'=>'Seguridad y Fiabilidad',
 
-    //quarta colonna
+    //quarta colonna footer
    'contactUs'=>"CONTACTANOS",
    'name'=>"Ingresa tu nombre completo",
    'email'=>"Ingrese su correo electrónico",
@@ -80,16 +80,35 @@ return [
    'requestRegister'=>"¿Ya estás registrado?",
    'loginR'=>"Iniciar sesión",
 
-   //Navbar guest
+    //Password Dimenticata 
+    'recoverPsw'=>"Recupera tu contraseña",
+    'insertemailPsw'=>"Inserta tu correo electrónico",
+    'emailHelp'=>"Si la dirección ingresada es correcta recibirás un correo electrónico con el enlace de recuperación",
+    'buttonContinues'=>"Continúa",
 
+    //Resetta Password
+    'resetPsw'=>"Restablecer su contraseña",
+    'emailResetPsw'=>"Correo electrónico",
+    'newPswReset'=>"Introduzca su nueva contraseña",
+    'retypePswReset'=>"Repita la contraseña",
+    'editPsw'=>"cambiar la contraseña",
+
+   //Navbar guest
    'placeholderSearchG'=>"Busca tu anuncio ",
-   'ButtonSearchG'=>"Buscar",
-   'ButtonLoginG'=>"Iniciar sesión",
-   'ButtonRegisterG'=>"Regístrate",
-   'ChangeLanguage'=>'Idioma',
+   'buttonSearchG'=>"Buscar",
+   'buttonLoginG'=>"Iniciar sesión",
+   'buttonRegisterG'=>"Regístrate",
+   'changeLanguage'=>'Idioma',
 
     //Navbar auth
     'placeholderSearchA'=>"Busca tu anuncio ",
-    'ButtonSearchA'=>"Buscar",
-    'AuditorArea'=>'Area de auditores',
+    'buttonSearchA'=>"Buscar",
+    'auditorArea'=>'Area de auditores',
+    'dropDwnDashboard'=>"Dashboard",
+    'dropDwnBalance'=>"Saldo",
+    'dropDwnAssistance'=>"Asistencia",
+    'dropDwnRevisor'=>"Area de auditores",
+    'dropDwnLogout'=>"Sales",
+
+
 ];

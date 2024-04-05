@@ -31,14 +31,14 @@ return [
     
    //footer
 
-   //prima colonna
+   //prima colonna footer
    'about'=>"Chi Siamo",
    'revisor'=>"Diventa revisore",
    'sustainability'=>'Sostenibilità',
    'print'=>'Stampa',
    'advertising'=>'Pubblicità',
 
-   //seconda colonna
+   //seconda colonna footer
    'discover'=>'SCOPRI',
    'functionality'=>'Funzionalità',
    'articleCheck'=>"Verifica dell'articolo",
@@ -46,14 +46,14 @@ return [
    'news'=>'News',
    'supportPro'=>' Supporto PrestoPro',
 
-   //terza colonna
+   //terza colonna footer
    'assistance'=>'ASSISTENZA',
    'customerService'=>'Centro Assistenza ',
    'sell'=>'Vendere',
    'buy'=>'Acquistare',
    'security'=>'Sicurezza ed Affidabilità',
 
-   //quarta colonna
+   //quarta colonna footer
    'contactUs'=>"CONTATTACI",
    'name'=>"Inserisci il tuo nome completo",
    'email'=>"Inserisci la tua email",
@@ -80,18 +80,36 @@ return [
    'requestRegister'=>"Sei già registrato?",
    'loginR'=>"Accedi",
 
-  //Navbar guest
+    //Password Dimenticata 
+    'recoverPsw'=>"Recupera la tua password",
+    'insertemailPsw'=>"Inserisci la tua email",
+    'emailHelp'=>"Se l'indirizzo inserito è corretto riceverai una email con il link per il recupero",
+    'buttonContinues'=>"Continua",
 
+    //Resetta Password
+    'resetPsw'=>"Resetta la tua password",
+    'emailResetPsw'=>"Email",
+    'newPswReset'=>"Inserisci la nuova password",
+    'retypePswReset'=>"Ripeti la password",
+    'editPsw'=>"Modifica password",
+
+   //Navbar guest
    'placeholderSearchG'=>"Cerca il tuo annuncio ",
-   'ButtonSearchG'=>"Cerca",
-   'ButtonLoginG'=>"Accedi",
-   'ButtonRegisterG'=>"Registrati",
-   'ChangeLanguage'=>'Lingua',
+   'buttonSearchG'=>"Cerca",
+   'buttonLoginG'=>"Accedi",
+   'buttonRegisterG'=>"Registrati",
+   'changeLanguage'=>'Lingua',
 
     //Navbar auth
     'placeholderSearchA'=>"Cerca il tuo annuncio ",
-    'ButtonSearchA'=>"Cerca",
-    'AuditorArea'=>'Zona Revisore',
+    'buttonSearchA'=>"Cerca",
+    'auditorArea'=>'Zona Revisore',
+    'dropDwnDashboard'=>"Dashboard",
+    'dropDwnBalance'=>"Saldo",
+    'dropDwnAssistance'=>"Assistenza",
+    'dropDwnRevisor'=>"Zona Revisore",
+    'dropDwnLogout'=>"Esci",
+    
 
 
 

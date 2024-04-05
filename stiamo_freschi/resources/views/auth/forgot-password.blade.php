@@ -7,16 +7,16 @@
                 {{ session('status') }}
             </div>
         @endif
-            <h1 class="accediLogin">Recupera la tua password</h1>
+            <h1 class="accediLogin">{{__('ui.recoverPsw')}}</h1>
             <form action="/forgot-password" method="POST">
                 @csrf
                 <div class="mb-4">
-                    <label for="exampleInputEmail1" class="form-label">Inserisci la tua email</label>
+                    <label for="exampleInputEmail1" class="form-label">{{__('ui.insertemailPsw')}}</label>
                     <input type="email" name="email" class="form-control" id="exampleInputEmail1"
                         style="width: 100%; height:40px;" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">Se l'indirizzo inserito è corretto riceverai una email con il link per il recupero</div>
+                        <div id="emailHelp" class="form-text">{{__('ui.emailHelp')}}</div>
                 </div>
-                <button type="submit" class="BtnAccediLogin">Continua</button>
+                <button type="submit" class="BtnAccediLogin">{{__('ui.buttonContinues')}}</button>
             </form>
         </div>
     </div>

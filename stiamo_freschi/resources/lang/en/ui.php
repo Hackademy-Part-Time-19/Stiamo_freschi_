@@ -31,14 +31,14 @@ return [
    
    //footer
 
-   //prima colonna
+   //prima colonna footer
    'about'=>"About",
    'revisor'=>"Be revisor",
    'sustainability'=>"Sustainability",
    'print'=>'Print',
    'advertising'=>'Advertising',
 
-   //seconda colonna
+   //seconda colonna footer
    'discover'=>'DISCOVER',
    'functionality'=>'Functionality',
    'articleCheck'=>'Article Check',
@@ -46,14 +46,14 @@ return [
    'news'=>'News',
    'supportPro'=>'Support PrestoPro',
 
-   //terza colonna
+   //terza colonna footer
    'assistance'=>'ASSISTANCE',
    'customerService'=>'Customer service',
    'sell'=>'Sell',
    'buy'=>'Buy',
    'security'=>'Security and reliability',
 
-   //quarta colonna
+   //quarta colonna footer
    'contactUs'=>"CONTACT US",
    'name'=>"Enter your full name",
    'email'=>"Enter your email",
@@ -80,19 +80,35 @@ return [
    'requestRegister'=>"Are you already registered?",
    'loginR'=>"login",
 
- //Navbar guest
+    //Password Dimenticata 
+    'recoverPsw'=>"Recover your password",
+    'insertemailPsw'=>"insert your email",
+    'emailHelp'=>"If the address entered is correct you will receive an email with the recovery link",
+    'buttonContinues'=>"Continues",
 
+    //Resetta Password
+    'resetPsw'=>"Reset your password",
+    'emailResetPsw'=>"Email",
+    'newPswReset'=>"Enter your new password",
+    'retypePswReset'=>"Repeat password",
+    'editPsw'=>"Change password",
+
+   //Navbar guest
    'placeholderSearchG'=>"Search for your ad ",
-   'ButtonSearchG'=>"Search",
-   'ButtonLoginG'=>"Login",
-   'ButtonRegisterG'=>"Register",
-   'ChangeLanguage'=>'Language',
+   'buttonSearchG'=>"Search",
+   'buttonLoginG'=>"Login",
+   'buttonRegisterG'=>"Register",
+   'changeLanguage'=>'Language',
 
     //Navbar auth
     'placeholderSearchA'=>"Search for your ad ",
-    'ButtonSearchA'=>"Search",
-    
-    'AuditorArea'=>'Auditor area',
+    'buttonSearchA'=>"Search",
+    'auditorArea'=>'Reviewer Area',
+    'dropDwnDashboard'=>"Dashboard",
+    'dropDwnBalance'=>"Balance",
+    'dropDwnAssistance'=>"Assistance",
+    'dropDwnRevisor'=>"Reviewer Area",
+    'dropDwnLogout'=>"Logout",
 
 
 
