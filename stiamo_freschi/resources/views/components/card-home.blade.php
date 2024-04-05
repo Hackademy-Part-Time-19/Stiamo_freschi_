@@ -4,7 +4,7 @@
     </div>
     <div class="userCard">
         <div class="imageUser">
-            <img src="{{$image}}"
+            <img src=""
                 alt="">
         </div>
         <div class="nomeUser">
