@@ -19,7 +19,7 @@ class FormCreate extends Component
     public $temporary_images;
 
     public $name = ['Sport', 'Elettronica', 'Musica', 'Casa', 'Giardino', 'Fai da te', 'Abbigliamento', 'Accessori', 'Gioielli'];
-  
+
 
 
     protected $rules = [
@@ -51,16 +51,18 @@ class FormCreate extends Component
     public function store()
     {
 
-         // [0 => Sport, 1 => Elettronica, 2 => Musica, 3 => Casa, 4 => Giardino, 5 => Fai da te, 6 => Abbigliamento, 7 => Accessori, 8 => Gioielli]
+        // [0 => Sport, 1 => Elettronica, 2 => Musica, 3 => Casa, 4 => Giardino, 5 => Fai da te, 6 => Abbigliamento, 7 => Accessori, 8 => Gioielli]
         $validatedData = $this->validate();
         $this->validate();
         $authUser = auth()->user()->id;
         $this->announcement = Announcement::create(array_merge($this->validate(), ['user_id' => $authUser]));
-     /*    $authUser = auth()->user()->id;
-        Announcement::create(array_merge($validatedData, ['user_id' => $authUser])); */
+        /*    $authUser = auth()->user()->id;
+           Announcement::create(array_merge($validatedData, ['user_id' => $authUser])); */
         if (count($this->images)) {
             foreach ($this->images as $image) {
                 $this->announcement->images()->create(['path' => $image->store('images', 'public')]);
+                $newFileName = "announcement/{$this->announcemnt->id}";
+                $newImage = $this->announcement->images()->create(['path' => $image->store($newFileName, 'public')]);
             }
         }
         session()->flash('message', 'Annuncio creato con successo!');
