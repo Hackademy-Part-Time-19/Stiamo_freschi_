@@ -4,7 +4,7 @@
     </div>
     <div class="userCard">
         <div class="imageUser">
-            <img src="https://banner2.cleanpng.com/20180508/toe/kisspng-user-profile-computer-icons-clip-art-5af1ac8cee74c6.8111281615257877889767.jpg"
+            <img src="{{$image}}"
                 alt="">
         </div>
         <div class="nomeUser">

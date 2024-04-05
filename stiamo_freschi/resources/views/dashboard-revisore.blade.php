@@ -158,9 +158,9 @@
                                             class="img-size d-block " alt="...">
                                     </div>
                                 @else
-                                    @foreach ($announcement_to_check as $announcement)
+                                    @foreach ($announcement_to_check->images as $announcement)
                                         <div class="carousel-item @if ($loop->first) active @endif">
-                                            <img src="{{ $announcement->images()->first()->getUrl(200, 300) }}"
+                                            <img src="{{ $announcement->getUrl(200,300)}}"
                                                 class="d-block w-100" alt="...">
                                         </div>
                                     @endforeach

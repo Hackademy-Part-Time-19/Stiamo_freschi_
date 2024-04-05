@@ -15,7 +15,7 @@
                 <h1>{{ __('ui.welcomeName') }} {{ auth()->user()->name }}</h1>
                 <button class="btn-txt-img"><a href="{{ route('announcement.create') }}"
                         style="text-decoration: none; color:white;">
-                        {{__('ui.insertAd')}}</a>
+                        {{ __('ui.insertAd') }}</a>
                 </button>
             </div>
         @endauth
@@ -84,14 +84,14 @@
             <div class="row" style="display:flex;justify-content:center;padding:0px;margin:0px">
                 @forelse($announcements as $announcement)
                     <div id="containerColCard" class="col-12 col-xl-3 col-lg-4 col-md-6 mt-5">
-                        <x-card-home :user="$announcement->user->name" :date="$announcement->updated_at->format('d/m/y H:i:s')" :title="$announcement->title" :price="$announcement->price"
-                            :description="$announcement->description" :category="$announcement->category->name" :announcement="$announcement">
+                        <x-card-home :image="$announcement->images()->getUrl(300,200)" :user="$announcement->user->name" :date="$announcement->updated_at->format('d/m/y H:i:s')" :title="$announcement->title"
+                            :price="$announcement->price" :description="$announcement->description" :category="$announcement->category->name" :announcement="$announcement">
                         </x-card-home>
                     </div>
                 @empty
                     <div class="col-12">
                         <div class="alert alert-warning py-3 shadow">
-                            <p class="lead">{{__('ui.alertNoAds')}}</p>
+                            <p class="lead">{{ __('ui.alertNoAds') }}</p>
                         </div>
                     </div>
                 @endforelse
