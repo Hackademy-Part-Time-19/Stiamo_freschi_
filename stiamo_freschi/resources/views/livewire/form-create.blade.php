@@ -6,12 +6,48 @@
             <div style="margin-right:70px;margin-left:60px;">
                 <div class="cardLayoutFormCreate box">
                     <div class="imgCard">
-                        <div aria-hidden="true">
-                            <h4 class="card-text placeholder-glow skeleton centro-skeletron">
-                                <span class="placeholder col-12 "
-                                    style="height: 250px; width: 300px;margin-left:70px"></span>
-                            </h4>
-                        </div>
+                        @if (empty($images))
+                            <div aria-hidden="true">
+                                <div class="card-text placeholder-glow skeleton centro-skeletron" style="width: 100%;margin:0px;padding:0px;background-color:none;">
+                                    <span class="placeholder col-12 "
+                                        style="height: 290px; width: 100%;"></span>
+                                </div>
+                            </div>
+                        @else
+                            <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
+                                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                                        aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                                        aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner" style="background-color: none">
+                                    @foreach ($images as $key => $image)
+                                        <div class="carousel-item @if ($loop->first) active @endif"
+                                            data-bs-interval="10000">
+                                            <img src="{{ $image->temporaryUrl() }}" class="d-block w-100" alt="..."
+                                                style="object-fit:cover;">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5 style="color:white;">Anteprima</h5>
+                                                <button class="RemoveFormCreate btn false" wire:click="removeImage({{$key}})">Rimuovi</button>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        @endif
                     </div>
                     <div class="userCard">
                         <div class="imageUser">
@@ -56,7 +92,7 @@
                                 @if ($category_id == false)
                                     <span class="placeholder col-12"></span>
                                 @else
-                                    Categoria : {{$name[$category_id-1]}}
+                                    Categoria : {{ $name[$category_id - 1] }}
                                 @endif
                             </h6>
                         </div>
@@ -78,7 +114,8 @@
                             <a class="btn btn-primary disabled placeholder col-12" aria-disabled="true"></a>
                         @else
                             <button type="submit" id='submitButtonFormCreate' onclick="" class="BtnRegistratiLogin"
-                                style="height:35px; font-size:18px"><label for="ButtonSubmitForm" tabindex="0">Crea il tuo annuncio</label></button>
+                                style="height:35px; font-size:18px"><label for="ButtonSubmitForm" tabindex="0">Crea il
+                                    tuo annuncio</label></button>
                         @endif
                     </div>
                 </div>
@@ -105,8 +142,8 @@
                         @enderror
                         <div class="mb-3">
                             <label for="price" class="form-label">Inserisci il prezzo</label>
-                            <input type="price" name="price" class="form-control" style="width: 100%; height:35px;"
-                                id="price" wire:model.live="price">
+                            <input type="price" name="price" class="form-control"
+                                style="width: 100%; height:35px;" id="price" wire:model.live="price">
                         </div>
                         @error('price')
                             <div class="alert alert-danger"
@@ -115,7 +152,7 @@
                             </div>
                         @enderror
                         <div class="mb-3">
-                            <label for="description" class="form-label">Inserisci una breve descrizione</label>
+                            <label for="description" class="form-label">Inserisci una descrizione</label>
                             <input type="textarea" name="description" class="form-control"
                                 style="width: 100%; height:35px;" id="description" wire:model.live="description">
                         </div>
@@ -150,14 +187,16 @@
                                 class="form-control @error('temporary_images.*') is-invalide @enderror" id="image"
                                 wire:model.blur="image" style="width: 100%; height:35px;margin-bottom: 20px">
                         </div>
-                        @error('image')
+                        @error('temporary_images')
                             <div class="alert alert-danger"
                                 style="height: 25px;display:flex;justify-content:center;align-items:center">
                                 {{ $message }}
                             </div>
                         @enderror
 
-                        <button type="submit" hidden class="BtnRegistratiLogin" id="ButtonSubmitForm">Crea il tuo annuncio</button>
+                        <button type="submit" hidden class="BtnRegistratiLogin" id="ButtonSubmitForm">Crea il
+                            tuo
+                            annuncio</button>
                     </form>
                 </div>
             </div>
