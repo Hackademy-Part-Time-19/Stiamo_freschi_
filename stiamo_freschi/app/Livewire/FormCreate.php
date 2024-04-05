@@ -61,8 +61,8 @@ class FormCreate extends Component
         if (count($this->images)) {
             foreach ($this->images as $image) {
                 $this->announcement->images()->create(['path' => $image->store('images', 'public')]);
-                $newFileName = "announcement/{$this->announcemnt->id}";
-                $newImage = $this->announcement->images()->create(['path' => $image->store($newFileName, 'public')]);
+                /* $newFileName = "announcement/{$this->announcemnt->id}";
+                 $newImage = $this->announcement->images()->create(['path' => $image->store($newFileName, 'public')]);*/
             }
         }
         session()->flash('message', 'Annuncio creato con successo!');
