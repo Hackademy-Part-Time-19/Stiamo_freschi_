@@ -10,7 +10,7 @@
         </div>
         <div class="nomeUser">
            <p style="font-size: 15px;color:black">{{ $user }}</p>
-           <p style="font-size: 11px">Data pubblicazione: {{$date}}</p>
+           <p style="font-size: 11px">{{__('ui.publicationDate')}} {{$date}}</p>
         </div>
     </div>
     <div class="prezzoCard">
@@ -26,8 +26,7 @@
     <div class="Areabutton">
         
         <button class="btnCardLayout"><a style="color: white"
-                href="{{ route('announcement.show', ['announcement' => $announcement]) }}">Vai al
-                dettaglio</a></button>
+                href="{{ route('announcement.show', ['announcement' => $announcement]) }}">{{__('ui.buttonDetails')}}</a></button>
     </div>
 
 

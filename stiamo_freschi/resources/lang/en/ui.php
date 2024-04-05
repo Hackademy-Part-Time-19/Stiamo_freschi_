@@ -26,6 +26,10 @@ return [
    'boxDx1'=>"All ads are reviewed by",
    'boxDx2'=>"our team of experts.",
 
+   //card homepage
+   'publicationDate'=>"Publication date:",
+   'buttonDetails'=>"Go to detail",
+
    //alert non ci sono annunci
    'alertNoAds'=>"There are no ads for this search. Try changing the search parameters",
    
@@ -110,6 +114,38 @@ return [
     'dropDwnRevisor'=>"Reviewer Area",
     'dropDwnLogout'=>"Logout",
 
+    //Email Richiesta Revisore
+    'subject'=>"A user has requested to work with us",
+    'yourDetails'=>"Here are his details:",
+    'nameRevisor'=>"Name:",
+    'emailRevisor'=>"Email: ",
+    'acceptancetext'=>"If you want to make it a reviewer click here:",
+    'buttonMakeRevisor'=>"Make reviewer",
 
+    //Dashboard Revisore
+    'welcomeBackRevisor'=>"Welcome back",
+    'youHave'=>"You have",
+    'adsReview'=>"ads to review!",
+    'asd'=>"Announcement:",
+    'userRevisor'=>"User:",
+    'priceAsdReview'=>"Price:",
+    'descriptionAsdReview'=>"Description:",
+    'buttonAccept'=>"Accept",
+    'buttonrefuse'=>"Reject",
 
+    //Ricerca per categoria
+    'textAdsByCategory'=>"Here are the results found for the category:",
+
+    //informativa cookies
+    'information'=>"Information",
+    'theSite'=>"The site",
+    'textInformation'=>"uses profiling cookies and third-party cookies, useful for improving the
+                        usability of the site by the navigator. If you want to know the details on the use of cookies and
+                        To know how to disable them, consult our extensive information on the use of cookies. If you lend the
+                        your consent, it will only be valid on this domain. Refusal of consent can make you not
+                        the relevant functions are available.
+                        Use the “Accept” button to agree. Use the “Reject” button to continue without
+                        accept.",
+    'buttonAcceptCookies'=>"Accept",
+    'buttonrefuseCookies'=>"Reject",
 ];

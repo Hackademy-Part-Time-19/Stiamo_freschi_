@@ -26,6 +26,10 @@ return [
     'boxDx1'=>"Tutti gli annunci sono revisionati dal ",
     'boxDx2'=>"nostro team di esperti.",
 
+    //card homepage
+    'publicationDate'=>"Data pubblicazione: ",
+    'buttonDetails'=>"Vai al dettaglio",
+
     //alert non ci sono annunci
     'alertNoAds'=>"Non ci sono annunci per questa ricerca. Prova a cambiare i parametri di ricerca.",
     
@@ -109,6 +113,43 @@ return [
     'dropDwnAssistance'=>"Assistenza",
     'dropDwnRevisor'=>"Zona Revisore",
     'dropDwnLogout'=>"Esci",
+
+    //Email Richiesta Revisore
+    'subject'=>"Un utente ha richiesto di lavorare con noi",
+    'yourDetails'=>"Ecco i suoi dati:",
+    'nameRevisor'=>"Nome: ",
+    'emailRevisor'=>"Email: ",
+    'acceptancetext'=>"Se vuoi renderlo revisore clicca qui:",
+    'buttonMakeRevisor'=>"Rendi revisore",
+
+    //Dashboard Revisore
+    'welcomeBackRevisor'=>"Bentornato",
+    'youHave'=>"Hai",
+    'adsReview'=>"annunci da revisionare!",
+    'asd'=>"Annuncio:",
+    'userRevisor'=>"Utente:",
+    'priceAsdReview'=>"Prezzo:",
+    'descriptionAsdReview'=>"Descrizione:",
+    'buttonAccept'=>"Accetta",
+    'buttonrefuse'=>"Rifiuta",
+
+    //Ricerca per categoria
+    'textAdsByCategory'=>"Ecco i risultati trovati per la categoria :",
+
+    //informativa cookies
+    'information'=>"Informativa",
+    'theSite'=>"Il sito",
+    'textInformation'=>"utilizza cookies di profilazione e cookies di terza parte, utili per migliorare la
+                        fruibilità del sito da parte del navigatore. Se vuoi conoscere i dettagli sull’utilizzo dei cookie e
+                        sapere come disabilitarli, consulta la nostra informativa estesa sull’uso dei cookies. Se presti il
+                        tuo consenso, sarà valido solo su questo dominio. Il rifiuto del consenso può rendere non
+                        disponibili le relative funzioni.
+                        Usa il pulsante “Accetta” per acconsentire. Usa il pulsante “Rifiuta” per continuare senza
+                        accettare.",
+    'buttonAcceptCookies'=>"Accetta",
+    'buttonrefuseCookies'=>"Rifiuta",
+
+
     
 
 

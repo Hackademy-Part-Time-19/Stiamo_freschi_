@@ -26,6 +26,10 @@ return [
     'boxDx1'=>"Todos los anuncios son revisados por",
     'boxDx2'=>"nuestro equipo de expertos.",
 
+    //card homepage
+    'publicationDate'=>"Fecha de publicación: ",
+    'buttonDetails'=>"Ir al detalle",
+
     //alert non ci sono annunci
     'alertNoAds'=>"No hay anuncios para esta búsqueda. Intente cambiar los parámetros de búsqueda.",
 
@@ -109,6 +113,41 @@ return [
     'dropDwnAssistance'=>"Asistencia",
     'dropDwnRevisor'=>"Area de auditores",
     'dropDwnLogout'=>"Sales",
+
+    //Email Richiesta Revisore
+    'subject'=>"Un usuario ha solicitado trabajar con nosotros.",
+    'yourDetails'=>"Aquí están sus detalles:",
+    'nameRevisor'=>"Nombre:",
+    'emailRevisor'=>"Correo electrónico:",
+    'acceptancetext'=>"Si quieres convertirlo en revisor haz clic aquí:",
+    'buttonMakeRevisor'=>"Hacer auditores",
+
+    //Dashboard Revisore
+    'welcomeBackRevisor'=>"Bienvenido de nuevo",
+    'youHave'=>"Tienes",
+    'adsReview'=>"anuncios para revisar!",
+    'asd'=>"Anuncio:",
+    'userRevisor'=>"Usuario:",
+    'priceAsdReview'=>"Precio:",
+    'descriptionAsdReview'=>"Descripción:",
+    'buttonAccept'=>"Aceptar",
+    'buttonrefuse'=>"Rechazar",
+
+    //Ricerca per categoria
+    'textAdsByCategory'=>"Aquí están los resultados encontrados para la categoría:",
+
+    //informativa cookies
+    'information'=>"Información",
+    'theSite'=>"El sitio",
+    'textInformation'=>"utiliza cookies de creación de perfiles y cookies de terceros, útiles para mejorar la
+                        usabilidad del sitio por parte del navegante. Si desea conocer los detalles sobre el uso de cookies y
+                        Para saber cómo desactivarlas consulte nuestra amplia información sobre el uso de cookies. Si prestas el
+                        su consentimiento, sólo será válido en este dominio. La denegación del consentimiento puede impedirle
+                        las funciones relevantes están disponibles.
+                        Utilice el botón “Aceptar” para aceptar. Utilice el botón 'Rechazar' para continuar sin
+                        aceptar.",
+    'buttonAcceptCookies'=>"Aceptar",
+    'buttonrefuseCookies'=>"Rechazar",
 
 
 ];

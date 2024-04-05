@@ -5,7 +5,7 @@
 
     <div class="img-container"
         style="display: flex; align-items:end;justify-content:center;color:white;padding-bottom:30px">
-        <h1>Ecco i risultati trovati per la categoria : {{-- {{$announcements->category->name}} --}} </h1>
+        <h1>{{__('ui.textAdsByCategory')}} {{-- {{$announcements->category->name}} --}} </h1>
     </div>
     <div class="back-by-cat" style="display: flex">
         <div class="banner2" style="margin-top: 40px">

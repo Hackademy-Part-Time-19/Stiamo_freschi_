@@ -59,10 +59,10 @@
         </div>
         <div class="div-card">
             <div>
-                <h1 style="text-align:center;margin-top:30px">Bentornato {{ Auth::user()->name }}</h1>
-                <h3 style="text-align:center">Hai <span class="num_ann"
+                <h1 style="text-align:center;margin-top:30px">{{__('ui.welcomeBackRevisor')}} {{ Auth::user()->name }}</h1>
+                <h3 style="text-align:center">{{__('ui.youHave')}} <span class="num_ann"
                         id="num_ann">{{ App\Models\Announcement::toBeRevisionedCount() }}</span>
-                    annunci da revisionare!</h3>
+                        {{__('ui.adsReview')}}</h3>
 
             </div>
             <x-session-success />
@@ -101,7 +101,7 @@
                             </form>
                         </div>
                         <div style="flex:1;margin:10px; border-right:1px solid black;">
-                            <h3 style="padding: 0px;font-size:25px">Annuncio: {{ $announcement_to_check->title }}
+                            <h3 style="padding: 0px;font-size:25px">{{__('ui.asd')}} {{ $announcement_to_check->title }}
                             </h3>
                         </div>
                         <div style="flex:1;margin:10px; margin-right:50px;">
@@ -178,10 +178,10 @@
                     </div>
                     <div style="flex:3; background-color: #dbd8e388;">
                         <div class="div-descr">
-                            <h6>User: {{ $announcement_to_check->user->name }}</h6>
+                            <h6>{{__('ui.userRevisor')}} {{ $announcement_to_check->user->name }}</h6>
                             <h1>{{ $announcement_to_check->title }}</h1>
-                            <h2>Prezzo : {{ $announcement_to_check->price }}</h2>
-                            <h6>Descrizione : {{ $announcement_to_check->description }}</p>
+                            <h2>{{__('ui.priceAsdReview')}} {{ $announcement_to_check->price }}</h2>
+                            <h6>{{__('ui.descriptionAsdReview')}} {{ $announcement_to_check->description }}</p>
                         </div>
                         <div class="div_container_btn">
                             <form
@@ -195,7 +195,7 @@
                                     <path
                                         d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
                                 </svg> --}}
-                                    <h4>accetta</h4>
+                                    <h4>{{__('ui.buttonAccept')}}</h4>
                                 </button>
                             </form>
                             <form
@@ -209,7 +209,7 @@
                                     <path
                                         d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
                                 </svg> --}}
-                                    <h4>rifiuta</h4>
+                                    <h4>{{__('ui.buttonrefuse')}}</h4>
                                 </button>
                             </form>
                         </div>
