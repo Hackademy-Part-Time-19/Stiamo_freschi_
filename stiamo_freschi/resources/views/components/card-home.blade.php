@@ -1,7 +1,6 @@
 <div class="cardLayout box">
     <div class="imgCard">
-        <img src="https://images1.vinted.net/t/02_0126f_7UxTSDC7QPA9b5SwtpjvXi9K/f800/1710953115.jpeg?s=2b251215e7d94314a9ffa97432a4b9413faa19e3"
-            alt="">
+        <img src="" alt="">
     </div>
     <div class="userCard">
         <div class="imageUser">
@@ -9,8 +8,8 @@
                 alt="">
         </div>
         <div class="nomeUser">
-           <p style="font-size: 15px;color:black">{{ $user }}</p>
-           <p style="font-size: 11px">{{__('ui.publicationDate')}} {{$date}}</p>
+            <p style="font-size: 15px;color:black">{{ $user }}</p>
+            <p style="font-size: 11px">{{ __('ui.publicationDate') }} {{ $date }}</p>
         </div>
     </div>
     <div class="prezzoCard">
@@ -24,9 +23,9 @@
     </div>
 
     <div class="Areabutton">
-        
+
         <button class="btnCardLayout"><a style="color: white"
-                href="{{ route('announcement.show', ['announcement' => $announcement]) }}">{{__('ui.buttonDetails')}}</a></button>
+                href="{{ route('announcement.show', ['announcement' => $announcement]) }}">{{ __('ui.buttonDetails') }}</a></button>
     </div>
 
 
