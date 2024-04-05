@@ -30,6 +30,31 @@ return [
     'publicationDate'=>"Data pubblicazione: ",
     'buttonDetails'=>"Vai al dettaglio",
 
+    //Card create
+    'createAnnouncements'=>"Crea il tuo annuncio",
+    'InsertTitleAnnouncements'=>"Inserisci il titolo del tuo annuncio",
+    'InsertPriceAnnouncements'=>"Inserisci il prezzo",
+    'InsertDescriptionAnnouncements'=>"Inserisci una descrizione",
+    'selectCategory'=>"Seleziona una categoria",
+    'selectElement'=>"Seleziona un elemento",
+    'InsertImageAnnouncements'=>"Inserisci un'immagine",
+    'chooseFile'=>"Scegli File",
+    'unselectedFile'=>"Nessun file selezionato",
+
+    //Card Anteprima
+    'previewPriceAnnouncement'=>"Prezzo : ",
+    'previewCategoryAnnouncement'=>"Categoria :",
+    'buttonCreateAnnouncement'=>"Crea il tuo annuncio",
+    'previewImage'=>"Anteprima",
+    'buttonRemoveImage'=>"Rimuovi",
+    
+    //card Dettaglio
+    'priceCardDetails'=>"Prezzo :",
+    'descriptionCardDetails'=>"Descrizione :",
+    'categoryCardDetails'=>"Categoria :",
+    'buttonBuy'=>"Acquista",
+    'addFavorites'=>"Aggiungi ai preferiti",
+
     //alert non ci sono annunci
     'alertNoAds'=>"Non ci sono annunci per questa ricerca. Prova a cambiare i parametri di ricerca.",
     
@@ -76,6 +101,7 @@ return [
 
    //Register
    'registerR'=>"Registrati",
+   'insertNameR'=>"Inserisci un nome",
    'insertemailR'=>"Inserisci una email",
    'newPswR'=>"Inserisci una password",
    'retypePswR'=>"Ripeti la password",
@@ -107,6 +133,7 @@ return [
     //Navbar auth
     'placeholderSearchA'=>"Cerca il tuo annuncio ",
     'buttonSearchA'=>"Cerca",
+    'buttonInsertAds'=>"Inserisci articolo",
     'auditorArea'=>'Zona Revisore',
     'dropDwnDashboard'=>"Dashboard",
     'dropDwnBalance'=>"Saldo",
