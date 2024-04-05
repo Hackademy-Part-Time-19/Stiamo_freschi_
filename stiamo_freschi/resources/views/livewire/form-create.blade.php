@@ -30,8 +30,8 @@
                                             <img src="{{ $image->temporaryUrl() }}" class="d-block w-100" alt="..."
                                                 style="object-fit:cover;">
                                             <div class="carousel-caption d-none d-md-block">
-                                                <h5 style="color:white;">Anteprima</h5>
-                                                <button class="RemoveFormCreate btn false" wire:click="removeImage({{$key}})">Rimuovi</button>
+                                                <h5 style="color:white;">{{__('ui.previewImage')}}</h5>
+                                                <button class="RemoveFormCreate btn false" wire:click="removeImage({{$key}})">{{__('ui.buttonRemoveImage')}}</button>
                                             </div>
                                         </div>
                                     @endforeach
@@ -83,7 +83,7 @@
                                 @if ($price == false)
                                     <span class="placeholder col-6"></span>
                                 @else
-                                    Prezzo : {{ $price }} €
+                                {{__('ui.previewPriceAnnouncement')}} {{ $price }} €
                                 @endif
                             </p>
                         </div>
@@ -92,7 +92,7 @@
                                 @if ($category_id == false)
                                     <span class="placeholder col-12"></span>
                                 @else
-                                    Categoria : {{ $name[$category_id - 1] }}
+                                {{__('ui.previewCategoryAnnouncement')}} {{ $name[$category_id - 1] }}
                                 @endif
                             </h6>
                         </div>
@@ -114,8 +114,7 @@
                             <a class="btn btn-primary disabled placeholder col-12" aria-disabled="true"></a>
                         @else
                             <button type="submit" id='submitButtonFormCreate' onclick="" class="BtnRegistratiLogin"
-                                style="height:35px; font-size:18px"><label for="ButtonSubmitForm" tabindex="0">Crea il
-                                    tuo annuncio</label></button>
+                                style="height:35px; font-size:18px"><label for="ButtonSubmitForm" tabindex="0">{{__('ui.buttonCreateAnnouncement')}}</label></button>
                         @endif
                     </div>
                 </div>
@@ -124,13 +123,13 @@
 
 
             <div class="col-4 div-modale">
-                <h1 style="margin-bottom: 20px">Crea il tuo annuncio</h1>
+                <h1 style="margin-bottom: 20px">{{__('ui.createAnnouncements')}}</h1>
 
                 <div class="form3">
                     <x-session-success />
                     <form wire:submit.live="store" id="FormCreateAnnouncement">
                         <div class="mb-3">
-                            <label for="title" class="form-label">Inserisci il titolo del tuo annuncio</label>
+                            <label for="title" class="form-label">{{__('ui.InsertTitleAnnouncements')}}</label>
                             <input type="text" name="title" class="form-control" style="width: 100%; height:35px;"
                                 id="title" wire:model.live="title">
                         </div>
@@ -141,7 +140,7 @@
                             </div>
                         @enderror
                         <div class="mb-3">
-                            <label for="price" class="form-label">Inserisci il prezzo</label>
+                            <label for="price" class="form-label">{{__('ui.InsertPriceAnnouncements')}}</label>
                             <input type="price" name="price" class="form-control"
                                 style="width: 100%; height:35px;" id="price" wire:model.live="price">
                         </div>
@@ -152,7 +151,7 @@
                             </div>
                         @enderror
                         <div class="mb-3">
-                            <label for="description" class="form-label">Inserisci una descrizione</label>
+                            <label for="description" class="form-label">{{__('ui.InsertDescriptionAnnouncements')}}</label>
                             <input type="textarea" name="description" class="form-control"
                                 style="width: 100%; height:35px;" id="description" wire:model.live="description">
                         </div>
@@ -163,11 +162,11 @@
                             </div>
                         @enderror
                         <div class="mb-3">
-                            <label for="category">Seleziona una categoria</label>
+                            <label for="category">{{__('ui.selectCategory')}}</label>
                         </div>
                         <select class="form-select" aria-label="Default select example" name="category_id"
                             style="width: 100%; height:35px;margin-bottom: 20px;" wire:model.live="category_id">
-                            <option selected>Seleziona un elemento</option>
+                            <option selected>{{__('ui.selectElement')}}</option>
                             @foreach ($categories as $category)
                                 <option value="{{ $category->id }}">{{ $category->name }}</option>
                             @endforeach
@@ -182,7 +181,7 @@
                             </div>
                         @enderror
                         <div class="mb-3">
-                            <label for="image" class="form-label">Inserisci un'immagine</label>
+                            <label for="image" class="form-label">{{__('ui.InsertImageAnnouncements')}}</label>
                             <input wire:model='temporary_images' type="file" name="image" multiple
                                 class="form-control @error('temporary_images.*') is-invalide @enderror" id="image"
                                 wire:model.blur="image" style="width: 100%; height:35px;margin-bottom: 20px">

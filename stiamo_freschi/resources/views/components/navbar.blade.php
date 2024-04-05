@@ -132,7 +132,7 @@
                     <button class="btn btn-outline-secondary btn-search" style="" type="submit">{{__('ui.buttonSearchA')}}</button>
                 </form>
                 <div class="btn-ann" onclick="scrollFunction()" id="scrollToTopBtn">
-                    <a href="{{ route('announcement.create') }}"><button class="btn-desk2">Inserisci articolo</button></a>
+                    <a href="{{ route('announcement.create') }}"><button class="btn-desk2">{{__('ui.buttonInsertAds')}}</button></a>
                 </div>
             </div>
         @else

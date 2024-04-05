@@ -7,6 +7,7 @@
             <form action="./register" method="POST">
                 @csrf
                 <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">{{__('ui.insertNameR')}}</label>
                     <input type="text" name="name" class="form-control" style="width: 100%; height:35px;" id="name"
                         aria-describedby="emailHelp">
                     @error('name')
