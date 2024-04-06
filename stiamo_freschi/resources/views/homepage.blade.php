@@ -8,6 +8,7 @@
         @endforeach
     </div>
     <div class="img-container-mobile">
+
     </div>
     <div class="img-container">
         @auth
@@ -35,28 +36,24 @@
             <div class="container2">
                 <h1 class="copy">
                     {{ __('ui.copyHomepage') }}
-                    <div class="btn-copy">
-                        <button class="btn2"></button>
-                        <button class="btn3"></button>
-                    </div>
+                </h1>
             </div>
         </div>
 
 
         <div class="containerD ">
             <div class="row">
-                <div class="col-12 col-xl-6 col-l-6 col-md-12 mb-3 mb-sm-0 ">
-
+                <div class="col-12 col-xl-6 col-l-6 col-md-12 mb-3 mb-sm-0 container-row">
                     <div class="card-body1 box">
-                        <h4>{{ __('ui.boxSx1') }}</h4>
-                        <p>{{ __('ui.boxSx2') }}</p>
+                        <h4 class="font-img">{{ __('ui.boxSx1') }}</h4>
+                        <p class="font-img">{{ __('ui.boxSx2') }}</p>
                     </div>
                 </div>
 
-                <div class="col-sm-6">
+                <div class="col-12 col-xl-6 col-l-6 col-md-12 mb-3 mb-sm-0 container-row ">
 
                     <div class="card-body2 box">
-                        <h4>{{ __('ui.boxDx1') }} <br> {{ __('ui.boxDx2') }}</h4>
+                        <h4 class="font-img">{{ __('ui.boxDx1') }} <br> {{ __('ui.boxDx2') }}</h4>
                     </div>
 
                 </div>
@@ -70,8 +67,8 @@
         @guest
             <div id="pop" class="overlay">
                 <div class="popup">
-                    <h2 style="margin: 20px">{{ __('ui.popup1') }}</h2>
-                    <p style="margin: 20px">{{ __('ui.popup2') }}</p>
+                    <h2 class="font-img" style="margin: 20px">{{ __('ui.popup1') }}</h2>
+                    <p class="font-img" style="margin: 20px">{{ __('ui.popup2') }}</p>
                     <span id="close" style="color: black; font-size:1.5rem">X</span>
                     <a href="/register"><button class="btn_popup btn-desk2">{{ __('ui.registration') }}</button></a>
                 </div>
@@ -84,8 +81,8 @@
             <div class="row" style="display:flex;justify-content:center;padding:0px;margin:0px">
                 @forelse($announcements as $announcement)
                     <div id="containerColCard" class="col-12 col-xl-3 col-lg-4 col-md-6 mt-5">
-                        <x-card-home :user="$announcement->user->name" :date="$announcement->updated_at->format('d/m/y H:i:s')" :title="$announcement->title"
-                            :price="$announcement->price" :description="$announcement->description" :category="$announcement->category->name" :announcement="$announcement">
+                        <x-card-home :user="$announcement->user->name" :date="$announcement->updated_at->format('d/m/y H:i:s')" :title="$announcement->title" :price="$announcement->price"
+                            :description="$announcement->description" :category="$announcement->category->name" :announcement="$announcement">
                         </x-card-home>
                     </div>
                 @empty

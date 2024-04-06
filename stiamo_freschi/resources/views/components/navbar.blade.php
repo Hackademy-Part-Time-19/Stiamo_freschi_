@@ -1,20 +1,22 @@
 <nav class="navbar mobile ">
     <div class="container-navbar">
         <div class="container-logo">
-            <img src="img/3202bafdb1a3c31e249263cbffd1a937.png" alt="logo" class="img-logo">
+            <img src="\img\logo.presto.scontornato.2.png" alt="logo" class="img-logo">
         </div>
         <div class="container-menu">
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <button class="navbar-toggler" style="margin-right:30px" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <img src="img/3202bafdb1a3c31e249263cbffd1a937.png" alt="logo" class="img-logo">
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <div class="offcanvas-header" style="padding-left: 0px">
+                    <img src="\img\logo.presto.scontornato.2.png" alt="logo" class="img-logo"
+                        style="margin-top: 5px; padding-left:0px">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
+                        style="padding-left: 0px"></button>
                 </div>
-                <div class="offcanvas-body">
+                <div class="offcanvas-body" style="padding-top:0px">
                     <div
                         style="height: 30%; display: flex;flex-direction: column;justify-content: center;align-items: center;">
                         <button class="btn-menu" style=" margin-bottom: 20px;">
@@ -128,11 +130,13 @@
                 <form class="d-flex" role="search" action="{{ route('announcements.search') }}" method="GET">
                     @csrf
                     <input name="searched" class="form-control me-2" style="margin-top: 13px; height:35px"
-                        type="search" placeholder="{{__('ui.placeholderSearchA')}}" aria-label="Search">
-                    <button class="btn btn-outline-secondary btn-search" style="" type="submit">{{__('ui.buttonSearchA')}}</button>
+                        type="search" placeholder="{{ __('ui.placeholderSearchA') }}" aria-label="Search">
+                    <button class="btn btn-outline-secondary btn-search" style=""
+                        type="submit">{{ __('ui.buttonSearchA') }}</button>
                 </form>
                 <div class="btn-ann" onclick="scrollFunction()" id="scrollToTopBtn">
-                    <a href="{{ route('announcement.create') }}"><button class="btn-desk2">{{__('ui.buttonInsertAds')}}</button></a>
+                    <a href="{{ route('announcement.create') }}"><button
+                            class="btn-desk2">{{ __('ui.buttonInsertAds') }}</button></a>
                 </div>
             </div>
         @else
@@ -140,15 +144,17 @@
                 <form class="d-flex" role="search" action="{{ route('announcements.search') }}" method="GET">
                     @csrf
                     <input name="searched" class="form-control me-2" style="margin-top: 13px; height:35px"
-                        type="search" placeholder="{{__('ui.placeholderSearchG')}}" aria-label="Search">
-                    <button class="btn btn-outline-secondary btn-search" type="submit">{{__('ui.buttonSearchG')}}</button>
+                        type="search" placeholder="{{ __('ui.placeholderSearchG') }}" aria-label="Search">
+                    <button class="btn btn-outline-secondary btn-search"
+                        type="submit">{{ __('ui.buttonSearchG') }}</button>
                 </form>
             </div>
         @endauth
 
         @if (Auth::check())
             @if (Auth::user()->is_revisor)
-                <a href="{{ route('revisor.index') }}" class="btn-revisore"><button class="btn-desk2">{{__('ui.auditorArea')}} <span style="margin-left:4px;"
+                <a href="{{ route('revisor.index') }}" class="btn-revisore"><button
+                        class="btn-desk2">{{ __('ui.auditorArea') }} <span style="margin-left:4px;"
                             class="badge bg-white text-danger ">{{ App\Models\Announcement::toBeRevisionedCount() }}</span></button>
                 </a>
             @endif
@@ -157,14 +163,15 @@
 
         @guest
             <div class="div-btn-desk">
-                <a href="/login"><button class="btn-desk2">{{__('ui.buttonLoginG')}}</button></a>
-                <a href="/register"><button class="btn-desk2">{{__('ui.buttonRegisterG')}}</button></a>
+                <a href="/login"><button class="btn-desk2">{{ __('ui.buttonLoginG') }}</button></a>
+                <a href="/register"><button class="btn-desk2">{{ __('ui.buttonRegisterG') }}</button></a>
             </div>
 
-            <div class="dropdown icon-btn" id="dropdownMenuNavDesktop" style="flex:0.3;display:flex;justify-content:center;align-items:center;margin-right:10px" >
+            <div class="dropdown icon-btn" id="dropdownMenuNavDesktop"
+                style="flex:0.3;display:flex;justify-content:center;align-items:center;margin-right:10px">
                 <button class="btn dropdown-toggle icon-profile" type="button" id="dropdownMenuButton"
                     data-bs-toggle="dropdown" aria-expanded="false">
-                    {{__('ui.changeLanguage')}}
+                    {{ __('ui.changeLanguage') }}
                 </button>
                 <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton">
                     <li style="display: flex; margin:10px">
@@ -202,8 +209,8 @@
                     </svg>
                 </div>
                 <div class="dropdown icon-btn" id="dropdownMenuNavDesktop">
-                    <button class="btn dropdown-toggle icon-profile" style="width: 80px" type="button" id="dropdownMenuButton"
-                        data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn dropdown-toggle icon-profile" style="width: 80px" type="button"
+                        id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                             class="bi bi-person-circle" viewBox="0 0 16 16">
                             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
@@ -213,12 +220,13 @@
                         {{ auth()->user()->name }}
                     </button>
                     <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton">
-                        <li><a class="dropdown-item" href="#">{{__('ui.dropDwnDashboard')}}</a></li>
-                        <li><a class="dropdown-item" href="#">{{__('ui.dropDwnBalance')}}</a></li>
-                        <li><a class="dropdown-item" href="#">{{__('ui.dropDwnAssistance')}}</a></li>
+                        <li><a class="dropdown-item" href="#">{{ __('ui.dropDwnDashboard') }}</a></li>
+                        <li><a class="dropdown-item" href="#">{{ __('ui.dropDwnBalance') }}</a></li>
+                        <li><a class="dropdown-item" href="#">{{ __('ui.dropDwnAssistance') }}</a></li>
                         @if (Auth::check())
                             @if (Auth::user()->is_revisor)
-                                <li><a class="dropdown-item" href="{{ route('revisor.index') }}">{{__('ui.dropDwnRevisor')}}
+                                <li><a class="dropdown-item"
+                                        href="{{ route('revisor.index') }}">{{ __('ui.dropDwnRevisor') }}
                                         {{ App\Models\Announcement::toBeRevisionedCount() }}</a></li>
                             @endif
                         @endif
@@ -228,7 +236,7 @@
                         <li><a class="dropdown-item btn-log" href="#">
                                 <form action="/logout" method="post">
                                     @csrf
-                                    <button class="btn-log logout">{{__('ui.dropDwnLogout')}}
+                                    <button class="btn-log logout">{{ __('ui.dropDwnLogout') }}
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             style="margin-left:5px; margin-top:0px" fill="currentColor"
                                             class="bi bi-box-arrow-right" viewBox="0 0 16 16">
@@ -243,7 +251,7 @@
                         </li>
                     </ul>
                 </div>
-                
+
                 <ul class="nav-item">
 
                 </ul>
@@ -264,7 +272,8 @@
     <div class="container-fluid">
         <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-secondary" type="submit">Search</button>
+            <button class="btn btn-outline-secondary" type="submit"
+                style="margin-top: 2px;padding:3px;width:60px;">Search</button>
         </form>
     </div>
 </div>
