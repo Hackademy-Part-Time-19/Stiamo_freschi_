@@ -256,21 +256,17 @@
                         </li>
                     </ul>
                 </div>
-                <div class="dropdown icon-btn" id="dropdownMenuNavDesktop"
+                <div class="dropdown icon-btn"
                     style="flex:0.3;display:flex;justify-content:center;align-items:center;margin-right:10px">
-                    <button class="btn dropdown-toggle icon-profile" type="button" id="dropdownMenuButton"
+                    <button id="languageButton" class="btn dropdown-toggle icon-profile"
+                        style="width: max-content;margin-right:20px" type="button" id="dropdownMenuButton"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         {{ __('ui.changeLanguage') }}
                     </button>
                     <ul class="dropdown-menu  " aria-labelledby="dropdownMenuButton" style="margin-right: 10px">
-                        <li style="display: flex; margin:10px">
-                            <a href="" style="margin-right: 5px">Italiano</a>
-                            <x-_locale lang='it' nation='it' />
-                        </li>
-                        <li style="display: flex;margin:10px"><a href="">Inglese</a> <x-_locale lang='en'
-                                nation='gb' /></li>
-                        <li style="display: flex;margin:10px"><a href="">Spagnolo\</a> <x-_locale lang='es'
-                                nation='es' /></li>
+                        <li style="display: flex; margin:10px"><x-_locale lang='it' nation='it' /></li>
+                        <li style="display: flex;margin:10px"><x-_locale lang='en' nation='gb' /></li>
+                        <li style="display: flex;margin:10px"> <x-_locale lang='es' nation='es' /></li>
                     </ul>
                 </div>
             </div>
