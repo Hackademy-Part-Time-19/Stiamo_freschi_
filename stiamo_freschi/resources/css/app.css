@@ -30,7 +30,7 @@
 #containerFormLogin {
     min-height: 70vh;
     height: auto;
-    padding: 40px;
+    padding: 20px;
     background-color: #d9d9d9b2;
     border-radius: 20px;
     margin-top: 70px;
@@ -303,7 +303,7 @@ a {
 
 .skeleton span {
     margin-bottom: 10px;
-    
+
 }
 
 .prezzoCard p {
@@ -579,7 +579,7 @@ a {
     width: 100px;
 }
 
-.RemoveFormCreate{
+.RemoveFormCreate {
     width: 100px;
     font-size: 17px;
 
