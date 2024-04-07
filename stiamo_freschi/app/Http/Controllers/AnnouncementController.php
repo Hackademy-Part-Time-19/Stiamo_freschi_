@@ -11,7 +11,8 @@ class AnnouncementController extends Controller
     public function indexByCategory($id)
     {
         $categories = Category::all();
-        return view('search-bycategory', ['announcements' => Announcement::where('category_id', $id)->where('is_accepted', true)->get(), 'categories' => $categories]);
+        $thisCategory = Category::find($id)->name;
+        return view('search-bycategory', ['announcements' => Announcement::where('category_id', $id)->where('is_accepted', true)->get(), 'categories' => $categories, 'thisCategory' => $thisCategory]);
     }
 
     public function searchAnnouncements(Request $request)
