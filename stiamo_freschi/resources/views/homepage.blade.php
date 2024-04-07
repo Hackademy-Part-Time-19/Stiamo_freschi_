@@ -41,7 +41,7 @@
         </div>
 
 
-        <div class="containerD ">
+        <div class="containerD  containertab">
             <div class="row">
                 <div class="col-12 col-xl-6 col-l-6 col-md-12 mb-3 mb-sm-0 container-row">
                     <div class="card-body1 box">

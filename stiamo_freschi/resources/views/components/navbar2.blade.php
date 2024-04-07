@@ -151,15 +151,6 @@
             </div>
         @endauth
 
-        @if (Auth::check())
-            @if (Auth::user()->is_revisor)
-                <a href="{{ route('revisor.index') }}" class="btn-revisore"><button
-                        class="btn-desk2">{{ __('ui.auditorArea') }} <span style="margin-left:4px;"
-                            class="badge bg-white text-danger ">{{ App\Models\Announcement::toBeRevisionedCount() }}</span></button>
-                </a>
-            @endif
-        @endif
-
 
         @guest
             <div class="div-btn-desk">
@@ -186,7 +177,7 @@
             </div>
         @endguest
         @auth
-            <div class="div-btn-desk">
+            <div class="div-btn-desk" style="">
                 <div style="margin: 10px">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                         class="bi bi-envelope" viewBox="0 0 16 16">
@@ -209,7 +200,7 @@
                     </svg>
                 </div>
                 <div class="dropdown icon-btn" id="dropdownMenuNavDesktop" style="width: max-content;">
-                    <button class="btn dropdown-toggle icon-profile" style="width: max-content; " type="button"
+                    <button class="btn dropdown-toggle icon-profile" style="width: max-content;" type="button"
                         id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
                             class="bi bi-person-circle" viewBox="0 0 16 16">
@@ -220,8 +211,7 @@
                         {{ auth()->user()->name }}
                     </button>
                     <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton">
-                        <li><a class="dropdown-item" href="{{ route('dashboard') }}">{{ __('ui.dropDwnDashboard') }}</a>
-                        </li>
+                        <li><a class="dropdown-item" href="#">{{ __('ui.dropDwnDashboard') }}</a></li>
                         <li><a class="dropdown-item" href="#">{{ __('ui.dropDwnBalance') }}</a></li>
                         <li>
                             <a class="dropdown-item" href="#">{{ __('ui.dropDwnAssistance') }}</a>

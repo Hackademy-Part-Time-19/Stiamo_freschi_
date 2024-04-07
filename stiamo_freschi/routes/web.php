@@ -30,7 +30,7 @@ Route::get('/test', [PageController::class, 'test'])->name('test');
 
 Route::get('/ricerca/annuncio', [AnnouncementController::class, 'searchAnnouncements'])->name('announcements.search');
 
-
+Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
 // zona revisore
 
 
@@ -47,7 +47,7 @@ Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])-
 
 Route::get('/passwordDimenticata', [PageController::class, 'passwordDimenticata']);
 
-Route::post('/lingua/{lang}', [LanguageController::class,'setLanguage'])->name('set_language_locale');
+Route::post('/lingua/{lang}', [LanguageController::class, 'setLanguage'])->name('set_language_locale');
 // Accetta cookies
 Route::get('/accetta-cookies', [PageController::class, 'accettaCookies'])->name('accetta-cookies');
 // Rifiuta cookies

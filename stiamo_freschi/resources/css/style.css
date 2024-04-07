@@ -735,6 +735,46 @@ nav.desktop {
     align-items: center;
 }
 
+.div-card1 {
+    margin-top: 30px;
+    max-height: max-content !important;
+    flex: 3;
+    padding-bottom: 30px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-image: url('/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-card_dash {
+    display: flex;
+    margin-top: 40px;
+    margin-left: 0px;
+}
+
+.card_dash_p {
+    flex: 1;
+    width: 400px;
+    height: 250px;
+    border-radius: 25px;
+    margin: 30px;
+    background-color: rgba(217, 217, 217, 0.6);
+}
+
+.card_dash_p:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
+/*.lf {
+    margin-right: 20px;
+}*/
+
 .ul-aside {
     width: 100%;
     padding-left: 0rem;
@@ -799,6 +839,41 @@ nav.desktop {
     width: 100%;
     display: flex;
 }
+
+.li-aside2 {
+    width: 100%;
+    list-style: none;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px black;
+    display: flex;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+.grafic-revisor {
+    flex: 1;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 40px;
+    border: 20px solid;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding-left: 20px;
+    border-color: black;
+}
+
+.dash_num {
+    font-size: x-large;
+
+}
+
+
 
 .btn4 {
     background-color: transparent;
@@ -884,7 +959,7 @@ nav.desktop {
     background-repeat: no-repeat;
 }
 
-@media screen and (max-width:991px) {
+@media screen and (max-width:749.90px) {
     .body {
         padding: 0px !important;
         margin: 0px !important;
@@ -1076,22 +1151,122 @@ nav.desktop {
 
 }
 
-@media screen and (min-width:540px) {
+@media screen and (min-width:560px) and (max-width:750.9px) {
+
     .container-row {
         display: flex;
         flex-direction: row;
     }
 
+    .row {
+        width: 100% !important;
+    }
+
+    .containerD {
+        display: flex;
+        flex-direction: row;
+        width: 100% !important;
+        height: 70vh;
+        margin-bottom: 40vh;
+    }
+
+    .banner {
+        margin-top: 20px;
+    }
 }
 
-@media screen and (min-width:992px) {
+@media screen and (min-width:751px) and (max-width:990.9) {
+    .container-row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .mobile {
+        display: none !important;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .tablet {
+        display: flex !important;
+    }
+
+    .container-cat {
+        display: none;
+    }
+
+    .banner {
+        margin-top: 70px;
+
+    }
+
+    .row {
+        width: 100% !important;
+    }
+
+    .containerD {
+        display: flex;
+        flex-direction: row;
+        width: 100% !important;
+        height: 70vh;
+    }
+
+    .container-logo {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        background-color: none;
+        margin: 0px;
+    }
+
+}
+
+@media screen and (min-width:991px) and (max-width:1200.9px) {
+    nav.desktop {
+        display: flex;
+    }
+
+    nav.tablet {
+        display: none;
+    }
+
     nav.mobile {
         display: none;
+    }
+
+    .container-logo {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        background-color: none;
+        margin: 0px;
+    }
+
+    .div_container_btn {
+        position: relative;
+        top: 100px;
+        left: 180px;
+    }
+}
+
+@media screen and (min-width:1201px) {
+    .nav.mobile {
+        display: none !important;
     }
 
 
     nav.tablet {
         display: none;
+    }
+
+    nav.desktop {
+        display: flex !important;
     }
 
     .container-cat {
@@ -1151,5 +1326,16 @@ nav.desktop {
 
     .img-container {
         display: flex;
+    }
+
+    .icon-btn {
+        margin-right: 40px;
+        width: 70px;
+    }
+
+    .div_container_btn {
+        position: relative;
+        top: 100px;
+        left: 180px;
     }
 }

@@ -24,10 +24,13 @@ class PageController extends Controller
     {
         return view('Announcements-create', ['categories' => Category::all()]);
     }
-    
+    public function dashboard()
+    {
+        return view('dashboard');
+    }
     public function test()
     {
-        return view('test-cookies');
+        return view('profile');
     }
     public function passwordDimenticata()
     {
@@ -38,8 +41,8 @@ class PageController extends Controller
     {
         return redirect()->back()->withCookie('request_user_cookies', true, 60 * 60 * 24 * 30);
     }
-    public function rifiutaCookies(){
+    public function rifiutaCookies()
+    {
         return redirect()->back()->withCookie('request_user_cookies', false, 60 * 60 * 24 * 30);
     }
 }
-
