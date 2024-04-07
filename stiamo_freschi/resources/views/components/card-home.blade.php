@@ -4,7 +4,7 @@
     </div>
     <div class="userCard">
         <div class="imageUser">
-            <img src=""
+            <img src="{{asset('img/MainAfter.webp')}}"
                 alt="">
         </div>
         <div class="nomeUser">
