@@ -1,6 +1,13 @@
 .body {
     padding: 0px;
     margin: 0px;
+    background: url("/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg");
+}
+
+.background {
+    background: url("/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .navbar {
@@ -221,6 +228,11 @@
     display: flex;
 }
 
+.icon-btn {
+    margin-right: 30px;
+    width: 70px;
+}
+
 
 
 .img-container {
@@ -425,7 +437,7 @@ nav.desktop {
 .div-btn-desk {
     background-color: none;
     display: flex;
-    flex: 1;
+    flex: 2;
     justify-content: end;
     align-items: center;
     z-index: 2001;
@@ -433,7 +445,7 @@ nav.desktop {
 
 .icon-profile {
     padding: 5px;
-    width: 100%;
+    width: 70px;
     height: 50px;
     border: none;
     margin-top: 5px;
@@ -1064,7 +1076,13 @@ nav.desktop {
 
 }
 
+@media screen and (min-width:540px) {
+    .container-row {
+        display: flex;
+        flex-direction: row;
+    }
 
+}
 
 @media screen and (min-width:992px) {
     nav.mobile {

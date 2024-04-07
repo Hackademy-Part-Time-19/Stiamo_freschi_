@@ -211,7 +211,7 @@
                 <div class="dropdown icon-btn" id="dropdownMenuNavDesktop">
                     <button class="btn dropdown-toggle icon-profile" style="width: 80px" type="button"
                         id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
                             class="bi bi-person-circle" viewBox="0 0 16 16">
                             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
                             <path fill-rule="evenodd"
@@ -251,16 +251,23 @@
                         </li>
                     </ul>
                 </div>
-
-                <ul class="nav-item">
-
-                </ul>
-                <ul class="nav-item">
-
-                </ul>
-                <ul class="nav-item">
-
-                </ul>
+                <div class="dropdown icon-btn" id="dropdownMenuNavDesktop"
+                    style="flex:0.3;display:flex;justify-content:center;align-items:center;margin-right:10px">
+                    <button class="btn dropdown-toggle icon-profile" type="button" id="dropdownMenuButton"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ __('ui.changeLanguage') }}
+                    </button>
+                    <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+                        <li style="display: flex; margin:10px">
+                            <a href="" style="margin-right: 5px">Italiano</a>
+                            <x-_locale lang='it' nation='it' />
+                        </li>
+                        <li style="display: flex;margin:10px"><a href="">Inglese</a> <x-_locale lang='en'
+                                nation='gb' /></li>
+                        <li style="display: flex;margin:10px"><a href="">Spagnolo\</a> <x-_locale lang='es'
+                                nation='es' /></li>
+                    </ul>
+                </div>
             </div>
 
         </div>
