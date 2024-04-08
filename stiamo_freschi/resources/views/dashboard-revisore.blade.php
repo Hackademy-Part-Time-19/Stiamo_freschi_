@@ -58,7 +58,7 @@
             </ul>
         </div>
 
-        <div class="div-card">
+        <div class="div-card" style="@if($announcement_to_check)justify-content: center;@else justify-content: start;padding-top:100px @endif">
             <div>
                 <h1 style="text-align:center;margin-top:30px">{{ __('ui.welcomeBackRevisor') }}
                     {{ Auth::user()->name }}
@@ -69,19 +69,13 @@
 
             </div>
 
-            @if ($announcement_to_check)
+            <x-session-success />
 
-                <div>
-                    <h6>é vuoto</h6>
-                </div>
-            @else
-                <x-session-success />
-                {{-- @foreach ($announcement_to_check as $announcement_to_check) --}}
+            @if ($announcement_to_check)
                 <div class="card-dash">
                     <div class="inserzione">
                         <div
-                            style="display: flex;  width: 80%;padding:5px;justify-content: center;
-                    align-items: center;">
+                            style="display: flex;  width: 80%;padding:5px;justify-content: center;align-items: center;">
                             <div id="div_container_btn" style="display:flex; flex:0.5">
                                 <form
                                     action="{{ route('revisor.accept_announcement', ['announcement' => $announcement_to_check]) }}"
@@ -227,9 +221,10 @@
                         </div>
                     </div>
                 </div>
-                {{-- @endforeach --}}
-
+            @else
+                <button class="btn"><a href="/" style="color: white">Torna alla home</a></h1>
             @endif
+
         </div>
     </div>
     <script>
