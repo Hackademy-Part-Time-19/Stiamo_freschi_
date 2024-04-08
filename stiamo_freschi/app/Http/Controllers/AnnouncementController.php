@@ -57,10 +57,12 @@ class AnnouncementController extends Controller
      * Display the specified resource.
      */
     public function show(Announcement $announcement)
-    {
-        $categoryAnnouncements = $announcement->category->announcements;
+    {   
+        $announcementOfCategory = Announcement::where('category_id', $announcement->category_id)->where('id', '!=', $announcement->id)->where('is_accepted', true)->get();
+        $categoryAnnouncements = $announcement->category->name;
         $categories = Category::all();
-        return view('announcement-show', ['announcement' => $announcement, 'categoryAnnouncements' => $categoryAnnouncements], compact('categories'));
+        $announcementShow = $announcement;
+        return view('announcement-show', compact('announcementShow', 'categories', 'announcementOfCategory', 'categoryAnnouncements' ));
     }
 
 

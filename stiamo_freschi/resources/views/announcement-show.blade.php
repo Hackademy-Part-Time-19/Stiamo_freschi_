@@ -14,7 +14,7 @@
                             aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
-                        @if ($announcement->images->isEmpty())
+                        @if ($announcementShow->images->isEmpty())
                             <div class="carousel-item active">
                                 <img src="{{ asset('img/pexels-photo-4464487.jpeg') }}" class="d-block w-100"
                                     alt="...">
@@ -40,7 +40,7 @@
                                 </div>
                             </div>
                         @else
-                            @foreach ($announcement_to_check->images as $announcement)
+                            @foreach ($announcementShow->images as $announcement)
                                 <div class="carousel-item @if ($loop->first) active @endif">
                                     <img src="{{ $announcement->getUrl(200, 300) }}" class="d-block w-100"
                                         alt="...">
@@ -62,10 +62,10 @@
             </div>
             <div class="containerTextShow">
                 <div style="width:80%: height: 50%; margin-top:0px">
-                    <h1 style="font-size: 3vw; overflow:hidden">{{ $announcement->title }}</h1>
-                    <h2 style="font-size: 2vw">{{ __('ui.priceCardDetails') }} {{ $announcement->price }} € </h2>
-                    <p style="font-size: 2vw">{{ __('ui.descriptionCardDetails') }} {{ $announcement->description }}</p>
-                    <p style="font-size: 2vw">{{ __('ui.categoryCardDetails') }} {{ $announcement->category->name }}
+                    <h1 style="font-size: 40px; overflow:hidden">{{$announcementShow->title}}</h1>
+                    <h2 style="font-size: 30px">{{ __('ui.priceCardDetails') }} {{ $announcementShow->price}} € </h2>
+                    <p style="font-size: 25px">{{ __('ui.descriptionCardDetails') }} {{ $announcementShow->description}}</p>
+                    <p style="font-size: 23px">{{ __('ui.categoryCardDetails') }} {{ $categoryAnnouncements}}
                     </p>
                 </div>
                 <div class="div-btn-acq">
@@ -88,7 +88,7 @@
                 @endforeach
             </div>
             <div class="row" style="display:flex;justify-content:center;padding:0px;margin:0px; flex:3">
-                @forelse ($categoryAnnouncements as $announcement)
+                @forelse ($announcementOfCategory as $announcement)
                     <div id="containerColCard" class="col-12 col-xl-3 col-lg-4 col-md-6 mt-5">
                         @if ($announcement->images->isEmpty())
                             <x-card-home :imagecard="asset('img/pexels-photo-4464487.jpeg')" :user="$announcement->user->name" :date="$announcement->updated_at->format('d/m/y H:i:s')" :title="$announcement->title"
@@ -102,9 +102,8 @@
                     </div>
                 @empty
                     <div class="col-12">
-                        <div class="alert alert-warning py-3 shadow">
-                            <p class="lead">Non ci sono annunci per questa ricerca. Prova a cambiare i parametri di
-                                ricerca.</p>
+                        <div class="alert alert-warning py-3 shadow" style="margin-top:200px;display:flex;justify-content:center;align-items:center;">
+                            <p class="lead">Non ci sono annunci correlati per questa categoria.</p>
                         </div>
                     </div>
                 @endforelse
