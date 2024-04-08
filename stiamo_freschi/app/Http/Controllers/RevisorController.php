@@ -15,36 +15,45 @@ use Illuminate\Support\Facades\Artisan;
 
 class RevisorController extends Controller
 {
-    
-    public function index (){
+
+    public function index()
+    {
         // voglio passare i primi 5 annunci
         /* $announcement_to_check = Announcement::where('is_accepted', null)->orderBy('created_at', 'desc')->take(5)->get(); */
         $announcement_to_check = Announcement::where('is_accepted', null)->orderBy('created_at', 'desc')->first();
+        if (!$announcement_to_check) {
+            return view('dashboard-revisore')->with('message', 'Nessun annuncio da revisionare');
+        }
         return view('dashboard-revisore', compact('announcement_to_check'));
+
     }
 
-    public function acceptAnnouncement(Announcement $announcement){
-        
+    public function acceptAnnouncement(Announcement $announcement)
+    {
+
         $announcement->setAccepted(true);
         return redirect()->back()->with('message', 'Complimenti, hai accettato l\'annuncio');
     }
 
-    public function rejectAnnouncement(Announcement $announcement){
+    public function rejectAnnouncement(Announcement $announcement)
+    {
         $announcement->setAccepted(false);
         return redirect()->back()->with('message', 'Complimenti, hai rifiutato l\'annuncio');
     }
 
-    public function becomeRevisor(){
+    public function becomeRevisor()
+    {
 
         $user = Auth::user();
         Mail::to('admin@presto.it')->send(new BecomeRevisor($user));
         return redirect()->back()->with('message', 'Complimenti! Hai richiesto di diventare revisore correttamente');
     }
 
-    public function makeRevisor(User $user){
-        Artisan::call('presto:makeUserRevisor', ["email"=>$user->email]);
+    public function makeRevisor(User $user)
+    {
+        Artisan::call('presto:makeUserRevisor', ["email" => $user->email]);
         return redirect('/')->with('message', 'Complimenti! L\'utente è diventato revisore');
     }
-    
-    
+
+
 }
