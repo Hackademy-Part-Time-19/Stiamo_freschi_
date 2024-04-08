@@ -70,11 +70,6 @@
             </div>
 
             @if ($announcement_to_check)
-
-                <div>
-                    <h6>é vuoto</h6>
-                </div>
-            @else
                 <x-session-success />
                 {{-- @foreach ($announcement_to_check as $announcement_to_check) --}}
                 <div class="card-dash">
@@ -228,6 +223,8 @@
                     </div>
                 </div>
                 {{-- @endforeach --}}
+                @else
+                <p>Non ci sono annunci da Revisionare</p>
 
             @endif
         </div>
