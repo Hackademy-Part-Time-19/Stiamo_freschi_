@@ -228,7 +228,7 @@
                 </div>
                 {{-- @endforeach --}}
             @else
-                <p>Non ci sono annunci da Revisionare</p>
+                <button class="btn"><a href="/" style="color: white;font-weight:500">Torna alla homepage</a></button>
 
             @endif
 
