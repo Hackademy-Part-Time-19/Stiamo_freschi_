@@ -1,5 +1,7 @@
 <div>
 
+    <x-session-success />
+
     <div class="row div-form" style=" justify-content: center !important;
     align-items: center !important;">
         <div class="col-4 div-cons">
@@ -126,7 +128,7 @@
 
             <div class="col-4 div-modale">
                 <h1 style="margin-bottom: 20px">{{ __('ui.createAnnouncements') }}</h1>
-                <x-session-success />
+
                 <div class="form3">
 
                     <form wire:submit.live="store" id="FormCreateAnnouncement">

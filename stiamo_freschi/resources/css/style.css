@@ -1014,7 +1014,24 @@ nav.desktop {
 .pop {
     width: 80%;
     display: flex;
-    justify-content: center;
+    z-index: 3000;
+    position: fixed;
+    top: 70px;
+    right: 150px;
+}
+
+.trasp {
+    opacity: 0.7;
+    color: #00B58F;
+}
+
+.btnCloseM {
+    position: absolute;
+    right: 5px;
+    top: 2px;
+    bottom: 2px;
+    cursor: pointer;
+    font-weight: 500;
 }
 
 @media screen and (max-width:749.90px) {

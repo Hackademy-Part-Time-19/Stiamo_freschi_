@@ -1,6 +1,7 @@
 <x-layout>
     <x-navbar />
 
+
     {{-- <div class="banner">
         @foreach ($categories as $category)
             <div id="myButton" class="banner-cat"><a
