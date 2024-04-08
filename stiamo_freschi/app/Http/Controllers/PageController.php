@@ -30,7 +30,7 @@ class PageController extends Controller
     }
     public function test()
     {
-        return view('test-profile');
+        return view('test-cookies');
     }
     public function passwordDimenticata()
     {

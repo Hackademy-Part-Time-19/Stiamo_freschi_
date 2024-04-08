@@ -1,5 +1,10 @@
 <x-layout>
     <x-navbar />
+    <div class="alert alert-success" role="alert">
+        {{ session('message') }}
+    </div>
+
+
     {{-- <div class="banner">
         @foreach ($categories as $category)
             <div id="myButton" class="banner-cat"><a
@@ -7,7 +12,7 @@
         @endforeach
     </div> --}}
     <div class="DivPadreProfile">
-        <div style="height:100vh; background: transparent;">
+        <div style="height:350px; background: transparent;">
             <div class="divInfoProfile">
                 <div class="divInfoProfile1">
                     <div class="divfoto">
@@ -36,14 +41,91 @@
                     </div>
                 </div>
                 <div class="btnArt">
-                    <button class=" btn-desk2 btn-prof">I miei articoli</button>
-                    <button class=" btn-desk2 btn-prof">I miei Preferiti</button>
+                    <button onclick="CambioPagina()" class=" btn-desk2 btn-prof">I miei articoli</button>
+                    <button onclick="CambioPagina1()"class=" btn-desk2 btn-prof">I miei Preferiti</button>
+                </div>
+            </div>
+        </div>
+        <div id="MyArticle" style="background-color: bisque;padding-left:100px;padding-top:50px;padding-bottom:50px">
+            <div class="cardLayout box">
+                <div class="imgCard">
+                    <img src="{{-- $imagecard --}}" alt="">
+                </div>
+                <div class="userCard">
+                    <div class="imageUser">
+                        <img src="{{ asset('img/MainAfter.webp') }}" alt="">
+                    </div>
+                    <div class="nomeUser">
+                        <p style="font-size: 15px;color:black">{{-- $user }}</p>
+                        <p style="font-size: 11px">{{ __('ui.publicationDate') }} {{-- $date --}}</p>
+                    </div>
+                </div>
+                <div class="prezzoCard">
+                    <h4>{{-- $title --}}</h4>
+                    <p>{{-- $price --}} €</p>
+                    <h6>{{-- $category --}}</h6>
+                </div>
+                <div class="descrizioneCard"> mia card
+                    <p>{{-- Str::limit($description, 100) --}}</p>
+                </div>
+                <div class="Areabutton">
+                    <button class="btnCardLayout"><a style="color: white"
+                            href="{{-- route('announcement.show', ['announcement' => $announcement]) --}}">{{ __('ui.buttonDetails') }}</a></button>
+                </div>
+            </div>
+        </div>
+        <div id="MyFavourite" style="background-color: bisque;padding-left:100px;padding-top:50px;padding-bottom:50px">
+            <div class="cardLayout box">
+                <div class="imgCard">
+                    <img src="{{-- $imagecard --}}" alt="">
+                </div>
+                <div class="userCard">
+                    <div class="imageUser">
+                        <img src="{{ asset('img/MainAfter.webp') }}" alt="">
+                    </div>
+                    <div class="nomeUser">
+                        <p style="font-size: 15px;color:black">{{-- $user }}</p>
+                        <p style="font-size: 11px">{{ __('ui.publicationDate') }} {{-- $date --}}</p>
+                    </div>
+                </div>
+                <div class="prezzoCard">
+                    <h4>{{-- $title --}}</h4>
+                    <p>{{-- $price --}} €</p>
+                    <h6>{{-- $category --}}</h6>
+                </div>
+                <div class="descrizioneCard"> mi piace
+                    <p>{{-- Str::limit($description, 100) --}}</p>
+                </div>
+                <div class="Areabutton">
+                    <button class="btnCardLayout"><a style="color: white"
+                            href="{{-- route('announcement.show', ['announcement' => $announcement]) --}}">{{ __('ui.buttonDetails') }}</a></button>
                 </div>
             </div>
         </div>
     </div>
-    <div style="background-color: bisque">
-    </div>
 
-    <script></script>
+
+    <script>
+        let apertura = false;
+
+        let apertura2 = false;
+
+        function CambioPagina() {
+
+
+            if (apertura === false) {
+                document.getElementById('MyArticle').style.display = "flex";
+                document.getElementById('MyFavourite').style.display = "none";
+            }
+        }
+
+        function CambioPagina1() {
+
+
+            if (apertura2 === false) {
+                document.getElementById('MyArticle').style.display = "none";
+                document.getElementById('MyFavourite').style.display = "flex";
+            }
+        }
+    </script>
 </x-layout>
