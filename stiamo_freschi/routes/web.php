@@ -5,6 +5,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\LanguageController;
+use App\Http\Controllers\GoogleAuthController;
 use App\Http\Controllers\AnnouncementController;
 
 /*
@@ -52,3 +53,8 @@ Route::post('/lingua/{lang}', [LanguageController::class, 'setLanguage'])->name(
 Route::get('/accetta-cookies', [PageController::class, 'accettaCookies'])->name('accetta-cookies');
 // Rifiuta cookies
 Route::get('/rifiuta-cookies', [PageController::class, 'rifiutaCookies'])->name('rifiuta-cookies');
+
+
+// Google Auth Socialite
+Route::get('/auth/google', [GoogleAuthController::class, 'redirect'])->name('google.auth');
+Route::get('/auth/google/call-back', [GoogleAuthController::class, 'callbackGoogle']);
