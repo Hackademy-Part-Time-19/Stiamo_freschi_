@@ -58,7 +58,8 @@
             </ul>
         </div>
 
-        <div class="div-card" style="@if($announcement_to_check)justify-content: center;@else justify-content: start;padding-top:100px @endif">
+        <div class="div-card"
+            style="@if ($announcement_to_check) justify-content: center;@else justify-content: start;padding-top:100px @endif">
             <div>
                 <h1 style="text-align:center;margin-top:30px">{{ __('ui.welcomeBackRevisor') }}
                     {{ Auth::user()->name }}
@@ -73,6 +74,10 @@
 
             @if ($announcement_to_check)
                 <div class="card-dash">
+                    <div style="display: flex; justify-content:center">
+                        <x-session-success />
+                    </div>
+
                     <div class="inserzione">
                         <div
                             style="display: flex;  width: 80%;padding:5px;justify-content: center;align-items: center;">
@@ -221,8 +226,10 @@
                         </div>
                     </div>
                 </div>
+                {{-- @endforeach --}}
             @else
-                <button class="btn"><a href="/" style="color: white">Torna alla home</a></h1>
+                <p>Non ci sono annunci da Revisionare</p>
+
             @endif
 
         </div>

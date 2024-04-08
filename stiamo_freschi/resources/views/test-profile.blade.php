@@ -1,12 +1,5 @@
 <x-layout>
     <x-navbar />
-    <div class="pop">
-        <div class="alert alert-success " style="width: 90%; display: flex;
-        justify-content: center;"
-            role="alert">
-            {{ session('message') }} il tuo Annuncio è stato creato con successo
-        </div>
-    </div>
 
     {{-- <div class="banner">
         @foreach ($categories as $category)
@@ -49,7 +42,7 @@
                 </div>
             </div>
         </div>
-        <div id="MyArticle" style="background-color: bisque;padding-left:100px;padding-top:50px;padding-bottom:50px">
+        <div id="MyArticle" style="background-color: bisque;padding-left:100px;padding-top:50px;padding-bottom:50px;">
             <div class="cardLayout box">
                 <div class="imgCard">
                     <img src="{{-- $imagecard --}}" alt="">
@@ -77,7 +70,8 @@
                 </div>
             </div>
         </div>
-        <div id="MyFavourite" style="background-color: bisque;padding-left:100px;padding-top:50px;padding-bottom:50px">
+        <div id="MyFavourite"
+            style="background-color: bisque;padding-left:100px;padding-top:50px;padding-bottom:50px; display:none">
             <div class="cardLayout box">
                 <div class="imgCard">
                     <img src="{{-- $imagecard --}}" alt="">

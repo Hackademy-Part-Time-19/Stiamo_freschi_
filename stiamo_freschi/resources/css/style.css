@@ -1012,7 +1012,7 @@ nav.desktop {
 }
 
 .pop {
-    margin: 80px;
+    width: 80%;
     display: flex;
     justify-content: center;
 }
