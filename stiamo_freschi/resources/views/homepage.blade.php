@@ -14,10 +14,11 @@
         @auth
             <div class="txt-img">
                 <h1>{{ __('ui.welcomeName') }} {{ auth()->user()->name }}</h1>
-                <button class="btn-txt-img"><a href="{{ route('announcement.create') }}"
-                        style="text-decoration: none; color:white;">
-                        {{ __('ui.insertAd') }}</a>
-                </button>
+                <a style="text-decoration: none; color:white; width: 500px" href="{{ route('announcement.create') }}">
+                    <button class="btn-txt-img">
+                        {{ __('ui.insertAd') }}
+                    </button>
+                </a>
             </div>
         @endauth
         @guest
