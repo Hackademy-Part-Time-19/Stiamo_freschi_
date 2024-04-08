@@ -1011,6 +1011,12 @@ nav.desktop {
     border-bottom-right-radius: 0px;
 }
 
+.pop {
+    margin: 80px;
+    display: flex;
+    justify-content: center;
+}
+
 @media screen and (max-width:749.90px) {
     .body {
         padding: 0px !important;

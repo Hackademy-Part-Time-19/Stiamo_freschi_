@@ -1,9 +1,12 @@
 <x-layout>
     <x-navbar />
-    <div class="alert alert-success" role="alert">
-        {{ session('message') }}
+    <div class="pop">
+        <div class="alert alert-success " style="width: 90%; display: flex;
+        justify-content: center;"
+            role="alert">
+            {{ session('message') }} il tuo Annuncio è stato creato con successo
+        </div>
     </div>
-
 
     {{-- <div class="banner">
         @foreach ($categories as $category)
