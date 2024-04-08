@@ -175,13 +175,15 @@
                 </button>
                 <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton">
                     <li style="display: flex; margin:10px">
-                        <a href="" style="margin-right: 5px">Italiano</a>
+                        <a href="" style="margin-right: 5px"></a>
                         <x-_locale lang='it' nation='it' />
                     </li>
-                    <li style="display: flex;margin:10px"><a href="">Inglese</a> <x-_locale lang='en'
-                            nation='gb' /></li>
-                    <li style="display: flex;margin:10px"><a href="">Spagnolo\</a> <x-_locale lang='es'
-                            nation='es' /></li>
+                    <li style="display: flex;margin:10px">
+                        <a href=""></a> 
+                        <x-_locale lang='en'nation='gb' /></li>
+                    <li style="display: flex;margin:10px">
+                        <a href=""></a> 
+                        <x-_locale lang='es'nation='es' /></li>
                 </ul>
             </div>
         @endguest
@@ -236,7 +238,7 @@
                             @endif
                         @endif
                         @if (!Auth::user()->is_revisor)
-                            <li><a class="dropdown-item" href="{{ route('become.revisor') }}">Diventa revisore
+                        <li><a class="dropdown-item" href="{{ route('become.revisor') }}">{{__('ui.dropDwnMakeRevisor')}} 
                         @endif
                         <li><a class="dropdown-item btn-log" href="#">
                                 <form action="/logout" method="post">

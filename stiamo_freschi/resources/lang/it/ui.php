@@ -96,8 +96,10 @@ return [
    'insertipsw'=>"Inserisci la tua password",
    'remember'=>"Ricordami",
    'or'=>"Oppure",
-   'register'=>"Registrati",
+   'registerGoogle'=>"Continua con Google",
    'requestPsw'=>"Hai dimenticato la Password?",
+   'youNotRegister'=>"Non sei registrato? ",
+   'clickHere'=>"Clicca qui",
 
    //Register
    'registerR'=>"Registrati",
@@ -135,9 +137,12 @@ return [
     'buttonSearchA'=>"Cerca",
     'buttonInsertAds'=>"Inserisci articolo",
     'auditorArea'=>'Zona Revisore',
+    'messageAccessOnlyRevisor'=>"Attenzione! Solo i revisori hanno accesso a quest'area",
     'dropDwnDashboard'=>"Dashboard",
     'dropDwnBalance'=>"Saldo",
     'dropDwnAssistance'=>"Assistenza",
+    'dropDwnMakeRevisor'=>"Diventa revisore",
+    'messageBecomeRevisor'=>"Complimenti! Hai richiesto di diventare revisore correttamente",
     'dropDwnRevisor'=>"Zona Revisore",
     'dropDwnLogout'=>"Esci",
 
@@ -148,6 +153,7 @@ return [
     'emailRevisor'=>"Email: ",
     'acceptancetext'=>"Se vuoi renderlo revisore clicca qui:",
     'buttonMakeRevisor'=>"Rendi revisore",
+    'messageIsRevisor'=>"Complimenti! L'utente è diventato revisore",
 
     //Dashboard Revisore
     'welcomeBackRevisor'=>"Bentornato",
@@ -158,7 +164,9 @@ return [
     'priceAsdReview'=>"Prezzo:",
     'descriptionAsdReview'=>"Descrizione:",
     'buttonAccept'=>"Accetta",
+    'messageAsdAccepted'=>"Complimenti, hai accettato l'annuncio",
     'buttonrefuse'=>"Rifiuta",
+    'messageAsdRejected'=>"Complimenti, hai rifiutato l'annuncio",
 
     //Ricerca per categoria
     'textAdsByCategory'=>"Ecco i risultati trovati per la categoria :",
@@ -175,16 +183,6 @@ return [
                         accettare.",
     'buttonAcceptCookies'=>"Accetta",
     'buttonrefuseCookies'=>"Rifiuta",
-
-
-    
-
-
-
-
-
-   
-
 ];
 
 

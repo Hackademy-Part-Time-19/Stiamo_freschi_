@@ -96,8 +96,10 @@ return [
    'insertipsw'=>"Insert your password",
    'remember'=>"Remind me",
    'or'=>"Or",
-   'register'=>"Register",
+   'registerGoogle'=>"Continue with Google",
    'requestPsw'=>"Have you forgotten your password?",
+   'youNotRegister'=>"Not registered?",
+   'clickHere'=>"Click here",
 
    //Register
    'registerR'=>"Sign in",
@@ -135,9 +137,12 @@ return [
     'buttonSearchA'=>"Search",
     'buttonInsertAds'=>"Insert article",
     'auditorArea'=>'Reviewer Area',
+    'messageAccessOnlyRevisor'=>"Attention! Only reviewers have access to this area",
     'dropDwnDashboard'=>"Dashboard",
     'dropDwnBalance'=>"Balance",
     'dropDwnAssistance'=>"Assistance",
+    'dropDwnMakeRevisor'=>"Make reviewer",
+    'messageBecomeRevisor'=>"Compliments! You have successfully applied to become a reviewer",
     'dropDwnRevisor'=>"Reviewer Area",
     'dropDwnLogout'=>"Logout",
 
@@ -148,6 +153,7 @@ return [
     'emailRevisor'=>"Email: ",
     'acceptancetext'=>"If you want to make it a reviewer click here:",
     'buttonMakeRevisor'=>"Make reviewer",
+    'messageIsRevisor'=>"Compliments! The user has become a reviewer",
 
     //Dashboard Revisore
     'welcomeBackRevisor'=>"Welcome back",
@@ -158,7 +164,9 @@ return [
     'priceAsdReview'=>"Price:",
     'descriptionAsdReview'=>"Description:",
     'buttonAccept'=>"Accept",
+    'messageAsdAccepted'=>"Congratulations, you have accepted the announcement",
     'buttonrefuse'=>"Reject",
+    'messageAsdRejected'=>"Congratulations, you rejected the ad",
 
     //Ricerca per categoria
     'textAdsByCategory'=>"Here are the results found for the category:",
