@@ -959,6 +959,58 @@ nav.desktop {
     background-repeat: no-repeat;
 }
 
+.DivPadreProfile {
+    background: url('/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.divInfoProfile {
+    border-bottom: 1px solid #081F37;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 60px;
+}
+
+.divInfoProfile1 {
+    display: flex;
+    padding-top: 100px;
+    height: 40vh;
+    /* background-color: #133f6f;*/
+    background: transparent;
+}
+
+.divfoto {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.divNome {
+    flex: 2;
+}
+
+.divModifica {
+    flex: 1;
+}
+
+.btnModificaProfile {
+    width: 140px;
+    height: 35px;
+    background: #081F37;
+}
+
+.btnArt {
+    margin-left: 10px;
+    display: flex;
+}
+
+.btn-prof {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
 @media screen and (max-width:749.90px) {
     .body {
         padding: 0px !important;
@@ -1258,6 +1310,10 @@ nav.desktop {
 @media screen and (min-width:1201px) {
     .nav.mobile {
         display: none !important;
+    }
+
+    .container-cat {
+        display: none;
     }
 
 

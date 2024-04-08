@@ -485,11 +485,10 @@ a {
     height: auto;
     background-color: none;
     display: flex;
+    justify-content: center;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding-top: 80px;
-
-
 }
 
 .cardLayout:hover {
@@ -502,15 +501,13 @@ a {
 .containerCaruselShow {
     background-color: none;
     height: 600px;
-    width: 800px;
+    width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 20px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-
-
 }
 
 .containerCaruselShow img {
@@ -523,7 +520,7 @@ a {
 
 .containerTextShow {
     height: 550px;
-    width: 700px;
+    width: 600px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -533,6 +530,7 @@ a {
     border-bottom-right-radius: 20px;
     background-color: #d9d9d9b2;
     margin-right: 20px;
+
 }
 
 .containerTextShow h1 {

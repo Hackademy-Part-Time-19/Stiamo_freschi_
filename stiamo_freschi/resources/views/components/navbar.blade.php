@@ -257,7 +257,7 @@
                     </ul>
                 </div>
                 <div class="dropdown icon-btn"
-                    style="flex:0.3;display:flex;justify-content:center;align-items:center;margin-right:10px">
+                    style="flex:0.3;display:flex;justify-content:center;align-items:center;margin-right:10px;">
                     <button id="languageButton" class="btn dropdown-toggle icon-profile"
                         style="width: max-content;margin-right:20px" type="button" id="dropdownMenuButton"
                         data-bs-toggle="dropdown" aria-expanded="false">

@@ -16,24 +16,24 @@
                     <div class="carousel-inner">
                         @if ($announcement->images->isEmpty())
                             <div class="carousel-item active">
-                                <img src="{{asset('img/pexels-photo-4464487.jpeg')}}"
-                                    class="d-block w-100" alt="...">
+                                <img src="{{ asset('img/pexels-photo-4464487.jpeg') }}" class="d-block w-100"
+                                    alt="...">
                                 <div class="carousel-caption d-none d-md-block">
                                     {{--  <h5>First slide label</h5>
                             <p>Some representative placeholder content for the first slide.</p> --}}
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="{{asset('img/pexels-photo-4464487.jpeg')}}"
-                                    style="object-fit:cover" class="d-block w-100" alt="">
+                                <img src="{{ asset('img/pexels-photo-4464487.jpeg') }}" style="object-fit:cover"
+                                    class="d-block w-100" alt="">
                                 <div class="carousel-caption d-none d-md-block">
                                     {{-- <h5>Second slide label</h5>
                             <p>Some representative placeholder content for the second slide.</p> --}}
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="{{asset('img/pexels-photo-4464487.jpeg')}}"
-                                    class="d-block w-100" alt="...">
+                                <img src="{{ asset('img/pexels-photo-4464487.jpeg') }}" class="d-block w-100"
+                                    alt="...">
                                 <div class="carousel-caption d-none d-md-block">
                                     {{--                             <h5>Third slide label</h5>
                             <p>Some representative placeholder content for the third slide.</p> --}}
@@ -61,11 +61,12 @@
                 </div>
             </div>
             <div class="containerTextShow">
-                <div style="width:70%: height: 50%; margin-top:0px">
-                    <h1 style="font-size: 3vw">{{ $announcement->title }}</h1>
+                <div style="width:80%: height: 50%; margin-top:0px">
+                    <h1 style="font-size: 3vw; overflow:hidden">{{ $announcement->title }}</h1>
                     <h2 style="font-size: 2vw">{{ __('ui.priceCardDetails') }} {{ $announcement->price }} € </h2>
                     <p style="font-size: 2vw">{{ __('ui.descriptionCardDetails') }} {{ $announcement->description }}</p>
-                    <p style="font-size: 2vw">{{ __('ui.categoryCardDetails') }} {{ $announcement->category->name }}</p>
+                    <p style="font-size: 2vw">{{ __('ui.categoryCardDetails') }} {{ $announcement->category->name }}
+                    </p>
                 </div>
                 <div class="div-btn-acq">
                     <button class="btn btn-acq">{{ __('ui.buttonBuy') }}</button>
@@ -90,14 +91,14 @@
                 @forelse ($categoryAnnouncements as $announcement)
                     <div id="containerColCard" class="col-12 col-xl-3 col-lg-4 col-md-6 mt-5">
                         @if ($announcement->images->isEmpty())
-                        <x-card-home :imagecard="asset('img/pexels-photo-4464487.jpeg')" :user="$announcement->user->name" :date="$announcement->updated_at->format('d/m/y H:i:s')" :title="$announcement->title"
-                            :price="$announcement->price" :description="$announcement->description" :category="$announcement->category->name" :announcement="$announcement">
-                        </x-card-home>
-                    @else
-                        <x-card-home :imagecard="$announcement->images->first()->getUrl(200, 300)" :user="$announcement->user->name" :date="$announcement->updated_at->format('d/m/y H:i:s')" :title="$announcement->title"
-                            :price="$announcement->price" :description="$announcement->description" :category="$announcement->category->name" :announcement="$announcement">
-                        </x-card-home>
-                    @endif
+                            <x-card-home :imagecard="asset('img/pexels-photo-4464487.jpeg')" :user="$announcement->user->name" :date="$announcement->updated_at->format('d/m/y H:i:s')" :title="$announcement->title"
+                                :price="$announcement->price" :description="$announcement->description" :category="$announcement->category->name" :announcement="$announcement">
+                            </x-card-home>
+                        @else
+                            <x-card-home :imagecard="$announcement->images->first()->getUrl(200, 300)" :user="$announcement->user->name" :date="$announcement->updated_at->format('d/m/y H:i:s')" :title="$announcement->title"
+                                :price="$announcement->price" :description="$announcement->description" :category="$announcement->category->name" :announcement="$announcement">
+                            </x-card-home>
+                        @endif
                     </div>
                 @empty
                     <div class="col-12">
