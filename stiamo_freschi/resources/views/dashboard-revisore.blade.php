@@ -69,7 +69,8 @@
 
             </div>
 
-            @if ($announcement_to_check->isEmpty())
+            @if ($announcement_to_check)
+
                 <div>
                     <h6>é vuoto</h6>
                 </div>
@@ -227,8 +228,9 @@
                     </div>
                 </div>
                 {{-- @endforeach --}}
+
+            @endif
         </div>
-        @endif
     </div>
     <script>
         let apertura = false;

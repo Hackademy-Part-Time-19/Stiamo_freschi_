@@ -21,9 +21,6 @@ class RevisorController extends Controller
         // voglio passare i primi 5 annunci
         /* $announcement_to_check = Announcement::where('is_accepted', null)->orderBy('created_at', 'desc')->take(5)->get(); */
         $announcement_to_check = Announcement::where('is_accepted', null)->orderBy('created_at', 'desc')->first();
-        if (!$announcement_to_check) {
-            return view('dashboard-revisore')->with('message', 'Nessun annuncio da revisionare');
-        }
         return view('dashboard-revisore', compact('announcement_to_check'));
 
     }
