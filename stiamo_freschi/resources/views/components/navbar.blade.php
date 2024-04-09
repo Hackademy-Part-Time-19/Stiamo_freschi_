@@ -166,29 +166,10 @@
                 <a href="/login"><button class="btn-desk2">{{ __('ui.buttonLoginG') }}</button></a>
                 <a href="/register"><button class="btn-desk2">{{ __('ui.buttonRegisterG') }}</button></a>
             </div>
-
-            <div class="dropdown icon-btn" id="dropdownMenuNavDesktop"
-                style="flex:0.3;display:flex;justify-content:center;align-items:center;margin-right:10px">
-                <button class="btn dropdown-toggle icon-profile" type="button" id="dropdownMenuButton"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    {{ __('ui.changeLanguage') }}
-                </button>
-                <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton">
-                    <li style="display: flex; margin:10px">
-                        <a href="" style="margin-right: 5px"></a>
-                        <x-_locale lang='it' nation='it' />
-                    </li>
-                    <li style="display: flex;margin:10px">
-                        <a href=""></a> 
-                        <x-_locale lang='en'nation='gb' /></li>
-                    <li style="display: flex;margin:10px">
-                        <a href=""></a> 
-                        <x-_locale lang='es'nation='es' /></li>
-                </ul>
-            </div>
         @endguest
-        @auth
-            <div class="div-btn-desk">
+
+        <div class="div-btn-desk">
+            @auth
                 {{-- <div style="margin: 10px">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                         class="bi bi-envelope" viewBox="0 0 16 16">
@@ -238,7 +219,8 @@
                             @endif
                         @endif
                         @if (!Auth::user()->is_revisor)
-                        <li><a class="dropdown-item" href="{{ route('become.revisor') }}">{{__('ui.dropDwnMakeRevisor')}} 
+                            <li><a class="dropdown-item"
+                                    href="{{ route('become.revisor') }}">{{ __('ui.dropDwnMakeRevisor') }}
                         @endif
                         <li><a class="dropdown-item btn-log" href="#">
                                 <form action="/logout" method="post">
@@ -258,24 +240,21 @@
                         </li>
                     </ul>
                 </div>
-                <div class="dropdown icon-btn"
-                    style="flex:0.3;display:flex;justify-content:center;align-items:center;margin-right:10px;">
-                    <button id="languageButton" class="btn dropdown-toggle icon-profile"
-                        style="width: max-content;margin-right:20px" type="button" id="dropdownMenuButton"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        {{ __('ui.changeLanguage') }}
-                    </button>
-                    <ul class="dropdown-menu  " aria-labelledby="dropdownMenuButton" style="margin-right: 10px">
-                        <li style="display: flex; margin:10px"><x-_locale lang='it' nation='it' /></li>
-                        <li style="display: flex;margin:10px"><x-_locale lang='en' nation='gb' /></li>
-                        <li style="display: flex;margin:10px"> <x-_locale lang='es' nation='es' /></li>
-                    </ul>
-                </div>
+            @endauth
+            <div class="dropdown icon-btn"
+                style="flex:0.3;display:flex;justify-content:center;align-items:center;margin-right:10px;">
+                <button id="languageButton" class="btn dropdown-toggle icon-profile"
+                    style="width: max-content;margin-right:20px" type="button" id="dropdownMenuButton"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    {{ __('ui.changeLanguage') }}
+                </button>
+                <ul class="dropdown-menu  " aria-labelledby="dropdownMenuButton" style="margin-right: 10px">
+                    <li style="display: flex; margin:10px"><x-_locale lang='it' nation='it' /></li>
+                    <li style="display: flex;margin:10px"><x-_locale lang='en' nation='gb' /></li>
+                    <li style="display: flex;margin:10px"> <x-_locale lang='es' nation='es' /></li>
+                </ul>
             </div>
-
         </div>
-    @endauth
-    </div>
     </div>
 </nav>
 <div class="container-cat">

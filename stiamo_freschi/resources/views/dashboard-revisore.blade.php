@@ -70,9 +70,13 @@
 
             </div>
 
-            <x-session-success />
+
 
             @if ($announcement_to_check)
+
+                <x-session-success />
+
+
                 <div class="card-dash">
                     <div style="display: flex; justify-content:center">
                         <x-session-success />
@@ -228,7 +232,8 @@
                 </div>
                 {{-- @endforeach --}}
             @else
-                <button class="btn"><a href="/" style="color: white;font-weight:500">Torna alla homepage</a></button>
+                <button class="btn"><a href="/" style="color: white;font-weight:500">Torna alla
+                        homepage</a></button>
 
             @endif
 

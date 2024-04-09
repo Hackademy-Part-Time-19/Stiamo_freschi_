@@ -14,6 +14,20 @@
 @endif
 
 <script>
+    // Funzione che nasconde il popup dopo un certo periodo di tempo
+    function hidePopup() {
+        document.getElementById('popSuccess').style.display = 'none';
+    }
+
+    // Codice per far partire setTimeout quando appare il popup
+    document.addEventListener('DOMContentLoaded', function() {
+        // Quando il popup viene mostrato, avvia setTimeout
+        document.getElementById('popSuccess').addEventListener('transitionend', function() {
+            // La transizione è completata, il popup è ora visibile
+            setTimeout(hidePopup, 5000); // Nascondi il popup dopo 5 secondi (5000 millisecondi)
+        });
+    });
+
     function closeMessageSuccess() {
         document.getElementById('popSuccess').style.display = 'none';
     }

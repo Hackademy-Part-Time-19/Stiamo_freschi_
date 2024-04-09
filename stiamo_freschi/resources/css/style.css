@@ -1014,6 +1014,7 @@ nav.desktop {
 .pop {
     width: 80%;
     display: flex;
+    justify-content: center;
     z-index: 3000;
     position: fixed;
     top: 70px;
