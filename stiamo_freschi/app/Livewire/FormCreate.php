@@ -71,7 +71,7 @@ class FormCreate extends Component
 
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
-        session()->flash('message', 'Annuncio creato con successo!');
+        session()->flash('message', 'Annuncio creato con successo! Verrà pubblicato solamente dopo la revisione');
         $this->clearForm();
     }
 

@@ -261,7 +261,7 @@
     margin: 0px;
     height: 100%;
     background-color: none;
-    flex: 3;
+    flex: 5;
     width: 10px;
 }
 
@@ -437,7 +437,7 @@ nav.desktop {
 .div-btn-desk {
     background-color: none;
     display: flex;
-    flex: 2;
+    flex: 1;
     justify-content: end;
     align-items: center;
     z-index: 2001;
@@ -1018,11 +1018,11 @@ nav.desktop {
     z-index: 3000;
     position: fixed;
     top: 70px;
-    right: 150px;
+    right: 130px;
 }
 
 .trasp {
-    opacity: 0.7;
+    opacity: 0.8;
     color: #00B58F;
 }
 

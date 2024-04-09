@@ -3,7 +3,7 @@
     <div style="display: flex;height:max-content">
         <div class="aside-left">
             <ul class="ul-aside">
-                <a class="li-aside" href="{{ route('dashboard') }}">
+                <a class="li-aside" href="{{ route('dashboard') }}" style="color:black">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                         class="bi bi-columns-gap" viewBox="0 0 16 16">
                         <path
@@ -73,12 +73,8 @@
 
 
             @if ($announcement_to_check)
-
-                <x-session-success />
-
-
                 <div class="card-dash">
-                    <div style="display: flex; justify-content:center">
+                    <div style="display: flex; justify-content:center;align-items:center;margin-left:100px">
                         <x-session-success />
                     </div>
 
