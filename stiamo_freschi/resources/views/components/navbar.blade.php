@@ -161,15 +161,15 @@
         @endif
 
 
-     
+
 
         <div class="div-btn-desk">
             @guest
-            <div class="div-btn-desk">
+
                 <a href="/login"><button class="btn-desk2">{{ __('ui.buttonLoginG') }}</button></a>
                 <a href="/register"><button class="btn-desk2">{{ __('ui.buttonRegisterG') }}</button></a>
-            </div>
-        @endguest
+
+            @endguest
             @auth
                 {{-- <div style="margin: 10px">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
@@ -244,9 +244,8 @@
             @endauth
             <div class="dropdown icon-btn"
                 style="display:flex;justify-content:center;align-items:center;margin-right:10px;height:100%;width:150px;padding-bottom:4px">
-                <button id="languageButton" class="btn dropdown-toggle icon-profile"
-                    style="width: 100px" type="button" id="dropdownMenuButton"
-                    data-bs-toggle="dropdown" aria-expanded="false">
+                <button id="languageButton" class="btn dropdown-toggle icon-profile" style="width: 100px"
+                    type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                     {{ __('ui.changeLanguage') }}
                 </button>
                 <ul class="dropdown-menu  " aria-labelledby="dropdownMenuButton" style="margin-right: 10px">

@@ -229,8 +229,11 @@
 }
 
 .icon-btn {
-    margin-right: 30px;
+    margin-right: 0px;
     width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 
@@ -1409,7 +1412,6 @@ nav.desktop {
     }
 
     .icon-btn {
-        margin-right: 40px;
         width: 70px;
     }
 
