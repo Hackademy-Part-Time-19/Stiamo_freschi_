@@ -2,6 +2,8 @@
 
 namespace App\Livewire;
 
+use App\Jobs\GoogleVisionSafeSearch;
+use App\Jobs\RemoveFaces;
 use Livewire\Component;
 use App\Models\Category;
 use App\Jobs\ResizeImage;
@@ -65,8 +67,11 @@ class FormCreate extends Component
                 /* $this->announcement->images()->create(['path' => $image->store('images', 'public')]);*/
                 $newFileName = "announcement/{$this->announcement->id}";
                 $newImage = $this->announcement->images()->create(['path' => $image->store($newFileName, 'public')]);
+                RemoveFaces::withChain([
+                    new ResizeImage($newImage->path, 200, 300),
+                    new GoogleVisionSafeSearch($newImage->id),
+                ])->dispatch($newImage->id);
 
-                dispatch(new ResizeImage($newImage->path, 200, 300));
             }
 
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
@@ -83,7 +88,7 @@ class FormCreate extends Component
                 'name' => $category->translatedName(),
             ];
         });
-    
+
         return view('livewire.form-create', [
             'categories' => $categories,
         ]);
