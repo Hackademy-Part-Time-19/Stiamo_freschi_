@@ -77,8 +77,15 @@ class FormCreate extends Component
 
     public function render()
     {
+        $categories = Category::all()->map(function ($category) {
+            return [
+                'id' => $category->id,
+                'name' => $category->translatedName(),
+            ];
+        });
+    
         return view('livewire.form-create', [
-            'categories' => Category::all()
+            'categories' => $categories,
         ]);
     }
 

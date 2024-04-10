@@ -183,6 +183,17 @@ return [
                         accettare.",
     'buttonAcceptCookies'=>"Accetta",
     'buttonrefuseCookies'=>"Rifiuta",
+
+    //categorie
+        'sport' => 'Sport',
+        'elettronica' => 'Elettronica',
+        'musica' => 'Musica',
+        'casa' => 'Casa',
+        'giardino' => 'Giardino',
+        'fai da te' => 'Fai da te',
+        'abbigliamento' => 'Abbigliamento',
+        'accessori' => 'Accessori',
+        'gioielli' => 'Gioielli',
 ];
 
 

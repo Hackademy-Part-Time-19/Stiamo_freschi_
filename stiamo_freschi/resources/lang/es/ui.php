@@ -183,4 +183,15 @@ return [
                         aceptar.",
     'buttonAcceptCookies'=>"Aceptar",
     'buttonrefuseCookies'=>"Rechazar",
+
+    //categorie
+    'sport' => 'Deporte',
+    'elettronica' => 'Electrónica',
+    'musica' => 'Música',
+    'casa' => 'Casa',
+    'giardino' => 'Jardín',
+    'fai da te' => 'Hazlo tu mismo',
+    'abbigliamento' => 'Ropa',
+    'accessori' => 'Accesorios',
+    'gioielli' => 'Joyas',
 ];

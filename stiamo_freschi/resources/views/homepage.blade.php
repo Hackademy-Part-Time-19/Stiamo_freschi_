@@ -3,9 +3,12 @@
     <x-navbar />
     <div class="banner">
         @foreach ($categories as $category)
-            <div id="myButton" class="banner-cat"><a
-                    href="{{ route('announcement.category', ['id' => $category->id]) }}">{{ $category->name }}</a></div>
-        @endforeach
+        <div id="myButton" class="banner-cat">
+            <a href="{{ route('announcement.category', ['id' => $category->id]) }}">
+                {{ $category->translatedName() }}
+            </a>
+        </div>
+    @endforeach
     </div>
     <div class="img-container-mobile">
 

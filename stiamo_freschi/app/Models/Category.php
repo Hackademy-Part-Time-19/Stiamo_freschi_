@@ -15,4 +15,10 @@ class Category extends Model
     {
         return $this->hasMany(Announcement::class);
     }
+
+    public function translatedName()
+    {
+    return __('ui.' . strtolower($this->name));
+    }
+
 }

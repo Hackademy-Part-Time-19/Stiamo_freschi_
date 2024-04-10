@@ -169,11 +169,10 @@
                         <div class="mb-3">
                             <label for="category">{{ __('ui.selectCategory') }}</label>
                         </div>
-                        <select class="form-select" aria-label="Default select example" name="category_id"
-                            style="width: 100%; height:35px;margin-bottom: 20px;" wire:model.live="category_id">
+                        <select class="form-select" aria-label="Default select example" name="category_id" style="width: 100%; height:35px;margin-bottom: 20px;" wire:model.live="category_id">
                             <option selected>{{ __('ui.selectElement') }}</option>
                             @foreach ($categories as $category)
-                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                <option value="{{ $category['id'] }}">{{ $category['name'] }}</option>
                             @endforeach
                         </select>
 
