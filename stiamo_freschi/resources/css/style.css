@@ -29,6 +29,7 @@
 .container-img-back {
     background: url("/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg");
     background-repeat: none;
+    background-size: cover;
 }
 
 .popup {

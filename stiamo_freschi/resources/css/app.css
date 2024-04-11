@@ -520,7 +520,6 @@ a {
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     object-fit: cover;
-    aspect-ratio: 1/1;
 }
 
 .containerTextShow {
