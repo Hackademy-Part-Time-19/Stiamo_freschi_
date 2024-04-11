@@ -1,8 +1,7 @@
 @if (session('message'))
-    <div id="popSuccess" class="pop">
+    <div id="popSuccess" class="pop" x-data="{ isOpen: true }" x-init="setTimeout(() => { isOpen = false; }, 5000)" >
         <div class="alert alert-success trasp" style="width: 90%; display: flex;
-    justify-content: center;"
-            role="alert">
+            justify-content: center;align-items:center;text-align:center;font-size:20px" role="alert" x-show="isOpen" class="popup">
             {{ session('message') }}
             <div onclick="closeMessageSuccess()" class="btnCloseM"><svg xmlns="http://www.w3.org/2000/svg" width="20"
                     height="20" fill="black" class="bi bi-x-lg" viewBox="0 0 16 16">
@@ -13,22 +12,17 @@
     </div>
 @endif
 
+
+
+
+
+
+
+
 <script>
     // Funzione che nasconde il popup dopo un certo periodo di tempo
     function hidePopup() {
         document.getElementById('popSuccess').style.display = 'none';
     }
 
-    // Codice per far partire setTimeout quando appare il popup
-    document.addEventListener('DOMContentLoaded', function() {
-        // Quando il popup viene mostrato, avvia setTimeout
-        document.getElementById('popSuccess').addEventListener('transitionend', function() {
-            // La transizione è completata, il popup è ora visibile
-            setTimeout(hidePopup, 5000); // Nascondi il popup dopo 5 secondi (5000 millisecondi)
-        });
-    });
-
-    function closeMessageSuccess() {
-        document.getElementById('popSuccess').style.display = 'none';
-    }
 </script>
