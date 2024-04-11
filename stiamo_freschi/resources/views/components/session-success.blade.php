@@ -1,5 +1,5 @@
 @if (session('message'))
-    <div id="popSuccess" class="pop" x-data="{ isOpen: true }" x-init="setTimeout(() => { isOpen = false; }, 5000)">
+    <div id="popSuccess" class="pop" x-data="{ isOpen: true }" x-init="setTimeout(() => { isOpen = false; }, 3000)">
         <div class="alert alert-success trasp"
             style="width: 90%; display: flex;
             justify-content: center;align-items:center;text-align:center;font-size:20px"
@@ -13,3 +13,12 @@
         </div>
     </div>
 @endif
+
+<script>
+    function hidePopup() {
+        document.getElementById('popSuccess').style.display = 'none';
+    }
+    function hidePopupDenied() {
+        document.getElementById('popDenied').style.display = 'none';
+    }
+</script>

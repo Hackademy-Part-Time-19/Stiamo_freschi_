@@ -8,8 +8,9 @@
                 {{ $category->translatedName() }}
             </a>
         </div>
-    @endforeach
+        @endforeach
     </div>
+    <x-session-success/>
     <div class="img-container-mobile">
 
     </div>

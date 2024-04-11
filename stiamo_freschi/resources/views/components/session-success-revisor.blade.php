@@ -1,5 +1,5 @@
 @if (session('success'))
-    <div id="popSuccess" class="pop" x-data="{ isOpen: true }" x-init="setTimeout(() => { isOpen = false; }, 5000)" >
+    <div id="popSuccess" class="pop" x-data="{ isOpen: true }" x-init="setTimeout(() => { isOpen = false; }, 3000)" >
         <div class="alert alert-success trasp" style="width: 90%; display: flex;
             justify-content: center;align-items:center;text-align:center;font-size:20px" role="alert" x-show="isOpen" class="popup">
             {{ session('success') }}
@@ -11,7 +11,7 @@
         </div>
     </div>
 @elseif (session('denied'))
-    <div id="popDenied" class="pop" x-data="{ isOpen: true }" x-init="setTimeout(() => { isOpen = false; }, 5000)" >
+    <div id="popDenied" class="pop" x-data="{ isOpen: true }" x-init="setTimeout(() => { isOpen = false; }, 3000)" >
         <div class="alert alert-danger traspDenied" style="width: 90%; display: flex;
             justify-content: center;align-items:center;text-align:center;font-size:20px" role="alert" x-show="isOpen" class="popup">
             {{ session('denied') }}
@@ -25,12 +25,10 @@
 @endif
 
 <script>
-    // Funzione che nasconde il popup dopo un certo periodo di tempo
     function hidePopup() {
         document.getElementById('popSuccess').style.display = 'none';
     }
     function hidePopupDenied() {
         document.getElementById('popDenied').style.display = 'none';
     }
-
 </script>
