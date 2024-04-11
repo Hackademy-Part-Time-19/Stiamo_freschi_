@@ -59,8 +59,8 @@
         </div>
 
         <div class="div-card"
-            style="@if ($announcement_to_check) justify-content: center;@else justify-content: start;padding-top:100px @endif">
-            <div>
+            style="@if ($announcement_to_check) justify-content: center;@else justify-content: start;padding-top:60px @endif">
+            <div style="margin-left: 200px;">
                 <h1 style="text-align:center;margin-top:30px">{{ __('ui.welcomeBackRevisor') }}
                     {{ Auth::user()->name }}
                 </h1>
@@ -73,76 +73,24 @@
 
 
             @if ($announcement_to_check)
+                <x-session-success />
                 <div class="card-dash">
-                    <div style="display: flex; justify-content:center;align-items:center;margin-left:100px">
-                        <x-session-success />
-                    </div>
-
                     <div class="inserzione">
-                        <div
-                            style="display: flex;  width: 80%;padding:5px;justify-content: center;align-items: center;">
-                            <div id="div_container_btn" style="display:flex; flex:0.5">
-                                <form
-                                    action="{{ route('revisor.accept_announcement', ['announcement' => $announcement_to_check]) }}"
-                                    method="post">
-                                    @csrf
-                                    @method ('PATCH')
-                                    <button class="btn4 true" style="flex:0.5; margin:10px" onclick="">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                                            fill="green" class="bi bi-check2" viewBox="0 0 16 16">
-                                            <path
-                                                d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
-                                        </svg>
-                                    </button>
-                                </form>
-                                <form
-                                    action="{{ route('revisor.reject_announcement', ['announcement' => $announcement_to_check]) }}"
-                                    method="post">
-                                    @csrf
-                                    @method ('PATCH')
-                                    <button class="btn4 false" style="flex:0.5;margin:10px" onclick="">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25"
-                                            fill="red" class="bi bi-x-lg" viewBox="0 0 16 16">
-                                            <path
-                                                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
-                                        </svg>
-                                    </button>
-                                </form>
-                            </div>
-                            <div style="flex:1;margin:10px; border-right:1px solid black;">
-                                <h3 style="padding: 0px;font-size:25px">{{ __('ui.asd') }}
+                        <div class="containerTitleRevisor">
+                            <div class="containerTitleRevisorChild">
+                                <h3 style="padding: 0px;font-size:20px">{{ __('ui.asd') }}
                                     {{ $announcement_to_check->title }}
                                 </h3>
                             </div>
-                            <div style="flex:1;margin:10px; margin-right:50px;">
-                                <div style="margin-left: 20px">
-                                    <h3 style="font-size:25px;">{{ $announcement_to_check->category->name }}</h3>
-                                </div>
+                            <div class="containerTitleRevisorChild2">
+                                <h3 style="font-size:20px;">{{ $announcement_to_check->category->name }}</h3>
                             </div>
-                        </div>
-                        <div class="div-btn">
-                            <button class="btn4" onclick="apriBox()">
-                                <div id="btn" style="display:block">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                        fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-                                    </svg>
-                                </div>
-                                <div id="btn2" style="display:  none">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                        fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
-                                    </svg>
-                                </div>
-                            </button>
-                        </div>
 
+                        </div>
                     </div>
-                    <div id="box-card" style="display: none; ">
+                    <div id="box-card" class="containerCardDash">
                         <div class="card-dash2">
-                            <div id="carouselExample" class="carousel slide" style="width: 100%;height:100%">
+                            <div id="carouselExample" class="carousel slide" style="width: 400px;height:501px;">
                                 <div class="carousel-inner" style="width: 100%;height:100%">
                                     {{--                                 @if ($announcement_to_check->images)
                                     @foreach ($announcement_to_check->images as $image)
@@ -168,94 +116,90 @@
                                     @else
                                         @foreach ($announcement_to_check->images as $announcement)
                                             <div class="carousel-item @if ($loop->first) active @endif">
-                                                <img src="{{ $announcement->getUrl(200, 300) }}"
-                                                    class="d-block w-100" alt="...">
+                                                <img src="{{ $announcement->getUrl(200, 300) }}" class="d-block w-100"
+                                                    alt="...">
                                             </div>
                                         @endforeach
                                     @endif
                                 </div>
-                                <button class="carousel-control-prev" type="button"
-                                    data-bs-target="#carouselExample" data-bs-slide="prev">
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                                    data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Previous</span>
                                 </button>
-                                <button class="carousel-control-next" type="button"
-                                    data-bs-target="#carouselExample" data-bs-slide="next">
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                                    data-bs-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Next</span>
                                 </button>
                             </div>
-                        </div>
-                        <div style="flex:3; background-color: #dbd8e388;">
-                            <div class="div-descr">
-                                <h6>{{ __('ui.userRevisor') }} {{ $announcement_to_check->user->name }}</h6>
-                                <h1>{{ $announcement_to_check->title }}</h1>
-                                <h2>{{ __('ui.priceAsdReview') }} {{ $announcement_to_check->price }}</h2>
-                                <h6>{{ __('ui.descriptionAsdReview') }} {{ $announcement_to_check->description }}</p>
+                            <div class="containerInfoRevisor">
+                                <div class="div-descr">
+                                    <h6>{{ __('ui.userRevisor') }} {{ $announcement_to_check->user->name }}</h6>
+                                    <h1>{{ $announcement_to_check->title }}</h1>
+                                    <h2>{{ __('ui.priceAsdReview') }} {{ $announcement_to_check->price }}</h2>
+                                    <p>{{ __('ui.descriptionAsdReview') }} {{ $announcement_to_check->description }}
+                                    </p>
+                                    <div class="containerButtonRevisor">
+                                        <form
+                                            action="{{ route('revisor.accept_announcement', ['announcement' => $announcement_to_check]) }}"
+                                            method="post">
+                                            @csrf
+                                            @method ('PATCH')
+                                            <button class="btn true" style="width: 130px;">
+                                                <h4 style="text-align: center">{{ __('ui.buttonAccept') }}</h4>
+                                            </button>
+                                        </form>
+                                        <form
+                                            action="{{ route('revisor.reject_announcement', ['announcement' => $announcement_to_check]) }}"
+                                            method="post">
+                                            @csrf
+                                            @method ('PATCH')
+                                            <button class="btn false" style="width: 130px">
+                                                <h4 style="text-align: center">{{ __('ui.buttonrefuse') }}</h4>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="div_container_btn">
-                                <form
-                                    action="{{ route('revisor.accept_announcement', ['announcement' => $announcement_to_check]) }}"
-                                    method="post">
-                                    @csrf
-                                    @method ('PATCH')
-                                    <button class="btn_btn true trueBorder">
-                                        {{-- <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="green"
-                                    class="bi bi-check2" viewBox="0 0 16 16">
-                                    <path
-                                        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
-                                </svg> --}}
-                                        <h4>{{ __('ui.buttonAccept') }}</h4>
-                                    </button>
-                                </form>
-                                <form
-                                    action="{{ route('revisor.reject_announcement', ['announcement' => $announcement_to_check]) }}"
-                                    method="post">
-                                    @csrf
-                                    @method ('PATCH')
-                                    <button class="btn_btn false falseBorder">
-                                        {{-- <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" fill="red"
-                                    class="bi bi-x-lg" viewBox="0 0 16 16">
-                                    <path
-                                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
-                                </svg> --}}
-                                        <h4>{{ __('ui.buttonrefuse') }}</h4>
-                                    </button>
-                                </form>
+                            <div class="containerInfoGoogle">
+                                <h6>mi chiamo .containerInfoGoogle</h6>
                             </div>
                         </div>
+
+
                     </div>
                 </div>
                 {{-- @endforeach --}}
             @else
-                <button class="btn"><a href="/" style="color: white;font-weight:500">Torna alla
+                <button class="btn" style="margin-left:200px">
+                    <a href="/" style="color: white;font-weight:500;">Torna alla
                         homepage</a></button>
 
             @endif
 
         </div>
     </div>
+    {
     <script>
-        let apertura = false;
+        /* let apertura = false;
 
-        function apriBox() {
+                                     function apriBox() {
+                                        if (apertura === false) {
+                                            document.getElementById('box-card').style.display = "flex";
+                                            document.getElementById('btn').style.display = "none";
+                                            document.getElementById('btn2').style.display = "block";
+                                            document.getElementById('div_container_btn').style.display = "none";
 
-
-            if (apertura === false) {
-                document.getElementById('box-card').style.display = "flex";
-                document.getElementById('btn').style.display = "none";
-                document.getElementById('btn2').style.display = "block";
-                document.getElementById('div_container_btn').style.display = "none";
-
-                apertura = true;
-            } else {
-                document.getElementById('box-card').style.display = "none";
-                document.getElementById('btn').style.display = "block";
-                document.getElementById('btn2').style.display = "none";
-                document.getElementById('div_container_btn').style.display = "flex";
-                apertura = false;
-            }
-        }
+                                            apertura = true;
+                                        } else {
+                                            document.getElementById('box-card').style.display = "none";
+                                            document.getElementById('btn').style.display = "block";
+                                            document.getElementById('btn2').style.display = "none";
+                                            document.getElementById('div_container_btn').style.display = "flex";
+                                            apertura = false;
+                                        }
+                                    } */
         document.addEventListener('DOMContentLoaded', function() {
             // Recupera l'elemento span con la classe num_ann
             var numAnnSpan = document.getElementById('num_ann');
@@ -275,3 +219,25 @@
     </script>
 
 </x-layout-revisore>
+
+
+{{--                                 <div class="div_container_btn">
+                                    <form
+                                        action="{{ route('revisor.accept_announcement', ['announcement' => $announcement_to_check]) }}"
+                                        method="post">
+                                        @csrf
+                                        @method ('PATCH')
+                                        <button class="btn">
+                                            <h4>{{ __('ui.buttonAccept') }}</h4>
+                                        </button>
+                                    </form>
+                                    <form
+                                        action="{{ route('revisor.reject_announcement', ['announcement' => $announcement_to_check]) }}"
+                                        method="post">
+                                        @csrf
+                                        @method ('PATCH')
+                                        <button class="btn">
+                                            <h4>{{ __('ui.buttonrefuse') }}</h4>
+                                        </button>
+                                    </form>
+                                </div> --}}

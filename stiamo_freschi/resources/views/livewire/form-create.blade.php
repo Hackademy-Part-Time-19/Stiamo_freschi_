@@ -1,6 +1,6 @@
 <div class="row div-form">
     <x-navbar-create :revisorCounter="$announcement_revisor_counter" />
-    <x-session-success/>
+    <x-session-success style="left:500px"/>
     <div class="col-4 div-cons">
         <div style="margin-right:70px;margin-left:60px;">
             <div class="cardLayoutFormCreate box">
