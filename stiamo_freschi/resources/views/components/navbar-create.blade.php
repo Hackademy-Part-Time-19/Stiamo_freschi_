@@ -155,7 +155,7 @@
             @if (Auth::user()->is_revisor)
                 <a href="{{ route('revisor.index') }}" class="btn-revisore"><button
                         class="btn-desk2">{{ __('ui.auditorArea') }} <span style="margin-left:4px;"
-                            class="badge bg-white text-danger ">{{ App\Models\Announcement::toBeRevisionedCount() }}</span></button>
+                            class="badge bg-white text-danger ">{{ $revisorCounter}}</span></button>
                 </a>
             @endif
 

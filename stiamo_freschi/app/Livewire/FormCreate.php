@@ -2,13 +2,14 @@
 
 namespace App\Livewire;
 
-use App\Jobs\GoogleVisionSafeSearch;
-use App\Jobs\RemoveFaces;
+use Livewire\Livewire;
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\RemoveFaces;
 use App\Jobs\ResizeImage;
 use App\Models\Announcement;
 use Livewire\WithFileUploads;
+use App\Jobs\GoogleVisionSafeSearch;
 use Illuminate\Support\Facades\File;
 
 class FormCreate extends Component
@@ -21,6 +22,7 @@ class FormCreate extends Component
     public $images = [];
     public $announcement;
     public $temporary_images;
+    public $announcement_revisor_counter;
 
     public $name = ['Sport', 'Elettronica', 'Musica', 'Casa', 'Giardino', 'Fai da te', 'Abbigliamento', 'Accessori', 'Gioielli'];
 
@@ -51,6 +53,11 @@ class FormCreate extends Component
         'temporary_images.*.max' => 'I file caricati non devono superare 1 mb di grandezza',
     ];
 
+    public function mount()
+    {
+        $this->announcement_revisor_counter = Announcement::toBeRevisionedCount();
+    }
+
 
     public function store()
     {
@@ -76,6 +83,7 @@ class FormCreate extends Component
 
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
+        $this->announcement_revisor_counter = Announcement::toBeRevisionedCount();
         session()->flash('message', 'Annuncio creato con successo! Verrà pubblicato solamente dopo la revisione');
         $this->clearForm();
     }

@@ -285,13 +285,15 @@ a {
 }
 
 .div-form {
-    min-height: 90vh;
+    min-height: 100vh;
     height: auto;
     background-image: url('/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     color: black;
+    justify-content: center;
+    align-items: center;
 }
 
 .div-modale {
