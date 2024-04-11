@@ -116,7 +116,7 @@
                                     @else
                                         @foreach ($announcement_to_check->images as $announcement)
                                             <div class="carousel-item @if ($loop->first) active @endif">
-                                                <img src="{{ $announcement->getUrl(200, 300) }}" class="d-block w-100"
+                                                <img src="{{ $announcement->getUrl(400, 500) }}" class="d-block w-100"
                                                     alt="...">
                                             </div>
                                         @endforeach
@@ -163,7 +163,20 @@
                                 </div>
                             </div>
                             <div class="containerInfoGoogle">
-                                <h6>mi chiamo .containerInfoGoogle</h6>
+                                <div class="card-body">
+                                    <h5 class="tc-accent">Revisione immagine</h5>
+                                    @foreach ($announcement_to_check->images as $image)
+                                        <p>Adulti:<span class="{{ $image->adult }} ms-2"></span>
+                                        </p>
+                                        <p>Satira:<span class="{{ $image->spoof }} ms-2"></span>
+                                        </p>
+                                        <p>Medicina:<span class="{{ $image->medical }} ms-2"></span>
+                                        </p>
+                                        <p>Violenza:<span class="{{ $image->violence }} ms-2"></span>
+                                        </p>
+                                        <p>Contenuto ammiccante:<span class="{{ $image->racy }} ms-2"></span></p>
+                                    @endforeach
+                                </div>
                             </div>
                         </div>
 
@@ -184,22 +197,22 @@
     <script>
         /* let apertura = false;
 
-                                     function apriBox() {
-                                        if (apertura === false) {
-                                            document.getElementById('box-card').style.display = "flex";
-                                            document.getElementById('btn').style.display = "none";
-                                            document.getElementById('btn2').style.display = "block";
-                                            document.getElementById('div_container_btn').style.display = "none";
+                                                                                             function apriBox() {
+                                                                                                if (apertura === false) {
+                                                                                                    document.getElementById('box-card').style.display = "flex";
+                                                                                                    document.getElementById('btn').style.display = "none";
+                                                                                                    document.getElementById('btn2').style.display = "block";
+                                                                                                    document.getElementById('div_container_btn').style.display = "none";
 
-                                            apertura = true;
-                                        } else {
-                                            document.getElementById('box-card').style.display = "none";
-                                            document.getElementById('btn').style.display = "block";
-                                            document.getElementById('btn2').style.display = "none";
-                                            document.getElementById('div_container_btn').style.display = "flex";
-                                            apertura = false;
-                                        }
-                                    } */
+                                                                                                    apertura = true;
+                                                                                                } else {
+                                                                                                    document.getElementById('box-card').style.display = "none";
+                                                                                                    document.getElementById('btn').style.display = "block";
+                                                                                                    document.getElementById('btn2').style.display = "none";
+                                                                                                    document.getElementById('div_container_btn').style.display = "flex";
+                                                                                                    apertura = false;
+                                                                                                }
+                                                                                            } */
         document.addEventListener('DOMContentLoaded', function() {
             // Recupera l'elemento span con la classe num_ann
             var numAnnSpan = document.getElementById('num_ann');
