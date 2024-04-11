@@ -1,6 +1,6 @@
 <div class="row div-form">
     <x-navbar-create :revisorCounter="$announcement_revisor_counter" />
-    <x-session-success style="left:500px"/>
+    <x-session-success/>
     <div class="col-4 div-cons">
         <div style="margin-right:70px;margin-left:60px;">
             <div class="cardLayoutFormCreate box">
@@ -9,7 +9,7 @@
                         <div aria-hidden="true">
                             <div class="card-text placeholder-glow skeleton centro-skeletron"
                                 style="width: 100%;margin:0px;padding:0px;background-color:none;">
-                                <span class="placeholder col-12 " style="height: 290px; width: 100%;"></span>
+                                <span class="placeholder col-12 " style="height: 290px; width: 100%;cursor:default;"></span>
                             </div>
                         </div>
                     @else
@@ -59,7 +59,7 @@
                             <div class="card-body">
                                 <p class="card-text placeholder-glow skeleton ">
                                     @if ($title == false)
-                                        <span class="placeholder col-4"></span>
+                                        <span class="placeholder col-4" style="cursor:default"></span>
                                     @else
                                         {{ Auth::user()->name }}
                                     @endif
@@ -72,7 +72,7 @@
                     <div aria-hidden="true">
                         <h4 class="card-text placeholder-glow skeleton centro-skeletron">
                             @if ($title == false)
-                                <span class="placeholder col-12"></span>
+                                <span class="placeholder col-12" style="cursor:default"></span>
                             @else
                                 {{ $title }}
                             @endif
@@ -81,7 +81,7 @@
                     <div aria-hidden="true">
                         <p class="card-text placeholder-glow skeleton centro-skeletron">
                             @if ($price == false)
-                                <span class="placeholder col-6"></span>
+                                <span class="placeholder col-6" style="cursor:default"></span>
                             @else
                                 {{ __('ui.previewPriceAnnouncement') }} {{ $price }} €
                             @endif
@@ -90,7 +90,7 @@
                     <div aria-hidden="true">
                         <h6 class="card-text placeholder-glow skeleton centro-skeletron" style="margin: top:20px;">
                             @if ($category_id == false)
-                                <span class="placeholder col-12"></span>
+                                <span class="placeholder col-12" style="cursor:default"></span>
                             @else
                                 {{ __('ui.previewCategoryAnnouncement') }} {{ $name[$category_id - 1] }}
                             @endif
@@ -102,7 +102,7 @@
                         <p class="card-text placeholder-glow skeleton centro-skeletron"
                             style="font-size: 16px;margin-bottom:20px">
                             @if ($description == false)
-                                <span class="placeholder col-12"></span>
+                                <span class="placeholder col-12" style="cursor:default"></span>
                             @else
                                 {{ $description }}
                             @endif
@@ -113,8 +113,8 @@
                     @if ($title == false || $price == false || $description == false || $category_id == false)
                         <a class="btn btn-primary disabled placeholder col-12" aria-disabled="true"></a>
                     @else
-                        <button type="submit" id='submitButtonFormCreate' onclick="" class="BtnRegistratiLogin"
-                            style="height:35px; font-size:18px"><label for="ButtonSubmitForm"
+                        <button type="submit" id='submitButtonFormCreate' class="BtnRegistratiLogin"
+                            style="height:35px; font-size:18px;cursor:pointer"><label for="ButtonSubmitForm"
                                 tabindex="0">{{ __('ui.buttonCreateAnnouncement') }}</label></button>
                     @endif
                 </div>

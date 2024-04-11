@@ -1,9 +1,11 @@
 @if (session('message'))
-    <div id="popSuccess" class="pop" x-data="{ isOpen: true }" x-init="setTimeout(() => { isOpen = false; }, 5000)" >
-        <div class="alert alert-success trasp" style="width: 90%; display: flex;
-            justify-content: center;align-items:center;text-align:center;font-size:20px" role="alert" x-show="isOpen" class="popup">
+    <div id="popSuccess" class="pop" x-data="{ isOpen: true }" x-init="setTimeout(() => { isOpen = false; }, 5000)">
+        <div class="alert alert-success trasp"
+            style="width: 90%; display: flex;
+            justify-content: center;align-items:center;text-align:center;font-size:20px"
+            role="alert" x-show="isOpen" class="popup">
             {{ session('message') }}
-            <div onclick="closeMessageSuccess()" class="btnCloseM"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+            <div onclick="hidePopup()" class="btnCloseM"><svg xmlns="http://www.w3.org/2000/svg" width="20"
                     height="20" fill="black" class="bi bi-x-lg" viewBox="0 0 16 16">
                     <path
                         d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
@@ -11,18 +13,3 @@
         </div>
     </div>
 @endif
-
-
-
-
-
-
-
-
-<script>
-    // Funzione che nasconde il popup dopo un certo periodo di tempo
-    function hidePopup() {
-        document.getElementById('popSuccess').style.display = 'none';
-    }
-
-</script>

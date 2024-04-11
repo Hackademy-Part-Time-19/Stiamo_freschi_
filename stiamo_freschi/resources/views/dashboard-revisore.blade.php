@@ -73,7 +73,7 @@
 
 
             @if ($announcement_to_check)
-                <x-session-success />
+                <x-session-success-revisor />
                 <div class="card-dash">
                     <div class="inserzione">
                         <div class="containerTitleRevisor">
