@@ -37,25 +37,26 @@ class Watermark implements ShouldQueue
         $srcPath = storage_path('app/public/' . $i->path);
         $imageToWatermark = SpatieImage::load($srcPath);
 
-        // Apply watermark to the entire image
-        $imageToWatermark->watermark(base_path('resources/img/logo.presto.scontornato.2.png'))
-            ->watermarkPosition('top-left')
-            ->watermarkFit(Manipulations::FIT_STRETCH)
-            ->save($srcPath);
+        // Get image dimensions
+        $imageWidth = $imageToWatermark->getWidth();
+        $imageHeight = $imageToWatermark->getHeight();
 
-        // Initialize Google Cloud Vision client
-        putenv('GOOGLE_APPLICATION_CREDENTIALS=' . base_path('google_credential.json'));
-        $imageAnnotator = new ImageAnnotatorClient();
+        // Calculate the step size for diagonal positioning
+        $stepSize = 50; // Change this value to adjust the spacing between watermarks
+        $numStepsX = ceil($imageWidth / $stepSize);
+        $numStepsY = ceil($imageHeight / $stepSize);
 
-        // Perform face detection on the original image
-        $image = file_get_contents($srcPath);
-        $response = $imageAnnotator->faceDetection($image);
-        $faces = $response->getFaceAnnotations();
-
-        // Close the Google Cloud Vision client
-        $imageAnnotator->close();
+        // Apply watermark in diagonal positions
+        for ($i = 0; $i < $numStepsX + $numStepsY; $i++) {
+            $x = $i * $stepSize;
+            $y = $i * $stepSize;
+            if ($x < $imageWidth && $y < $imageHeight) {
+                $imageToWatermark->watermark(base_path('resources/img/logo.presto.scontornato.2.png'))
+                    ->watermarkPosition('top-left')
+                    ->watermarkPadding($x, $y)
+                    ->watermarkFit(Manipulations::FIT_STRETCH)
+                    ->save($srcPath); // Save the modified image
+            }
+        }
     }
-
-
-
 }
