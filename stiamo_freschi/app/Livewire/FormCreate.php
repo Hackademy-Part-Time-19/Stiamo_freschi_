@@ -75,7 +75,7 @@ class FormCreate extends Component
                 $newFileName = "announcement/{$this->announcement->id}";
                 $newImage = $this->announcement->images()->create(['path' => $image->store($newFileName, 'public')]);
                 RemoveFaces::withChain([
-                    new ResizeImage($newImage->path, 300, 400),
+                    new ResizeImage($newImage->path, 200, 300),
                     new GoogleVisionSafeSearch($newImage->id),
                 ])->dispatch($newImage->id);
 

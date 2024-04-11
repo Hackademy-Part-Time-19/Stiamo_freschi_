@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Image extends Model
 {
     use HasFactory;
-    protected $fillable = ['path'];
+    protected $fillable = ['path', 'labels'];
 
     public function announcement()
     {
