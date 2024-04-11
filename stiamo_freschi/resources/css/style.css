@@ -51,10 +51,11 @@
     width: 100%;
     min-height: 100vh;
     height: auto;
-    display: flex;
+    display: block;
     background-color: none;
     margin-top: 0px;
 }
+
 
 .btn_popup {
     margin-top: 50px;
@@ -245,8 +246,6 @@
     background: url("/public/img/iug.png");
     background-size: cover;
     background-repeat: no-repeat;
-
-
 }
 
 .btn-menu {
@@ -503,20 +502,20 @@ nav.desktop {
 
 .banner2 {
     flex: 1;
-    position: sticky;
-    left: 0px;
-    top: 60px;
-    display: block;
+    display: flex;
     max-height: 50px;
     justify-content: start;
     align-items: start;
-    margin-top: 30px;
-    margin-bottom: 60vh;
+    position: sticky;
+    top: 60px;
+    left: 0px;
+    right: 0px;
 }
 
 .back-by-cat {
     background: url("/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg");
     background-repeat: none;
+    background-size: cover;
 }
 
 .banner {
@@ -860,7 +859,7 @@ nav.desktop {
     font-size: 25px;
     font-weight: 500;
     color: #00B58F;
-    
+
 }
 
 .div-descr p {
@@ -878,13 +877,15 @@ nav.desktop {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-.containerTitleRevisor{
-    
+
+.containerTitleRevisor {
+
     width: 100%;
-    display:flex;
+    display: flex;
 
 }
-.containerTitleRevisorChild{
+
+.containerTitleRevisorChild {
     flex: 2;
     display: flex;
     justify-content: start;
@@ -892,7 +893,8 @@ nav.desktop {
     padding-left: 20px;
     border-right: 1px solid rgba(0, 0, 0, 0.207);
 }
-.containerTitleRevisorChild2{
+
+.containerTitleRevisorChild2 {
     flex: 4.5;
     display: flex;
     justify-content: start;
@@ -971,19 +973,19 @@ nav.desktop {
 }
 
 .containerButtonRevisor {
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
     width: 400px;
     height: 100px;
     position: absolute;
-    top:350px;
+    top: 350px;
 }
 
-.containerButtonRevisor button{
+.containerButtonRevisor button {
     height: 40px !important;
-    
+
 }
 
 
@@ -1101,7 +1103,8 @@ nav.desktop {
     opacity: 0.93;
     color: green;
 }
-.traspDenied{
+
+.traspDenied {
     opacity: 0.93;
     color: red;
 
@@ -1116,7 +1119,8 @@ nav.desktop {
     font-weight: 500;
     color: green;
 }
-.btnCloseDenied{
+
+.btnCloseDenied {
     position: absolute;
     right: 5px;
     top: 2px;

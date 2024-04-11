@@ -86,7 +86,7 @@ form label {
     color: white;
 }
 
-.BtnAuthGoogle{
+.BtnAuthGoogle {
     height: 45px;
     width: 100%;
     margin-top: 20px;
@@ -106,6 +106,7 @@ form label {
     margin-right: 10px;
 
 }
+
 .BtnAuthGoogle:hover {
     background-color: #0d3b6f;
     transition: 0.3s;
@@ -133,10 +134,12 @@ form label {
     text-align: center;
     font-size: 16px;
 }
- .vaiARegistrati {
+
+.vaiARegistrati {
     text-align: center;
     font-size: 16px;
 }
+
 .vaiARegistrati:hover {
     font-weight: bold;
     transition: 0.2s;
@@ -293,7 +296,7 @@ a {
     display: flex;
     color: black;
     justify-content: center;
-    
+
 }
 
 .div-modale {
@@ -494,8 +497,7 @@ a {
 }
 
 .cardLayout:hover {
-    scale: 1.05;
-    transition: 0.15s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 
@@ -508,13 +510,15 @@ a {
     justify-content: center;
     align-items: center;
     border-radius: 0px;
-  
+
 }
 
 .containerCaruselShow img {
     height: 550px;
     width: 500px;
     border-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
     object-fit: cover;
     aspect-ratio: 1/1;
 }
@@ -624,7 +628,7 @@ a {
 
 }
 
-.containerPaginate{
+.containerPaginate {
     height: auto;
     margin-bottom: 0px;
     display: flex;
@@ -632,4 +636,3 @@ a {
     align-items: center;
     margin-top: 30px;
 }
-
