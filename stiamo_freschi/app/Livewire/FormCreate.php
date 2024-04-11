@@ -11,6 +11,7 @@ use App\Jobs\ResizeImage;
 use App\Models\Announcement;
 use Livewire\WithFileUploads;
 use App\Jobs\GoogleVisionSafeSearch;
+use App\Jobs\Watermark;
 use Illuminate\Support\Facades\File;
 
 class FormCreate extends Component
@@ -77,6 +78,7 @@ class FormCreate extends Component
                 $newImage = $this->announcement->images()->create(['path' => $image->store($newFileName, 'public')]);
                 RemoveFaces::withChain([
                     new ResizeImage($newImage->path, 400, 500),
+                    new Watermark($newImage->id),
                     new GoogleVisionSafeSearch($newImage->id),
                     new GoogleVisionLabelImage($newImage->id),
                 ])->dispatch($newImage->id);
