@@ -35,40 +35,27 @@ class Watermark implements ShouldQueue
             return;
         }
         $srcPath = storage_path('app/public/' . $i->path);
-        $image = file_get_contents($srcPath);
+        $imageToWatermark = SpatieImage::load($srcPath);
+
+        // Apply watermark to the entire image
+        $imageToWatermark->watermark(base_path('resources/img/logo.presto.scontornato.2.png'))
+            ->watermarkPosition('top-left')
+            ->watermarkFit(Manipulations::FIT_STRETCH)
+            ->save($srcPath);
+
+        // Initialize Google Cloud Vision client
         putenv('GOOGLE_APPLICATION_CREDENTIALS=' . base_path('google_credential.json'));
         $imageAnnotator = new ImageAnnotatorClient();
+
+        // Perform face detection on the original image
+        $image = file_get_contents($srcPath);
         $response = $imageAnnotator->faceDetection($image);
         $faces = $response->getFaceAnnotations();
-    
-        // Load the original image
-        $imageToWatermark = SpatieImage::load($srcPath);
-    
-        foreach ($faces as $face) {
-            $vertices = $face->getBoundingPoly()->getVertices();
-            $bounds = [];
-            foreach ($vertices as $vertex) {
-                $bounds[] = [$vertex->getX(), $vertex->getY()];
-            }
-            $w = $bounds[2][0] - $bounds[0][0];
-            $h = $bounds[2][1] - $bounds[0][1];
-    
-            // Clone the original image to apply watermark
-            $imageWithWatermark = clone $imageToWatermark;
-    
-            // Apply watermark
-            $imageWithWatermark->watermark(base_path('resources/img/logo.presto.scontornato.2.png'))
-                ->watermarkPosition('top-left')
-                ->watermarkPadding($bounds[0][0], $bounds[0][1])
-                ->watermarkWidth($w, Manipulations::UNIT_PIXELS)
-                ->watermarkHeight($h, Manipulations::UNIT_PIXELS)
-                ->watermarkFit(Manipulations::FIT_STRETCH);
-    
-            // Save the image with watermark
-            $imageWithWatermark->save($srcPath);
-        }
-    
+
+        // Close the Google Cloud Vision client
         $imageAnnotator->close();
     }
-    
+
+
+
 }
