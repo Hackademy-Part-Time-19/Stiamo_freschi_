@@ -11,6 +11,9 @@ class Image extends Model
 {
     use HasFactory;
     protected $fillable = ['path', 'labels'];
+    protected $casts = [
+        'labels' => 'array'
+    ];
 
     public function announcement()
     {

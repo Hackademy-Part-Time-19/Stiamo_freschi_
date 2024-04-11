@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Jobs\GoogleVisionLabelImage;
 use Livewire\Livewire;
 use Livewire\Component;
 use App\Models\Category;
@@ -77,6 +78,7 @@ class FormCreate extends Component
                 RemoveFaces::withChain([
                     new ResizeImage($newImage->path, 200, 300),
                     new GoogleVisionSafeSearch($newImage->id),
+                    new GoogleVisionLabelImage($newImage->id),
                 ])->dispatch($newImage->id);
 
             }
