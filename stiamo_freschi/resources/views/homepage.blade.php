@@ -3,14 +3,14 @@
     <x-navbar />
     <div class="banner">
         @foreach ($categories as $category)
-        <div id="myButton" class="banner-cat">
-            <a href="{{ route('announcement.category', ['id' => $category->id]) }}">
-                {{ $category->translatedName() }}
-            </a>
-        </div>
+            <div id="myButton" class="banner-cat">
+                <a href="{{ route('announcement.category', ['id' => $category->id]) }}">
+                    {{ $category->translatedName() }}
+                </a>
+            </div>
         @endforeach
     </div>
-    <x-session-success/>
+    <x-session-success />
     <div class="img-container-mobile">
 
     </div>
@@ -95,7 +95,9 @@
                                 :price="$announcement->price" :description="$announcement->description" :category="$announcement->category->name" :announcement="$announcement">
                             </x-card-home>
                         @endif
+
                     </div>
+
                 @empty
                     <div class="col-12" style="display:flex;justify-content:center;align-items:center">
                         <div class="alert alert-warning py-3 shadow">
@@ -103,6 +105,9 @@
                         </div>
                     </div>
                 @endforelse
+                    <div class="containerPaginate">
+                        {{ $announcements->links() }}
+                    </div>
             </div>
         </div>
     </div>

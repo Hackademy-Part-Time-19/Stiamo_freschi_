@@ -19,7 +19,7 @@
 
     {{ $slot }}
 
-    <x-footer />
+    <x-footer/>
     
 </body>
 
