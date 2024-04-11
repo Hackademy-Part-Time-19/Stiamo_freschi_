@@ -35,40 +35,28 @@ class Watermark implements ShouldQueue
             return;
         }
         $srcPath = storage_path('app/public/' . $i->path);
-        $image = file_get_contents($srcPath);
-        putenv('GOOGLE_APPLICATION_CREDENTIALS=' . base_path('google_credential.json'));
-        $imageAnnotator = new ImageAnnotatorClient();
-        $response = $imageAnnotator->faceDetection($image);
-        $faces = $response->getFaceAnnotations();
-    
-        // Load the original image
         $imageToWatermark = SpatieImage::load($srcPath);
-    
-        foreach ($faces as $face) {
-            $vertices = $face->getBoundingPoly()->getVertices();
-            $bounds = [];
-            foreach ($vertices as $vertex) {
-                $bounds[] = [$vertex->getX(), $vertex->getY()];
+
+        // Get image dimensions
+        $imageWidth = $imageToWatermark->getWidth();
+        $imageHeight = $imageToWatermark->getHeight();
+
+        // Calculate the step size for diagonal positioning
+        $stepSize = 50; // Change this value to adjust the spacing between watermarks
+        $numStepsX = ceil($imageWidth / $stepSize);
+        $numStepsY = ceil($imageHeight / $stepSize);
+
+        // Apply watermark in diagonal positions
+        for ($i = 0; $i < $numStepsX + $numStepsY; $i++) {
+            $x = $i * $stepSize;
+            $y = $i * $stepSize;
+            if ($x < $imageWidth && $y < $imageHeight) {
+                $imageToWatermark->watermark(base_path('resources/img/logo.presto.scontornato.2.png'))
+                    ->watermarkPosition('top-left')
+                    ->watermarkPadding($x, $y)
+                    ->watermarkFit(Manipulations::FIT_STRETCH)
+                    ->save($srcPath); // Save the modified image
             }
-            $w = $bounds[2][0] - $bounds[0][0];
-            $h = $bounds[2][1] - $bounds[0][1];
-    
-            // Clone the original image to apply watermark
-            $imageWithWatermark = clone $imageToWatermark;
-    
-            // Apply watermark
-            $imageWithWatermark->watermark(base_path('resources/img/logo.presto.scontornato.2.png'))
-                ->watermarkPosition('top-left')
-                ->watermarkPadding($bounds[0][0], $bounds[0][1])
-                ->watermarkWidth($w, Manipulations::UNIT_PIXELS)
-                ->watermarkHeight($h, Manipulations::UNIT_PIXELS)
-                ->watermarkFit(Manipulations::FIT_STRETCH);
-    
-            // Save the image with watermark
-            $imageWithWatermark->save($srcPath);
         }
-    
-        $imageAnnotator->close();
     }
-    
 }

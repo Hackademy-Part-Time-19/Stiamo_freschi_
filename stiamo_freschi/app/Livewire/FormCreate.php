@@ -78,14 +78,16 @@ class FormCreate extends Component
                 $newImage = $this->announcement->images()->create(['path' => $image->store($newFileName, 'public')]);
                 RemoveFaces::withChain([
                     new ResizeImage($newImage->path, 400, 500),
-                    new Watermark($newImage->id),
                     new GoogleVisionSafeSearch($newImage->id),
-                    new GoogleVisionLabelImage($newImage->id),
+                    new GoogleVisionLabelImage($newImage->id)
                 ])->dispatch($newImage->id);
 
+                // Invia la job Watermark separatamente dopo che tutte le altre operazioni sono state completate
+                Watermark::dispatch($newImage->id); // Puoi aggiungere un ritardo se necessario
             }
 
-            File::deleteDirectory(storage_path('/app/livewire-tmp'));
+                File::deleteDirectory(storage_path('/app/livewire-tmp'));
+            
         }
         $this->announcement_revisor_counter = Announcement::toBeRevisionedCount();
         session()->flash('message', 'Annuncio creato con successo! Verrà pubblicato solamente dopo la revisione');
@@ -130,5 +132,4 @@ class FormCreate extends Component
         $this->temporary_images = [];
         $this->category_id = '';
     }
-
 }
