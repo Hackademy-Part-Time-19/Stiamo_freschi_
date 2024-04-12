@@ -57,22 +57,21 @@ class FormCreate extends Component
     ];
 
     public function __construct()
-
     {
 
-    $this->messages['title.required'] = Lang::get('ui.titleRequired');
-    $this->messages['title.min'] = Lang::get('ui.titleMin');
-    $this->messages['title.max'] = Lang::get('ui.titleMax');
-    $this->messages['price.required'] = Lang::get('ui.priceRequired');
-    $this->messages['price.numeric'] = Lang::get('ui.priceNumeric');
-    $this->messages['description.required'] = Lang::get('ui.descriptionRequired');
-    $this->messages['description.min'] = Lang::get('ui.descriptionMin');
-    $this->messages['description.max'] = Lang::get('ui.descriptionMax');
-    $this->messages['category_id.required'] = Lang::get('ui.categoryRequired');
-    $this->messages['images.image'] = Lang::get('ui.imagesImage');
-    $this->messages['images.max'] = Lang::get('ui.imagesMax');
-    $this->messages['temporary_images.*.image'] = Lang::get('ui.tempImagesImage');
-    $this->messages['temporary_images.*.max'] = Lang::get('ui.tempImagesMax');
+        $this->messages['title.required'] = Lang::get('ui.titleRequired');
+        $this->messages['title.min'] = Lang::get('ui.titleMin');
+        $this->messages['title.max'] = Lang::get('ui.titleMax');
+        $this->messages['price.required'] = Lang::get('ui.priceRequired');
+        $this->messages['price.numeric'] = Lang::get('ui.priceNumeric');
+        $this->messages['description.required'] = Lang::get('ui.descriptionRequired');
+        $this->messages['description.min'] = Lang::get('ui.descriptionMin');
+        $this->messages['description.max'] = Lang::get('ui.descriptionMax');
+        $this->messages['category_id.required'] = Lang::get('ui.categoryRequired');
+        $this->messages['images.image'] = Lang::get('ui.imagesImage');
+        $this->messages['images.max'] = Lang::get('ui.imagesMax');
+        $this->messages['temporary_images.*.image'] = Lang::get('ui.tempImagesImage');
+        $this->messages['temporary_images.*.max'] = Lang::get('ui.tempImagesMax');
 
     }
 
@@ -96,13 +95,14 @@ class FormCreate extends Component
                 $newFileName = "announcement/{$this->announcement->id}";
                 $newImage = $this->announcement->images()->create(['path' => $image->store($newFileName, 'public')]);
                 RemoveFaces::withChain([
-                    new ResizeImage($newImage->path, 400, 500),
+                    new Watermark($newImage->id),
                     new GoogleVisionSafeSearch($newImage->id),
-                    new GoogleVisionLabelImage($newImage->id)
+                    new GoogleVisionLabelImage($newImage->id),
+                    new ResizeImage($newImage->path, 400, 500),
                 ])->dispatch($newImage->id);
 
                 // Invia la job Watermark separatamente dopo che tutte le altre operazioni sono state completate
-                Watermark::dispatch($newImage->id);
+                // Watermark::dispatch($newImage->id);
             }
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
@@ -150,5 +150,5 @@ class FormCreate extends Component
         $this->temporary_images = [];
         $this->category_id = '';
     }
-   
+
 }
