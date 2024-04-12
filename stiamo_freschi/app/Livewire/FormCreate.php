@@ -2,11 +2,16 @@
 
 namespace App\Livewire;
 
+use App\Jobs\GoogleVisionLabelImage;
+use Livewire\Livewire;
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\RemoveFaces;
 use App\Jobs\ResizeImage;
 use App\Models\Announcement;
 use Livewire\WithFileUploads;
+use App\Jobs\GoogleVisionSafeSearch;
+use App\Jobs\Watermark;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Lang;
 
@@ -20,6 +25,7 @@ class FormCreate extends Component
     public $images = [];
     public $announcement;
     public $temporary_images;
+    public $announcement_revisor_counter;
 
     public $name = ['Sport', 'Elettronica', 'Musica', 'Casa', 'Giardino', 'Fai da te', 'Abbigliamento', 'Accessori', 'Gioielli'];
 
@@ -68,13 +74,16 @@ class FormCreate extends Component
     $this->messages['temporary_images.*.image'] = Lang::get('ui.tempImagesImage');
     $this->messages['temporary_images.*.max'] = Lang::get('ui.tempImagesMax');
 
+    }
 
+    public function mount()
+    {
+        $this->announcement_revisor_counter = Announcement::toBeRevisionedCount();
     }
 
 
     public function store()
     {
-
         // [0 => Sport, 1 => Elettronica, 2 => Musica, 3 => Casa, 4 => Giardino, 5 => Fai da te, 6 => Abbigliamento, 7 => Accessori, 8 => Gioielli]
         $validatedData = $this->validate();
         $this->validate();
@@ -84,16 +93,22 @@ class FormCreate extends Component
            Announcement::create(array_merge($validatedData, ['user_id' => $authUser])); */
         if (count($this->images)) {
             foreach ($this->images as $image) {
-                /* $this->announcement->images()->create(['path' => $image->store('images', 'public')]);*/
                 $newFileName = "announcement/{$this->announcement->id}";
                 $newImage = $this->announcement->images()->create(['path' => $image->store($newFileName, 'public')]);
+                RemoveFaces::withChain([
+                    new ResizeImage($newImage->path, 400, 500),
+                    new GoogleVisionSafeSearch($newImage->id),
+                    new GoogleVisionLabelImage($newImage->id)
+                ])->dispatch($newImage->id);
 
-                dispatch(new ResizeImage($newImage->path, 200, 300));
+                // Invia la job Watermark separatamente dopo che tutte le altre operazioni sono state completate
+                Watermark::dispatch($newImage->id);
             }
-
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
         session()->flash('message', __('ui.messageAsdAccepted'));
+        $this->announcement_revisor_counter = Announcement::toBeRevisionedCount();
+        session()->flash('message', 'Annuncio creato con successo! Verrà pubblicato solamente dopo la revisione');
         $this->clearForm();
     }
 
@@ -105,7 +120,7 @@ class FormCreate extends Component
                 'name' => $category->translatedName(),
             ];
         });
-    
+
         return view('livewire.form-create', [
             'categories' => $categories,
         ]);
@@ -135,5 +150,5 @@ class FormCreate extends Component
         $this->temporary_images = [];
         $this->category_id = '';
     }
-
+   
 }

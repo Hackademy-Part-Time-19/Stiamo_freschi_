@@ -27,9 +27,13 @@ class RevisorController extends Controller
 
     public function index()
     {
+        $logged_in_reviewer_id = Auth::id();
         // voglio passare i primi 5 annunci
         /* $announcement_to_check = Announcement::where('is_accepted', null)->orderBy('created_at', 'desc')->take(5)->get(); */
-        $announcement_to_check = Announcement::where('is_accepted', null)->orderBy('created_at', 'desc')->first();
+        $announcement_to_check = Announcement::where('is_accepted', null)
+        ->where('user_id', '!=', $logged_in_reviewer_id)
+        ->orderBy('created_at', 'desc')
+        ->first();
         
         $currentTranslations = $this->categoryTranslations[App::getLocale()];
 
@@ -53,7 +57,6 @@ class RevisorController extends Controller
         }
         
         return view('dashboard-revisore', compact('announcement_to_check','translatedCategory'));
-
     }
 
     public function acceptAnnouncement(Announcement $announcement)

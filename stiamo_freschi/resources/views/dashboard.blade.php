@@ -3,7 +3,7 @@
     <div style="display: flex;height:max-content">
         <div class="div-card1">
             <div class="div-card_dash">
-                <a href="{{ route('revisor.index') }}" class="card_dash_p lf box">
+                <a href="{{ route('revisor.index') }}" class="card_dash_p lf box XcolorA">
                     <div class="li-aside2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                             class="bi bi-card-checklist" viewBox="0 0 16 16">
@@ -48,26 +48,28 @@
                         <li class="liMargin">Catalogs</li>
                     </div>
                 </div>
-                <div class="card_dash_p box">
-                    <div class="li-aside2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                            class="bi bi-person" viewBox="0 0 16 16">
-                            <path
-                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
-                        </svg>
-                        <li class="liMargin">Profile</li>
-                    </div>
-                    <div style="display:flex; justify-content:center;align-items:center; height:70%">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor"
-                            class="bi bi-person-circle" viewBox="0 0 16 16">
-                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                            <path fill-rule="evenodd"
-                                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
-                        </svg>
-                        <h4 style="margin: 50px;color:#081F37">{{ auth()->user()->name }}</h4>
+                <a class="XcolorA" href="{{route('profile')}}">
+                    <div class="card_dash_p box">
+                        <div class="li-aside2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="bi bi-person" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+                            </svg>
+                            <li class="liMargin">Profile</li>
+                        </div>
+                        <div style="display:flex; justify-content:center;align-items:center; height:70%">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor"
+                                class="bi bi-person-circle" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                                <path fill-rule="evenodd"
+                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                            </svg>
+                            <h4 style="margin: 50px;color:#081F37">{{ auth()->user()->name }}</h4>
 
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="div-card_dash">
                 <div class="card_dash_p lf box">

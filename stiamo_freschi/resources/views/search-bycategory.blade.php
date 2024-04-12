@@ -5,17 +5,17 @@
 
     <div class="img-container"
         style="display: flex; align-items:end;justify-content:center;color:white;padding-bottom:30px">
-        <h1>{{ __('ui.textAdsByCategory') }} {{$thisCategory}}</h1>
+        <h1>{{ __('ui.textAdsByCategory') }} {{ $thisCategory }}</h1>
     </div>
-    <div class="back-by-cat" style="display: flex">
-        <div class="banner2" style="margin-top: 40px">
+    <div class="back-by-cat">
+        <div class="banner2">
             @foreach ($categories as $category)
-            <div id="myButton" class="banner-cat">
-                <a href="{{ route('announcement.category', ['id' => $category->id]) }}">
-                    {{ $category->translatedName() }}
-                </a>
-            </div>
-        @endforeach
+                <div style="background-color: #dbd8e3b0; flex:1;height:85px">
+                    <div id="myButton" class="banner-cat"><a
+                            href="{{ route('announcement.category', ['id' => $category->id]) }}">{{ $category->translatedName() }}</a>
+                    </div>
+                </div>
+            @endforeach
         </div>
         <div class="ContainerCard1">
             <div class="row">

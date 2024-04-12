@@ -122,17 +122,17 @@
 
         </div>
 
-
+        
         <div class="col-4 div-modale">
-            <h1 style="margin-bottom: 20px">{{ __('ui.createAnnouncements') }}</h1>
+            <h1 style="margin-bottom: 20px">Modifica il tuo annuncio</h1>
 
             <div class="form3">
 
-                <form wire:submit.live="store" id="FormCreateAnnouncement">
+                <form id="FormCreateAnnouncement">
                     <div class="mb-3">
-                        <label for="title" class="form-label">{{ __('ui.InsertTitleAnnouncements') }}</label>
+                        <label for="title" class="form-label">Modifica il titolo dell'annuncio</label>
                         <input type="text" name="title" class="form-control" style="width: 100%; height:35px;"
-                            id="title" wire:model.live="title">
+                            id="title" wire:model.live="title" >
                     </div>
                     @error('title')
                         <div class="alert alert-danger"
@@ -141,7 +141,7 @@
                         </div>
                     @enderror
                     <div class="mb-3">
-                        <label for="price" class="form-label">{{ __('ui.InsertPriceAnnouncements') }}</label>
+                        <label for="price" class="form-label">Modifica il prezzo</label>
                         <input type="price" name="price" class="form-control" style="width: 100%; height:35px;"
                             id="price" wire:model.live="price">
                     </div>
@@ -153,7 +153,7 @@
                     @enderror
                     <div class="mb-3">
                         <label for="description"
-                            class="form-label">{{ __('ui.InsertDescriptionAnnouncements') }}</label>
+                            class="form-label">Modifica la descrizione</label>
                         <input type="textarea" name="description" class="form-control"
                             style="width: 100%; height:35px;" id="description" wire:model.live="description">
                     </div>
@@ -164,7 +164,7 @@
                         </div>
                     @enderror
                     <div class="mb-3">
-                        <label for="category">{{ __('ui.selectCategory') }}</label>
+                        <label for="category">Modifica la categoria</label>
                     </div>
                     <select class="form-select" aria-label="Default select example" name="category_id"
                         style="width: 100%; height:35px;margin-bottom: 20px;" wire:model.live="category_id">
@@ -183,7 +183,7 @@
                         </div>
                     @enderror
                     <div class="mb-3">
-                        <label for="image" class="form-label">{{ __('ui.InsertImageAnnouncements') }}</label>
+                        <label for="image" class="form-label">Carica una nuova immagine</label>
                         <input wire:model='temporary_images' type="file" name="image" multiple
                             class="form-control @error('temporary_images.*') is-invalide @enderror" id="image"
                             wire:model.blur="image" style="width: 100%; height:35px;margin-bottom: 20px">
@@ -194,9 +194,10 @@
                             {{ $message }}
                         </div>
                     @enderror
+                    
 
-                    <button type="submit" hidden class="BtnRegistratiLogin" id="ButtonSubmitForm">Crea il
-                        tuo
+                    <button type="submit"  class="BtnRegistratiLogin" wire:click="editAnnouncement" id="ButtonSubmitForm">Crea il
+                        tuo 
                         annuncio</button>
                 </form>
             </div>

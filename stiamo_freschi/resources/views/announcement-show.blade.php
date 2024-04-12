@@ -62,10 +62,19 @@
             </div>
             <div class="containerTextShow">
                 <div style="width:80%: height: 50%; margin-top:0px">
+<<<<<<< HEAD
                     <h1 style="font-size: 40px; overflow:hidden">{{$announcementShow->title}}</h1>
                     <h2 style="font-size: 30px">{{ __('ui.priceCardDetails') }} {{ $announcementShow->price}} € </h2>
                     <p style="font-size: 25px">{{ __('ui.descriptionCardDetails') }} {{ $announcementShow->description}}</p>
                     <p style="font-size: 23px">{{ __('ui.categoryCardDetails') }} {{ $categoryAnnouncement }}</p>
+=======
+                    <h1 style="font-size: 40px; overflow:hidden">{{ $announcementShow->title }}</h1>
+                    <h2 style="font-size: 30px">{{ __('ui.priceCardDetails') }} {{ $announcementShow->price }} € </h2>
+                    <p style="font-size: 25px">{{ __('ui.descriptionCardDetails') }}
+                        {{ $announcementShow->description }}</p>
+                    <p style="font-size: 23px">{{ __('ui.categoryCardDetails') }} {{ $categoryAnnouncements }}
+                    </p>
+>>>>>>> 1cad94b8bc8285757464a024ed45a63ee2d55d14
                 </div>
                 <div class="div-btn-acq">
                     <button class="btn btn-acq">{{ __('ui.buttonBuy') }}</button>
@@ -81,16 +90,26 @@
         <div class="ContainerCard">
             <div class="banner2">
                 @foreach ($categories as $category)
+<<<<<<< HEAD
                 <div id="myButton" class="banner-cat">
                     <a href="{{ route('announcement.category', ['id' => $category->id]) }}">
                         {{ $category->translatedName() }}
                     </a>
                 </div>
             @endforeach
+=======
+                    <div style="background-color: #dbd8e3b0; flex:1;height:85px">
+                        <div id="myButton" class="banner-cat"><a
+                                href="{{ route('announcement.category', ['id' => $category->id]) }}">{{ $category->name }}</a>
+                        </div>
+                    </div>
+                @endforeach
+>>>>>>> 1cad94b8bc8285757464a024ed45a63ee2d55d14
             </div>
             <div class="row" style="display:flex;justify-content:center;padding:0px;margin:0px; flex:3;">
                 @forelse ($announcementOfCategory as $announcement)
-                    <div id="containerColCard" class="col-12 col-xl-3 col-lg-4 col-md-6 mt-5">
+                    <div id="containerColCard" class="col-12 col-xl-3 col-lg-4 col-md-6 mt-5"
+                        style="height: 60vh; padding-top: 100px">
                         @if ($announcement->images->isEmpty())
                             <x-card-home :imagecard="asset('img/pexels-photo-4464487.jpeg')" :user="$announcement->user->name" :date="$announcement->updated_at->format('d/m/y H:i:s')" :title="$announcement->title"
                                 :price="$announcement->price" :description="$announcement->description" :category="$announcement->translatedCategory"
@@ -105,8 +124,14 @@
                     </div>
                 @empty
                     <div class="col-12">
+<<<<<<< HEAD
                         <div class="alert alert-warning py-3 shadow" style="margin-top:200px;display:flex;justify-content:center;align-items:center;">
                             <p class="lead">{{ __('ui.noAsdForThisCategory') }}</p>
+=======
+                        <div class="alert alert-warning py-3 shadow"
+                            style="margin-top:200px;display:flex;justify-content:center;align-items:center;">
+                            <p class="lead">Non ci sono annunci correlati per questa categoria.</p>
+>>>>>>> 1cad94b8bc8285757464a024ed45a63ee2d55d14
                         </div>
                     </div>
                 @endforelse

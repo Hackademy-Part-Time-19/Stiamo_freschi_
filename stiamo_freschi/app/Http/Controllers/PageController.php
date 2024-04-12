@@ -24,7 +24,7 @@ class PageController extends Controller
     public function home()
     {
         $categories = Category::all();
-        $announcements = Announcement::orderBy('updated_at', 'desc')->where('is_accepted', true)->get();
+        $announcements = Announcement::orderBy('updated_at', 'desc')->where('is_accepted', true)->paginate(8);
 
         $currentTranslations = $this->categoryTranslations[App::getLocale()];
 
@@ -51,13 +51,29 @@ class PageController extends Controller
     {
         return view('Announcements-create', ['categories' => Category::all()]);
     }
+    public function announcementEdit(Announcement $announcement)
+    {
+        return view('Announcement-edit', ['announcement' => $announcement, 'categories' => Category::all()]);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
     public function dashboard()
     {
         return view('dashboard');
     }
     public function test()
     {
-        return view('test-profile');
+       
     }
     public function passwordDimenticata()
     {
