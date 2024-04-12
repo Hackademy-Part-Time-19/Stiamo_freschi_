@@ -42,7 +42,7 @@
                         @else
                             @foreach ($announcementShow->images as $announcement)
                                 <div class="carousel-item @if ($loop->first) active @endif">
-                                    <img src="{{ $announcement->getUrl(200, 300) }}" class="d-block w-100"
+                                    <img src="{{ $announcement->getUrl(400, 500) }}" class="d-block w-100"
                                         alt="...">
                                 </div>
                             @endforeach
@@ -62,9 +62,10 @@
             </div>
             <div class="containerTextShow">
                 <div style="width:80%: height: 50%; margin-top:0px">
-                    <h1 style="font-size: 40px; overflow:hidden">{{$announcementShow->title}}</h1>
-                    <h2 style="font-size: 30px">{{ __('ui.priceCardDetails') }} {{ $announcementShow->price}} € </h2>
-                    <p style="font-size: 25px">{{ __('ui.descriptionCardDetails') }} {{ $announcementShow->description}}</p>
+                    <h1 style="font-size: 40px; overflow:hidden">{{ $announcementShow->title }}</h1>
+                    <h2 style="font-size: 30px">{{ __('ui.priceCardDetails') }} {{ $announcementShow->price }} € </h2>
+                    <p style="font-size: 25px">{{ __('ui.descriptionCardDetails') }}
+                        {{ $announcementShow->description }}</p>
                     <p style="font-size: 23px">{{ __('ui.categoryCardDetails') }} {{ $categoryAnnouncement }}</p>
                 </div>
                 <div class="div-btn-acq">
@@ -94,19 +95,18 @@
                         style="height: 60vh; padding-top: 100px">
                         @if ($announcement->images->isEmpty())
                             <x-card-home :imagecard="asset('img/pexels-photo-4464487.jpeg')" :user="$announcement->user->name" :date="$announcement->updated_at->format('d/m/y H:i:s')" :title="$announcement->title"
-                                :price="$announcement->price" :description="$announcement->description" :category="$announcement->translatedCategory"
-                                :announcement="$announcement">
+                                :price="$announcement->price" :description="$announcement->description" :category="$announcement->translatedCategory" :announcement="$announcement">
                             </x-card-home>
                         @else
                             <x-card-home :imagecard="$announcement->images->first()->getUrl(200, 300)" :user="$announcement->user->name" :date="$announcement->updated_at->format('d/m/y H:i:s')" :title="$announcement->title"
-                                :price="$announcement->price" :description="$announcement->description" :category="$announcement->translatedCategory"
-                                :announcement="$announcement">
+                                :price="$announcement->price" :description="$announcement->description" :category="$announcement->translatedCategory" :announcement="$announcement">
                             </x-card-home>
                         @endif
                     </div>
                 @empty
                     <div class="col-12">
-                        <div class="alert alert-warning py-3 shadow" style="margin-top:200px;display:flex;justify-content:center;align-items:center;">
+                        <div class="alert alert-warning py-3 shadow"
+                            style="margin-top:200px;display:flex;justify-content:center;align-items:center;">
                             <p class="lead">{{ __('ui.noAsdForThisCategory') }}</p>
                         </div>
                     </div>

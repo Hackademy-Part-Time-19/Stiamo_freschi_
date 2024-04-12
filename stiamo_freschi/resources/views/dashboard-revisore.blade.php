@@ -83,7 +83,7 @@
                                 </h3>
                             </div>
                             <div class="containerTitleRevisorChild2">
-                                <h3 style="font-size:20px;">{{ $translatedCategory }}</h3>
+                                <h3 style="font-size:20px;">{{ $announcement_to_check->category->name }}</h3>
                             </div>
 
                         </div>
@@ -165,51 +165,52 @@
                             <div class="containerInfoGoogle">
                                 <div class="card-body">
                                     <h5 class="tc-accent">Revisione immagine</h5>
-                                    @foreach ($announcement_to_check->images as $image)
-                                        <p>Adulti:<span class="{{ $image->adult }} ms-2"></span>
+                                    <!-- Nella tua vista -->
+                                    <div>
+                                        <p>Media Adulti: <i class="{{ $announcement->avg_adult }}"></i></p>
+                                        <p>Media Satira: <i class="{{ $announcement->avg_spoof }}"></i></p>
+                                        <p>Media Medicina: <i class="{{ $announcement->avg_medical }}"></i></p>
+                                        <p>Media Violenza: <i class="{{ $announcement->avg_violence }}"></i></p>
+                                        <p>Media Contenuto ammiccante: <i class="{{ $announcement->avg_racy }}"></i>
                                         </p>
-                                        <p>Satira:<span class="{{ $image->spoof }} ms-2"></span>
-                                        </p>
-                                        <p>Medicina:<span class="{{ $image->medical }} ms-2"></span>
-                                        </p>
-                                        <p>Violenza:<span class="{{ $image->violence }} ms-2"></span>
-                                        </p>
-                                        <p>Contenuto ammiccante:<span class="{{ $image->racy }} ms-2"></span></p>
-                                    @endforeach
+                                    </div>
+
                                 </div>
                             </div>
+
+
                         </div>
-
-
                     </div>
-                </div>
-                {{-- @endforeach --}}
-            @else
-                <button class="btn" style="margin-left:200px"><a href="/" style="color: white;font-weight:500;">{{ __('ui.returnHomepage') }}</a></button>
+                    {{-- @endforeach --}}
+                @else
+                    <button class="btn" style="margin-left:200px">
+                        <a href="/" style="color: white;font-weight:500;">Torna alla
+                            homepage</a></button>
 
             @endif
 
         </div>
     </div>
+    {
     <script>
         /* let apertura = false;
 
-                                                                                             function apriBox() {
-                                                                                                if (apertura === false) {
-                                                                                                    document.getElementById('box-card').style.display = "flex";
-                                                                                                    document.getElementById('btn').style.display = "none";
-                                                                                                    document.getElementById('btn2').style.display = "block";
-                                                                                                    document.getElementById('div_container_btn').style.display = "none";
+                                                                                                                                             function apriBox() {
+                                                                                                                                                if (apertura === false) {
+                                                                                                                                                    document.getElementById('box-card').style.display = "flex";
+                                                                                                                                                    document.getElementById('btn').style.display = "none";
+                                                                                                                                                    document.getElementById('btn2').style.display = "block";
+                                                                                                                                                    document.getElementById('div_container_btn').style.display = "none";
 
-                                                                                                    apertura = true;
-                                                                                                } else {
-                                                                                                    document.getElementById('box-card').style.display = "none";
-                                                                                                    document.getElementById('btn').style.display = "block";
-                                                                                                    document.getElementById('btn2').style.display = "none";
-                                                                                                    document.getElementById('div_container_btn').style.display = "flex";
-                                                                                                    apertura = false;
-                                                                                                }
-                                                                                            } */
+                                                                                                                                                    apertura = true;
+                                                                                                                                                } else {
+                                                                                                                                                    document.getElementById('box-card').style.display = "none";
+                                                                                                                                                    document.getElementById('btn').style.display = "block";
+                                                                                                                                                    document.getElementById('btn2').style.display = "none";
+                                                                                                                                                    document.getElementById('div_container_btn').style.display = "flex";
+                                                                                                                                                    apertura = false;
+                                                                                                                                                }
+                                                                                                                                            } */
         document.addEventListener('DOMContentLoaded', function() {
             // Recupera l'elemento span con la classe num_ann
             var numAnnSpan = document.getElementById('num_ann');
