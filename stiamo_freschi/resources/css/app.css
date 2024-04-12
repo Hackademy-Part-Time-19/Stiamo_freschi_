@@ -78,7 +78,6 @@ form label {
 .BtnRegistratiLogin {
     height: 45px;
     width: 100%;
-    margin-top: 20px;
     border-radius: 5px;
     font-size: 22px;
     font-weight: bold;
@@ -656,34 +655,14 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    
 }
 
-.btnCardLayoutProfileElimina {
-        border-radius: 5px;
-        font-size: 18px;
-        width: 100%;
-        height: 28px;
-        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-        margin-bottom: 10px;
-        border: 1px solid white;
-        background-color: #081F37;
-        color: white;
-        font-weight: 500;
-    }
-    
-    .btnCardLayoutProfileElimina:hover {
-        background-color: #0d3b6f;
-        transition: 0.3s;
-    }
-
-    .btnCardLayoutProfile{
+    .btnCardLayoutProfile1{
         flex:1;
-        border-radius: 5px;
-        font-size: 16px;
-        overflow: hidden;
-        width: 100%;
+        border-radius: 5px;;
         height: 40px;
+        width: 100%;
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
         margin-bottom: 10px;
         border: 1px solid white;
@@ -692,13 +671,15 @@ a {
         font-weight: 500;
     }
 
-    .btnCardLayoutProfile:hover{
+    .btnCardLayoutProfile1:hover{
         background-color: #0d3b6f;
         transition: 0.3s;
     }
+   
+   
 
-    .btnCardLayoutProfileEdit{
-        flex: 5;
+    .btnCardLayoutProfileShow{
+        flex:4;
         border-radius: 5px;
         font-size: 16px;
         overflow: hidden;
@@ -712,7 +693,7 @@ a {
         font-weight: 500;
     }
 
-    .btnCardLayoutProfileEdit:hover{
+    .btnCardLayoutProfileShow:hover{
         background-color: #0d3b6f;
         transition: 0.3s;
     }
