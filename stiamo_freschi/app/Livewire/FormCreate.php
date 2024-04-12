@@ -73,7 +73,6 @@ class FormCreate extends Component
            Announcement::create(array_merge($validatedData, ['user_id' => $authUser])); */
         if (count($this->images)) {
             foreach ($this->images as $image) {
-                /* $this->announcement->images()->create(['path' => $image->store('images', 'public')]);*/
                 $newFileName = "announcement/{$this->announcement->id}";
                 $newImage = $this->announcement->images()->create(['path' => $image->store($newFileName, 'public')]);
                 RemoveFaces::withChain([
@@ -83,11 +82,9 @@ class FormCreate extends Component
                 ])->dispatch($newImage->id);
 
                 // Invia la job Watermark separatamente dopo che tutte le altre operazioni sono state completate
-                Watermark::dispatch($newImage->id); // Puoi aggiungere un ritardo se necessario
+                Watermark::dispatch($newImage->id);
             }
-
                 File::deleteDirectory(storage_path('/app/livewire-tmp'));
-            
         }
         $this->announcement_revisor_counter = Announcement::toBeRevisionedCount();
         session()->flash('message', 'Annuncio creato con successo! Verrà pubblicato solamente dopo la revisione');
