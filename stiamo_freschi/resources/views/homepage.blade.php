@@ -82,7 +82,7 @@
 
             {{-- @dd($announcements) --}}
 
-            <div class="ContainerCard">
+            <div class="ContainerCard" style="@if($announcements->isEmpty()) min-height: 20vh;@endif">
                 <div class="row" style="display:flex;justify-content:center;padding:0px;margin:0px;width:100%">
                     @forelse($announcements as $announcement)
                         <div id="containerColCard" class="col-12 col-xl-3 col-lg-4 col-md-6 mt-5">
@@ -99,19 +99,41 @@
                         </div>
 
                     @empty
-                        <div class="col-12" style="display:flex;justify-content:center;align-items:center">
-                            <div class="alert alert-warning py-3 shadow">
-                                <p class="lead">{{ __('ui.alertNoAds') }}</p>
+                        <div id="popSuccess" class="pop" x-data="{ isOpen: true }" x-init="setTimeout(() => { isOpen = false; }, 3000)">
+                            <div class="alert alert-warning traspWarning"
+                                style="width: 90%; display: flex;
+                                justify-content: center;align-items:center;text-align:center;font-size:20px"
+                                role="alert" x-show="isOpen" class="popup">
+                                {{ __('ui.alertNoAds') }}
+                                <div onclick="hidePopup()" class="btnCloseM"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="20" height="20" fill="black" class="bi bi-x-lg"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                                    </svg></div>
                             </div>
                         </div>
                     @endforelse
+
+                    @if(!$announcements->isEmpty())
                     <div class="containerPaginate">
-                        {{ $announcements->links() }}
+                            {{ $announcements->links() }}
                     </div>
+                    @endif
+
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        function hidePopup() {
+            document.getElementById('popSuccess').style.display = 'none';
+        }
+
+        function hidePopupDenied() {
+            document.getElementById('popDenied').style.display = 'none';
+        }
+    </script>
 
 
 
