@@ -116,7 +116,7 @@
                             </div>
                             <div style="flex:1;margin:10px; margin-right:50px;">
                                 <div style="margin-left: 20px">
-                                    <h3 style="font-size:25px;">{{ $announcement_to_check->category->name }}</h3>
+                                    <h3 style="font-size:25px;">{{ $translatedCategory }}</h3>
                                 </div>
                             </div>
                         </div>
@@ -228,8 +228,7 @@
                 </div>
                 {{-- @endforeach --}}
             @else
-                <button class="btn"><a href="/" style="color: white;font-weight:500">Torna alla
-                        homepage</a></button>
+                <button class="btn"><a href="/" style="color: white;font-weight:500">{{ __('ui.returnHomepage') }}</a></button>
 
             @endif
 

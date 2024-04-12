@@ -65,8 +65,7 @@
                     <h1 style="font-size: 40px; overflow:hidden">{{$announcementShow->title}}</h1>
                     <h2 style="font-size: 30px">{{ __('ui.priceCardDetails') }} {{ $announcementShow->price}} € </h2>
                     <p style="font-size: 25px">{{ __('ui.descriptionCardDetails') }} {{ $announcementShow->description}}</p>
-                    <p style="font-size: 23px">{{ __('ui.categoryCardDetails') }} {{ $categoryAnnouncements}}
-                    </p>
+                    <p style="font-size: 23px">{{ __('ui.categoryCardDetails') }} {{ $categoryAnnouncement }}</p>
                 </div>
                 <div class="div-btn-acq">
                     <button class="btn btn-acq">{{ __('ui.buttonBuy') }}</button>
@@ -82,28 +81,32 @@
         <div class="ContainerCard">
             <div class="banner2">
                 @foreach ($categories as $category)
-                    <div id="myButton" class="banner-cat"><a
-                            href="{{ route('announcement.category', ['id' => $category->id]) }}">{{ $category->name }}</a>
-                    </div>
-                @endforeach
+                <div id="myButton" class="banner-cat">
+                    <a href="{{ route('announcement.category', ['id' => $category->id]) }}">
+                        {{ $category->translatedName() }}
+                    </a>
+                </div>
+            @endforeach
             </div>
-            <div class="row" style="display:flex;justify-content:center;padding:0px;margin:0px; flex:3">
+            <div class="row" style="display:flex;justify-content:center;padding:0px;margin:0px; flex:3;">
                 @forelse ($announcementOfCategory as $announcement)
                     <div id="containerColCard" class="col-12 col-xl-3 col-lg-4 col-md-6 mt-5">
                         @if ($announcement->images->isEmpty())
                             <x-card-home :imagecard="asset('img/pexels-photo-4464487.jpeg')" :user="$announcement->user->name" :date="$announcement->updated_at->format('d/m/y H:i:s')" :title="$announcement->title"
-                                :price="$announcement->price" :description="$announcement->description" :category="$announcement->category->name" :announcement="$announcement">
+                                :price="$announcement->price" :description="$announcement->description" :category="$announcement->translatedCategory"
+                                :announcement="$announcement">
                             </x-card-home>
                         @else
                             <x-card-home :imagecard="$announcement->images->first()->getUrl(200, 300)" :user="$announcement->user->name" :date="$announcement->updated_at->format('d/m/y H:i:s')" :title="$announcement->title"
-                                :price="$announcement->price" :description="$announcement->description" :category="$announcement->category->name" :announcement="$announcement">
+                                :price="$announcement->price" :description="$announcement->description" :category="$announcement->translatedCategory"
+                                :announcement="$announcement">
                             </x-card-home>
                         @endif
                     </div>
                 @empty
                     <div class="col-12">
                         <div class="alert alert-warning py-3 shadow" style="margin-top:200px;display:flex;justify-content:center;align-items:center;">
-                            <p class="lead">Non ci sono annunci correlati per questa categoria.</p>
+                            <p class="lead">{{ __('ui.noAsdForThisCategory') }}</p>
                         </div>
                     </div>
                 @endforelse
