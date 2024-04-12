@@ -102,8 +102,6 @@ class FormEdit extends Component
     {
         $announcement = $this->announcementToEdit;
         $this->validate();
-    
-        // Imposta is_accepted a false
         $announcement->is_accepted = null;
     
         if (count($this->images)) {
@@ -124,9 +122,6 @@ class FormEdit extends Component
         }
     
         $announcement->update($this->validate());
-    
-        // Imposta is_accepted a false prima del redirect
-        $announcement->update(['is_accepted' => false]);
     
         session()->flash('message', 'Annuncio modificato con successo! Verrà pubblicato nuovamente solamente dopo la revisione');
 
