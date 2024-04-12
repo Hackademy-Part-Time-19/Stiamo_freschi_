@@ -3,7 +3,7 @@
     <div style="display: flex;height:max-content">
         <div class="div-card1">
             <div class="div-card_dash">
-                <a href="{{ route('revisor.index') }}" class="card_dash_p lf box XcolorA">
+                <a href="{{ route('revisor.index') }}" class="card_dash_pR lf box XcolorA">
                     <div class="li-aside2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                             class="bi bi-card-checklist" viewBox="0 0 16 16">
@@ -38,6 +38,9 @@
                         </div>
                     @endif
                 </a>
+            </div>
+            <div class="div-card_dash">
+
                 <div class="card_dash_p box">
                     <div class="li-aside2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
@@ -48,7 +51,7 @@
                         <li class="liMargin">Catalogs</li>
                     </div>
                 </div>
-                <a class="XcolorA" href="{{route('profile')}}">
+                <a class="XcolorA" href="{{ route('profile') }}">
                     <div class="card_dash_p box">
                         <div class="li-aside2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
@@ -70,30 +73,6 @@
                         </div>
                     </div>
                 </a>
-            </div>
-            <div class="div-card_dash">
-                <div class="card_dash_p lf box">
-                    <div class="li-aside2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                            class="bi bi-heart" viewBox="0 0 16 16">
-                            <path
-                                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                        </svg>
-                        <li class="liMargin">My favorites</li>
-                    </div>
-                </div>
-                <div class="card_dash_p box">
-                    <div class="li-aside2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                            class="bi bi-file-earmark-post" viewBox="0 0 16 16">
-                            <path
-                                d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5z" />
-                            <path
-                                d="M4 6.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5H7a.5.5 0 0 1 0 1H4.5a.5.5 0 0 1-.5-.5" />
-                        </svg>
-                        <li class="liMargin">My articles</li>
-                    </div>
-                </div>
                 <div class="card_dash_p  box">
                     <div class="li-aside2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"

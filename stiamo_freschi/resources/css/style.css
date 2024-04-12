@@ -834,6 +834,19 @@ nav.desktop {
     width: 400px;
 }
 
+.card_dash_pR {
+    flex: 3;
+    width: 900px;
+    height: 250px;
+    border-radius: 25px;
+    margin: 30px;
+    background-color: rgba(217, 217, 217, 0.6);
+}
+
+.card_dash_pR:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
 
 
 .div-descr {
@@ -1109,7 +1122,8 @@ nav.desktop {
     color: red;
 
 }
-.traspWarning{
+
+.traspWarning {
     opacity: 0.93;
     color: orange;
 
