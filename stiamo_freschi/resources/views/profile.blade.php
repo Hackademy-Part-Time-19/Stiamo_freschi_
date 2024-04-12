@@ -76,8 +76,8 @@
             </div>
         </div>
         {{-- MY-FAVOURITES --}}
-        <div id="MyFavourite" class="MyFavourite">
-            <div class="row" style="display:flex;justify-content:center;padding:0px;margin:0px;width:100%">
+        <div id="MyFavourite" class="MyFavourite" style="display:none;">
+            <div class="row" style="display:flex;justify-content:center;padding:0px;margin:0px;width:100%;">
                 <div id="containerColCard" class="col-12 col-xl-3 col-lg-4 col-md-6 mt-5">
                     <div class="cardLayout box">
                         <div class="imgCard">
