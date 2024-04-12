@@ -24,13 +24,29 @@ class PageController extends Controller
     {
         return view('Announcements-create', ['categories' => Category::all()]);
     }
+    public function announcementEdit(Announcement $announcement)
+    {
+        return view('Announcement-edit', ['announcement' => $announcement, 'categories' => Category::all()]);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
     public function dashboard()
     {
         return view('dashboard');
     }
     public function test()
     {
-        return view('test-profile');
+       
     }
     public function passwordDimenticata()
     {

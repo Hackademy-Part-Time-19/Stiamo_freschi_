@@ -14,7 +14,7 @@ use App\Jobs\GoogleVisionSafeSearch;
 use App\Jobs\Watermark;
 use Illuminate\Support\Facades\File;
 
-class FormCreate extends Component
+class FormEdit extends Component
 {
     use WithFileUploads;
     public $title;
@@ -25,6 +25,7 @@ class FormCreate extends Component
     public $announcement;
     public $temporary_images;
     public $announcement_revisor_counter;
+    public $announcementToEdit;
 
     public $name = ['Sport', 'Elettronica', 'Musica', 'Casa', 'Giardino', 'Fai da te', 'Abbigliamento', 'Accessori', 'Gioielli'];
 
@@ -58,36 +59,12 @@ class FormCreate extends Component
     public function mount()
     {
         $this->announcement_revisor_counter = Announcement::toBeRevisionedCount();
-    }
-
-
-    public function store()
-    {
-        // [0 => Sport, 1 => Elettronica, 2 => Musica, 3 => Casa, 4 => Giardino, 5 => Fai da te, 6 => Abbigliamento, 7 => Accessori, 8 => Gioielli]
-        $validatedData = $this->validate();
-        $this->validate();
-        $authUser = auth()->user()->id;
-        $this->announcement = Announcement::create(array_merge($this->validate(), ['user_id' => $authUser]));
-        /*    $authUser = auth()->user()->id;
-           Announcement::create(array_merge($validatedData, ['user_id' => $authUser])); */
-        if (count($this->images)) {
-            foreach ($this->images as $image) {
-                $newFileName = "announcement/{$this->announcement->id}";
-                $newImage = $this->announcement->images()->create(['path' => $image->store($newFileName, 'public')]);
-                RemoveFaces::withChain([
-                    new ResizeImage($newImage->path, 400, 500),
-                    new GoogleVisionSafeSearch($newImage->id),
-                    new GoogleVisionLabelImage($newImage->id)
-                ])->dispatch($newImage->id);
-
-                // Invia la job Watermark separatamente dopo che tutte le altre operazioni sono state completate
-                Watermark::dispatch($newImage->id);
-            }
-            File::deleteDirectory(storage_path('/app/livewire-tmp'));
-        }
-        $this->announcement_revisor_counter = Announcement::toBeRevisionedCount();
-        session()->flash('message', 'Annuncio creato con successo! Verrà pubblicato solamente dopo la revisione');
-        $this->clearForm();
+        
+        $announcement = $this->announcementToEdit;
+        $this->title = $announcement->title;
+        $this->price = $announcement->price;
+        $this->description = $announcement->description ;
+        $this->category_id = $announcement->category_id;
     }
 
     public function render()
@@ -99,7 +76,7 @@ class FormCreate extends Component
             ];
         });
 
-        return view('livewire.form-create', [
+        return view('livewire.form-edit', [
             'categories' => $categories,
         ]);
     }
@@ -119,14 +96,41 @@ class FormCreate extends Component
         }
     }
 
-    public function clearForm()
+
+
+    public function editAnnouncement()
     {
-        $this->title = '';
-        $this->price = '';
-        $this->description = '';
-        $this->images = [];
-        $this->temporary_images = [];
-        $this->category_id = '';
+        $announcement = $this->announcementToEdit;
+        $this->validate();
+    
+        // Imposta is_accepted a false
+        $announcement->is_accepted = null;
+    
+        if (count($this->images)) {
+            foreach ($this->images as $image) {
+                $newFileName = "announcement/{$announcement->id}";
+                $newImage = $announcement->images()->create(['path' => $image->store($newFileName, 'public')]);
+                RemoveFaces::withChain([
+                    new ResizeImage($newImage->path, 400, 500),
+                    new GoogleVisionSafeSearch($newImage->id),
+                    new GoogleVisionLabelImage($newImage->id)
+                ])->dispatch($newImage->id);
+    
+                // Invia la job Watermark separatamente dopo che tutte le altre operazioni sono state completate
+                Watermark::dispatch($newImage->id);
+            }
+            // Rimuovi la directory temporanea di Livewire
+            File::deleteDirectory(storage_path('/app/livewire-tmp'));
+        }
+    
+        $announcement->update($this->validate());
+    
+        // Imposta is_accepted a false prima del redirect
+        $announcement->update(['is_accepted' => false]);
+    
+        session()->flash('message', 'Annuncio modificato con successo! Verrà pubblicato nuovamente solamente dopo la revisione');
+
+        return redirect()->route('profile');
     }
-   
+    
 }
