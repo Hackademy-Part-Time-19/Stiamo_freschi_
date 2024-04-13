@@ -22,7 +22,7 @@ class GoogleVisionSafeSearch implements ShouldQueue
      */
     public function __construct($announcement_image_ids)
     {
-        $this->announcement_image_ids = $announcement_image_ids;
+        $this->announcement_image_ids = is_array($announcement_image_ids) ? $announcement_image_ids : [$announcement_image_ids];
     }
 
     /**
