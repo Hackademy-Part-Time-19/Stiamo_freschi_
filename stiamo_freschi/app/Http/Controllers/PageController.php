@@ -39,10 +39,10 @@ class PageController extends Controller
             'Accessori' => $currentTranslations['Accessori'],
             'Gioielli' => $currentTranslations['Gioielli'],
         ];
-    
-            $translatedCategory = 'Nessuna categoria';
-            
-        return view('homepage', compact('categories', 'announcements','translatedCategory'));
+
+        $translatedCategory = 'Nessuna categoria';
+
+        return view('homepage', compact('categories', 'announcements', 'translatedCategory'));
     }
 
 
@@ -73,7 +73,7 @@ class PageController extends Controller
     }
     public function test()
     {
-       
+        return view('modifica-profilo');
     }
     public function passwordDimenticata()
     {

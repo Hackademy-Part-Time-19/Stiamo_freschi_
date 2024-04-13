@@ -821,6 +821,63 @@ nav.desktop {
     height: 500px;
 }
 
+.DivModProf {
+    background-image: url('/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px;
+}
+
+.divPadreMod {
+    height: 300px;
+    margin: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: #dbd8e388;
+    display: flex;
+    flex-direction: column;
+}
+
+.InfoModProf {
+    flex: 2;
+    display: flex;
+    border-bottom: 1px solid black;
+}
+
+.ModFoto {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ModFoto1 {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 60px;
+}
+
+.ModForm1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    margin-right: 60px;
+    padding-bottom: 5px;
+}
+
+.FormProf {
+    height: 150px;
+    width: 400px;
+    border: none;
+    border-bottom: 1px solid rgb(113, 112, 112);
+    background-color: transparent;
+    padding: 0px;
+
+}
+
 .containerInfoGoogle {
     height: 100%;
     width: 350px;
