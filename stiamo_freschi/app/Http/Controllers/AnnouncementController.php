@@ -115,6 +115,7 @@ class AnnouncementController extends Controller
      */
     public function destroy(Announcement $announcement)
     {
-        //
+        $announcement->delete();
+        return redirect()->back()->with('message', 'Annuncio eliminato con successo!');
     }
 }
