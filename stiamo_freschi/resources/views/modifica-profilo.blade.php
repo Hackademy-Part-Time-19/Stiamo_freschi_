@@ -8,12 +8,12 @@
                     Torna al profilo
                 </button></a>
         </div>
-        <form class="divPadreMod  box" action="{{ route('profile.update') }}" method="POST">
+        <form class="divPadreMod  box" action="{{ route('profile.update') }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div class="InfoModProf ">
                 <div class="ModFoto " style="flex: 1">
-                    <h4>la tua foto</h4>
+                    <h2>Modifica i tuoi dati</h2>
                 </div>
                 <div class="ModFoto1" style="flex: 3">
                     <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor"
@@ -22,10 +22,9 @@
                         <path fill-rule="evenodd"
                             d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
                     </svg>
-                    <div style="margin-left: 50px">
-                        <button class="btn">
-                            scegli la foto
-                        </button>
+                    <div class="containerInputProfile">
+                        <input class="selectProfileImg" style="background-color: none" type="file" name="profile_image">
+                    </input>
                     </div>
                 </div>
 
@@ -37,7 +36,7 @@
                 </div>
                 <div class="ModForm1 " style="flex: 3">
                     <input type="textarea" name="name" class="FormProf" id=""
-                        placeholder="{{ Auth::user()->name }}">
+                        value="{{ Auth::user()->name }}">
                 </div>
 
             </div>
@@ -51,7 +50,7 @@
                 </div>
                 <div class="ModForm1 " style="flex: 3">
                     <input type="textarea" name="email" class="FormProf" id=""
-                        placeholder="{{ Auth::user()->email }}">
+                        value="{{ Auth::user()->email }}">
                 </div>
 
             </div>

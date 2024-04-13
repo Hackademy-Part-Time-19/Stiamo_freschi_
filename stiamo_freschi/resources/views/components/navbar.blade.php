@@ -196,11 +196,17 @@
                 <div class="dropdown icon-btn" id="dropdownMenuNavDesktop" style="width: max-content;">
                     <button class="btn dropdown-toggle icon-profile" style="width: max-content; " type="button"
                         id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
-                            class="bi bi-person-circle" viewBox="0 0 16 16">
-                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                            <path fill-rule="evenodd"
-                                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                        @if (!Auth::user()->image)
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                                class="bi bi-person-circle" viewBox="0 0 16 16" style="margin-right:2px">
+                            @else
+                                <img class="imgProfileNav"
+                                    src="{{ asset('storage/profile_images/' . Auth::user()->image->path) }}"
+                                    alt="">
+                        @endif
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
                         </svg>
                         {{ auth()->user()->name }}
                     </button>
@@ -209,11 +215,11 @@
                         </li>
                         <li><a class="dropdown-item" href="{{ route('profile') }}">Il mio profilo</a>
                         </li>
-{{--                         <li><a class="dropdown-item" href="#">{{ __('ui.dropDwnBalance') }}</a></li>
+                        {{--                         <li><a class="dropdown-item" href="#">{{ __('ui.dropDwnBalance') }}</a></li>
                         <li> --}}
-{{--                             <a class="dropdown-item" href="#">{{ __('ui.dropDwnAssistance') }}</a>
+                        {{--                             <a class="dropdown-item" href="#">{{ __('ui.dropDwnAssistance') }}</a>
                         </li> --}}
-  {{--                       @if (Auth::check())
+                        {{--                       @if (Auth::check())
                             @if (Auth::user()->is_revisor)
                                 <li><a class="dropdown-item" href="{{ route('revisor.index') }}">
                                         {{ __('ui.dropDwnRevisor') }}

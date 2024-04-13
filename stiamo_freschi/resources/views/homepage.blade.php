@@ -85,7 +85,7 @@
                                 </x-card-home>
                             @else
                                 <x-card-home :imagecard="$announcement->images->first()->getUrl(400, 500)" :user="$announcement->user->name" :date="$announcement->updated_at->format('d/m/y H:i:s')" :title="$announcement->title"
-                                    :price="$announcement->price" :description="$announcement->description" :category="$announcement->category->translatedName()" :announcement="$announcement">
+                                    :price="$announcement->price"  :description="$announcement->description" :category="$announcement->category->translatedName()" :announcement="$announcement">
                                 </x-card-home>
                             @endif
                         </div>

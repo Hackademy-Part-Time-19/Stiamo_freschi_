@@ -452,6 +452,9 @@ nav.desktop {
     height: 50px;
     border: none;
     margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -766,6 +769,8 @@ nav.desktop {
     border-radius: 25px;
     margin: 30px;
     background-color: rgba(217, 217, 217, 0.6);
+    font-weight: 500;
+    font-size: 20px;
 }
 
 .card_dash_p:hover {
@@ -800,7 +805,7 @@ nav.desktop {
 }
 
 .liMargin {
-    margin-left: 20px
+    margin-left: 10px;
 }
 
 .card-dash {
@@ -978,11 +983,12 @@ nav.desktop {
 .li-aside2 {
     width: 100%;
     list-style: none;
-    padding-left: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     border-bottom: solid 1px black;
     display: flex;
+    justify-content: center;
+    align-items: center;
     border-top-right-radius: 25px;
     border-top-left-radius: 25px;
 }
@@ -1125,20 +1131,46 @@ nav.desktop {
     height: 40vh;
     /* background-color: #133f6f;*/
     background: transparent;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    padding-left: 20px;
 }
 
 .divfoto {
     display: flex;
-    justify-content: center;
-    flex: 1;
+    justify-content: start;
+    align-items: center;
+    flex: 0.7;
+    background-color: none;
+    padding-right: 20px;
+}
+
+.divfoto img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    
 }
 
 .divNome {
-    flex: 2;
+    flex: 3;
+    background-color: none;
+    padding-left: 20px;
+}
+
+.divNome h3 {
+    font-size: 40px;
+    font-weight: 600;
+}
+.divNome p{
+    font-size: 20px;
+    font-weight: 500;
+
 }
 
 .divModifica {
-    flex: 1;
+    flex: 0.5;
 }
 
 .btnModificaProfile {
