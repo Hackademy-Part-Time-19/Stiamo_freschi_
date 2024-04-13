@@ -701,3 +701,41 @@ a {
     .XcolorA{
         color:black;
     }
+
+    .containerInfoGoogle {
+        height: 100%;
+        width: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: none;
+        flex-direction: column;
+    }
+    .containerTag{
+        flex: 1;
+        background-color: none;
+        height: 50px;
+        width: 100%;
+        overflow: hidden;
+        margin-top: 20px;
+    }
+  
+
+    .containerTag span {
+        color: black;
+        font-size: 12px;
+    }
+
+    .containerFlagRevisor{
+        flex:1;
+        padding-top: 30px;
+        background-color: none;
+        height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+

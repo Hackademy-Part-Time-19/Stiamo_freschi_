@@ -85,14 +85,6 @@
                         <div class="card-dash2">
                             <div id="carouselExample" class="carousel slide" style="width: 400px;height:501px;">
                                 <div class="carousel-inner" style="width: 100%;height:100%">
-                                    {{--                                 @if ($announcement_to_check->images)
-                                    @foreach ($announcement_to_check->images as $image)
-                                        <div class="carousel-item @if ($loop->first) active @endif">
-                                            <img src="{{ Storage::url($image->path) }}" class="d-block w-100"
-                                                alt="...">
-                                        </div>
-                                    @endforeach
-                                @else --}}
                                     @if ($announcement_to_check->images->isEmpty())
                                         <div class="carousel-item active">
                                             <img src="https://images1.vinted.net/t/01_00c4d_ibKrDo5AVXpgGHcrrAVUxZwh/f800/1711030911.jpeg?s=162684a97acb85e57eac3596398af8bbcb25c46e"
@@ -115,6 +107,7 @@
                                         @endforeach
                                     @endif
                                 </div>
+
                                 <button onclick="cambiaImgRevision()" class="carousel-control-prev" type="button"
                                     data-bs-target="#carouselExample" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -156,9 +149,9 @@
                                 </div>
                             </div>
                             <div class="containerInfoGoogle">
-                                <div class="card-body" id="container">
+                                <div class="card-body containerFlagRevisor" id="container">
                                     @if (!$announcement_to_check->images->isEmpty())
-                                        <h5 class="tc-accent">Revisione immagine</h5>
+                                        <h4 class="tc-accent" style="text-align: start">Media Revisione Immagini</h4>
                                         <div id="image_info">
                                             <p>Media Adulti: <span {{-- id="media_adulti" --}}
                                                     class="{{ $announcement_to_check->images[0]->adult }}"></span>
@@ -173,22 +166,34 @@
                                             </p>
                                             <p>Media Contenuto ammiccante: <span id="media_ammiccante"
                                                     class="{{ $announcement_to_check->images[0]->racy }}"></span></p>
+                                        </div>
                                     @endif
                                 </div>
-                                <div>
-                                    <p>LABEL</p>
+                                <div class="containerTag">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div id="tags-container">
+                                                <h4 class="tc-accent" style="text-align: center;font-weight:bold">Tags:</h4>
+                                                @if ($announcement_to_check->images)
+                                                    @foreach ($announcement_to_check->images as $image)
+                                                        @foreach ($image->labels as $label)
+                                                            <span class="badge badge-primary tag">{{ $label }}</span>
+                                                        @endforeach
+                                                    @endforeach
+                                                @endif
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                {{-- @endforeach --}}
-            @else
-                <button class="btn" style="margin-left:200px">
-                    <a href="/" style="color: white;font-weight:500;">Torna alla
-                        homepage
-                    </a>
-                </button>
+                        {{-- @endforeach --}}
+                    @else
+                        <button class="btn" style="margin-left:200px">
+                            <a href="/" style="color: white;font-weight:500;">Torna alla
+                                homepage
+                            </a>
+                        </button>
             @endif
 
         </div>
@@ -196,22 +201,22 @@
     <script>
         /* let apertura = false;
 
-                                                                                                                                                                                                                                                                                                                                                                    function apriBox() {
-                                                                                                                                                                                                                                                                                                                                                                    if (apertura === false) {
-                                                                                                                                                                                                                                                                                                                                                                        document.getElementById('box-card').style.display = "flex";
-                                                                                                                                                                                                                                                                                                                                                                        document.getElementById('btn').style.display = "none";
-                                                                                                                                                                                                                                                                                                                                                                        document.getElementById('btn2').style.display = "block";
-                                                                                                                                                                                                                                                                                                                                                                        document.getElementById('div_container_btn').style.display = "none";
+                                                                                                                                                                                                                                                                                                                                                                                                function apriBox() {
+                                                                                                                                                                                                                                                                                                                                                                                                if (apertura === false) {
+                                                                                                                                                                                                                                                                                                                                                                                                    document.getElementById('box-card').style.display = "flex";
+                                                                                                                                                                                                                                                                                                                                                                                                    document.getElementById('btn').style.display = "none";
+                                                                                                                                                                                                                                                                                                                                                                                                    document.getElementById('btn2').style.display = "block";
+                                                                                                                                                                                                                                                                                                                                                                                                    document.getElementById('div_container_btn').style.display = "none";
 
-                                                                                                                                                                                                                                                                                                                                                                        apertura = true;
-                                                                                                                                                                                                                                                                                                                                                                    } else {
-                                                                                                                                                                                                                                                                                                                                                                        document.getElementById('box-card').style.display = "none";
-                                                                                                                                                                                                                                                                                                                                                                        document.getElementById('btn').style.display = "block";
-                                                                                                                                                                                                                                                                                                                                                                        document.getElementById('btn2').style.display = "none";
-                                                                                                                                                                                                                                                                                                                                                                        document.getElementById('div_container_btn').style.display = "flex";
-                                                                                                                                                                                                                                                                                                                                                                        apertura = false;
-                                                                                                                                                                                                                                                                                                                                                                    }
-                                                                                                                                                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                                                                                                                                                    apertura = true;
+                                                                                                                                                                                                                                                                                                                                                                                                } else {
+                                                                                                                                                                                                                                                                                                                                                                                                    document.getElementById('box-card').style.display = "none";
+                                                                                                                                                                                                                                                                                                                                                                                                    document.getElementById('btn').style.display = "block";
+                                                                                                                                                                                                                                                                                                                                                                                                    document.getElementById('btn2').style.display = "none";
+                                                                                                                                                                                                                                                                                                                                                                                                    document.getElementById('div_container_btn').style.display = "flex";
+                                                                                                                                                                                                                                                                                                                                                                                                    apertura = false;
+                                                                                                                                                                                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                                                                                                                                                                            } */
         document.addEventListener('DOMContentLoaded', function() {
             // Recupera l'elemento span con la classe num_ann
             var numAnnSpan = document.getElementById('num_ann');

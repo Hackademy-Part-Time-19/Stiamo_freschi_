@@ -878,13 +878,7 @@ nav.desktop {
 
 }
 
-.containerInfoGoogle {
-    height: 100%;
-    width: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .img-size {
     height: 550px;
