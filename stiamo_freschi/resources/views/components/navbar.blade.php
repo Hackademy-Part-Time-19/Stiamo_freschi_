@@ -207,10 +207,12 @@
                     <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton">
                         <li><a class="dropdown-item" href="{{ route('dashboard') }}">{{ __('ui.dropDwnDashboard') }}</a>
                         </li>
-                        <li><a class="dropdown-item" href="#">{{ __('ui.dropDwnBalance') }}</a></li>
-                        <li>
-                            <a class="dropdown-item" href="#">{{ __('ui.dropDwnAssistance') }}</a>
+                        <li><a class="dropdown-item" href="{{ route('profile') }}">Il mio profilo</a>
                         </li>
+{{--                         <li><a class="dropdown-item" href="#">{{ __('ui.dropDwnBalance') }}</a></li>
+                        <li> --}}
+{{--                             <a class="dropdown-item" href="#">{{ __('ui.dropDwnAssistance') }}</a>
+                        </li> --}}
   {{--                       @if (Auth::check())
                             @if (Auth::user()->is_revisor)
                                 <li><a class="dropdown-item" href="{{ route('revisor.index') }}">

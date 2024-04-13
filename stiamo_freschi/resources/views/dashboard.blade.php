@@ -1,5 +1,5 @@
 <x-layout>
-    <x-navbar2 />
+    <x-navbar />
     <div style="display: flex;height:max-content">
         <div class="div-card1">
             <div class="div-card_dash">

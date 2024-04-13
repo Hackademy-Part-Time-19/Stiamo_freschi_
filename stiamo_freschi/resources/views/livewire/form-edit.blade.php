@@ -1,7 +1,8 @@
 <div class="row div-form">
     <x-navbar-create :revisorCounter="$announcement_revisor_counter" />
-    <x-session-success/>
+    
     <div class="col-4 div-cons">
+        <x-session-success/>
         <div style="margin-right:70px;margin-left:60px;">
             <div class="cardLayoutFormCreate box">
                 <div class="imgCard">
@@ -115,7 +116,7 @@
                     @else
                         <button type="submit" id='submitButtonFormCreate' class="BtnRegistratiLogin"
                             style="height:35px; font-size:18px;cursor:pointer"><label for="ButtonSubmitForm"
-                                tabindex="0">{{ __('ui.buttonCreateAnnouncement') }}</label></button>
+                                tabindex="0">Modifica il tuo annuncio</label></button>
                     @endif
                 </div>
             </div>
@@ -196,7 +197,7 @@
                     @enderror
                     
 
-                    <button type="submit"  class="BtnRegistratiLogin" wire:click="editAnnouncement" id="ButtonSubmitForm">Crea il
+                    <button type="submit"  class="BtnRegistratiLogin" hidden wire:click="editAnnouncement" id="ButtonSubmitForm">Crea il
                         tuo 
                         annuncio</button>
                 </form>
@@ -204,4 +205,11 @@
         </div>
     </div>
 
+    <script>
+        document.addEventListener('livewire:load', function () {
+            Livewire.on('redirectToProfile', () => {
+                window.location.href = '{{ route('dashboard') }}'; // Reindirizza alla pagina del profilo
+            });
+        });
+    </script>
 </div>

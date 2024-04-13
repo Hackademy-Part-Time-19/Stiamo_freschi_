@@ -59,12 +59,12 @@ class FormEdit extends Component
     public function mount()
     {
         $this->announcement_revisor_counter = Announcement::toBeRevisionedCount();
-        
-        $announcement = $this->announcementToEdit;
+
+       /*  $announcement = $this->announcementToEdit;
         $this->title = $announcement->title;
         $this->price = $announcement->price;
-        $this->description = $announcement->description ;
-        $this->category_id = $announcement->category_id;
+        $this->description = $announcement->description;
+        $this->category_id = $announcement->category_id; */
     }
 
     public function render()
@@ -101,9 +101,9 @@ class FormEdit extends Component
     public function editAnnouncement()
     {
         $announcement = $this->announcementToEdit;
-        $this->validate();
-        $announcement->is_accepted = null;
-    
+        $validatedData = $this->validate();
+        $announcement->update(array_merge($validatedData, ['is_accepted' => null]));
+
         if (count($this->images)) {
             foreach ($this->images as $image) {
                 $newFileName = "announcement/{$announcement->id}";
@@ -113,19 +113,25 @@ class FormEdit extends Component
                     new GoogleVisionSafeSearch($newImage->id),
                     new GoogleVisionLabelImage($newImage->id)
                 ])->dispatch($newImage->id);
-    
+
                 // Invia la job Watermark separatamente dopo che tutte le altre operazioni sono state completate
                 Watermark::dispatch($newImage->id);
             }
             // Rimuovi la directory temporanea di Livewire
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
-        }
-    
-        $announcement->update($this->validate());
-    
-        session()->flash('message', 'Annuncio modificato con successo! Verrà pubblicato nuovamente solamente dopo la revisione');
-
-        return redirect()->route('profile');
+        };
+        return redirect()->to('/profile')->with('message', 'Annuncio modificato con successo! Verrà pubblicato nuovamente solamente dopo la revisione');
     }
-    
+
+
+
+    public function clearForm()
+    {
+        $this->title = '';
+        $this->price = '';
+        $this->description = '';
+        $this->images = [];
+        $this->temporary_images = [];
+        $this->category_id = '';
+    }
 }

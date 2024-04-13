@@ -63,13 +63,13 @@ class RevisorController extends Controller
     {
 
         $announcement->setAccepted(true);
-        return redirect()->back()->with('message',  __('ui.messageAsdAccepted') );
+        return redirect()->back()->with('success',  __('ui.messageAsdAccepted') );
     }
 
     public function rejectAnnouncement(Announcement $announcement)
     {
         $announcement->setAccepted(false);
-        return redirect()->back()->with('message', __('ui.messageAsdRejected'));
+        return redirect()->back()->with('denied', __('ui.messageAsdRejected'));
     }
 
     public function becomeRevisor()
