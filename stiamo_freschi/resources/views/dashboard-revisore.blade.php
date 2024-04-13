@@ -120,8 +120,8 @@
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Previous</span>
                                 </button>
-                                <button class="carousel-control-next" type="button"
-                                    data-bs-target="#carouselExample" data-bs-slide="next">
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                                    data-bs-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Next</span>
                                 </button>
@@ -160,15 +160,21 @@
                                     <h5 class="tc-accent">Revisione immagine</h5>
                                     <!-- Nella tua vista -->
                                     <div>
-                                        <p>Media Adulti: <i class="{{ $announcement_to_check->avg_adult }}"></i></p>
-                                        <p>Media Satira: <i class="{{ $announcement_to_check->avg_spoof }}"></i></p>
-                                        <p>Media Medicina: <i class="{{ $announcement_to_check->avg_medical }}"></i>
-                                        </p>
-                                        <p>Media Violenza: <i class="{{ $announcement_to_check->avg_violence }}"></i>
-                                        </p>
-                                        <p>Media Contenuto ammiccante: <i
-                                                class="{{ $announcement_to_check->avg_racy }}"></i>
-                                        </p>
+                                        @foreach ($announcement_to_check->images as $image)
+                                            <p>Media Adulti: <span class="{{ $image->adult }}"></span>
+                                            </p>
+                                            <p>Media Satira: <span class="{{ $image->spoof }}"></span>
+                                            </p>
+                                            <p>Media Medicina: <span
+                                                    class="{{ $image->medical }}"></span>
+                                            </p>
+                                            <p>Media Violenza: <span
+                                                    class="{{ $image->violence }}"></span>
+                                            </p>
+                                            <p>Media Contenuto ammiccante: <span
+                                                    class="{{ $image->racy }}"></span>
+                                            </p>
+                                        @endforeach
                                     </div>
 
                                 </div>
@@ -191,22 +197,22 @@
     <script>
         /* let apertura = false;
 
-                function apriBox() {
-                if (apertura === false) {
-                    document.getElementById('box-card').style.display = "flex";
-                    document.getElementById('btn').style.display = "none";
-                    document.getElementById('btn2').style.display = "block";
-                    document.getElementById('div_container_btn').style.display = "none";
+                    function apriBox() {
+                    if (apertura === false) {
+                        document.getElementById('box-card').style.display = "flex";
+                        document.getElementById('btn').style.display = "none";
+                        document.getElementById('btn2').style.display = "block";
+                        document.getElementById('div_container_btn').style.display = "none";
 
-                    apertura = true;
-                } else {
-                    document.getElementById('box-card').style.display = "none";
-                    document.getElementById('btn').style.display = "block";
-                    document.getElementById('btn2').style.display = "none";
-                    document.getElementById('div_container_btn').style.display = "flex";
-                    apertura = false;
-                }
-            } */
+                        apertura = true;
+                    } else {
+                        document.getElementById('box-card').style.display = "none";
+                        document.getElementById('btn').style.display = "block";
+                        document.getElementById('btn2').style.display = "none";
+                        document.getElementById('div_container_btn').style.display = "flex";
+                        apertura = false;
+                    }
+                } */
         document.addEventListener('DOMContentLoaded', function() {
             // Recupera l'elemento span con la classe num_ann
             var numAnnSpan = document.getElementById('num_ann');
