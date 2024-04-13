@@ -1,7 +1,11 @@
 <x-layout>
     <x-navbar />
     <div class="DivModProf">
-        <div class="divPadreMod  box">
+        <x-session-success/>
+        {{--INIZIO FORM --}}
+        <form class="divPadreMod  box" action="{{route('profile.update')}}" method="POST">
+            @csrf
+            @method('PUT')
             <div class="InfoModProf ">
                 <div class="ModFoto " style="flex: 1">
                     <h4>la tua foto</h4>
@@ -21,13 +25,14 @@
                 </div>
 
             </div>
+            
             <div style="flex:3;display: flex">
                 <div class="ModFoto " style="flex: 1">
                     <h5>Nome utente</h5>
                 </div>
                 <div class="ModForm1 " style="flex: 3">
-                    <input type="textarea" name="" class="FormProf" id=""
-                        placeholder="{{ __('ui.InsertDescriptionAnnouncements') }}">
+                    <input type="textarea" name="name" class="FormProf" id=""
+                        placeholder="{{Auth::user()->name}}">
                 </div>
 
             </div>
@@ -36,8 +41,8 @@
                     <h5>Email</h5>
                 </div>
                 <div class="ModForm1 " style="flex: 3">
-                    <input type="textarea" name="" class="FormProf" id=""
-                        placeholder="{{ __('ui.InsertDescriptionAnnouncements') }}">
+                    <input type="textarea" name="email" class="FormProf" id=""
+                        placeholder="{{Auth::user()->email}}">
                 </div>
 
             </div>
@@ -46,17 +51,18 @@
                     <h5>Password</h5>
                 </div>
                 <div class="ModForm1 "style="flex:3">
-                    <button class="btn" style="height: 60px !important; width: 300px; !important">Modifica
+                    <button class="btn" style="height: 40px !important; width: 400px; !important">Modifica
                         Password</button>
                 </div>
 
             </div>
-        </div>
-        <div style="display:flex; justify-content: end;margin-right:30px;">
-            <button class="btn" style="height: 50px !important; width: 200px;">
-                salva modifiche
-            </button>
-        </div>
+            <div style="display:flex; justify-content: end;margin-right:30px;margin-bottom:20px;">
+                <button class="btn" type="submit" style="height: 50px !important; width: 200px;font-size:18px">
+                    Salva modifiche
+                </button>
+            </div>
+        </form>
+     
 
     </div>
 

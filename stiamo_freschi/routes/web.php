@@ -63,6 +63,9 @@ Route::get('/auth/google/call-back', [GoogleAuthController::class, 'callbackGoog
 // Profile
 
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile')->middleware('auth');
+Route::get('/profile/edit', [ProfileController::class, 'goToEdit'])->name('profile.edit')->middleware('auth');
+// profile update
+Route::put('/profile/edit', [ProfileController::class, 'update'])->name('profile.update')->middleware('auth');
 
 
 //edit announcement
