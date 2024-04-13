@@ -49,4 +49,8 @@ class User extends Authenticatable
         return $this->hasMany(Announcement::class);
     }
     
+    public function image()
+    {
+        return $this->hasOne(Image::class);
+    }
 }

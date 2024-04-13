@@ -24,7 +24,7 @@
                             <h3>{{ auth()->user()->name }} </h3>
                         </div>
                         <div>
-                            <p>Nessuna recensione</p>
+                            <p>{{auth()->user()->email}}</p>
                         </div>
                     </div>
                     <a href="{{route('profile.edit')}}" class="divModifica">

@@ -36,4 +36,10 @@ class Image extends Model
     {
         return Image::getUrlByFilePath($this->path, $w, $h);
     }
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
+    
 }
