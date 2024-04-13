@@ -55,7 +55,7 @@ class Watermark implements ShouldQueue
         $watermarkHeight = imagesy($watermark);
 
         // Define the scale factor for the watermark
-        $scaleFactor = 0.5; // Adjust this value to scale down the watermark
+        $scaleFactor = 0.2; // Adjust this value to scale down the watermark
 
         // Calculate the scaled watermark dimensions
         $scaledWatermarkWidth = $watermarkWidth * $scaleFactor;

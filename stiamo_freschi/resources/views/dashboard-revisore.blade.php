@@ -115,8 +115,8 @@
                                         @endforeach
                                     @endif
                                 </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                                    data-bs-slide="prev">
+                                <button onclick="cambiaImgRevision()" class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselExample" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Previous</span>
                                 </button>
@@ -156,63 +156,55 @@
                                 </div>
                             </div>
                             <div class="containerInfoGoogle">
-                                <div class="card-body">
+                                <div class="card-body" id="container">
                                     <h5 class="tc-accent">Revisione immagine</h5>
-                                    <!-- Nella tua vista -->
-                                    <div>
-                                        @foreach ($announcement_to_check->images as $image)
-                                            <p>Media Adulti: <span class="{{ $image->adult }}"></span>
-                                            </p>
-                                            <p>Media Satira: <span class="{{ $image->spoof }}"></span>
-                                            </p>
-                                            <p>Media Medicina: <span
-                                                    class="{{ $image->medical }}"></span>
-                                            </p>
-                                            <p>Media Violenza: <span
-                                                    class="{{ $image->violence }}"></span>
-                                            </p>
-                                            <p>Media Contenuto ammiccante: <span
-                                                    class="{{ $image->racy }}"></span>
-                                            </p>
-                                        @endforeach
+                                    <div id="image_info">
+                                        <p>Media Adulti: <span {{-- id="media_adulti" --}}
+                                                class="{{ $announcement_to_check->images[0]->adult }}"></span>
+                                        </p>
+                                        <p>Media Satira: <span id="media_satira"
+                                                class="{{ $announcement_to_check->images[0]->spoof }}"></span></p>
+                                        <p>Media Medicina: <span id="media_medicina"
+                                                class="{{ $announcement_to_check->images[0]->medical }}"></span></p>
+                                        <p>Media Violenza: <span id="media_violenza"
+                                                class="{{ $announcement_to_check->images[0]->violence }}"></span></p>
+                                        <p>Media Contenuto ammiccante: <span id="media_ammiccante"
+                                                class="{{ $announcement_to_check->images[0]->racy }}"></span></p>
                                     </div>
-
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
                     {{-- @endforeach --}}
                 @else
                     <button class="btn" style="margin-left:200px">
                         <a href="/" style="color: white;font-weight:500;">Torna alla
-                            homepage</a></button>
-
+                            homepage
+                        </a>
+                    </button>
             @endif
 
         </div>
     </div>
-    {
     <script>
         /* let apertura = false;
 
-                    function apriBox() {
-                    if (apertura === false) {
-                        document.getElementById('box-card').style.display = "flex";
-                        document.getElementById('btn').style.display = "none";
-                        document.getElementById('btn2').style.display = "block";
-                        document.getElementById('div_container_btn').style.display = "none";
+                                                                                                                                                                                                                                                                                    function apriBox() {
+                                                                                                                                                                                                                                                                                    if (apertura === false) {
+                                                                                                                                                                                                                                                                                        document.getElementById('box-card').style.display = "flex";
+                                                                                                                                                                                                                                                                                        document.getElementById('btn').style.display = "none";
+                                                                                                                                                                                                                                                                                        document.getElementById('btn2').style.display = "block";
+                                                                                                                                                                                                                                                                                        document.getElementById('div_container_btn').style.display = "none";
 
-                        apertura = true;
-                    } else {
-                        document.getElementById('box-card').style.display = "none";
-                        document.getElementById('btn').style.display = "block";
-                        document.getElementById('btn2').style.display = "none";
-                        document.getElementById('div_container_btn').style.display = "flex";
-                        apertura = false;
-                    }
-                } */
+                                                                                                                                                                                                                                                                                        apertura = true;
+                                                                                                                                                                                                                                                                                    } else {
+                                                                                                                                                                                                                                                                                        document.getElementById('box-card').style.display = "none";
+                                                                                                                                                                                                                                                                                        document.getElementById('btn').style.display = "block";
+                                                                                                                                                                                                                                                                                        document.getElementById('btn2').style.display = "none";
+                                                                                                                                                                                                                                                                                        document.getElementById('div_container_btn').style.display = "flex";
+                                                                                                                                                                                                                                                                                        apertura = false;
+                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                } */
         document.addEventListener('DOMContentLoaded', function() {
             // Recupera l'elemento span con la classe num_ann
             var numAnnSpan = document.getElementById('num_ann');
@@ -228,6 +220,38 @@
             } else {
                 numAnnSpan.style.color = 'red';
             }
+            // Supponiamo che currentIndex sia l'indice dell'immagine attualmente visualizzata nel carousel
+            var currentIndex = 0; // Inizializziamo currentIndex a 0
+
+            // Recupera l'annuncio da controllare
+            var announcement_to_check = {!! json_encode($announcement_to_check) !!};
+
+            // Aggiorna le informazioni dell'immagine corrente sulla pagina
+            function updateCurrentImage() {
+                var currentImage = announcement_to_check.images[currentIndex];
+                document.getElementById('media_adulti').innerText = currentImage.adult;
+                document.getElementById('media_satira').innerText = currentImage.spoof;
+                document.getElementById('media_medicina').innerText = currentImage.medical;
+                document.getElementById('media_violenza').innerText = currentImage.violence;
+                document.getElementById('media_ammiccante').innerText = currentImage.racy;
+            }
+
+            // Aggiorna le informazioni dell'immagine corrente quando il carousel cambia immagine
+            $('#carouselExample').on('slid.bs.carousel', function() {
+                currentIndex = $('#carouselExample').find('.carousel-item.active').index();
+                var currentImage = announcement_to_check.images[currentIndex];
+                document.getElementById('media_adulti').innerText = "Media Adulti: " + currentImage.adult;
+                document.getElementById('media_satira').innerText = "Media Satira: " + currentImage.spoof;
+                document.getElementById('media_medicina').innerText = "Media Medicina: " + currentImage
+                    .medical;
+                document.getElementById('media_violenza').innerText = "Media Violenza: " + currentImage
+                    .violence;
+                document.getElementById('media_ammiccante').innerText = "Media Contenuto ammiccante: " +
+                    currentImage.racy;
+            });
+
+            // Chiamata iniziale per aggiornare le informazioni dell'immagine corrente all'avvio
+            updateCurrentImage();
         });
     </script>
 
