@@ -2,16 +2,17 @@
 
 namespace App\Livewire;
 
-use App\Jobs\GoogleVisionLabelImage;
+use App\Models\Image;
 use Livewire\Livewire;
+use App\Jobs\Watermark;
 use Livewire\Component;
 use App\Models\Category;
 use App\Jobs\RemoveFaces;
 use App\Jobs\ResizeImage;
 use App\Models\Announcement;
 use Livewire\WithFileUploads;
+use App\Jobs\GoogleVisionLabelImage;
 use App\Jobs\GoogleVisionSafeSearch;
-use App\Jobs\Watermark;
 use Illuminate\Support\Facades\File;
 
 class FormEdit extends Component
@@ -60,7 +61,7 @@ class FormEdit extends Component
     {
         $this->announcement_revisor_counter = Announcement::toBeRevisionedCount();
 
-       /*  $announcement = $this->announcementToEdit;
+        /*  $announcement = $this->announcementToEdit;
         $this->title = $announcement->title;
         $this->price = $announcement->price;
         $this->description = $announcement->description;
@@ -102,9 +103,13 @@ class FormEdit extends Component
     {
         $announcement = $this->announcementToEdit;
         $validatedData = $this->validate();
-        $announcement->update(array_merge($validatedData, ['is_accepted' => null]));
+        $announcement->update(array_merge($validatedData));
+        $announcement->setAccepted(null);
 
         if (count($this->images)) {
+            // Elimina le immagini esistenti solo se ci sono nuove immagini caricate
+            $announcement->images()->delete();
+
             foreach ($this->images as $image) {
                 $newFileName = "announcement/{$announcement->id}";
                 $newImage = $announcement->images()->create(['path' => $image->store($newFileName, 'public')]);
@@ -117,9 +122,11 @@ class FormEdit extends Component
                 // Invia la job Watermark separatamente dopo che tutte le altre operazioni sono state completate
                 Watermark::dispatch($newImage->id);
             }
+
             // Rimuovi la directory temporanea di Livewire
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
-        };
+        }
+
         return redirect()->to('/profile')->with('message', 'Annuncio modificato con successo! Verrà pubblicato nuovamente solamente dopo la revisione');
     }
 

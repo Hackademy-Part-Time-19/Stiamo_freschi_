@@ -53,7 +53,7 @@
                                 :price="$myAnnouncement->price" :description="$myAnnouncement->description" :category="$myAnnouncement->category->name" :announcement="$myAnnouncement">
                             </x-card-profile>
                         @else
-                            <x-card-profile :imagecard="$myAnnouncement->images->first()->getUrl(200, 300)" :user="$myAnnouncement->user->name" :date="$myAnnouncement->updated_at->format('d/m/y H:i:s')" :title="$myAnnouncement->title"
+                            <x-card-profile :imagecard="$myAnnouncement->images->first()->getUrl(400, 500)" :user="$myAnnouncement->user->name" :date="$myAnnouncement->updated_at->format('d/m/y H:i:s')" :title="$myAnnouncement->title"
                                 :price="$myAnnouncement->price" :description="$myAnnouncement->description" :category="$myAnnouncement->category->name" :announcement="$myAnnouncement">
                             </x-card-profile>
                         @endif
