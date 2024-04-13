@@ -157,31 +157,36 @@
                             </div>
                             <div class="containerInfoGoogle">
                                 <div class="card-body" id="container">
-                                    <h5 class="tc-accent">Revisione immagine</h5>
-                                    <div id="image_info">
-                                        <p>Media Adulti: <span {{-- id="media_adulti" --}}
-                                                class="{{ $announcement_to_check->images[0]->adult }}"></span>
-                                        </p>
-                                        <p>Media Satira: <span id="media_satira"
-                                                class="{{ $announcement_to_check->images[0]->spoof }}"></span></p>
-                                        <p>Media Medicina: <span id="media_medicina"
-                                                class="{{ $announcement_to_check->images[0]->medical }}"></span></p>
-                                        <p>Media Violenza: <span id="media_violenza"
-                                                class="{{ $announcement_to_check->images[0]->violence }}"></span></p>
-                                        <p>Media Contenuto ammiccante: <span id="media_ammiccante"
-                                                class="{{ $announcement_to_check->images[0]->racy }}"></span></p>
-                                    </div>
+                                    @if (!$announcement_to_check->images->isEmpty())
+                                        <h5 class="tc-accent">Revisione immagine</h5>
+                                        <div id="image_info">
+                                            <p>Media Adulti: <span {{-- id="media_adulti" --}}
+                                                    class="{{ $announcement_to_check->images[0]->adult }}"></span>
+                                            </p>
+                                            <p>Media Satira: <span id="media_satira"
+                                                    class="{{ $announcement_to_check->images[0]->spoof }}"></span></p>
+                                            <p>Media Medicina: <span id="media_medicina"
+                                                    class="{{ $announcement_to_check->images[0]->medical }}"></span>
+                                            </p>
+                                            <p>Media Violenza: <span id="media_violenza"
+                                                    class="{{ $announcement_to_check->images[0]->violence }}"></span>
+                                            </p>
+                                            <p>Media Contenuto ammiccante: <span id="media_ammiccante"
+                                                    class="{{ $announcement_to_check->images[0]->racy }}"></span></p>
+                                    @endif
                                 </div>
+
                             </div>
                         </div>
                     </div>
-                    {{-- @endforeach --}}
-                @else
-                    <button class="btn" style="margin-left:200px">
-                        <a href="/" style="color: white;font-weight:500;">Torna alla
-                            homepage
-                        </a>
-                    </button>
+                </div>
+                {{-- @endforeach --}}
+            @else
+                <button class="btn" style="margin-left:200px">
+                    <a href="/" style="color: white;font-weight:500;">Torna alla
+                        homepage
+                    </a>
+                </button>
             @endif
 
         </div>
@@ -189,22 +194,22 @@
     <script>
         /* let apertura = false;
 
-                                                                                                                                                                                                                                                                                    function apriBox() {
-                                                                                                                                                                                                                                                                                    if (apertura === false) {
-                                                                                                                                                                                                                                                                                        document.getElementById('box-card').style.display = "flex";
-                                                                                                                                                                                                                                                                                        document.getElementById('btn').style.display = "none";
-                                                                                                                                                                                                                                                                                        document.getElementById('btn2').style.display = "block";
-                                                                                                                                                                                                                                                                                        document.getElementById('div_container_btn').style.display = "none";
+                                                                                                                                                                                                                                                                                            function apriBox() {
+                                                                                                                                                                                                                                                                                            if (apertura === false) {
+                                                                                                                                                                                                                                                                                                document.getElementById('box-card').style.display = "flex";
+                                                                                                                                                                                                                                                                                                document.getElementById('btn').style.display = "none";
+                                                                                                                                                                                                                                                                                                document.getElementById('btn2').style.display = "block";
+                                                                                                                                                                                                                                                                                                document.getElementById('div_container_btn').style.display = "none";
 
-                                                                                                                                                                                                                                                                                        apertura = true;
-                                                                                                                                                                                                                                                                                    } else {
-                                                                                                                                                                                                                                                                                        document.getElementById('box-card').style.display = "none";
-                                                                                                                                                                                                                                                                                        document.getElementById('btn').style.display = "block";
-                                                                                                                                                                                                                                                                                        document.getElementById('btn2').style.display = "none";
-                                                                                                                                                                                                                                                                                        document.getElementById('div_container_btn').style.display = "flex";
-                                                                                                                                                                                                                                                                                        apertura = false;
-                                                                                                                                                                                                                                                                                    }
-                                                                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                                                apertura = true;
+                                                                                                                                                                                                                                                                                            } else {
+                                                                                                                                                                                                                                                                                                document.getElementById('box-card').style.display = "none";
+                                                                                                                                                                                                                                                                                                document.getElementById('btn').style.display = "block";
+                                                                                                                                                                                                                                                                                                document.getElementById('btn2').style.display = "none";
+                                                                                                                                                                                                                                                                                                document.getElementById('div_container_btn').style.display = "flex";
+                                                                                                                                                                                                                                                                                                apertura = false;
+                                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                        } */
         document.addEventListener('DOMContentLoaded', function() {
             // Recupera l'elemento span con la classe num_ann
             var numAnnSpan = document.getElementById('num_ann');
