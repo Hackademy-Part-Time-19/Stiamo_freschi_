@@ -651,91 +651,107 @@ a {
     display: none
 }
 
-.Areabutton{
+.Areabutton {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
-    .btnCardLayoutProfile1{
-        flex:1;
-        border-radius: 5px;;
-        height: 40px;
-        width: 100%;
-        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-        margin-bottom: 10px;
-        border: 1px solid white;
-        background-color: #081F37;
-        color: white;
-        font-weight: 500;
-    }
+.btnCardLayoutProfile1 {
+    flex: 1;
+    border-radius: 5px;
+    ;
+    height: 40px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    margin-bottom: 10px;
+    border: 1px solid white;
+    background-color: #081F37;
+    color: white;
+    font-weight: 500;
+}
 
-    .btnCardLayoutProfile1:hover{
-        background-color: #0d3b6f;
-        transition: 0.3s;
-    }
-   
-   
+.btnCardLayoutProfile1:hover {
+    background-color: #0d3b6f;
+    transition: 0.3s;
+}
 
-    .btnCardLayoutProfileShow{
-        flex:4;
-        border-radius: 5px;
-        font-size: 16px;
-        overflow: hidden;
-        width: 100%;
-        height: 40px;
-        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-        margin-bottom: 10px;
-        border: 1px solid white;
-        background-color: #081F37;
-        color: white;
-        font-weight: 500;
-    }
 
-    .btnCardLayoutProfileShow:hover{
-        background-color: #0d3b6f;
-        transition: 0.3s;
-    }
 
-    .XcolorA{
-        color:black;
-    }
+.btnCardLayoutProfileShow {
+    flex: 4;
+    border-radius: 5px;
+    font-size: 16px;
+    overflow: hidden;
+    width: 100%;
+    height: 40px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    margin-bottom: 10px;
+    border: 1px solid white;
+    background-color: #081F37;
+    color: white;
+    font-weight: 500;
+}
 
-    .containerInfoGoogle {
-        height: 100%;
-        width: 350px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: none;
-        flex-direction: column;
-    }
-    .containerTag{
-        flex: 1;
-        background-color: none;
-        height: 50px;
-        width: 100%;
-        overflow: hidden;
-        margin-top: 20px;
-    }
-  
+.btnCardLayoutProfileShow:hover {
+    background-color: #0d3b6f;
+    transition: 0.3s;
+}
 
-    .containerTag span {
-        color: black;
-        font-size: 12px;
-    }
+.XcolorA {
+    color: black;
+}
 
-    .containerFlagRevisor{
-        flex:1;
-        padding-top: 30px;
-        background-color: none;
-        height: 50px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-    }
+.containerInfoGoogle {
+    height: 100%;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    flex-direction: column;
+}
 
+.containerTag {
+    flex: 1;
+    background-color: none;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+
+.containerTag span {
+    color: black;
+    font-size: 12px;
+}
+
+.containerFlagRevisor {
+    flex: 1;
+    padding-top: 30px;
+    background-color: none;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.containerBtnEditProfile {
+    height: 50px;
+    background-color: none;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 40px;
+}
+
+.containerBtnEditProfile {
+    height: 40px !important;
+    width: 200px;
+    font-size: 18px;
+}

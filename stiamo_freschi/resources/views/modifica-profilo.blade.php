@@ -1,9 +1,14 @@
 <x-layout>
     <x-navbar />
     <div class="DivModProf">
-        <x-session-success/>
-        {{--INIZIO FORM --}}
-        <form class="divPadreMod  box" action="{{route('profile.update')}}" method="POST">
+        <x-session-success />
+        {{-- INIZIO FORM --}}
+        <div class="containerBtnEditProfile">
+            <a href="{{ route('profile') }}"><button class="btn" type="submit">
+                    Torna al profilo
+                </button></a>
+        </div>
+        <form class="divPadreMod  box" action="{{ route('profile.update') }}" method="POST">
             @csrf
             @method('PUT')
             <div class="InfoModProf ">
@@ -25,27 +30,35 @@
                 </div>
 
             </div>
-            
+
             <div style="flex:3;display: flex">
                 <div class="ModFoto " style="flex: 1">
                     <h5>Nome utente</h5>
                 </div>
                 <div class="ModForm1 " style="flex: 3">
                     <input type="textarea" name="name" class="FormProf" id=""
-                        placeholder="{{Auth::user()->name}}">
+                        placeholder="{{ Auth::user()->name }}">
                 </div>
 
             </div>
+            @error('name')
+                <div class="alert alert-danger" style="height: 40px;display:flex;justify-content:center;align-items:center">
+                    {{ $message }}</div>
+            @enderror
             <div style="flex:3;display: flex">
                 <div class="ModFoto " style="flex: 1">
                     <h5>Email</h5>
                 </div>
                 <div class="ModForm1 " style="flex: 3">
                     <input type="textarea" name="email" class="FormProf" id=""
-                        placeholder="{{Auth::user()->email}}">
+                        placeholder="{{ Auth::user()->email }}">
                 </div>
 
             </div>
+            @error('email')
+                <div class="alert alert-danger" style="height: 40px;display:flex;justify-content:center;align-items:center">
+                    {{ $message }}</div>
+            @enderror
             <div style="flex:3;display: flex">
                 <div class="ModFoto " style="flex: 1">
                     <h5>Password</h5>
@@ -56,13 +69,12 @@
                 </div>
 
             </div>
-            <div style="display:flex; justify-content: end;margin-right:30px;margin-bottom:20px;">
+            <div style="display:flex; justify-content: end;margin-right:30px;margin-bottom:20px;gap:20px">
                 <button class="btn" type="submit" style="height: 50px !important; width: 200px;font-size:18px">
                     Salva modifiche
                 </button>
             </div>
         </form>
-     
 
     </div>
 
