@@ -1,6 +1,6 @@
 <div class="row div-form">
     <x-navbar-create :revisorCounter="$announcement_revisor_counter" />
-    <x-session-success/>
+    <x-session-success />
     <div class="col-4 div-cons">
         <div style="margin-right:70px;margin-left:60px;">
             <div class="cardLayoutFormCreate box">
@@ -9,7 +9,8 @@
                         <div aria-hidden="true">
                             <div class="card-text placeholder-glow skeleton centro-skeletron"
                                 style="width: 100%;margin:0px;padding:0px;background-color:none;">
-                                <span class="placeholder col-12 " style="height: 290px; width: 100%;cursor:default;"></span>
+                                <span class="placeholder col-12 "
+                                    style="height: 290px; width: 100%;cursor:default;"></span>
                             </div>
                         </div>
                     @else
