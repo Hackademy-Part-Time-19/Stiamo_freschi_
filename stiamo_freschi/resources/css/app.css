@@ -242,6 +242,7 @@ a {
     background-color: white;
     margin-left: 20px;
     border-radius: 100%;
+
 }
 
 .imageUser1 {
@@ -257,6 +258,7 @@ a {
     height: 30px;
     width: 30px;
     border-radius: 100%;
+    object-fit: cover;
 }
 
 .imageUser1 img {
@@ -813,4 +815,27 @@ a {
     opacity: 0.89;
     background-size: cover;
     color: white;
+}
+.containerUserRevisor{
+    height: 40px;
+    padding: 5px;
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+}
+
+.containerUserRevisor h6{
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    margin: 0px;
+}
+
+.containerUserRevisor img{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    margin-right: 10px;
+    object-fit: cover;
 }

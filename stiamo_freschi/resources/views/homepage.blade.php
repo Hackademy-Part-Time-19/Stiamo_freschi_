@@ -81,11 +81,11 @@
                         <div id="containerColCard" class="col-12 col-xl-3 col-lg-4 col-md-6 mt-5">
                             @if ($announcement->images->isEmpty())
                                 <x-card-home :imagecard="asset('img/pexels-photo-4464487.jpeg')" :user="$announcement->user->name" :date="$announcement->updated_at->format('d/m/y H:i:s')" :title="$announcement->title"
-                                    :price="$announcement->price" :description="$announcement->description" :category="$announcement->category->translatedName()" :announcement="$announcement">
+                                    :price="$announcement->price" :description="$announcement->description" :category="$announcement->category->translatedName()" :announcement="$announcement" :userimageannouncement=" $announcement->user->image && $announcement->user->image->path ? asset('storage/profile_images/' . $announcement->user->image->path) : asset('img/2318271-icona-profilo-utente-vettoriale-removebg-preview.png')">
                                 </x-card-home>
                             @else
                                 <x-card-home :imagecard="$announcement->images->first()->getUrl(400, 500)" :user="$announcement->user->name" :date="$announcement->updated_at->format('d/m/y H:i:s')" :title="$announcement->title"
-                                    :price="$announcement->price"  :description="$announcement->description" :category="$announcement->category->translatedName()" :announcement="$announcement">
+                                    :price="$announcement->price"  :description="$announcement->description" :category="$announcement->category->translatedName()" :announcement="$announcement" :userimageannouncement=" $announcement->user->image && $announcement->user->image->path ? asset('storage/profile_images/' . $announcement->user->image->path) : asset('img/2318271-icona-profilo-utente-vettoriale-removebg-preview.png')">
                                 </x-card-home>
                             @endif
                         </div>

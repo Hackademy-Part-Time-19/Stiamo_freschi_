@@ -52,11 +52,11 @@
                     <div id="containerColCard" class="col-12 col-xl-3 col-lg-4 col-md-6 mt-5">
                         @if ($myAnnouncement->images->isEmpty())
                             <x-card-profile :imagecard="asset('img/pexels-photo-4464487.jpeg')" :user="$myAnnouncement->user->name" :date="$myAnnouncement->updated_at->format('d/m/y H:i:s')" :title="$myAnnouncement->title"
-                                :price="$myAnnouncement->price" :description="$myAnnouncement->description" :category="$myAnnouncement->category->name" :announcement="$myAnnouncement">
+                                :price="$myAnnouncement->price" :description="$myAnnouncement->description" :category="$myAnnouncement->category->name" :announcement="$myAnnouncement" :userimageannouncement=" $myAnnouncement->user->image && $myAnnouncement->user->image->path ? asset('storage/profile_images/' . $myAnnouncement->user->image->path) : asset('img/2318271-icona-profilo-utente-vettoriale-removebg-preview.png')">
                             </x-card-profile>
                         @else
                             <x-card-profile :imagecard="$myAnnouncement->images->first()->getUrl(400, 500)" :user="$myAnnouncement->user->name" :date="$myAnnouncement->updated_at->format('d/m/y H:i:s')" :title="$myAnnouncement->title"
-                                :price="$myAnnouncement->price" :description="$myAnnouncement->description" :category="$myAnnouncement->category->name" :announcement="$myAnnouncement">
+                                :price="$myAnnouncement->price" :description="$myAnnouncement->description" :category="$myAnnouncement->category->name" :announcement="$myAnnouncement" :userimageannouncement=" $myAnnouncement->user->image && $myAnnouncement->user->image->path ? asset('storage/profile_images/' . $myAnnouncement->user->image->path) : asset('img/2318271-icona-profilo-utente-vettoriale-removebg-preview.png')">
                             </x-card-profile>
                         @endif
                     </div>

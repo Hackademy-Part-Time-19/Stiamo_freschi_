@@ -26,6 +26,7 @@ class PageController extends Controller
     {
         $categories = Category::all();
         $announcements = Announcement::orderBy('updated_at', 'desc')->where('is_accepted', true)->paginate(8);
+        
 
         $currentTranslations = $this->categoryTranslations[App::getLocale()];
 

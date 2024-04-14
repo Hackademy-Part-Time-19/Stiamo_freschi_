@@ -96,11 +96,17 @@
                         style="height: 60vh; padding-top: 100px">
                         @if ($announcement->images->isEmpty())
                             <x-card-home :imagecard="asset('img/pexels-photo-4464487.jpeg')" :user="$announcement->user->name" :date="$announcement->updated_at->format('d/m/y H:i:s')" :title="$announcement->title"
-                                :price="$announcement->price" :description="$announcement->description" :category="$announcement->translatedCategory" :announcement="$announcement">
+                                :price="$announcement->price" :description="$announcement->description" :category="$announcement->translatedCategory" :announcement="$announcement"
+                                :userimageannouncement="$announcement->user->image && $announcement->user->image->path
+                                    ? asset('storage/profile_images/' . $announcement->user->image->path)
+                                    : asset('img/2318271-icona-profilo-utente-vettoriale-removebg-preview.png')">
                             </x-card-home>
                         @else
                             <x-card-home :imagecard="$announcement->images->first()->getUrl(200, 300)" :user="$announcement->user->name" :date="$announcement->updated_at->format('d/m/y H:i:s')" :title="$announcement->title"
-                                :price="$announcement->price" :description="$announcement->description" :category="$announcement->translatedCategory" :announcement="$announcement">
+                                :price="$announcement->price" :description="$announcement->description" :category="$announcement->translatedCategory" :announcement="$announcement"
+                                :userimageannouncement="$announcement->user->image && $announcement->user->image->path
+                                    ? asset('storage/profile_images/' . $announcement->user->image->path)
+                                    : asset('img/2318271-icona-profilo-utente-vettoriale-removebg-preview.png')">
                             </x-card-home>
                         @endif
                     </div>
