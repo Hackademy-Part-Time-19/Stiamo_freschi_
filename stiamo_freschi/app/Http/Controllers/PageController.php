@@ -9,6 +9,7 @@ use App\Models\Category;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Redirect;
 
 class PageController extends Controller
 {
@@ -56,6 +57,12 @@ class PageController extends Controller
         return view('Announcement-edit', ['announcement' => $announcement, 'categories' => Category::all()]);
     }
 
+    public function GoToResetPassword()
+    {
+        //reindirizza alla rotta di reset password di tipo post
+       
+        return view('auth.forgot-password');
+    }
 
 
 

@@ -71,3 +71,5 @@ Route::put('/profile/edit', [ProfileController::class, 'update'])->name('profile
 //edit announcement
 
 Route::get('/edit/{announcement}', [PageController::class, 'announcementEdit'])->name('announcement.edit')->middleware('auth');
+
+ Route::get('/vaiAlReset', [PageController::class, 'GoToResetPassword']);

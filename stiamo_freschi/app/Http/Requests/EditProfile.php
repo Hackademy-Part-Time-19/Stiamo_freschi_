@@ -22,8 +22,9 @@ class EditProfile extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'string|max:40',
+            'name' => '|max:40',
             'email' => 'email|max:100',
+            'password' => 'nullable|string|min:8|',
         ];
     }
 
@@ -34,6 +35,9 @@ class EditProfile extends FormRequest
             'name.max' => 'Il campo nome deve essere lungo al massimo 40 caratteri',
             'email.email' => 'Il campo email deve essere un indirizzo email',
             'email.max' => 'Il campo email deve essere lungo al massimo 100 caratteri',
+            'password.min' => 'La password deve contenere almeno 8 caratteri',
+            'current_password.required' => 'Il campo password attuale è obbligatorio',
+            
         ];
     }
 }

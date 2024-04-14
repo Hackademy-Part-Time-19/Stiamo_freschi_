@@ -149,7 +149,7 @@ return [
     'buttonContinues'=>"Continua",
 
     //Resetta Password
-    'resetPsw'=>"Resetta la tua password",
+    'resetPsw'=>"Modifica la tua password",
     'emailResetPsw'=>"Email",
     'newPswReset'=>"Inserisci la nuova password",
     'retypePswReset'=>"Ripeti la password",

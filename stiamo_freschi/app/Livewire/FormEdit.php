@@ -96,7 +96,10 @@ class FormEdit extends Component
             unset($this->images[$key]);
         }
     }
-
+    public function submitForm()
+    {
+        return redirect()->to('/profile')->with('message', 'Annuncio modificato con successo! Verrà pubblicato nuovamente solamente dopo la revisione');
+    }
 
 
     public function editAnnouncement()

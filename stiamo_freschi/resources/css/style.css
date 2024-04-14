@@ -836,7 +836,7 @@ nav.desktop {
 }
 
 .divPadreMod {
-    height: 600px;
+    height:500px;
     margin: 20px;
     margin-bottom: 30px;
     border: 1px solid black;
@@ -873,6 +873,8 @@ nav.desktop {
     align-items: center;
     margin-right: 60px;
     padding-bottom: 5px;
+
+    background-color: none;
 }
 
 .PadreDivREvi {

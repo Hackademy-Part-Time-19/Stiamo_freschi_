@@ -61,15 +61,42 @@
             @enderror
             <div style="flex:3;display: flex">
                 <div class="ModFoto " style="flex: 1">
-                    <h5>Password</h5>
+                    <h5>Password corrente</h5>
                 </div>
-                <div class="ModForm1 "style="flex:3">
-                    <button class="btn" style="height: 40px !important; width: 400px; !important">Modifica
-                        Password</button>
+                <div class="ModForm1 " style="flex: 3">
+                    <input type="password" name="current_password" class="FormProf" id="" value="">
                 </div>
-
             </div>
-            <div style="display:flex; justify-content: end;margin-right:30px;margin-bottom:20px;gap:20px">
+            @error('current_password')
+                <div class="alert alert-danger" style="height: 40px;display:flex;justify-content:center;align-items:center">
+                    {{ $message }}</div>
+            @enderror
+            <div style="flex:3;display: flex">
+                <div class="ModFoto " style="flex: 1">
+                    <h5>Nuova password</h5>
+                </div>
+                <div class="ModForm1 " style="flex: 3">
+                    <input type="password" name="password" class="FormProf" id="" value="">
+                </div>
+            </div>
+            @error('password')
+                <div class="alert alert-danger" style="height: 40px;display:flex;justify-content:center;align-items:center">
+                    {{ $message }}</div>
+            @enderror
+            <div style="flex:3;display: flex">
+                <div class="ModFoto " style="flex: 1">
+                    <h5>Conferma la nuova password</h5>
+                </div>
+                <div class="ModForm1 " style="flex: 3">
+                    <input type="password" name="password_confirmation" class="FormProf" id="" value="">
+                </div>
+            </div>
+            @error('password_confirmation')
+                <div class="alert alert-danger" style="height: 40px;display:flex;justify-content:center;align-items:center">
+                    {{ $message }}</div>
+            @enderror
+
+            <div style="display:flex; justify-content: end;margin-right:30px;margin-bottom:20px">
                 <button class="btn" type="submit" style="height: 50px !important; width: 200px;font-size:18px">
                     Salva modifiche
                 </button>
