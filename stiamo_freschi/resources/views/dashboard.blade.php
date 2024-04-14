@@ -3,7 +3,7 @@
     <div class="PadreDivREvi">
         <div class="div-card1">
             <div class="div-card_dash">
-                <a href="{{ route('revisor.index') }}" class="card_dash_pR RevisorDashboard lf box XcolorA">
+                <div href="{{ route('revisor.index') }}" class="card_dash_pR RevisorDashboard lf box XcolorA">
                     <div class="li-aside2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                             class="bi bi-card-checklist" viewBox="0 0 16 16">
@@ -16,17 +16,19 @@
                     </div>
                     @if (Auth::check())
                         @if (Auth::user()->is_revisor)
-                            <div
-                                style="display:flex;flex-direction:column; justify-content:center; align-items:center; height:200px;padding-top:20px">
-                                <div style="margin: 10px">
-                                    <h5 style="color:white">Articoli da revisionare</h5>
+                            <a href="{{route('revisor.index')}}">
+                                <div
+                                    style="display:flex;flex-direction:column; justify-content:center; align-items:center; height:200px;padding-top:20px">
+                                    <div style="margin: 10px">
+                                        <h5 style="color:white">Articoli da revisionare</h5>
+                                    </div>
+                                    <div id="border_num" class="grafic-revisor">
+                                        <span id="dash_num" class="dropdown-item dash_num">
+                                            {{ App\Models\Announcement::toBeRevisionedCount() }}
+                                        </span>
+                                    </div>
                                 </div>
-                                <div id="border_num" class="grafic-revisor">
-                                    <span id="dash_num" class="dropdown-item dash_num">
-                                        {{ App\Models\Announcement::toBeRevisionedCount() }}
-                                    </span>
-                                </div>
-                            </div>
+                            </a>
                         @endif
                     @endif
                     @if (!Auth::user()->is_revisor)
@@ -34,11 +36,12 @@
                             style="display:flex; justify-content:center; align-items:center; height:200px;padding-top:20px">
                             <div style="display: flex;flex-direction:column;justify-content:center;align-items:center">
                                 <h1>Non sei ancora revisore?</h1>
-                                <button class="btn buttonBecomeRevisorDashboard">Invia ora la tua richiesta</button>
+
+                                <a href="{{route('become.revisor')}}"><button class="btn buttonBecomeRevisorDashboard">Invia ora la tua richiesta</button></a>
                             </div>
                         </div>
                     @endif
-                </a>
+                </div>
             </div>
             <div class="div-card_dash">
 
