@@ -1264,7 +1264,7 @@ nav.desktop {
         background-color: rgba(129, 130, 132, 0.43);
         display: flex;
         align-items: center;
-        margin-top: 60px;
+        margin-top: 0px;
         position: fixed;
         left: 0px;
         right: 0px;
@@ -1702,12 +1702,44 @@ nav.desktop {
     }
 
     .banner {
-        margin-top: 70px;
+        margin-top: 60px;
 
+    }
+
+    .container-copy {
+        margin-bottom: 80px;
+    }
+
+    .ContainerCard {
+        padding-top: 120px;
     }
 
     .row {
         width: 100% !important;
+    }
+
+    .container-fluid {
+        width: 400px !important;
+        position: absolute;
+        right: 120px;
+    }
+
+    .container-menu {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5px;
+        position: absolute;
+        right: 15px;
+    }
+
+    .form-control {
+        margin-top: 15px;
+    }
+
+    .container-cat {
+        margin-top: 0px;
     }
 
     .containerD {
