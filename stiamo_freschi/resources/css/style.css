@@ -217,7 +217,6 @@
     margin-top: 5px;
     height: 30px;
     width: 70%;
-    background-color: none;
 }
 
 .img-container-mobile {
@@ -606,7 +605,7 @@ nav.desktop {
 
 .div-foot {
     display: flex;
-    padding-right: 300px;
+    padding-right: 100px;
 }
 
 .section1 {
@@ -874,6 +873,11 @@ nav.desktop {
     align-items: center;
     margin-right: 60px;
     padding-bottom: 5px;
+}
+
+.PadreDivREvi {
+    display: flex;
+    height: max-content
 }
 
 .FormProf {
@@ -1150,7 +1154,7 @@ nav.desktop {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    
+
 }
 
 .divNome {
@@ -1163,7 +1167,8 @@ nav.desktop {
     font-size: 40px;
     font-weight: 600;
 }
-.divNome p{
+
+.divNome p {
     font-size: 20px;
     font-weight: 500;
 
@@ -1426,6 +1431,72 @@ nav.desktop {
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     }
 
+    .PadreDivREvi {
+        width: 100%;
+        display: flex;
+    }
+
+    .div-card1 {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .div-card_dash {
+        flex-direction: column;
+    }
+
+    .card_dash_pR {
+        width: 300px;
+    }
+
+    .card_dash_p {
+        width: 300px;
+    }
+
+    .div-form {
+        min-height: 100vh;
+        height: auto;
+        background-image: url('/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        color: black;
+        justify-content: center;
+        padding: 30px;
+    }
+
+    .Card {
+        margin-right: 15px !important;
+        margin-left: 0px !important;
+    }
+
+    .div-cons {
+        width: 750px !important;
+        margin-top: 120px;
+        padding: 0px;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        background-color: #d9d9d99a;
+        box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.3);
+        border-bottom-right-radius: 25px;
+        border-top-right-radius: 25px;
+        margin-bottom: 50px;
+    }
+
+    .cardLayoutFormCreate {
+        height: 450px;
+        width: 300px !important;
+        background-color: #d9d9d999;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 5px;
+    }
+
 }
 
 @media screen and (min-width:560px) and (max-width:750.9px) {
@@ -1444,15 +1515,171 @@ nav.desktop {
         flex-direction: row;
         width: 100% !important;
         height: 70vh;
-        margin-bottom: 40vh;
+        margin-bottom: 100px;
+    }
+
+    .container-row {
+        margin-bottom: 30px !important;
+    }
+
+    .card-body1 {
+        height: 300px;
+        width: 500px;
+    }
+
+    .card-body2 {
+        height: 300px;
+        width: 500px;
     }
 
     .banner {
         margin-top: 20px;
     }
+
+    .containerPadreLogin {
+        width: 90%;
+        min-height: 100vh;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*background-color: rgb(245, 243, 243);*/
+        background-image: url("/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        flex-direction: column;
+        padding: 60px;
+    }
+
+    .div-btn-desk {
+        display: flex;
+        flex-direction: column !important;
+    }
+
+    .btn-desk2 {
+        margin: 30px;
+    }
+
+    .dropdown.icon-btn {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        display: none;
+        float: left;
+        min-width: 160px;
+        padding: .5rem 0;
+        margin: .125rem 0 0;
+        font-size: 1rem;
+        color: #212529;
+        text-align: left;
+        list-style: none;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, .15);
+        border-radius: .25rem;
+    }
+
+    .dropdown-menu.show {
+        display: block;
+    }
+
+    .form-control {
+        margin-top: 5px;
+        height: 30px;
+        width: 70%;
+        background-color: #dbd8e3;
+    }
+
+    .container-fluid {
+        display: flex;
+        align-items: center;
+        padding: 0px;
+        margin: 0px;
+        height: 100%;
+        background-color: none;
+        flex: 2;
+        width: 10px;
+    }
+
+    .btn-ann {
+        display: flex;
+    }
+
+    .div-form {
+        min-height: 100vh;
+        height: auto;
+        background-image: url('/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        color: black;
+        justify-content: center;
+        padding: 30px;
+    }
+
+    .Card {
+        margin-right: 15px !important;
+        margin-left: 0px !important;
+    }
+
+    .div-cons {
+        width: 750px !important;
+        margin-top: 120px;
+        padding: 0px;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        background-color: #d9d9d99a;
+        box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.3);
+        border-bottom-right-radius: 25px;
+        border-top-right-radius: 25px;
+        margin-bottom: 50px;
+    }
+
+    .cardLayoutFormCreate {
+        height: 450px;
+        width: 300px !important;
+        background-color: #d9d9d999;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    .PadreDivREvi {
+        width: 100%;
+        display: flex;
+    }
+
+    .div-card1 {
+        flex-direction: column !important;
+        margin-top: 50px;
+    }
+
+    .div-card_dash {
+        flex-direction: column !important;
+    }
+
+    .card_dash_pR {
+        width: 300px;
+    }
+
+    .card_dash_p {
+        width: 300px;
+    }
 }
 
-@media screen and (min-width:751px) and (max-width:990.9) {
+@media screen and (min-width:751px) and (max-width:990.9px) {
     .container-row {
         display: flex;
         flex-direction: row;
@@ -1500,6 +1727,93 @@ nav.desktop {
         margin: 0px;
     }
 
+    .PadreDivREvi {
+        width: 100%;
+        display: flex !important;
+    }
+
+    .div-card1 {
+        flex-direction: column !important;
+        margin-top: 50px;
+    }
+
+    .div-card_dash {
+        flex-direction: column !important;
+    }
+
+    .card_dash_pR {
+        width: 300px !important;
+    }
+
+    .card_dash_p {
+        width: 300px !important;
+    }
+
+    .div-btn-desk {
+        background-color: none;
+        display: flex;
+        flex-direction: column !important;
+        flex: 1;
+        justify-content: end;
+        align-items: center;
+        z-index: 2001;
+    }
+
+    .containerPadreLogin {
+        width: 80%;
+        min-height: 100vh;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*background-color: rgb(245, 243, 243);*/
+        background-image: url("/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg");
+        background-size: cover;
+        background-position: center;
+        flex-direction: column;
+        padding: 60px !important;
+    }
+
+    .div-foot {
+        display: flex;
+        padding-right: 100px !important;
+    }
+
+    .div-form {
+        padding: 50px !important;
+    }
+
+    .Card {
+        margin-right: 20px !important;
+        margin-left: 0px !important;
+    }
+
+    .cardLayoutFormCreate {
+        height: 450px;
+        width: 300px !important;
+        background-color: #d9d9d999;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    .div-cons {
+        width: 750px !important;
+    }
+
+    .div-form {
+        min-height: 100vh;
+        height: auto;
+        background-image: url('/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        color: black;
+        justify-content: center;
+        padding: 60px !important;
+    }
 }
 
 @media screen and (min-width:991px) and (max-width:1200.9px) {
@@ -1530,6 +1844,47 @@ nav.desktop {
         top: 100px;
         left: 180px;
     }
+
+
+    .containerPadreLogin {
+        width: 90%;
+        min-height: 100vh;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*background-color: rgb(245, 243, 243);*/
+        background-image: url("/public/img/sfondo-astratto-con-un-design-monocromatico-low-poly_1048-14453.jpg");
+        background-size: cover;
+        background-position: center;
+        flex-direction: column;
+        padding: 60px !important;
+    }
+
+
+    .PadreDivREvi {
+        width: 100%;
+        display: flex !important;
+    }
+
+    .div-card1 {
+        flex-direction: column !important;
+        margin-top: 50px;
+    }
+
+    .div-card_dash {
+        flex-direction: column;
+    }
+
+    .card_dash_pR {
+        width: 600px !important;
+    }
+
+    .card_dash_p {
+        width: 600px !important;
+    }
+
+
 }
 
 @media screen and (min-width:1201px) {

@@ -25,6 +25,7 @@
     background-position: center;
     background-attachment: fixed;
     flex-direction: column;
+    padding: 60px;
 }
 
 #containerFormLogin {
@@ -295,6 +296,11 @@ a {
     color: black;
     justify-content: center;
 
+}
+
+.Card {
+    margin-right: 70px;
+    margin-left: 60px;
 }
 
 .div-modale {
@@ -773,14 +779,14 @@ a {
 
 }
 
-.imgProfileNav{
+.imgProfileNav {
     height: 30px;
     width: 30px;
     border-radius: 100%;
     margin-right: 10px;
 }
 
-.buttonBecomeRevisorDashboard{
+.buttonBecomeRevisorDashboard {
     width: 300px;
     font-size: 20px;
     display: flex;
@@ -788,23 +794,23 @@ a {
     align-items: center;
 }
 
-.homepageDashboard{
-    background-image: url("C:\Users\lucal\Desktop\Stiamo_Freschi-3edbd98c16d7ccdb03d6430a0e6cbbe98fa214b4\stiamo_freschi\public\img\pexels-rdne-stock-project-7309322.jpg") ;
+.homepageDashboard {
+    background-image: url('/public/img/pexels-rdne-stock-project-7309322.jpg');
     opacity: 0.9;
     background-size: cover;
     color: white;
 }
 
-.creaAnnuncioDashboard{
-    background-image: url("C:\Users\lucal\Desktop\Stiamo_Freschi-3edbd98c16d7ccdb03d6430a0e6cbbe98fa214b4\stiamo_freschi\public\img\pexels-photo-4464487.jpeg") ;
+.creaAnnuncioDashboard {
+    background-image: url('/public/img/pexels-photo-4464487.jpeg');
     opacity: 0.9;
     background-size: cover;
     color: black;
 }
 
-.RevisorDashboard{
-    background-image: url("C:\Users\lucal\Desktop\Stiamo_Freschi-3edbd98c16d7ccdb03d6430a0e6cbbe98fa214b4\stiamo_freschi\public\img\pexels-marek-levak-2265488.jpg") ;
+.RevisorDashboard {
+    background-image: url('/public/img/pexels-marek-levak-2265488.jpg');
     opacity: 0.89;
-    background-size:cover;
+    background-size: cover;
     color: white;
 }

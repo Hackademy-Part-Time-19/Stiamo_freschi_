@@ -1,6 +1,6 @@
 <x-layout>
     <x-navbar />
-    <div style="display: flex;height:max-content">
+    <div class="PadreDivREvi">
         <div class="div-card1">
             <div class="div-card_dash">
                 <a href="{{ route('revisor.index') }}" class="card_dash_pR RevisorDashboard lf box XcolorA">
@@ -51,6 +51,10 @@
                         </svg>
                         <li class="liMargin">Vai alla Home</li>
                     </div>
+                    <div
+                        style="height:400px; display:flex; justify-content:center;align-items:center;background-color:none;margin:none;padding:none">
+
+                    </div>
                 </div>
                 <a class="XcolorA" href="{{ route('profile') }}">
                     <div class="card_dash_p box">
@@ -62,16 +66,18 @@
                             </svg>
                             <li class="liMargin">Il tuo profilo</li>
                         </div>
-                        <div style="display:flex; justify-content:center;align-items:center;background-color:none;margin:none;padding:none">
+                        <div
+                            style="display:flex; justify-content:center;align-items:center;background-color:none;margin:none;padding:none">
                             <div class="divfoto" style="justify-content: center; background-color:none">
                                 @if (!Auth::user()->image)
                                     <img src="{{ asset('img/2318271-icona-profilo-utente-vettoriale-removebg-preview.png') }}"
                                         alt="">
                                 @else
-                                    <img src="{{ asset('storage/profile_images/' . Auth::user()->image->path) }}" alt="" style="height: 180px;width:180px;margin-top:5px">
+                                    <img src="{{ asset('storage/profile_images/' . Auth::user()->image->path) }}"
+                                        alt="" style="height: 180px;width:180px;margin-top:5px">
                                 @endif
                             </div>
-                            <h4 >{{ auth()->user()->name }}</h4>
+                            <h4>{{ auth()->user()->name }}</h4>
                         </div>
                     </div>
                 </a>
