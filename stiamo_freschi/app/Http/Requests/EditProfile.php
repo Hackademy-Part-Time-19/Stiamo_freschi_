@@ -24,7 +24,9 @@ class EditProfile extends FormRequest
         return [
             'name' => '|max:40',
             'email' => 'email|max:100',
-            'password' => 'nullable|string|min:8|',
+            'password' => 'nullable|string|min:8|confirmed',
+            'current_password' => 'nullable|required_with:password|string|min:8',
+            'password_confirmation' => 'nullable|string|min:8|required_with:password|same:password',
         ];
     }
 
@@ -36,8 +38,8 @@ class EditProfile extends FormRequest
             'email.email' => 'Il campo email deve essere un indirizzo email',
             'email.max' => 'Il campo email deve essere lungo al massimo 100 caratteri',
             'password.min' => 'La password deve contenere almeno 8 caratteri',
-            'current_password.required' => 'Il campo password attuale è obbligatorio',
-            
+            'current_password.required' => 'Il campo password attuale è obbligatorio per il cambio password',
+            'password_confirmation.same' => 'Le password non corrispondono',
         ];
     }
 }

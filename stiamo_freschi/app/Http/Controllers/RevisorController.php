@@ -32,7 +32,7 @@ class RevisorController extends Controller
         /* $announcement_to_check = Announcement::where('is_accepted', null)->orderBy('created_at', 'desc')->take(5)->get(); */
         $announcement_to_check = Announcement::where('is_accepted', null)
         ->where('user_id', '!=', $logged_in_reviewer_id)
-        ->orderBy('created_at', 'desc')
+        ->orderBy('updated_at', 'desc')
         ->first();
         
         $currentTranslations = $this->categoryTranslations[App::getLocale()];

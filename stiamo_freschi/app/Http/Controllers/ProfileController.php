@@ -44,13 +44,7 @@ public function update(EditProfile $request)
     }
     // Se la nuova password è stata fornita e valida, aggiorna la password
     if ($request->filled('password')) {
-        // Verifica che la nuova password fornita sia valida
-        $request->validate([
-            'password' => ['nullable', 'string', 'min:8', 'confirmed'],
-        ]);
-        // Aggiorna la password dell'utente con la nuova password criptata
-        
-        $user->password = Hash::make($request->password);
+        $validateData['password'] = Hash::make($validateData['password']);
     }
     // Aggiorna gli altri campi del profilo
     $user->update($validateData);
