@@ -28,7 +28,7 @@
                                     <div class="carousel-item @if ($loop->first) active @endif"
                                         data-bs-interval="10000">
                                         <img src="{{ $image->temporaryUrl() }}" class="d-block w-100" alt="..."
-                                            style="object-fit:cover;">
+                                            style="object-fit:cover ; ">
                                         <div class="carousel-caption d-none d-md-block">
                                             <h5 style="color:white;">{{ __('ui.previewImage') }}</h5>
                                             <button class="RemoveFormCreate btn false"
@@ -108,7 +108,7 @@
                         </h6>
                     </div>
                 </div>
-                <div class="descrizioneCard" style="">
+                <div class="descrizioneCard">
                     <div aria-hidden="true">
                         <p class="card-text placeholder-glow skeleton centro-skeletron"
                             style="font-size: 16px;margin-bottom:20px">

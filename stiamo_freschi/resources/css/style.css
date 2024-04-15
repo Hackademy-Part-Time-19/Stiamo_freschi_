@@ -49,13 +49,13 @@
 }
 
 .popup svg {
-  color: white;
-  transition: 0.5s ease all;
+    color: white;
+    transition: 0.5s ease all;
 }
 
 .popup svg:hover {
-  color: #081F37;
-  scale: 1.1;
+    color: #081F37;
+    scale: 1.1;
 }
 
 .ContainerCard {
@@ -113,6 +113,7 @@
 }
 
 .div-btn-acq {
+    width: 90%;
     margin-top: 20px;
     margin-left: 70px;
 }
@@ -149,7 +150,7 @@
 .btn-desk2:hover {
     background-color: #00B58F;
     color: #081F37;
-    
+
 }
 
 .container-navbar {
@@ -458,6 +459,14 @@ nav.desktop {
     justify-content: end;
     align-items: center;
     z-index: 2001;
+}
+
+.A2 {
+    width: 100px;
+}
+
+.A6 {
+    margin-right: 35px
 }
 
 .icon-profile {
@@ -853,7 +862,7 @@ nav.desktop {
 }
 
 .divPadreMod {
-    height:500px;
+    height: 500px;
     margin: 20px;
     margin-bottom: 30px;
     border: 1px solid black;
@@ -871,7 +880,7 @@ nav.desktop {
 }
 
 .ModFoto {
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -957,7 +966,7 @@ nav.desktop {
 .div-descr h1 {
     font-size: 30px;
     font-weight: 600;
-    
+
 }
 
 .div-descr h2 {
@@ -974,9 +983,14 @@ nav.desktop {
     text-align: center;
 }
 
+.ann_tit_rev {
+    padding: 0px;
+    font-size: 20px;
+}
+
 .inserzione {
     background-color: #dbd8e3;
-    height: 60px;
+    height: 80px;
     width: 100%;
     display: flex;
     border-top-left-radius: 10px;
@@ -1073,6 +1087,8 @@ nav.desktop {
 }
 
 .div-btn {
+
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1095,6 +1111,9 @@ nav.desktop {
 }
 
 
+.copyRev {
+    margin-left: 200px;
+}
 
 .btn_btn {
     margin: 40px;
@@ -1218,8 +1237,25 @@ nav.desktop {
 }
 
 .btn-prof {
+    background-color: #081F37;
+    color: white;
+    margin-right: 10px;
+    border: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    height: 35px;
+    min-width: 120px;
+    width: auto;
+    white-space: nowrap;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
+}
+
+.btn-prof:hover {
+    cursor: default;
 }
 
 .pop {
@@ -1231,6 +1267,7 @@ nav.desktop {
     top: 70px;
     right: 130px;
 }
+
 
 .trasp {
     opacity: 0.93;
@@ -1270,6 +1307,18 @@ nav.desktop {
 }
 
 @media screen and (max-width:749.90px) {
+    nav.desktop {
+        display: none;
+    }
+
+    nav.tablet {
+        display: none;
+    }
+
+    nav.mobile {
+        display: flex;
+    }
+
     .body {
         padding: 0px !important;
         margin: 0px !important;
@@ -1297,6 +1346,46 @@ nav.desktop {
         left: 0px;
         right: 0px;
         padding-left: 10px;
+    }
+
+    .Card {
+        display: none;
+    }
+
+    .div-btn-desk {
+        width: 100%;
+    }
+
+    .A3 {
+        width: 100%;
+        margin: 20px;
+    }
+
+    .A6 {
+        margin: 0px;
+    }
+
+    .icon-btn {
+        margin-right: 0px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+
+    .btn-desk2 {
+        width: 100%;
+    }
+
+    .div-modale {
+        flex: 1;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+    }
+
+    .BtnRegistratiLogin {
+        display: flex !important;
     }
 
     .container-copy {
@@ -1538,6 +1627,130 @@ nav.desktop {
         padding: 5px;
     }
 
+    .aside-left {
+        display: none;
+    }
+
+
+    .card-dash2 {
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .containerCardDash {
+        display: flex;
+        flex-direction: column !important;
+        justify-content: start !important;
+    }
+
+    .img-size {
+        width: 100%;
+        height: 100%;
+    }
+
+    .containerButtonRevisor {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        width: 200px;
+        height: 100px;
+        position: absolute;
+        top: 235px;
+    }
+
+    .true {
+        width: 100px !important;
+    }
+
+    .false {
+
+        width: 100px !important;
+    }
+
+
+    .ann_tit_rev {
+        padding: 5px;
+        font-size: 15px;
+    }
+
+    .carousel-control-next {
+        left: 180px;
+    }
+
+    .carousel-control-prev-icon {
+        background-color: #081F37;
+        height: 50px;
+        width: 40px;
+        border-radius: 20%;
+        padding: 0px;
+        padding-top: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        position: relative;
+        right: 0px !important;
+        margin: 0px !important;
+    }
+
+    .carousel-control-next-icon {
+        padding: 0px;
+    }
+
+    .slide {
+        width: 280px;
+        height: 320px;
+        margin-top: 30px;
+    }
+
+    .copyRev {
+        margin-left: 0px;
+    }
+
+    .card-dash {
+        width: 280px;
+        margin-top: 40px;
+        margin-left: 50px;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    .DivOFF {
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .container-fluid {
+        flex: 2;
+        justify-content: center;
+        align-items: center;
+        margin-left: 50px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .btn-revisore {
+        flex: 2;
+        margin-bottom: 15px;
+    }
+
+    .div-btn-desk {
+        flex: 4;
+        flex-direction: column;
+    }
+
+    .btn-ann {
+        display: flex;
+    }
 }
 
 @media screen and (min-width:560px) and (max-width:750.9px) {
@@ -1726,6 +1939,8 @@ nav.desktop {
         flex-direction: row;
     }
 
+
+
     .mobile {
         display: none !important;
     }
@@ -1736,6 +1951,16 @@ nav.desktop {
 
     .tablet {
         display: flex !important;
+    }
+
+    .container-logo {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        background-color: none;
+        padding-left: 100px;
     }
 
     .container-cat {
@@ -1759,8 +1984,38 @@ nav.desktop {
         width: 100% !important;
     }
 
+    .div-container {
+        margin-top: 0px;
+    }
+
+    .DIVLOg {
+        width: 80%;
+        margin-left: 30px;
+    }
+
+    .container-logo {
+        width: 70%;
+    }
+
+    .btn-revisore {
+        margin-top: 60px;
+    }
+
+    .div-btn-desk {
+        display: flex;
+        flex-direction: column !important;
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+
+    .btn-close {
+        width: 50%;
+        height: 100px;
+        margin-right: 90px !important;
+    }
+
     .container-fluid {
-        width: 400px !important;
+        width: 235px !important;
         position: absolute;
         right: 120px;
     }
@@ -1786,8 +2041,16 @@ nav.desktop {
     .containerD {
         display: flex;
         flex-direction: row;
+        justify-content: center;
+        align-items: center;
         width: 100% !important;
         height: 70vh;
+    }
+
+    .container-row {
+        margin-left: 30px;
+        padding-right: 0px;
+        padding-left: 50px;
     }
 
     .container-logo {
@@ -1859,6 +2122,15 @@ nav.desktop {
     .Card {
         margin-right: 20px !important;
         margin-left: 0px !important;
+    }
+
+    .container-fluid {
+        margin-right: 0px;
+        right: 0px;
+    }
+
+    .btn-ann {
+        display: flex;
     }
 
     .cardLayoutFormCreate {
@@ -2025,6 +2297,7 @@ nav.desktop {
         text-decoration: none;
         color: white;
     }
+
 
     .btn-txt-img:hover {
         background-color: #133f6f;
