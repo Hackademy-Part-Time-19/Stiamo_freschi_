@@ -1,8 +1,8 @@
 <div class="row div-form">
     <x-navbar-create :revisorCounter="$announcement_revisor_counter" />
-    
+
     <div class="col-4 div-cons">
-        <x-session-success/>
+        <x-session-success />
         <div style="margin-right:70px;margin-left:60px;">
             <div class="cardLayoutFormCreate box">
                 <div class="imgCard">
@@ -10,7 +10,8 @@
                         <div aria-hidden="true">
                             <div class="card-text placeholder-glow skeleton centro-skeletron"
                                 style="width: 100%;margin:0px;padding:0px;background-color:none;">
-                                <span class="placeholder col-12 " style="height: 290px; width: 100%;cursor:default;"></span>
+                                <span class="placeholder col-12 "
+                                    style="height: 290px; width: 100%;cursor:default;"></span>
                             </div>
                         </div>
                     @else
@@ -123,7 +124,7 @@
 
         </div>
 
-        
+
         <div class="col-4 div-modale">
             <h1 style="margin-bottom: 20px">Modifica il tuo annuncio</h1>
 
@@ -133,7 +134,7 @@
                     <div class="mb-3">
                         <label for="title" class="form-label">Modifica il titolo dell'annuncio</label>
                         <input type="text" name="title" class="form-control" style="width: 100%; height:35px;"
-                            id="title" wire:model.live="title" >
+                            id="title" wire:model.live="title">
                     </div>
                     @error('title')
                         <div class="alert alert-danger"
@@ -153,8 +154,7 @@
                         </div>
                     @enderror
                     <div class="mb-3">
-                        <label for="description"
-                            class="form-label">Modifica la descrizione</label>
+                        <label for="description" class="form-label">Modifica la descrizione</label>
                         <input type="textarea" name="description" class="form-control"
                             style="width: 100%; height:35px;" id="description" wire:model.live="description">
                     </div>
@@ -195,10 +195,11 @@
                             {{ $message }}
                         </div>
                     @enderror
-                    
 
-                    <button type="submit"  class="BtnRegistratiLogin" hidden wire:click="editAnnouncement" id="ButtonSubmitForm">Crea il
-                        tuo 
+
+                    <button type="submit" class="BtnRegistratiLogin" hidden wire:click="editAnnouncement"
+                        id="ButtonSubmitForm">Crea il
+                        tuo
                         annuncio</button>
                 </form>
             </div>
@@ -206,7 +207,7 @@
     </div>
 
     <script>
-        document.addEventListener('livewire:load', function () {
+        document.addEventListener('livewire:load', function() {
             Livewire.on('redirectToProfile', () => {
                 window.location.href = '{{ route('dashboard') }}'; // Reindirizza alla pagina del profilo
             });
