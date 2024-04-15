@@ -94,7 +94,7 @@
                             <div class="alert alert-warning py-3 shadow">
                                 <p class="lead">{{ __('ui.alertNoAds') }}</p>
                             </div>
-                        </div>
+                        </div>{{--  --}}
                     @endforelse
                 </div>
                 @if (!$announcements->isEmpty())

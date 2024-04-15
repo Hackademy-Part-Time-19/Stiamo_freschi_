@@ -52,14 +52,24 @@
                 </div>
                 <div class="userCard">
                     <div class="imageUser">
-                        <img src="https://banner2.cleanpng.com/20180508/toe/kisspng-user-profile-computer-icons-clip-art-5af1ac8cee74c6.8111281615257877889767.jpg"
-                            alt="">
+                        @if ($title == false && $price == false && $description == false && $category_id == false)
+                            <img src="https://banner2.cleanpng.com/20180508/toe/kisspng-user-profile-computer-icons-clip-art-5af1ac8cee74c6.8111281615257877889767.jpg"
+                                alt="">
+                        @else
+                            @if (Auth::user()->image)
+                                <img src="{{ asset('storage/profile_images/' . Auth::user()->image->path) }}"
+                                    alt="Immagine profilo">
+                            @else
+                                <img src="https://banner2.cleanpng.com/20180508/toe/kisspng-user-profile-computer-icons-clip-art-5af1ac8cee74c6.8111281615257877889767.jpg"
+                                    alt="">
+                            @endif
+                        @endif
                     </div>
                     <div class="nomeUser ">
                         <div aria-hidden="true">
                             <div class="card-body">
                                 <p class="card-text placeholder-glow skeleton ">
-                                    @if ($title == false)
+                                    @if ($title == false && $price == false && $description == false && $category_id == false)
                                         <span class="placeholder col-4" style="cursor:default"></span>
                                     @else
                                         {{ Auth::user()->name }}
