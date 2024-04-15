@@ -11,8 +11,8 @@ return [
     'insertAd'=>"Inserisci il tuo annuncio",
 
     //popup
-    'popup1'=>"Non hai fatto ancora l'accesso?",
-    'popup2'=>"Registrati ora per ricevere notifiche esclusive sui nostri prodotti, accedere in anteprima alle offerte speciali e non perderti mai più le ultime novità!",
+    'popup1'=>"Hai già fatto l'accesso?",
+    'popup2'=>" Registrati ora per accedere a notifiche esclusive sui nostri prodotti, anteprime delle offerte speciali e tutte le ultime novità in anteprima!",
     'registration'=>"Iscriviti ora",
     
     //copy centrale

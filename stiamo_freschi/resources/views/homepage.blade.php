@@ -18,7 +18,7 @@
             @auth
                 <div class="txt-img">
                     <h1>{{ __('ui.welcomeName') }} {{ auth()->user()->name }}</h1>
-                    <a style="text-decoration: none; color:white; width: 500px" href="{{ route('announcement.create') }}">
+                    <a style="text-decoration: none; width: 500px;" href="{{ route('announcement.create') }}">
                         <button class="btn-txt-img">
                             {{ __('ui.insertAd') }}
                         </button>
@@ -68,10 +68,14 @@
             @guest
                 <div id="pop" class="overlay">
                     <div class="popup">
-                        <h2 class="font-img" style="margin: 20px">{{ __('ui.popup1') }}</h2>
+                        <h2 class="font-img" style="">{{ __('ui.popup1') }}</h2>
+                        <h5 class="font-img">Se no, non perderti l'occasione!</h4>
                         <p class="font-img" style="margin: 20px">{{ __('ui.popup2') }}</p>
-                        <span id="close" style="color: black; font-size:1.5rem">X</span>
-                        <a href="/register"><button class="btn_popup btn-desk2">{{ __('ui.registration') }}</button></a>
+                        <span id="close"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                          </svg></span>
+
+                        <a href="/register"><button class="btn_popup btn-desk2" style="height: 50px;width:200px;font-size:20px">{{ __('ui.registration') }}</button></a>
                     </div>
                 </div>
             @endguest

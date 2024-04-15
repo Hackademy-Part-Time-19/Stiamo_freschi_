@@ -11,8 +11,8 @@ return [
     'insertAd'=>"Coloca tu anuncio",
 
     //popup
-    'popup1'=>"¿Aún no has iniciado sesión?",
-    'popup2'=>"Regístrese ahora para recibir notificaciones exclusivas sobre nuestros productos, obtener acceso temprano a ofertas especiales y ¡no volver a perderse las últimas noticias!",
+    'popup1'=>"¿Ya has iniciado sesión?",
+    'popup2'=>"¡Regístrese ahora para acceder primero a notificaciones exclusivas sobre nuestros productos, avances de ofertas especiales y las últimas novedades!",
     'registration'=>"¡Regístrate ahora!",
     
     //copy centrale
