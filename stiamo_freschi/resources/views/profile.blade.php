@@ -40,8 +40,7 @@
                     </a>
                 </div>
                 <div class="btnArt">
-                    <button onclick="CambioPagina()" class=" btn-desk2 btn-prof">I miei articoli</button>
-                    <button onclick="CambioPagina1()"class=" btn-desk2 btn-prof">I miei Preferiti</button>
+                    <button {{-- onclick="CambioPagina()" --}} class=" btn-prof">I miei articoli</button>
                 </div>
             </div>
         </div>
@@ -73,40 +72,8 @@
             </div>
         </div>
         {{-- MY-FAVOURITES --}}
-        <div id="MyFavourite" class="MyFavourite" style="display:none;">
-            <div class="row" style="display:flex;justify-content:center;padding:0px;margin:0px;width:100%;">
-                <div id="containerColCard" class="col-12 col-xl-3 col-lg-4 col-md-6 mt-5">
-                    <div class="cardLayout box">
-                        <div class="imgCard">
-                            <img src="{{-- $imagecard --}}" alt="">
-                        </div>
-                        <div class="userCard">
-                            <div class="imageUser">
-                                <img src="{{ asset('img/MainAfter.webp') }}" alt="">
-                            </div>
-                            <div class="nomeUser">
-                                <p style="font-size: 15px;color:black">{{-- $user }}</p>
-                        <p style="font-size: 11px">{{ __('ui.publicationDate') }} {{-- $date --}}</p>
-                            </div>
-                        </div>
-                        <div class="prezzoCard">
-                            <h4>{{-- $title --}}</h4>
-                            <p>{{-- $price --}} €</p>
-                            <h6>{{-- $category --}}</h6>
-                        </div>
-                        <div class="descrizioneCard"> mi piace
-                            <p>{{-- Str::limit($description, 100) --}}</p>
-                        </div>
-                        <div class="Areabutton">
-                            <button class="btnCardLayout"><a style="color: white"
-                                    href="{{-- route('announcement.show', ['announcement' => $announcement]) --}}">{{ __('ui.buttonDetails') }}</a></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <script>
+        {{-- <script>
             let apertura = false;
 
             let apertura2 = false;
@@ -128,5 +95,5 @@
                     document.getElementById('MyFavourite').style.display = "flex";
                 }
             }
-        </script>
+        </script> --}}
 </x-layout>
