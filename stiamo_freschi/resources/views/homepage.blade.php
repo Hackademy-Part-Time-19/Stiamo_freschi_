@@ -91,7 +91,7 @@
                         </div>
                     @empty
                         <div class="col-12" style="display:flex;justify-content:center;align-items:center">
-                            <div class="alert alert-warning py-3 shadow">
+                            <div class="alert alert-secondary py-3 shadow">
                                 <p class="lead">{{ __('ui.alertNoAds') }}</p>
                             </div>
                         </div>{{--  --}}

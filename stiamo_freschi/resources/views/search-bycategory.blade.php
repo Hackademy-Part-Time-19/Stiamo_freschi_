@@ -19,7 +19,7 @@
         </div>
         <div class="ContainerCard1">
             <div class="row">
-                @foreach ($announcements as $announcement)
+                @forelse ($announcements as $announcement)
                     <div id="containerColCard" class="col-12 col-xl-3 col-lg-4 col-md-6 mt-5">
                         @if ($announcement->images->isEmpty())
                             <x-card-home :imagecard="asset('img/pexels-photo-4464487.jpeg')" :user="$announcement->user->name" :date="$announcement->updated_at->format('d/m/y H:i:s')" :title="$announcement->title"
@@ -31,7 +31,14 @@
                             </x-card-home>
                         @endif
                     </div>
-                @endforeach
+                @empty
+                <div class="col-12">
+                    <div class="alert alert-secondary py-3 shadow"
+                        style="margin-top:100px;display:flex;justify-content:center;align-items:center;">
+                        <p class="lead">Nessun risultato trovato per questa categoria</p>
+                    </div>
+                </div>
+                @endforelse
             </div>
         </div>
 
