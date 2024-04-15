@@ -816,23 +816,25 @@ a {
     background-size: cover;
     color: white;
 }
-.containerUserRevisor{
+
+.containerUserRevisor {
     height: 40px;
     padding: 5px;
     background-color: none;
     display: flex;
     justify-content: center;
-    align-items: center;;
+    align-items: center;
+    ;
 }
 
-.containerUserRevisor h6{
+.containerUserRevisor h6 {
     font-size: 18px;
     font-weight: 500;
     color: black;
     margin: 0px;
 }
 
-.containerUserRevisor img{
+.containerUserRevisor img {
     height: 30px;
     width: 30px;
     border-radius: 100%;

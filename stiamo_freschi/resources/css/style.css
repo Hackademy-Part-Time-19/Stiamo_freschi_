@@ -49,13 +49,13 @@
 }
 
 .popup svg {
-  color: white;
-  transition: 0.5s ease all;
+    color: white;
+    transition: 0.5s ease all;
 }
 
 .popup svg:hover {
-  color: #081F37;
-  scale: 1.1;
+    color: #081F37;
+    scale: 1.1;
 }
 
 .ContainerCard {
@@ -150,7 +150,7 @@
 .btn-desk2:hover {
     background-color: #00B58F;
     color: #081F37;
-    
+
 }
 
 .container-navbar {
@@ -862,7 +862,7 @@ nav.desktop {
 }
 
 .divPadreMod {
-    height:500px;
+    height: 500px;
     margin: 20px;
     margin-bottom: 30px;
     border: 1px solid black;
@@ -880,7 +880,7 @@ nav.desktop {
 }
 
 .ModFoto {
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -966,7 +966,7 @@ nav.desktop {
 .div-descr h1 {
     font-size: 30px;
     font-weight: 600;
-    
+
 }
 
 .div-descr h2 {
@@ -1270,7 +1270,7 @@ nav.desktop {
 
 .slide {
     width: 400px;
-    height: 500px;
+    height: 501px;
 }
 
 .trasp {
@@ -2288,6 +2288,7 @@ nav.desktop {
         text-decoration: none;
         color: white;
     }
+
 
     .btn-txt-img:hover {
         background-color: #133f6f;
