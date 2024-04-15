@@ -129,7 +129,7 @@
 
             <div class="form3">
 
-                <form id="FormCreateAnnouncement">
+                <form id="FormCreateAnnouncement" wire:submit.prevent="submitForm">
                     <div class="mb-3">
                         <label for="title" class="form-label">Modifica il titolo dell'annuncio</label>
                         <input type="text" name="title" class="form-control" style="width: 100%; height:35px;"

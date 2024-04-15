@@ -91,22 +91,29 @@
             </div>
             <div class="row"
                 style="display:flex;justify-content:center;padding:0px;margin:0px; flex:3;margin-top:20px">
+                <h2 style="text-align:center;margin-top:30px;font-weight:100">Annunci correlati per categoria <span style="font-weight: 500">{{$categoryAnnouncement}}</span></h1>
                 @forelse ($announcementOfCategory as $announcement)
                     <div id="containerColCard" class="col-12 col-xl-3 col-lg-4 col-md-6 mt-5"
-                        style="height: 60vh; padding-top: 100px">
+                        style="height: 60vh; padding-top: 100px;">
                         @if ($announcement->images->isEmpty())
                             <x-card-home :imagecard="asset('img/pexels-photo-4464487.jpeg')" :user="$announcement->user->name" :date="$announcement->updated_at->format('d/m/y H:i:s')" :title="$announcement->title"
-                                :price="$announcement->price" :description="$announcement->description" :category="$announcement->translatedCategory" :announcement="$announcement">
+                                :price="$announcement->price" :description="$announcement->description" :category="$announcement->translatedCategory" :announcement="$announcement"
+                                :userimageannouncement="$announcement->user->image && $announcement->user->image->path
+                                    ? asset('storage/profile_images/' . $announcement->user->image->path)
+                                    : asset('img/2318271-icona-profilo-utente-vettoriale-removebg-preview.png')">
                             </x-card-home>
                         @else
                             <x-card-home :imagecard="$announcement->images->first()->getUrl(200, 300)" :user="$announcement->user->name" :date="$announcement->updated_at->format('d/m/y H:i:s')" :title="$announcement->title"
-                                :price="$announcement->price" :description="$announcement->description" :category="$announcement->translatedCategory" :announcement="$announcement">
+                                :price="$announcement->price" :description="$announcement->description" :category="$announcement->translatedCategory" :announcement="$announcement"
+                                :userimageannouncement="$announcement->user->image && $announcement->user->image->path
+                                    ? asset('storage/profile_images/' . $announcement->user->image->path)
+                                    : asset('img/2318271-icona-profilo-utente-vettoriale-removebg-preview.png')">
                             </x-card-home>
                         @endif
                     </div>
                 @empty
-                    <div class="col-12">
-                        <div class="alert alert-warning py-3 shadow"
+                    <div class="col-6">
+                        <div class="alert alert-secondary py-3 shadow"
                             style="margin-top:200px;display:flex;justify-content:center;align-items:center;">
                             <p class="lead">{{ __('ui.noAsdForThisCategory') }}</p>
                         </div>

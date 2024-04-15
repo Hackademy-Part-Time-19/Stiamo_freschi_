@@ -9,6 +9,7 @@ use App\Models\Category;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Redirect;
 
 class PageController extends Controller
 {
@@ -25,6 +26,7 @@ class PageController extends Controller
     {
         $categories = Category::all();
         $announcements = Announcement::orderBy('updated_at', 'desc')->where('is_accepted', true)->paginate(8);
+        
 
         $currentTranslations = $this->categoryTranslations[App::getLocale()];
 
@@ -56,6 +58,12 @@ class PageController extends Controller
         return view('Announcement-edit', ['announcement' => $announcement, 'categories' => Category::all()]);
     }
 
+    public function GoToResetPassword()
+    {
+        //reindirizza alla rotta di reset password di tipo post
+       
+        return view('auth.forgot-password');
+    }
 
 
 

@@ -50,7 +50,7 @@ class AnnouncementController extends Controller
     public function searchAnnouncements(Request $request)
     {
         /* dd($request->all());  */
-        $announcements = Announcement::search($request->searched)->where('is_accepted', true)->get();
+        $announcements = Announcement::search($request->searched)->where('is_accepted', true)->paginate(8);
         /*   dd($announcements); */
         $categories = Category::all();
         return view('homepage', compact('announcements', 'categories'));
@@ -74,7 +74,7 @@ class AnnouncementController extends Controller
 
         $categoryAnnouncement = $categoryTranslations[$announcement->category->name] ?? $announcement->category->name;
 
-        $announcementOfCategory = Announcement::where('category_id', $announcement->category_id)->where('is_accepted', true)->get();
+        $announcementOfCategory = Announcement::where('category_id', $announcement->category_id)->where('is_accepted', true)->where('id', '!=', $announcement->id)->orderBy('updated_at', 'desc')->get();
         
         $announcementOfCategory->transform(function ($announcement) use ($categoryTranslations) {
             $translatedCategory = $categoryTranslations[$announcement->category->name] ?? 'Nessuna categoria';

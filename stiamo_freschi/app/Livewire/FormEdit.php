@@ -61,11 +61,11 @@ class FormEdit extends Component
     {
         $this->announcement_revisor_counter = Announcement::toBeRevisionedCount();
 
-        /*  $announcement = $this->announcementToEdit;
+        $announcement = $this->announcementToEdit;
         $this->title = $announcement->title;
         $this->price = $announcement->price;
         $this->description = $announcement->description;
-        $this->category_id = $announcement->category_id; */
+        $this->category_id = $announcement->category_id;
     }
 
     public function render()
@@ -96,7 +96,10 @@ class FormEdit extends Component
             unset($this->images[$key]);
         }
     }
-
+    public function submitForm()
+    {
+        return redirect()->to('/profile')->with('message', 'Annuncio modificato con successo! Verrà pubblicato nuovamente solamente dopo la revisione');
+    }
 
 
     public function editAnnouncement()
