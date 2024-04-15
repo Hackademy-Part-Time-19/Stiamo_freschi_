@@ -50,7 +50,7 @@ class AnnouncementController extends Controller
     public function searchAnnouncements(Request $request)
     {
         /* dd($request->all());  */
-        $announcements = Announcement::search($request->searched)->where('is_accepted', true)->get();
+        $announcements = Announcement::search($request->searched)->where('is_accepted', true)->paginate(8);
         /*   dd($announcements); */
         $categories = Category::all();
         return view('homepage', compact('announcements', 'categories'));
